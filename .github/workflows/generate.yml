@@ -1,0 +1,41 @@
+name: Generate Daily Briefing
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - name: Generate briefing
+        run: npm run generate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit and push
+        run: |
+          git config user.name "Claude Daily Bot"
+          git config user.email "bot@claudedaily.dev"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No new data to commit"
+          else
+            DATE=$(date -u +%Y-%m-%d)
+            git commit -m "data: daily briefing $DATE"
+            git push
+          fi
