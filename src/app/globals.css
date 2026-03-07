@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #faf6f1;
+  --color-cream-dark: #f0ebe3;
+  --color-claude-orange: #e07a3a;
+  --color-claude-orange-hover: #c96a2f;
+  --color-charcoal: #1a1a1a;
+  --color-gray-secondary: #6b6b6b;
+  --color-card-shadow: rgba(139, 109, 79, 0.08);
+  --font-serif: "Georgia", "Times New Roman", serif;
+}
