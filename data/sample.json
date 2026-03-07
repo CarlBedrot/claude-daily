@@ -1,0 +1,194 @@
+{
+  "date": "2026-03-07",
+  "generated_at": "2026-03-07T06:00:00Z",
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude AI",
+      "stories": [
+        {
+          "id": "claude-ai-1",
+          "headline": "Anthropic Introduces Claude Opus 4.6 With Extended Reasoning Chains",
+          "summary": "Anthropic released Claude Opus 4.6, featuring significantly longer reasoning chains and improved performance on complex multi-step tasks. The model scores 92% on graduate-level science benchmarks, up from 87% in the previous generation.",
+          "key_points": [
+            "Reasoning chain length increased by 3x compared to Opus 4.5",
+            "Graduate-level science benchmark scores improved from 87% to 92%",
+            "Available immediately on API and Claude.ai Pro plans"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Introducing Claude Opus 4.6",
+              "url": "https://anthropic.com/blog/claude-opus-4-6",
+              "published_at": "2026-03-06T14:00:00Z"
+            },
+            {
+              "type": "reddit",
+              "title": "Opus 4.6 is a massive leap in reasoning. My benchmarks inside.",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1j4k8m2/opus_46_is_a_massive_leap_in_reasoning",
+              "published_at": "2026-03-06T18:32:00Z"
+            }
+          ],
+          "perspectives": "The developer community is largely enthusiastic, with several independent benchmarks confirming Anthropic's claims. Some researchers note the gains are concentrated in STEM domains and less pronounced in creative writing tasks."
+        },
+        {
+          "id": "claude-ai-2",
+          "headline": "Claude API Pricing Restructured With New Volume Tiers for Enterprise",
+          "summary": "Anthropic announced a revised pricing structure for the Claude API, introducing three new volume tiers that reduce per-token costs by up to 40% for high-usage customers. The changes take effect April 1.",
+          "key_points": [
+            "New 'Scale' tier offers 25% discount at 10B+ tokens per month",
+            "New 'Enterprise' tier offers 40% discount at 50B+ tokens per month",
+            "Sonnet and Haiku pricing unchanged for standard tier users"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "New API pricing tiers for growing teams",
+              "url": "https://anthropic.com/blog/api-pricing-tiers-2026",
+              "published_at": "2026-03-07T09:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-3",
+          "headline": "Claude Gains Native Spreadsheet Analysis With Structured Data Mode",
+          "summary": "A new 'Structured Data Mode' allows Claude to ingest CSV and Excel files directly through the API, returning typed JSON responses with statistical summaries. Early testers report dramatically improved accuracy on tabular reasoning tasks.",
+          "key_points": [
+            "Supports CSV, XLSX, and TSV formats up to 50MB",
+            "Returns typed JSON with automatic schema detection",
+            "Tabular QA accuracy improved from 78% to 94% versus plain-text ingestion"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Structured Data Mode: Claude meets your spreadsheets",
+              "url": "https://anthropic.com/blog/structured-data-mode",
+              "published_at": "2026-03-05T16:00:00Z"
+            },
+            {
+              "type": "twitter",
+              "title": "@AnthropicAI: Announcing Structured Data Mode",
+              "url": "https://twitter.com/AnthropicAI/status/1897654321098765432",
+              "published_at": "2026-03-05T16:05:00Z"
+            }
+          ],
+          "perspectives": "Data analysts on Reddit are calling this a game-changer for ad-hoc reporting workflows. Some users note that competing models already handle spreadsheets but lack Claude's accuracy on multi-sheet cross-references."
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-1",
+          "headline": "Claude Code 1.5 Ships With Background Task Orchestration",
+          "summary": "The latest Claude Code release introduces background task orchestration, allowing developers to queue multiple long-running operations that execute in parallel. The feature includes automatic dependency resolution between tasks.",
+          "key_points": [
+            "Tasks can be queued with explicit dependency graphs",
+            "Parallel execution with configurable concurrency limits",
+            "New `--orchestrate` flag enables multi-task mode from the CLI"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code 1.5: Orchestrate your workflow",
+              "url": "https://anthropic.com/blog/claude-code-1-5-orchestration",
+              "published_at": "2026-03-06T10:00:00Z"
+            },
+            {
+              "type": "reddit",
+              "title": "Claude Code 1.5 orchestration is exactly what I needed for monorepo refactors",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1j4a9b3/claude_code_15_orchestration_monorepo",
+              "published_at": "2026-03-06T14:20:00Z"
+            }
+          ],
+          "perspectives": "Power users are excited about the monorepo use case, where Claude Code can now refactor shared libraries and downstream consumers in a single coordinated session. Some developers worry about token costs when running many parallel tasks."
+        },
+        {
+          "id": "claude-code-2",
+          "headline": "New `claude review` Command Brings Automated PR Analysis to the Terminal",
+          "summary": "Claude Code now includes a dedicated `claude review` command that performs structured code review on git diffs. It produces categorized findings with severity levels and suggested fixes inline.",
+          "key_points": [
+            "Outputs findings in `category/severity file:line` format",
+            "Supports `--fix` flag to auto-apply suggested changes",
+            "Integrates with GitHub PR workflows via `--pr` flag"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Code review, meet the command line",
+              "url": "https://anthropic.com/blog/claude-code-review-command",
+              "published_at": "2026-03-04T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-3",
+          "headline": "Community Workflow: Using Claude Code Hooks for Continuous Spec Validation",
+          "summary": "A popular community post details a workflow where Claude Code hooks are configured to validate implementation against spec files on every commit. The approach catches requirement drift before code reaches review.",
+          "key_points": [
+            "Pre-commit hook compares implementation against spec acceptance criteria",
+            "Reduces review cycles by catching spec violations early",
+            "Template shared as an open-source CLAUDE.md snippet"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "I set up Claude Code hooks for continuous spec validation and it cut my review cycles in half",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1j3z7k1/claude_code_hooks_spec_validation",
+              "published_at": "2026-03-05T22:15:00Z"
+            }
+          ],
+          "perspectives": "The community response is overwhelmingly positive, though some point out that overly rigid spec validation can slow down exploratory development phases where requirements are still forming."
+        }
+      ]
+    },
+    "cowork": {
+      "label": "Cowork",
+      "stories": [
+        {
+          "id": "cowork-1",
+          "headline": "Anthropic Launches Shared Claude Sessions for Real-Time Team Collaboration",
+          "summary": "Anthropic introduced shared sessions in Claude.ai, allowing multiple team members to collaborate in a single Claude conversation in real time. The feature includes role-based permissions and conversation branching.",
+          "key_points": [
+            "Up to 10 participants per shared session on Team and Enterprise plans",
+            "Role-based access: owner, editor, and viewer permissions",
+            "Conversation branching lets team members explore alternatives without disrupting the main thread"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Shared Sessions: Think together with Claude",
+              "url": "https://anthropic.com/blog/shared-sessions-collaboration",
+              "published_at": "2026-03-06T08:00:00Z"
+            },
+            {
+              "type": "reddit",
+              "title": "Shared sessions are a game changer for architecture discussions with distributed teams",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1j4c2d5/shared_sessions_distributed_teams",
+              "published_at": "2026-03-06T16:45:00Z"
+            }
+          ],
+          "perspectives": "Engineering leads report that shared sessions reduce meeting time by letting teams async-collaborate through Claude. Privacy-conscious users are asking for on-prem options and clearer data retention policies for shared conversations."
+        },
+        {
+          "id": "cowork-2",
+          "headline": "Case Study: How a 50-Person Startup Replaced Daily Standups With Claude Briefings",
+          "summary": "A detailed case study describes how a Series A startup eliminated daily standup meetings by having each team member post async updates to Claude, which synthesizes a team briefing every morning. The team reports saving 4.5 hours per week per engineer.",
+          "key_points": [
+            "Engineers post updates via Slack integration; Claude generates a daily digest",
+            "Blockers are automatically flagged and routed to relevant team leads",
+            "Team satisfaction scores increased 23% after eliminating synchronous standups"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Beyond standups: async team coordination with Claude",
+              "url": "https://anthropic.com/blog/case-study-async-standups",
+              "published_at": "2026-03-03T11:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
