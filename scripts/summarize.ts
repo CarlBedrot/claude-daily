@@ -65,8 +65,9 @@ Content: ${item.content.slice(0, 500)}`,
     system: SYSTEM_PROMPT,
   });
 
-  const text =
+  const raw =
     response.content[0].type === "text" ? response.content[0].text : "";
+  const text = raw.replace(/^```(?:json)?\s*\n?/, "").replace(/\n?```\s*$/, "");
   const parsed = JSON.parse(text);
 
   const now = new Date();
