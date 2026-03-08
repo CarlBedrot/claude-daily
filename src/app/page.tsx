@@ -1,4 +1,4 @@
-import { getBriefing, getAvailableDates } from "@/lib/data";
+import { getBriefing, getAvailableDates, getTips } from "@/lib/data";
 import { BriefingView } from "@/components/BriefingView";
 
 export const revalidate = 3600;
@@ -20,5 +20,16 @@ export default async function Home({ searchParams }: PageProps) {
     );
   }
 
-  return <BriefingView briefing={briefing} availableDates={availableDates} />;
+  const tips = getTips();
+  const briefingWithTips = {
+    ...briefing,
+    tabs: {
+      ...briefing.tabs,
+      tips: { label: "Tips", stories: tips },
+    },
+  };
+
+  return (
+    <BriefingView briefing={briefingWithTips} availableDates={availableDates} />
+  );
 }

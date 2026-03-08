@@ -1,0 +1,62 @@
+{
+  "tips": [
+    {
+      "id": "tip-001",
+      "headline": "Use @-mentions to give Claude Code precise file context",
+      "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+      "author": { "name": "Boris Cherny", "role": "Creator of Claude Code" },
+      "actionable_steps": [
+        "Type @ in Claude Code to see a file picker with fuzzy search",
+        "Select the specific files relevant to your task before writing your prompt",
+        "Combine multiple @-mentions for cross-file tasks like refactoring"
+      ],
+      "sources": [
+        {
+          "type": "twitter",
+          "title": "Boris Cherny on using @-mentions effectively",
+          "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+          "published_at": "2025-06-03T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "tip-002",
+      "headline": "Write a CLAUDE.md file to set project conventions once",
+      "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+      "author": { "name": "Anthropic", "role": "Claude Code Documentation" },
+      "actionable_steps": [
+        "Create a CLAUDE.md in your project root with build/test/lint commands",
+        "Add coding conventions like naming patterns, preferred libraries, and file structure",
+        "Include architectural decisions and constraints Claude should respect",
+        "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+      ],
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Best Practices — CLAUDE.md",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+          "published_at": "2025-05-01T00:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "tip-003",
+      "headline": "Use Claude's extended thinking for complex architectural decisions",
+      "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+      "author": { "name": "Community", "role": "r/ClaudeAI contributors" },
+      "actionable_steps": [
+        "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+        "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+        "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+      ],
+      "sources": [
+        {
+          "type": "reddit",
+          "title": "Tips for getting better architectural advice from Claude",
+          "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+          "published_at": "2025-07-15T00:00:00Z"
+        }
+      ]
+    }
+  ]
+}

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "generate": "tsx scripts/generate.ts"
+    "generate": "tsx scripts/generate.ts",
+    "fetch-raw": "tsx scripts/fetch-raw.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

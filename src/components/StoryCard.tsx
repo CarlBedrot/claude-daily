@@ -1,40 +1,88 @@
 "use client";
 
 import { useState } from "react";
-import { Story } from "@/types/daily";
-import { SourcePill } from "./SourcePill";
+import { Story, SourceType } from "@/types/daily";
+import { SourceList } from "./SourceList";
+import { FootnoteText } from "./FootnoteText";
+import { timeAgo } from "@/lib/format";
 
-function timeAgo(dateStr: string): string {
-  const now = new Date();
-  const date = new Date(dateStr);
-  const diffMs = now.getTime() - date.getTime();
-  const diffH = Math.floor(diffMs / (1000 * 60 * 60));
+const SOURCE_LABELS: Record<SourceType, string> = {
+  blog: "BLOG",
+  reddit: "REDDIT",
+  twitter: "X",
+};
 
-  if (diffH < 1) return "just now";
-  if (diffH < 24) return `${diffH}h ago`;
-  const diffD = Math.floor(diffH / 24);
-  if (diffD === 1) return "yesterday";
-  return `${diffD}d ago`;
+function StoryBody({ story }: { story: Story }) {
+  return (
+    <>
+      <p className="text-sm text-gray-secondary leading-relaxed">
+        <FootnoteText text={story.summary} sources={story.sources} />
+      </p>
+
+      {story.key_points && story.key_points.length > 0 && (
+        <ul className="mt-3 space-y-1.5">
+          {story.key_points.map((point, i) => (
+            <li
+              key={i}
+              className="text-sm text-charcoal flex items-start gap-2.5"
+            >
+              <span className="shrink-0 w-5 h-5 rounded-full bg-claude-orange/10 text-claude-orange text-xs font-semibold flex items-center justify-center mt-0.5">
+                {i + 1}
+              </span>
+              <FootnoteText text={point} sources={story.sources} />
+            </li>
+          ))}
+        </ul>
+      )}
+
+      {story.perspectives && (
+        <p className="mt-3 text-sm italic text-gray-secondary border-l-2 border-claude-orange pl-3">
+          <FootnoteText text={story.perspectives} sources={story.sources} />
+        </p>
+      )}
+
+      <SourceList sources={story.sources} />
+    </>
+  );
 }
 
 type StoryCardProps = {
   story: Story;
+  isLead?: boolean;
 };
 
-export function StoryCard({ story }: StoryCardProps) {
-  const [expanded, setExpanded] = useState(false);
+export function StoryCard({ story, isLead = false }: StoryCardProps) {
+  const [expanded, setExpanded] = useState(isLead);
 
   const earliestSource = story.sources.reduce((earliest, s) =>
     s.published_at < earliest.published_at ? s : earliest,
   );
 
-  const sourceType = story.sources[0]?.type;
-  const categoryLabel =
-    sourceType === "blog"
-      ? "OFFICIAL"
-      : sourceType === "reddit"
-        ? "COMMUNITY"
-        : "UPDATE";
+  const sourceLabel = SOURCE_LABELS[earliestSource.type];
+
+  if (isLead) {
+    return (
+      <article className="border-b border-cream-dark last:border-b-0 bg-cream-dark/30 -mx-4 px-4 rounded-lg">
+        <div className="py-4">
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-medium tracking-wide text-claude-orange">
+              {sourceLabel}
+            </span>
+            <span className="text-xs text-gray-secondary">
+              {timeAgo(earliestSource.published_at)}
+            </span>
+          </div>
+          <h2 className="text-lg font-semibold font-serif text-charcoal leading-snug mt-0.5">
+            {story.headline}
+          </h2>
+        </div>
+
+        <div className="pb-5">
+          <StoryBody story={story} />
+        </div>
+      </article>
+    );
+  }
 
   return (
     <article className="border-b border-cream-dark last:border-b-0">
@@ -43,74 +91,46 @@ export function StoryCard({ story }: StoryCardProps) {
         className="w-full text-left py-4 flex items-start justify-between gap-4 group cursor-pointer"
       >
         <div className="min-w-0">
-          <span className="text-xs font-medium tracking-wide text-claude-orange">
-            {categoryLabel}
-          </span>
-          <h2 className="text-base font-medium text-charcoal leading-snug mt-0.5 group-hover:text-claude-orange transition-colors">
-            {story.headline}
-          </h2>
-        </div>
-        <span
-          className={`mt-6 shrink-0 w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
-            expanded
-              ? "border-claude-orange bg-claude-orange text-white"
-              : "border-cream-dark text-transparent"
-          }`}
-        >
-          <svg
-            width="10"
-            height="8"
-            viewBox="0 0 10 8"
-            fill="none"
-            className="translate-y-[0.5px]"
-          >
-            <path
-              d="M1 4L3.5 6.5L9 1"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </span>
-      </button>
-
-      {expanded && (
-        <div className="pb-5 pl-0">
-          <p className="text-sm text-gray-secondary leading-relaxed">
-            {story.summary}
-          </p>
-
-          {story.key_points && story.key_points.length > 0 && (
-            <ul className="mt-3 space-y-1.5">
-              {story.key_points.map((point, i) => (
-                <li
-                  key={i}
-                  className="text-sm text-charcoal flex items-start gap-2"
-                >
-                  <span className="text-claude-orange mt-1 text-xs">●</span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          )}
-
-          {story.perspectives && (
-            <p className="mt-3 text-sm italic text-gray-secondary border-l-2 border-claude-orange pl-3">
-              {story.perspectives}
-            </p>
-          )}
-
-          <div className="mt-3 flex items-center gap-2 flex-wrap">
-            {story.sources.map((source, i) => (
-              <SourcePill key={i} type={source.type} url={source.url} />
-            ))}
-            <span className="text-xs text-gray-secondary ml-auto">
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-medium tracking-wide text-claude-orange">
+              {sourceLabel}
+            </span>
+            <span className="text-xs text-gray-secondary">
               {timeAgo(earliestSource.published_at)}
             </span>
           </div>
+          <h2 className="text-base font-semibold font-serif text-charcoal leading-snug mt-0.5 group-hover:text-claude-orange transition-colors">
+            {story.headline}
+          </h2>
         </div>
-      )}
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          className={`mt-5 shrink-0 text-gray-secondary group-hover:text-claude-orange transition-all duration-200 ${
+            expanded ? "rotate-180" : ""
+          }`}
+        >
+          <path
+            d="M4 6L8 10L12 6"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fill="none"
+          />
+        </svg>
+      </button>
+
+      <div
+        className={`overflow-hidden transition-all duration-200 ${
+          expanded ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="pb-5 pl-0">
+          <StoryBody story={story} />
+        </div>
+      </div>
     </article>
   );
 }

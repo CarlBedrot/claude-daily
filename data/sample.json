@@ -142,8 +142,8 @@
         }
       ]
     },
-    "cowork": {
-      "label": "Cowork",
+    "community": {
+      "label": "Community",
       "stories": [
         {
           "id": "cowork-1",

@@ -1,19 +1,10 @@
-import { fetchAnthropicBlog } from "./sources/anthropic-blog";
-import { fetchReddit } from "./sources/reddit";
-import { fetchClaudeCodeChangelog } from "./sources/claude-code-changelog";
-import { filterItems } from "./filter";
+import { fetchAllSources } from "./sources/fetch-all";
 import fs from "fs";
 import path from "path";
 
 async function main() {
-  const [blogItems, redditItems, changelogItems] = await Promise.all([
-    fetchAnthropicBlog(),
-    fetchReddit(),
-    fetchClaudeCodeChangelog(),
-  ]);
-
-  const allItems = [...blogItems, ...redditItems, ...changelogItems];
-  const filtered = filterItems(allItems);
+  const { blogItems, redditItems, changelogItems, filtered } =
+    await fetchAllSources();
 
   const output = {
     fetched_at: new Date().toISOString(),

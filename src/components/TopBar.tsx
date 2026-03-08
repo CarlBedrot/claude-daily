@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef } from "react";
+
 type TopBarProps = {
   date: string;
   availableDates: string[];
@@ -5,6 +9,7 @@ type TopBarProps = {
 };
 
 export function TopBar({ date, availableDates, onDateChange }: TopBarProps) {
+  const selectRef = useRef<HTMLSelectElement>(null);
   const formattedDate = new Date(date + "T00:00:00").toLocaleDateString(
     "en-US",
     {
@@ -21,16 +26,13 @@ export function TopBar({ date, availableDates, onDateChange }: TopBarProps) {
           Claude Daily
         </h1>
         <button
-          onClick={() => {
-            const select = document.getElementById("date-select");
-            if (select) (select as HTMLSelectElement).showPicker();
-          }}
+          onClick={() => selectRef.current?.showPicker()}
           className="text-sm text-gray-secondary mt-1 hover:text-claude-orange transition-colors cursor-pointer"
         >
           {formattedDate}
         </button>
         <select
-          id="date-select"
+          ref={selectRef}
           value={date}
           onChange={(e) => onDateChange(e.target.value)}
           className="sr-only"

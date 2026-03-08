@@ -2,7 +2,7 @@ name: Generate Daily Briefing
 
 on:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "0 7 * * *" # 07:00 UTC = 08:00 CET
   workflow_dispatch:
 
 permissions:
@@ -39,3 +39,10 @@ jobs:
             git commit -m "data: daily briefing $DATE"
             git push
           fi
+
+      - name: Deploy to Vercel
+        run: npx vercel --prod --yes
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}

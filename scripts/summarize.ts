@@ -9,7 +9,7 @@ You receive raw news items from various sources. Your job is to:
 1. Categorize each item into one of three tabs:
    - claude_ai: Claude.ai product updates, model releases, features, pricing, general Anthropic news
    - claude_code: Claude Code CLI, SDK updates, developer tooling, coding workflows
-   - cowork: Cowork collaboration features, team usage, enterprise features
+   - community: Community projects, creative uses, ecosystem discussions, third-party tools, tutorials, Claude Cowork features, enterprise usage patterns, user workflows and experiences
 
 2. Group related items into single stories (e.g., a blog post and Reddit discussion about the same announcement)
 
@@ -18,20 +18,24 @@ You receive raw news items from various sources. Your job is to:
    - A 2-3 sentence summary synthesizing all sources
    - Key points (only for stories that warrant them, 2-3 bullets max)
    - Perspectives (only when sources disagree or there is genuine nuance)
+   - IMPORTANT: Embed inline source references using [N] notation in the summary, key_points, and perspectives text. N is the 1-indexed position of the source in that story's sources array. Place them after the claims they support, like: "Claude now supports extended thinking [1], which the community has praised [2]."
 
 4. Include 5-10 stories per tab. If a tab has fewer items, that is fine.
 
 5. If an item does not clearly fit Claude ecosystem news, discard it.
 
+6. Generate a "digest" field: 2-3 sentences summarizing today's biggest highlights across ALL tabs. Write like a morning briefing editor — conversational, direct. Lead with the single most important story.
+
 Output ONLY valid JSON matching this exact schema:
 {
+  "digest": "Today's biggest story is...",
   "tabs": {
     "claude_ai": {
       "label": "Claude.ai",
       "stories": [{ "id": "claude-ai-001", "headline": "", "summary": "", "key_points": [], "sources": [{ "type": "blog|reddit|twitter", "title": "", "url": "", "published_at": "" }], "perspectives": "" }]
     },
     "claude_code": { "label": "Claude Code", "stories": [...] },
-    "cowork": { "label": "Cowork", "stories": [...] }
+    "community": { "label": "Community", "stories": [...] }
   }
 }`;
 
@@ -71,6 +75,7 @@ Content: ${item.content.slice(0, 500)}`,
   return {
     date: dateStr,
     generated_at: now.toISOString(),
+    digest: parsed.digest,
     tabs: parsed.tabs,
   };
 }

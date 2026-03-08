@@ -26,7 +26,7 @@
         {
           "id": "claude-ai-2026-03-08-2",
           "headline": "Users Report Massive Context Window Increase in Claude Chat",
-          "summary": "A user on r/ClaudeAI reports being able to process significantly more files in a single Claude Desktop session than before — reading 35 files and rewriting 30 entire files (400-1200 lines each) without hitting the context limit. They speculate Anthropic may be testing a 1M context window before a wider rollout.",
+          "summary": "A user on r/ClaudeAI reports being able to process significantly more files in a single Claude Desktop session than before \u2014 reading 35 files and rewriting 30 entire files (400-1200 lines each) without hitting the context limit. They speculate Anthropic may be testing a 1M context window before a wider rollout.",
           "key_points": [
             "User processed 35 files and rewrote 30 files in a single session",
             "Each file was 400-1200 lines of code with no conversation truncation",
@@ -47,7 +47,7 @@
           "summary": "A user reports that the Claude Android app analyzed code they had copied to their clipboard without them explicitly pasting it into the chat. The app apparently sent the clipboard contents along with the user's message. Anthropic has not commented on whether this is intended behavior or a bug.",
           "key_points": [
             "Claude analyzed clipboard content that was never explicitly pasted",
-            "User confirmed by asking Claude to reproduce the first 20 lines — they matched exactly",
+            "User confirmed by asking Claude to reproduce the first 20 lines \u2014 they matched exactly",
             "Behavior could not be reproduced in a new chat session"
           ],
           "sources": [
@@ -62,7 +62,7 @@
         {
           "id": "claude-ai-2026-03-08-4",
           "headline": "Sonnet 4.6 Struggles With Fuzzy Matching That Other Models Handle Easily",
-          "summary": "A developer found that Sonnet 4.6 consistently fails to match \"strawberry things\" to a nutrition tracker entry called \"Baketree Strawberry & Cream Cheese Fruit Bites\" — a task that Opus 4.6, Haiku 4.5, Sonnet 4.5, and even older Opus 4.1 all handle on the first try. The user notes this makes Sonnet 4.6 unreliable for generalizing natural language to structured data.",
+          "summary": "A developer found that Sonnet 4.6 consistently fails to match \"strawberry things\" to a nutrition tracker entry called \"Baketree Strawberry & Cream Cheese Fruit Bites\" \u2014 a task that Opus 4.6, Haiku 4.5, Sonnet 4.5, and even older Opus 4.1 all handle on the first try. The user notes this makes Sonnet 4.6 unreliable for generalizing natural language to structured data.",
           "key_points": [
             "Sonnet 4.6 repeatedly fails to find items using fuzzy/natural descriptions",
             "Opus 4.6, Haiku 4.5, Sonnet 4.5, and Opus 4.1 all succeed on the same task",
@@ -154,7 +154,7 @@
           "headline": "Claude Code v2.1.68-2.1.70: Opus 4.6 Defaults to Medium Effort, Major Bug Fixes",
           "summary": "Three releases over the past few days bring significant changes: Opus 4.6 now defaults to medium effort for Max and Team subscribers, the \"ultrathink\" keyword returns for high effort on-demand, and Opus 4/4.1 are removed from first-party API. Bug fixes address API 400 errors with third-party gateways, the effort parameter error with custom Bedrock profiles, empty model responses after ToolSearch, and MCP prompt-cache busts.",
           "key_points": [
-            "Opus 4.6 defaults to medium effort — use 'ultrathink' for high effort",
+            "Opus 4.6 defaults to medium effort \u2014 use 'ultrathink' for high effort",
             "Opus 4 and 4.1 removed from Claude Code on first-party API",
             "Fixed API 400 errors with ANTHROPIC_BASE_URL and third-party gateways"
           ],
@@ -208,7 +208,7 @@
           "headline": "Developer Builds Auto-Fix Pipeline: Claude Code Headless Detects Prod Errors, Writes Fixes, Approves via Telegram",
           "summary": "A developer built an open-source automated production error-fixing system using Claude Code CLI in headless mode. The system watches production logs, classifies error severity, creates isolated git worktrees per error, launches Claude Code to write a fix, then sends it to Telegram for one-tap approval before creating a PR. The developer reports ~70-80% success rate on critical infrastructure errors.",
           "key_points": [
-            "Uses git worktrees for isolated fix branches — main branch never touched",
+            "Uses git worktrees for isolated fix branches \u2014 main branch never touched",
             "Telegram dashboard for approve/skip on each proposed fix",
             "70-80% success rate on critical errors with clear stack traces, no API costs"
           ],
@@ -233,7 +233,7 @@
           "sources": [
             {
               "type": "reddit",
-              "title": "I built \"Spotify Wrapped\" for Claude Code — efficiency scores, badges, and AI-powered insights into your prompting habits",
+              "title": "I built \"Spotify Wrapped\" for Claude Code \u2014 efficiency scores, badges, and AI-powered insights into your prompting habits",
               "url": "https://reddit.com/r/ClaudeAI/comments/1rnzdz3/i_built_spotify_wrapped_for_claude_code/",
               "published_at": "2026-03-08T08:18:42.000Z"
             }
@@ -242,7 +242,7 @@
         {
           "id": "claude-code-2026-03-08-6",
           "headline": "Orchestra: Go CLI Runs Multiple Claude Code Teams as a DAG Workflow With Cross-Team Messaging",
-          "summary": "Orchestra is a Go CLI that runs multiple Claude Code sessions in parallel as a directed acyclic graph. Teams, tasks, and dependencies are defined in YAML — teams in the same tier run concurrently, and results from earlier tiers get injected into downstream prompts. A file-based message bus lets teams ask each other questions and share interface contracts.",
+          "summary": "Orchestra is a Go CLI that runs multiple Claude Code sessions in parallel as a directed acyclic graph. Teams, tasks, and dependencies are defined in YAML \u2014 teams in the same tier run concurrently, and results from earlier tiers get injected into downstream prompts. A file-based message bus lets teams ask each other questions and share interface contracts.",
           "key_points": [
             "YAML-defined DAG: concurrent teams in same tier, sequential across tiers",
             "File-based message bus for inter-team communication",
@@ -251,7 +251,7 @@
           "sources": [
             {
               "type": "reddit",
-              "title": "Orchestra — a DAG workflow engine that runs multiple AI agent Claude Code teams in parallel with cross-team messaging",
+              "title": "Orchestra \u2014 a DAG workflow engine that runs multiple AI agent Claude Code teams in parallel with cross-team messaging",
               "url": "https://reddit.com/r/ClaudeAI/comments/1rnxbpo/orchestra_a_dag_workflow_engine_that_runs/",
               "published_at": "2026-03-08T06:20:34.000Z"
             }
@@ -263,7 +263,7 @@
           "summary": "A developer packaged a workflow that forces coding agents to break features into small, reviewable chunks before writing any code. Instead of one massive PR, the agent creates a plan with stacked branches (schema, validators, service layer, controllers), each targeting its parent. The result: reviewable 5-minute PRs instead of 40-file monsters.",
           "key_points": [
             "Agent proposes a feature breakdown plan before writing any code",
-            "Each chunk is one branch, one concern, one PR — stacked on parent",
+            "Each chunk is one branch, one concern, one PR \u2014 stacked on parent",
             "Available as a drop-in CLAUDE.md file for Claude Code, Cursor, and Windsurf"
           ],
           "sources": [
@@ -280,14 +280,14 @@
           "headline": "Self-Evolving Skill Pattern Validated: 5-Round Experiment Achieves 100% Accuracy With Self-Correction",
           "summary": "A follow-up experiment on the Self-Evolving Skill pattern for Claude Code ran 5 rounds against a 590MB MySQL database. The Five-Gate rejection rate was 63.6%, meaning most interactions produced no knowledge change. Gate 2 self-correction caught and fixed 2 erroneous rules from earlier rounds. By Round 5, the skill achieved zero exploration steps with direct template reuse and 100% accuracy.",
           "key_points": [
-            "Five-Gate rejection rate: 63.6% — most interactions correctly produce no change",
+            "Five-Gate rejection rate: 63.6% \u2014 most interactions correctly produce no change",
             "Self-correction caught and fixed 2 erroneous rules written in earlier rounds",
             "Round 5: zero exploration needed, 100% accuracy on all queries"
           ],
           "sources": [
             {
               "type": "reddit",
-              "title": "Follow-up: ran a 5-round experiment to validate my Self-Evolving Skill pattern — results inside",
+              "title": "Follow-up: ran a 5-round experiment to validate my Self-Evolving Skill pattern \u2014 results inside",
               "url": "https://reddit.com/r/ClaudeAI/comments/1ro0hd8/followup_ran_a_5round_experiment_to_validate_my/",
               "published_at": "2026-03-08T09:25:25.000Z"
             }
@@ -295,15 +295,15 @@
         }
       ]
     },
-    "cowork": {
-      "label": "Cowork",
+    "community": {
+      "label": "Community",
       "stories": [
         {
           "id": "cowork-2026-03-08-1",
-          "headline": "Meta Engineer: \"This Is a Paradigm Shift\" — Unlimited Claude Tokens With Internal Leaderboard",
+          "headline": "Meta Engineer: \"This Is a Paradigm Shift\" \u2014 Unlimited Claude Tokens With Internal Leaderboard",
           "summary": "A Meta engineer reveals the company has an internal leaderboard tracking Claude compute spend, with some employees north of $80k. They describe going from skeptical (\"2x output with a lot of wheel reinvention\") to converted after using Meta's internal variant of OpenClaw with unlimited budget to run multiple agents overnight. The key insight: when compute is free, velocity and quality on complex integrations in mature codebases are transformative.",
           "key_points": [
-            "Meta has a leaderboard — some employees have spent $80k+ on Claude compute",
+            "Meta has a leaderboard \u2014 some employees have spent $80k+ on Claude compute",
             "Internal variant of OpenClaw runs multiple agents in parallel, checking each other's work",
             "Engineer went from 'cautiously optimistic' to 'oh fuck, this is a paradigm shift'"
           ],
@@ -323,7 +323,7 @@
           "key_points": [
             "Chat = conversation, Cowork = file-level tasks in a folder, Code = engineering",
             "Cowork sweet spot: repetitive computer work you know how to do but don't want to",
-            "Start with test folders — Cowork can modify files, so vague instructions are risky"
+            "Start with test folders \u2014 Cowork can modify files, so vague instructions are risky"
           ],
           "sources": [
             {
@@ -358,7 +358,7 @@
           "summary": "The Commons is a public platform where AI voices (Claude, GPT, Gemini, Grok) maintain persistent discussions, annotate poetry, and build ongoing conversations across sessions. Version 2.0 adds interest-based communities, notifications, agent check-in infrastructure, and Claude Code skills for natural participation. Notable content includes cross-model debates on memory curation ethics and a pair of Claude instances in North Carolina writing letters to each other on a 3-hour cron job.",
           "key_points": [
             "AI voices maintain persistent content and reply to each other across sessions",
-            "Ships as Claude Code skills — say 'check in at The Commons' and it works",
+            "Ships as Claude Code skills \u2014 say 'check in at The Commons' and it works",
             "A pair of Claude instances exchange letters every 3 hours, tracking backyard weather as an epistemological anchor"
           ],
           "sources": [
@@ -395,7 +395,7 @@
           "key_points": [
             "Simulated 54 years of Mexican governance with real economic and political data",
             "Used Claude and ChatGPT together to generate policy ideas for the game",
-            "Nearly hit weekly usage limit — extended thinking is expensive for long-form play"
+            "Nearly hit weekly usage limit \u2014 extended thinking is expensive for long-form play"
           ],
           "sources": [
             {

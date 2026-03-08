@@ -14,6 +14,8 @@ export type Story = {
   key_points?: string[];
   sources: Source[];
   perspectives?: string;
+  author?: { name: string; role: string };
+  actionable_steps?: string[];
 };
 
 export type Tab = {
@@ -21,10 +23,17 @@ export type Tab = {
   stories: Story[];
 };
 
-export type TabKey = "claude_ai" | "claude_code" | "cowork";
+export type TabKey = "claude_ai" | "claude_code" | "community" | "tips";
+
+export const NEWS_TAB_KEYS: readonly (
+  | "claude_ai"
+  | "claude_code"
+  | "community"
+)[] = ["claude_ai", "claude_code", "community"] as const;
 
 export type DailyBriefing = {
   date: string;
   generated_at: string;
+  digest?: string;
   tabs: Record<TabKey, Tab>;
 };
