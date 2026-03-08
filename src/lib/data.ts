@@ -9,7 +9,7 @@ export function getAvailableDates(): string[] {
 
   return fs
     .readdirSync(DATA_DIR)
-    .filter((f) => f.endsWith(".json") && f !== "sample.json")
+    .filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f))
     .map((f) => f.replace(".json", ""))
     .sort()
     .reverse();
