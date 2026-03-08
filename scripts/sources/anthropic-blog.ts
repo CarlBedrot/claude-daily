@@ -1,38 +1,41 @@
 import { RawItem } from "./types";
 
-const ANTHROPIC_RSS_URL = "https://www.anthropic.com/rss.xml";
+const SITEMAP_URL = "https://www.anthropic.com/sitemap.xml";
+
+function slugToTitle(slug: string): string {
+  return slug
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
 
 export async function fetchAnthropicBlog(): Promise<RawItem[]> {
   try {
-    const response = await fetch(ANTHROPIC_RSS_URL);
+    const response = await fetch(SITEMAP_URL, {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (compatible; ClaudeDaily/1.0; +https://github.com/CarlBedrot/claude-daily)",
+      },
+    });
     const xml = await response.text();
 
     const items: RawItem[] = [];
-    const itemRegex = /<item>([\s\S]*?)<\/item>/g;
+    const urlRegex =
+      /<url>\s*<loc>(https:\/\/www\.anthropic\.com\/news\/[^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g;
     let match;
 
-    while ((match = itemRegex.exec(xml)) !== null) {
-      const itemXml = match[1];
-      const title =
-        itemXml.match(/<title><!\[CDATA\[(.*?)\]\]>/)?.[1] ||
-        itemXml.match(/<title>(.*?)<\/title>/)?.[1] ||
-        "";
-      const link = itemXml.match(/<link>(.*?)<\/link>/)?.[1] || "";
-      const description =
-        itemXml.match(/<description><!\[CDATA\[([\s\S]*?)\]\]>/)?.[1] ||
-        itemXml.match(/<description>(.*?)<\/description>/)?.[1] ||
-        "";
-      const pubDate = itemXml.match(/<pubDate>(.*?)<\/pubDate>/)?.[1] || "";
+    while ((match = urlRegex.exec(xml)) !== null) {
+      const url = match[1];
+      const lastmod = match[2];
+      const slug = url.split("/news/")[1];
 
-      if (title && link) {
-        items.push({
-          title: title.trim(),
-          url: link.trim(),
-          content: description.replace(/<[^>]*>/g, "").trim(),
-          source_type: "blog",
-          published_at: new Date(pubDate).toISOString(),
-        });
-      }
+      items.push({
+        title: slugToTitle(slug),
+        url,
+        content: slugToTitle(slug),
+        source_type: "blog",
+        published_at: new Date(lastmod).toISOString(),
+      });
     }
 
     return items;

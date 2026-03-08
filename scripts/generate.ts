@@ -1,5 +1,6 @@
 import { fetchAnthropicBlog } from "./sources/anthropic-blog";
 import { fetchReddit } from "./sources/reddit";
+import { fetchClaudeCodeChangelog } from "./sources/claude-code-changelog";
 import { filterItems } from "./filter";
 import { summarize } from "./summarize";
 import fs from "fs";
@@ -8,16 +9,20 @@ import path from "path";
 async function main() {
   console.log("Fetching sources...");
 
-  const [blogItems, redditItems] = await Promise.all([
+  const [blogItems, redditItems, changelogItems] = await Promise.all([
     fetchAnthropicBlog(),
     fetchReddit(),
+    fetchClaudeCodeChangelog(),
   ]);
 
   console.log(`  Blog: ${blogItems.length} items`);
   console.log(`  Reddit: ${redditItems.length} items`);
-  console.log(`  Total raw: ${blogItems.length + redditItems.length} items`);
+  console.log(`  Changelog: ${changelogItems.length} items`);
+  console.log(
+    `  Total raw: ${blogItems.length + redditItems.length + changelogItems.length} items`,
+  );
 
-  const allItems = [...blogItems, ...redditItems];
+  const allItems = [...blogItems, ...redditItems, ...changelogItems];
   const filtered = filterItems(allItems);
 
   console.log(`  After filtering: ${filtered.length} items`);
