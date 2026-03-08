@@ -9,29 +9,25 @@ const TAB_CONFIG: { key: TabKey; label: string }[] = [
 type TabBarProps = {
   activeTab: TabKey;
   onTabChange: (tab: TabKey) => void;
-  storyCounts: Record<TabKey, number>;
 };
 
-export function TabBar({ activeTab, onTabChange, storyCounts }: TabBarProps) {
+export function TabBar({ activeTab, onTabChange }: TabBarProps) {
   return (
-    <nav className="sticky top-[73px] z-10 bg-cream border-b border-cream-dark">
-      <div className="max-w-3xl mx-auto px-4 flex gap-0">
+    <nav className="sticky top-0 z-10 bg-cream">
+      <div className="max-w-3xl mx-auto px-4 flex gap-6 justify-center">
         {TAB_CONFIG.map(({ key, label }) => (
           <button
             key={key}
             onClick={() => onTabChange(key)}
-            className={`px-4 py-3 text-sm font-medium transition-colors relative ${
+            className={`py-3 text-sm transition-colors relative cursor-pointer ${
               activeTab === key
-                ? "text-claude-orange"
+                ? "font-semibold text-charcoal"
                 : "text-gray-secondary hover:text-charcoal"
             }`}
           >
             {label}
-            <span className="ml-1.5 text-xs text-gray-secondary">
-              {storyCounts[key]}
-            </span>
             {activeTab === key && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-claude-orange" />
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-claude-orange rounded-full" />
             )}
           </button>
         ))}

@@ -18,12 +18,6 @@ export function BriefingView({ briefing, availableDates }: BriefingViewProps) {
 
   const dates = availableDates.length > 0 ? availableDates : [briefing.date];
 
-  const storyCounts: Record<TabKey, number> = {
-    claude_ai: briefing.tabs.claude_ai.stories.length,
-    claude_code: briefing.tabs.claude_code.stories.length,
-    cowork: briefing.tabs.cowork.stories.length,
-  };
-
   const activeStories = briefing.tabs[activeTab].stories;
 
   return (
@@ -33,11 +27,7 @@ export function BriefingView({ briefing, availableDates }: BriefingViewProps) {
         availableDates={dates}
         onDateChange={(date) => router.push(`/?date=${date}`)}
       />
-      <TabBar
-        activeTab={activeTab}
-        onTabChange={setActiveTab}
-        storyCounts={storyCounts}
-      />
+      <TabBar activeTab={activeTab} onTabChange={setActiveTab} />
       <main className="max-w-3xl mx-auto px-4 py-2">
         {activeStories.length === 0 ? (
           <p className="py-12 text-center text-gray-secondary">

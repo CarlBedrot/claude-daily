@@ -9,27 +9,31 @@ export function TopBar({ date, availableDates, onDateChange }: TopBarProps) {
     "en-US",
     {
       weekday: "long",
-      year: "numeric",
       month: "long",
       day: "numeric",
     },
   );
 
   return (
-    <header className="sticky top-0 z-10 bg-cream border-b border-cream-dark">
-      <div className="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold font-serif text-charcoal tracking-tight">
-            Claude Daily
-          </h1>
-          <p className="text-sm text-gray-secondary mt-0.5">
-            Your daily Claude ecosystem briefing
-          </p>
-        </div>
+    <header className="bg-cream">
+      <div className="max-w-3xl mx-auto px-4 pt-6 pb-2 text-center">
+        <h1 className="text-lg font-bold font-serif text-charcoal tracking-tight">
+          Claude Daily
+        </h1>
+        <button
+          onClick={() => {
+            const select = document.getElementById("date-select");
+            if (select) (select as HTMLSelectElement).showPicker();
+          }}
+          className="text-sm text-gray-secondary mt-1 hover:text-claude-orange transition-colors cursor-pointer"
+        >
+          {formattedDate}
+        </button>
         <select
+          id="date-select"
           value={date}
           onChange={(e) => onDateChange(e.target.value)}
-          className="bg-white border border-cream-dark rounded-lg px-3 py-1.5 text-sm text-charcoal cursor-pointer hover:border-claude-orange transition-colors"
+          className="sr-only"
         >
           {availableDates.map((d) => (
             <option key={d} value={d}>
