@@ -15,6 +15,7 @@ async function main() {
 
   console.log(`  Blog: ${blogItems.length} items`);
   console.log(`  Reddit: ${redditItems.length} items`);
+  console.log(`  Total raw: ${blogItems.length + redditItems.length} items`);
 
   const allItems = [...blogItems, ...redditItems];
   const filtered = filterItems(allItems);

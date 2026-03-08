@@ -2,7 +2,7 @@ import { RawItem } from "./sources/types";
 
 export function filterItems(
   items: RawItem[],
-  hoursBack: number = 24,
+  hoursBack: number = 72,
 ): RawItem[] {
   const cutoff = new Date();
   cutoff.setHours(cutoff.getHours() - hoursBack);
