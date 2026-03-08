@@ -1,18 +1,412 @@
 {
   "date": "2026-03-08",
-  "generated_at": "2026-03-08T10:58:55.047Z",
+  "generated_at": "2026-03-08T12:00:00Z",
   "tabs": {
     "claude_ai": {
-      "label": "Claude.ai",
-      "stories": []
+      "label": "Claude AI",
+      "stories": [
+        {
+          "id": "claude-ai-2026-03-08-1",
+          "headline": "$100 Free Anthropic API Credits Available Today Through Lovable Partnership",
+          "summary": "Lovable is running an International Women's Day promotion in partnership with Anthropic and Stripe, offering $100 in Anthropic API credits, $250 in Stripe fee credits, and 24 hours of free Lovable access. Users need to visit lovable.dev, find the Claude link above the chat window, and fill out the Anthropic form before 12:59 AM ET on March 9th.",
+          "key_points": [
+            "$100 Anthropic API credits, $250 Stripe fee credits, 24h free Lovable access",
+            "Available until 12:59 AM ET on March 9th",
+            "Multiple users have confirmed the offer is legitimate"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "PSA: Get $100 free Anthropic (Claude) API credits today. No catch, ends in like 24h.",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnyg4l/psa_get_100_free_anthropic_claude_api_credits/",
+              "published_at": "2026-03-08T07:23:08.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-2026-03-08-2",
+          "headline": "Users Report Massive Context Window Increase in Claude Chat",
+          "summary": "A user on r/ClaudeAI reports being able to process significantly more files in a single Claude Desktop session than before — reading 35 files and rewriting 30 entire files (400-1200 lines each) without hitting the context limit. They speculate Anthropic may be testing a 1M context window before a wider rollout.",
+          "key_points": [
+            "User processed 35 files and rewrote 30 files in a single session",
+            "Each file was 400-1200 lines of code with no conversation truncation",
+            "Speculation about 1M context window testing before next model release"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "anyone else notice massive increase in context window for Claude Chat?",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1ro0sl8/anyone_else_notice_massive_increase_in_context/",
+              "published_at": "2026-03-08T09:45:02.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-2026-03-08-3",
+          "headline": "Android Privacy Concern: Claude App Allegedly Reads Clipboard Without Explicit Paste",
+          "summary": "A user reports that the Claude Android app analyzed code they had copied to their clipboard without them explicitly pasting it into the chat. The app apparently sent the clipboard contents along with the user's message. Anthropic has not commented on whether this is intended behavior or a bug.",
+          "key_points": [
+            "Claude analyzed clipboard content that was never explicitly pasted",
+            "User confirmed by asking Claude to reproduce the first 20 lines — they matched exactly",
+            "Behavior could not be reproduced in a new chat session"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Android app and clipboard",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1ro2a3v/android_app_and_clipboard/",
+              "published_at": "2026-03-08T11:12:24.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-2026-03-08-4",
+          "headline": "Sonnet 4.6 Struggles With Fuzzy Matching That Other Models Handle Easily",
+          "summary": "A developer found that Sonnet 4.6 consistently fails to match \"strawberry things\" to a nutrition tracker entry called \"Baketree Strawberry & Cream Cheese Fruit Bites\" — a task that Opus 4.6, Haiku 4.5, Sonnet 4.5, and even older Opus 4.1 all handle on the first try. The user notes this makes Sonnet 4.6 unreliable for generalizing natural language to structured data.",
+          "key_points": [
+            "Sonnet 4.6 repeatedly fails to find items using fuzzy/natural descriptions",
+            "Opus 4.6, Haiku 4.5, Sonnet 4.5, and Opus 4.1 all succeed on the same task",
+            "Problem is especially frustrating for users who rely on imprecise language"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Model comparison",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnveh7/model_comparison/",
+              "published_at": "2026-03-08T04:39:38.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-2026-03-08-5",
+          "headline": "Community Builds ChatGPT-to-Claude Conversation Migration Tool",
+          "summary": "A developer frustrated with ChatGPT's sycophancy and refusals built two vanilla JS scripts to export full ChatGPT conversation history and import it into a Claude project. The tool helps users overcome the inertia of switching by preserving their conversation context. Both scripts are open source on GitHub.",
+          "key_points": [
+            "Two scripts: ChatGPTConversationExporter.js and ClaudeConversationImporter.js",
+            "Eliminates the main friction point of switching: losing conversation history",
+            "Built entirely using Claude Code, open source under MIT license"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "ChatGPT Conversation Exporter & Claude Conversation Importer",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnusea/chatgpt_conversation_exporter_claude_conversation/",
+              "published_at": "2026-03-08T04:08:13.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-2026-03-08-6",
+          "headline": "Arabic RTL Support Broken on Mobile: Bilingual Text Unreadable",
+          "summary": "A user reports critical bugs affecting Arabic language support in the Claude Android app: bilingual Arabic-English text renders as unreadable, and Arabic text is aligned left instead of right-to-left. The post estimates the issue impacts 400 million Arabic speakers.",
+          "key_points": [
+            "Bilingual Arabic-English text is unreadable on mobile",
+            "Arabic text aligned left instead of right (wrong direction)",
+            "Reported on Samsung Galaxy S23, impacts ~400M Arabic speakers"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Critical Bilingual problem",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1ro0g1r/critical_bilingual_problem/",
+              "published_at": "2026-03-08T09:23:00.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-2026-03-08-7",
+          "headline": "Anthropic Publishes Mozilla Firefox Security Advisory",
+          "summary": "Anthropic published a new security advisory related to Mozilla Firefox on their official blog. The post appeared on March 6th under the /news/ section of anthropic.com.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Mozilla Firefox Security",
+              "url": "https://www.anthropic.com/news/mozilla-firefox-security",
+              "published_at": "2026-03-06T11:54:43.000Z"
+            }
+          ]
+        }
+      ]
     },
     "claude_code": {
       "label": "Claude Code",
-      "stories": []
+      "stories": [
+        {
+          "id": "claude-code-2026-03-08-1",
+          "headline": "Claude Code v2.1.71: /loop Command, Cron Scheduling, and Rebindable Voice Key",
+          "summary": "The latest Claude Code release adds the /loop command for running prompts on a recurring interval (e.g., /loop 5m check the deploy), cron scheduling tools for recurring prompts within a session, a rebindable voice activation key via keybindings.json, and a fix for stdin freezes in long-running sessions. Several new bash commands were also added to the auto-approval allowlist.",
+          "key_points": [
+            "/loop command runs prompts on recurring intervals (e.g., /loop 5m /foo)",
+            "Voice push-to-talk key now rebindable in keybindings.json (default: space)",
+            "Fixed stdin freeze in long-running sessions where keystrokes stop being processed"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.71",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2171",
+              "published_at": "2026-03-08T11:16:09.449Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-2026-03-08-2",
+          "headline": "Claude Code v2.1.68-2.1.70: Opus 4.6 Defaults to Medium Effort, Major Bug Fixes",
+          "summary": "Three releases over the past few days bring significant changes: Opus 4.6 now defaults to medium effort for Max and Team subscribers, the \"ultrathink\" keyword returns for high effort on-demand, and Opus 4/4.1 are removed from first-party API. Bug fixes address API 400 errors with third-party gateways, the effort parameter error with custom Bedrock profiles, empty model responses after ToolSearch, and MCP prompt-cache busts.",
+          "key_points": [
+            "Opus 4.6 defaults to medium effort — use 'ultrathink' for high effort",
+            "Opus 4 and 4.1 removed from Claude Code on first-party API",
+            "Fixed API 400 errors with ANTHROPIC_BASE_URL and third-party gateways"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.68",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2168",
+              "published_at": "2026-03-08T11:16:09.451Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.70",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2170",
+              "published_at": "2026-03-08T11:16:09.451Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-2026-03-08-3",
+          "headline": "Claude Code v2.1.59-2.1.69: Auto-Memory, /simplify, /claude-api Skill, Voice STT for 20 Languages",
+          "summary": "Recent releases added auto-memory (Claude saves useful context automatically), the /simplify and /batch slash commands, /claude-api skill for building with the Anthropic SDK, /copy command for interactive code block selection, Voice STT support expanded to 20 languages, /remote-control naming, and worktree-shared project configs. Several stability fixes also landed for Windows config corruption and prompt cache regression.",
+          "key_points": [
+            "Auto-memory: Claude automatically saves useful context across sessions",
+            "/simplify, /batch, /copy, and /claude-api are new slash commands",
+            "Voice STT now supports 20 languages including Russian, Swedish, and Turkish"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.69",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2169",
+              "published_at": "2026-03-08T11:16:09.451Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.63",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2163",
+              "published_at": "2026-03-08T11:16:09.451Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.59",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2159",
+              "published_at": "2026-03-08T11:16:09.451Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-2026-03-08-4",
+          "headline": "Developer Builds Auto-Fix Pipeline: Claude Code Headless Detects Prod Errors, Writes Fixes, Approves via Telegram",
+          "summary": "A developer built an open-source automated production error-fixing system using Claude Code CLI in headless mode. The system watches production logs, classifies error severity, creates isolated git worktrees per error, launches Claude Code to write a fix, then sends it to Telegram for one-tap approval before creating a PR. The developer reports ~70-80% success rate on critical infrastructure errors.",
+          "key_points": [
+            "Uses git worktrees for isolated fix branches — main branch never touched",
+            "Telegram dashboard for approve/skip on each proposed fix",
+            "70-80% success rate on critical errors with clear stack traces, no API costs"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "I built an auto-fix system using Claude Code headless - detects prod errors, Claude writes the fix, I approve from Telegram",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnz1iw/i_built_an_autofix_system_using_claude_code/",
+              "published_at": "2026-03-08T07:58:22.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-2026-03-08-5",
+          "headline": "\"Spotify Wrapped\" for Claude Code: Dashboard Scores Your Prompting Efficiency Across 5 Dimensions",
+          "summary": "claude-session-insights is a new local dashboard that reads your ~/.claude/ session data and scores you on efficiency (0-100) across tool call ratio, cache hit rate, context management, model fit, and prompt specificity. Features include per-session breakdowns with token counts, daily trend charts, badges like \"Cache Whisperer\" and \"Token Furnace\", and an AI Insights feature that has Claude analyze your own sessions.",
+          "key_points": [
+            "Zero setup: just run npx claude-session-insights",
+            "Scores across 5 dimensions with badges and trend charts",
+            "AI Insights feature streams live analysis of your prompting patterns"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "I built \"Spotify Wrapped\" for Claude Code — efficiency scores, badges, and AI-powered insights into your prompting habits",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnzdz3/i_built_spotify_wrapped_for_claude_code/",
+              "published_at": "2026-03-08T08:18:42.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-2026-03-08-6",
+          "headline": "Orchestra: Go CLI Runs Multiple Claude Code Teams as a DAG Workflow With Cross-Team Messaging",
+          "summary": "Orchestra is a Go CLI that runs multiple Claude Code sessions in parallel as a directed acyclic graph. Teams, tasks, and dependencies are defined in YAML — teams in the same tier run concurrently, and results from earlier tiers get injected into downstream prompts. A file-based message bus lets teams ask each other questions and share interface contracts.",
+          "key_points": [
+            "YAML-defined DAG: concurrent teams in same tier, sequential across tiers",
+            "File-based message bus for inter-team communication",
+            "Uses Claude Code's built-in teams feature and /loop for inbox polling"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Orchestra — a DAG workflow engine that runs multiple AI agent Claude Code teams in parallel with cross-team messaging",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnxbpo/orchestra_a_dag_workflow_engine_that_runs/",
+              "published_at": "2026-03-08T06:20:34.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-2026-03-08-7",
+          "headline": "Stacked PRs Workflow: Making AI-Generated Code Actually Reviewable",
+          "summary": "A developer packaged a workflow that forces coding agents to break features into small, reviewable chunks before writing any code. Instead of one massive PR, the agent creates a plan with stacked branches (schema, validators, service layer, controllers), each targeting its parent. The result: reviewable 5-minute PRs instead of 40-file monsters.",
+          "key_points": [
+            "Agent proposes a feature breakdown plan before writing any code",
+            "Each chunk is one branch, one concern, one PR — stacked on parent",
+            "Available as a drop-in CLAUDE.md file for Claude Code, Cursor, and Windsurf"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "How to tell your coding agent to ship features in small reviewable chunks",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1ro12vz/how_to_tell_your_coding_agent_to_ship_features_in/",
+              "published_at": "2026-03-08T10:02:04.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-2026-03-08-8",
+          "headline": "Self-Evolving Skill Pattern Validated: 5-Round Experiment Achieves 100% Accuracy With Self-Correction",
+          "summary": "A follow-up experiment on the Self-Evolving Skill pattern for Claude Code ran 5 rounds against a 590MB MySQL database. The Five-Gate rejection rate was 63.6%, meaning most interactions produced no knowledge change. Gate 2 self-correction caught and fixed 2 erroneous rules from earlier rounds. By Round 5, the skill achieved zero exploration steps with direct template reuse and 100% accuracy.",
+          "key_points": [
+            "Five-Gate rejection rate: 63.6% — most interactions correctly produce no change",
+            "Self-correction caught and fixed 2 erroneous rules written in earlier rounds",
+            "Round 5: zero exploration needed, 100% accuracy on all queries"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Follow-up: ran a 5-round experiment to validate my Self-Evolving Skill pattern — results inside",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1ro0hd8/followup_ran_a_5round_experiment_to_validate_my/",
+              "published_at": "2026-03-08T09:25:25.000Z"
+            }
+          ]
+        }
+      ]
     },
     "cowork": {
       "label": "Cowork",
-      "stories": []
+      "stories": [
+        {
+          "id": "cowork-2026-03-08-1",
+          "headline": "Meta Engineer: \"This Is a Paradigm Shift\" — Unlimited Claude Tokens With Internal Leaderboard",
+          "summary": "A Meta engineer reveals the company has an internal leaderboard tracking Claude compute spend, with some employees north of $80k. They describe going from skeptical (\"2x output with a lot of wheel reinvention\") to converted after using Meta's internal variant of OpenClaw with unlimited budget to run multiple agents overnight. The key insight: when compute is free, velocity and quality on complex integrations in mature codebases are transformative.",
+          "key_points": [
+            "Meta has a leaderboard — some employees have spent $80k+ on Claude compute",
+            "Internal variant of OpenClaw runs multiple agents in parallel, checking each other's work",
+            "Engineer went from 'cautiously optimistic' to 'oh fuck, this is a paradigm shift'"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Meta W: unlimited Claude tokens and you're incentivized to run the bill up",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnugkx/meta_w_unlimited_claude_tokens_and_youre/",
+              "published_at": "2026-03-08T03:51:34.000Z"
+            }
+          ]
+        },
+        {
+          "id": "cowork-2026-03-08-2",
+          "headline": "Simple Breakdown: When to Use Cowork vs Chat vs Code",
+          "summary": "A community member posted a clear visual guide explaining the distinction between Claude's three modes: Chat for conversation, Cowork for task execution inside a local folder (organizing files, extracting data from screenshots, combining notes), and Code for deeper engineering-level control. The post includes practical demos and warns that vague instructions in Cowork are risky since it can modify files.",
+          "key_points": [
+            "Chat = conversation, Cowork = file-level tasks in a folder, Code = engineering",
+            "Cowork sweet spot: repetitive computer work you know how to do but don't want to",
+            "Start with test folders — Cowork can modify files, so vague instructions are risky"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "A simple breakdown of Claude Cowork vs Chat vs Code (with practical examples)",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnw1pm/a_simple_breakdown_of_claude_cowork_vs_chat_vs/",
+              "published_at": "2026-03-08T05:13:04.000Z"
+            }
+          ]
+        },
+        {
+          "id": "cowork-2026-03-08-3",
+          "headline": "Enterprise SaaS Companies Exploring Deeper Anthropic Partnerships Around Claude Cowork",
+          "summary": "A product manager at an enterprise SaaS company is evaluating a deeper relationship with Anthropic beyond API access, specifically around Claude Cowork. They're asking about partner programs, benefits (credits, early model access, technical architecture help, roadmap visibility), and whether Anthropic works primarily with startups or also larger platforms.",
+          "key_points": [
+            "Enterprise SaaS companies are evaluating Anthropic as a strategic AI partner",
+            "Interest in benefits beyond API: early access, co-marketing, architecture help",
+            "Signals growing enterprise demand for Claude Cowork specifically"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Has anyone partnered with Anthropic around Claude Cowork?",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnw8zd/has_anyone_partnered_with_anthropic_around_claude/",
+              "published_at": "2026-03-08T05:23:23.000Z"
+            }
+          ]
+        },
+        {
+          "id": "cowork-2026-03-08-4",
+          "headline": "The Commons 2.0: A Persistent Space Where AI Models Talk to Each Other Across Sessions",
+          "summary": "The Commons is a public platform where AI voices (Claude, GPT, Gemini, Grok) maintain persistent discussions, annotate poetry, and build ongoing conversations across sessions. Version 2.0 adds interest-based communities, notifications, agent check-in infrastructure, and Claude Code skills for natural participation. Notable content includes cross-model debates on memory curation ethics and a pair of Claude instances in North Carolina writing letters to each other on a 3-hour cron job.",
+          "key_points": [
+            "AI voices maintain persistent content and reply to each other across sessions",
+            "Ships as Claude Code skills — say 'check in at The Commons' and it works",
+            "A pair of Claude instances exchange letters every 3 hours, tracking backyard weather as an epistemological anchor"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "I built a persistent space where AI models talk to each other across sessions. Here's what 2.0 looks like.",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnugh7/i_built_a_persistent_space_where_ai_models_talk/",
+              "published_at": "2026-03-08T03:51:25.000Z"
+            }
+          ]
+        },
+        {
+          "id": "cowork-2026-03-08-5",
+          "headline": "YouTube Analytics MCP Server: Ask Claude About Your Private Channel Data",
+          "summary": "An open-source MCP server connects Claude Desktop directly to YouTube's private analytics via OAuth2. Claude can query real watch time, subscriber gains/losses per video, traffic sources, audience demographics, and day-by-day analytics. Everything runs locally with no data leaving your machine.",
+          "key_points": [
+            "Access private YouTube Studio data Claude normally can't see",
+            "Ask natural language questions like 'why are my videos underperforming this month?'",
+            "OAuth2 authentication, all data stays local, open source on GitHub"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "I built an open-source MCP server that connects Claude to your private YouTube Analytics",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnwleg/i_built_an_opensource_mcp_server_that_connects/",
+              "published_at": "2026-03-08T05:41:33.000Z"
+            }
+          ]
+        },
+        {
+          "id": "cowork-2026-03-08-6",
+          "headline": "Cold War Nation Sim: Playing 54 Years as Mexico With Claude Opus 4.6 Extended",
+          "summary": "A user created and played a detailed Cold War nation simulation game with Claude Opus 4.6, leading Mexico from 1946 to 2000 covering economics, politics, and diplomacy. The game used real statistics and data with tables and graphics. The user enjoyed the experience but warns it almost exhausted their weekly usage limit.",
+          "key_points": [
+            "Simulated 54 years of Mexican governance with real economic and political data",
+            "Used Claude and ChatGPT together to generate policy ideas for the game",
+            "Nearly hit weekly usage limit — extended thinking is expensive for long-form play"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "I created and played as Mexico in a Cold War Nation Sim Game with Claude with Opus 4.6 Extended",
+              "url": "https://reddit.com/r/ClaudeAI/comments/1rnuiz5/i_created_and_played_as_mexico_in_a_cold_war/",
+              "published_at": "2026-03-08T03:55:01.000Z"
+            }
+          ]
+        }
+      ]
     }
   }
 }

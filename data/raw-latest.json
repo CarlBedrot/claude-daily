@@ -1,0 +1,439 @@
+{
+  "fetched_at": "2026-03-08T11:16:12.333Z",
+  "counts": {
+    "blog": 192,
+    "reddit": 43,
+    "changelog": 10,
+    "after_filter": 55
+  },
+  "items": [
+    {
+      "title": "Claude Code v2.1.70",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2170",
+      "content": "Fixed API 400 errors when using `ANTHROPIC_BASE_URL` with a third-party gateway — tool search now correctly detects proxy endpoints and disables `tool_reference` blocks. Fixed `API Error: 400 This model does not support the effort parameter` when using custom Bedrock inference profiles or other model identifiers not matching standard Claude naming patterns. Fixed empty model responses immediately after `ToolSearch` — the server renders tool schemas with system-prompt-style tags at the prompt tail, which could confuse models into stopping early. Fixed prompt-cache bust when an MCP server with `instructions` connects after the first turn. Fixed Enter inserting a newline instead of submitting when typing over a slow SSH connection",
+      "source_type": "blog",
+      "published_at": "2026-03-08T11:16:09.451Z"
+    },
+    {
+      "title": "Claude Code v2.1.69",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2169",
+      "content": "Added the `/claude-api` skill for building applications with the Claude API and Anthropic SDK. Added Ctrl+U on an empty bash prompt (`!`) to exit bash mode, matching `escape` and `backspace`. Added numeric keypad support for selecting options in Claude's interview questions (previously only the number row above QWERTY worked). Added optional name argument to `/remote-control` and `claude remote-control` (`/remote-control My Project` or `--name \"My Project\"`) to set a custom session title visible in claude.ai/code. Added Voice STT support for 10 new languages (20 total) — Russian, Polish, Turkish, Dutch, Ukrainian, Greek, Czech, Danish, Swedish, Norwegian",
+      "source_type": "blog",
+      "published_at": "2026-03-08T11:16:09.451Z"
+    },
+    {
+      "title": "Claude Code v2.1.68",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2168",
+      "content": "Opus 4.6 now defaults to medium effort for Max and Team subscribers. Medium effort works well for most tasks — it's the sweet spot between speed and thoroughness. You can change this anytime with `/model`. Re-introduced the \"ultrathink\" keyword to enable high effort for the next turn. Removed Opus 4 and 4.1 from Claude Code on the first-party API — users with these models pinned are automatically moved to Opus 4.6",
+      "source_type": "blog",
+      "published_at": "2026-03-08T11:16:09.451Z"
+    },
+    {
+      "title": "Claude Code v2.1.66",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2166",
+      "content": "Reduced spurious error logging",
+      "source_type": "blog",
+      "published_at": "2026-03-08T11:16:09.451Z"
+    },
+    {
+      "title": "Claude Code v2.1.63",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2163",
+      "content": "Added `/simplify` and `/batch` bundled slash commands. Fixed local slash command output like /cost appearing as user-sent messages instead of system messages in the UI. Project configs & auto memory now shared across git worktrees of the same repository. Added `ENABLE_CLAUDEAI_MCP_SERVERS=false` env var to opt out from making claude.ai MCP servers available. Improved `/model` command to show the currently active model in the slash command menu",
+      "source_type": "blog",
+      "published_at": "2026-03-08T11:16:09.451Z"
+    },
+    {
+      "title": "Claude Code v2.1.62",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2162",
+      "content": "Fixed prompt suggestion cache regression that reduced cache hit rates",
+      "source_type": "blog",
+      "published_at": "2026-03-08T11:16:09.451Z"
+    },
+    {
+      "title": "Claude Code v2.1.61",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2161",
+      "content": "Fixed concurrent writes corrupting config file on Windows",
+      "source_type": "blog",
+      "published_at": "2026-03-08T11:16:09.451Z"
+    },
+    {
+      "title": "Claude Code v2.1.59",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2159",
+      "content": "Claude automatically saves useful context to auto-memory. Manage with /memory. Added `/copy` command to show an interactive picker when code blocks are present, allowing selection of individual code blocks or the full response.. Improved \"always allow\" prefix suggestions for compound bash commands (e.g. `cd /tmp && git fetch && git push`) to compute smarter per-subcommand prefixes instead of treating the whole command as one. Improved ordering of short task lists. Improved memory usage in multi-agent sessions by releasing completed subagent task state",
+      "source_type": "blog",
+      "published_at": "2026-03-08T11:16:09.451Z"
+    },
+    {
+      "title": "Claude Code v2.1.58",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2158",
+      "content": "Expand Remote Control to more users",
+      "source_type": "blog",
+      "published_at": "2026-03-08T11:16:09.451Z"
+    },
+    {
+      "title": "Claude Code v2.1.71",
+      "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2171",
+      "content": "Added `/loop` command to run a prompt or slash command on a recurring interval (e.g. `/loop 5m check the deploy`). Added cron scheduling tools for recurring prompts within a session. Added `voice:pushToTalk` keybinding to make the voice activation key rebindable in `keybindings.json` (default: space) — modifier+letter combos like `meta+k` have zero typing interference. Added `fmt`, `comm`, `cmp`, `numfmt`, `expr`, `test`, `printf`, `getconf`, `seq`, `tsort`, and `pr` to the bash auto-approval allowlist. Fixed stdin freeze in long-running sessions where keystrokes stop being processed but the process stays alive",
+      "source_type": "blog",
+      "published_at": "2026-03-08T11:16:09.449Z"
+    },
+    {
+      "title": "Android app and clipboard",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro2a3v/android_app_and_clipboard/",
+      "content": "Hi everyone, something strange just happened. I'd like to know if this is normal behavior and if it has already happened to any of you.\nI was browsing on my Android phone and copied a block of code to have Claude analyze it. I started a new chat in the Claude app and asked it to review the code, but I forgot to paste the clipboard content into the chat before sending the request. And Claude proceeded to analyze the entire code block anyway.\nThis means the Claude Android app read my clipboard without me explicitly pasting it, and silently sent its content along with my message.\nTo confirm this, I asked Claude what the filename was in its memory, and it replied that the file was stored as pasted_text_b4a56202-3d12-43c8-aa31-a39367a9a354.txt in its uploads directory. \nI thought it was hallucinating, so I asked it to rewrite the first 20 lines of the code and they matched exactly the original code I had copied to my clipboard.\n\nI'm trying to recreate the behavior in a new chat but this time it says he can't read any code until I upload it.\nI'm sure I didn't upload anything in the first chat, and there's no code in my original request or as an attachment.\n\nI'm not sure if this is an intentional feature or a bug, but it feels like a significant privacy concern. An app should not be reading clipboard content without explicit user action..",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T11:12:24.000Z",
+      "score": 1
+    },
+    {
+      "title": "hit my weekly limit in a short period of time - need help with managing",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro29zb/hit_my_weekly_limit_in_a_short_period_of_time/",
+      "content": "I am writing a book. I am writing about different places. Every place consists of the same: the history of the place, and a few other items.\n\nI go through old documents, and screen dump the important stuff of the place during the history of time. \n\nI then upload this word document to Claude. Claude then OCR this word doc and write a story about this place, based on my original. This story is about 6-9 word pages per place.\n\nBut, I reach the weekly in just a few days on my pro subscription. How do I use Claude more efficiently, and manage the subscription better?\n\nPlease help! ",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T11:12:14.000Z",
+      "score": 1
+    },
+    {
+      "title": "I built and tested an MCP server in Claude Desktop — sharing my setup",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro29d3/i_built_and_tested_an_mcp_server_in_claude/",
+      "content": "I've been experimenting with MCP servers recently and finally got one working properly inside Claude Desktop.\n\nThe interesting part for me wasn't just exposing tools to Claude, but figuring out how to structure the architecture around it.\n\nMy current setup looks something like this:\n\n**User**\n\n↓\n\n**Claude Desktop**\n\n↓\n\n**MCP Server**\n\n↓\n\n**Tools / APIs**\n\nOnce MCP is running, Claude can call tools directly through the server.\n\nA few things I learned while setting it up:\n\n• tool schemas matter a lot for reliability\n\n• simple tools work better than overly complex ones\n\n• debugging MCP calls is easier if the server logs requests clearly\n\nOne limitation I noticed though is that even with MCP tools, the context still lives inside the model session.\n\nSo if you run multiple agents or models, the reasoning state isn't shared.\n\nI'm now experimenting with architectures where the memory layer sits outside the model and agents interact with MCP tools through an orchestrator.\n\nCurious what MCP servers others here are building and how you're structuring them.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T11:11:10.000Z",
+      "score": 1
+    },
+    {
+      "title": "I vibe coded a +EV/ARB Betting App with around $18 in premium credits",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro290o/i_vibe_coded_a_evarb_betting_app_with_around_18/",
+      "content": "I was using Claude Opus 4.6 and fed in a series of prompts and refinements to create an app that looked for +EV/Arb betting opportunities in US based sports markets.\n\nWhile deploying the app I ran into a number of snags and used up way more tokens and requests than I should have for an easy fix.\n\nEither way, to go from idea to usable product in a few hours was simply amazing.\n\nYou can check it out here: https://worthster.com",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T11:10:35.000Z",
+      "score": 1
+    },
+    {
+      "title": "How to tell your coding agent to ship features in small reviewable chunks",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro12vz/how_to_tell_your_coding_agent_to_ship_features_in/",
+      "content": "[PR review meme](https://preview.redd.it/xywtx32djsng1.png?width=600&amp;format=png&amp;auto=webp&amp;s=d9891bd885cab42b4d11038f8b901ef7beddd66d)\n\n  \nWe are able to ship faster than ever using coding agents. The speed at which it generates code is great - what used to take 3 days now only takes an afternoon.\n\nBut now the bottleneck is in reviewing this AI-generated code.\n\nSome of the issues I see in reviewing AI-generated code are:\n\n* Large diffs touching many files, making intent hard to follow\n* Code that looks plausible, but tedious to verify\n* Duplicate patterns quietly appearing across files, especially in large codebases\n* Premature optimizations hurting readability\n* Having to reverse-engineer the intent/reasoning behind the implementation\n\n  \nSo to mitigate this, I came up with a workflow that's been working well for me so far.\n\n  \nThe crux is, instead of letting the agent charge ahead and dump everything into one single PR, you make the agent propose how to break the feature into **reviewable chunks before even writing a single line of code.**\n\n  \nThe flow:  \nFor eg: If you want to add a new FastAPI REST endpoint:  \nThe agent comes up with a plan (feature breakdown) which can look something like this:\n\n**Plan:**\n\n|Order|Branch|Contains|\n|:-|:-|:-|\n|1|feat/db-schema|Schema + migrations only|\n|2|feat/validators|Request/response pydantic schemas|\n|3|feat/service-layer|Business logic only|\n|4|feat/controller|HTTP Route handlers only|\n\n**Branch Hierarchy and target branch:**  \nPR1: feat/db-schema → main  \nPR2: feat/validators → feat/db-schema  \nPR3: feat/service-layer → feat/validators  \nPR4: feat/controller → feat/service-layer\n\nYou then review this plan, request changes(if necessary) and approve it.  \n  \nThis plan gets written to a `FEATURE_PLAN.md` in the repo - so it doesn't drift mid-session and forget what we agreed on.\n\nThen it executes one chunk at a time (one branch, one concern, one PR). Each one stacked on top of its parent chunk and targeting its immediate parent (not the main/master branch).\n\n  \n**And the result?**\n\nInstead of one 40-file monster, your reviewer gets:\n\n* PR 1: just the DB schema and migration files. 5 minutes.\n* PR 2: just the request/response validators. 5 minutes.\n* PR 3: just the service layer. 5 minutes.\n\n**Merging the PRs:**  \nPR merging happens in the same order they were created:  \nIn our example, the `feat/db-schema`' PR gets merged first (since it targets `main` branch), then `feat/validators`, then `feat/service`, and so on.\n\nThis workflow now exhibits a clean narrative the way it should have been all along!\n\nIf you want to give this workflow a try, I have packaged it as a ready-to-drop CLAUDE/AGENTS md file that works with Claude Code, Cursor, Windsurf, Copilot, and more.\n\nDrop it in your repo root, and your agent follows this workflow from the next feature onwards.\n\n# [GIthub repo link](https://github.com/abhilash-m96/agentic-coding-workflow)\n\n# [Link to medium article with in-detail explanation](https://medium.com/@abhilash_m/your-ai-coding-agent-is-a-100x-developer-but-your-code-review-process-isnt-87f09e82fc73)",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T10:02:04.000Z",
+      "score": 1
+    },
+    {
+      "title": "Made a Claud dis-track to OpenAI",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro10dw/made_a_claud_distrack_to_openai/",
+      "content": "https://suno.com/s/til8hhro4wvtqGQ0",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T09:58:12.000Z",
+      "score": 2
+    },
+    {
+      "title": "Is there a web version of Claude Code besides the official one?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro0wtu/is_there_a_web_version_of_claude_code_besides_the/",
+      "content": "Hey everyone! I know about the official Claude Code for web (claude.ai/code), but I'm wondering if there are any third-party or community-built web interfaces for Claude Code out there?\n\nSpecifically looking for:\n- Any web-based IDEs or tools that integrate Claude Code\n- Open source projects that wrap Claude Code in a web UI\n- Alternatives that offer similar coding assistant features in the browser\n\nWould love to hear if anyone has come across something like this. Thanks!",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T09:52:10.000Z",
+      "score": 1
+    },
+    {
+      "title": "i love Claude",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro0u2p/i_love_claude/",
+      "content": "2-3 days ago, i found out i could have inattentive ADHD. i have exams from tomorrow for a week and once i'm done i will go get as assessment done. however, i was struggling to start studying (i have diagnosed depression). \ni study using AI tools as the books are extremely expensive and we will be needing new books every semester. my professors love the content i gather from Claude. so in general i have shifted from cgpt to Claude a while ago for academics. \nClaude gave me a big response when i asked for notes and honestly i struggled to start. when i told it about my stuff, it not only made things shorter, but also retained every single part of the the syllabus without compromising quality. that's not something i have seen happen in any other AI tool yet. i'm not sure if my experience is factual but it felt so relieving as i was overwhelmed before that. i just wanted to share this ",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T09:47:37.000Z",
+      "score": 8
+    },
+    {
+      "title": "anyone else notice massive increase in context window for Claude Chat?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro0sl8/anyone_else_notice_massive_increase_in_context/",
+      "content": "i just started doing a major refactor and i added 20 files to the chat to kick it off. (mac desktop app)\n\nwe brainstormed, then started completely rewriting files one at a time... i then proceeded to add another 15 files one by one! in total it read about 35 files and re-wrote 30 entire files.\n\neach one was about 400-1200 lines of code.\n\npreviously, i'd have been capped a third of the way...\n\nbut it just kept on going!\n\ni wonder if they're testing out a 1m context window on normal users before rolling it out as a baseline feature with the next model release? anyone else noticing huge jumps in context and claude not ending the conversation due to being maxed out?\n\nEDIT: i'm on the mac desktop app and have code execution turned off... there is zero compaction happening.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T09:45:02.000Z",
+      "score": 2
+    },
+    {
+      "title": "Can two people share a Claude account for Claude Code simultaneously?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro0qw7/can_two_people_share_a_claude_account_for_claude/",
+      "content": "We want to subscribe to **Claude Max ($200)** and share one account with a friend to get more usage than two individual Claude Max ($100) plans. Before we pull the trigger, we have a few questions about how this works in practice:\n\n1. ​**Anthropic Policy &amp; Account Sharing:** Does Anthropic’s policy explicitly permit or forbid two different people from accessing the same Max account? Has anyone had their account flagged or suspended for sharing credentials or logging in from two geographically different IP addresses consistently?\n2. ​**Simultaneous Sessions:** Does Claude Code actually work on two devices at the same time? If Dev A is running a complex refactor, can Dev B start a separate session on their own machine without interrupting Dev A?",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T09:42:09.000Z",
+      "score": 1
+    },
+    {
+      "title": "Anyone else struggling with this or have fix to this?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro0p1z/anyone_else_struggling_with_this_or_have_fix_to/",
+      "content": "https://preview.redd.it/o52tuof8ksng1.png?width=1326&amp;format=png&amp;auto=webp&amp;s=c05c50281f35b3aece48330bb30e8e204902a61b\n\nAPI Error: Claude Code is unable to respond to this request, which appears to violate our Usage Policy (https://www.anthropic.com/legal/aup). Try rephrasing the request or attempting a different approach. If you are seeing this refusal repeatedly, try running /model claude-sonnet-4-20250514 to switch models.\n\nbtw switching to sonnet didn't help.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T09:38:57.000Z",
+      "score": 1
+    },
+    {
+      "title": "Follow-up: ran a 5-round experiment to validate my Self-Evolving Skill pattern — results inside",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro0hd8/followup_ran_a_5round_experiment_to_validate_my/",
+      "content": "https://preview.redd.it/g3pqbou1isng1.png?width=905&amp;format=png&amp;auto=webp&amp;s=31b3c5f0882d687fc63407e66e6f25b0939a0d8a\n\nLast week I shared the Self-Evolving Skill design pattern for Claude Code. This week I ran a real experiment to see if it actually works.\n\nDatabase: MySQL, 29 tables, 590MB (smart building management system)\n\nRounds: 5 (structure exploration → data queries → rule discovery → complex investigation → repeat verification)\n\nKey results:\n\n\\- Five-Gate rejection rate: 63.6% — most interactions produce no knowledge change\n\n\\- Incremental convergence: +75 → +46 → +12 → +21 → +1\n\n\\- Gate 2 self-correction: caught and fixed 2 erroneous rules the Skill had written in earlier rounds\n\n\\- Round 5: zero exploration steps, direct template reuse\n\n\\- Accuracy: 100% (no incorrect knowledge survived)\n\nUnexpected finding: tool usage pitfalls were captured as a high-value byproduct — things I didn't design for but the Five Gates caught anyway.\n\nA second experiment on a larger telecom billing database is in progress.\n\nFull data with per-round diffable snapshots:\n\n[https://github.com/191341025/Self-Evolving-Skill](https://github.com/191341025/Self-Evolving-Skill)",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T09:25:25.000Z",
+      "score": 2
+    },
+    {
+      "title": "Critical Bilingual problem",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro0g1r/critical_bilingual_problem/",
+      "content": "@AnthropicAI Critical bugs\nin Claude for Arabic users:\nBUG 1: Bilingual Arabic-English\ntext = unreadable on mobile\nBUG 2: Arabic text aligned LEFT\ninstead of RIGHT (wrong direction)\nDevice: Samsung Galaxy S23\nImpact: 400M Arabic speakers\nPlease prioritize fixing RTL\nlanguage support.\nScreenshots attached.\n#ClaudeAI #Accessibility\n#Arabic #RTL",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T09:23:00.000Z",
+      "score": 1
+    },
+    {
+      "title": "How we manage Claude Code work with plans and reports (224 plans, 248 reports so far)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro08cr/how_we_manage_claude_code_work_with_plans_and/",
+      "content": "AI agents can write code fast now.  \nBut when you start using them in real projects, a few practical questions appear:\n\n* Which plan did this change come from?\n* Where do we find the root cause when something breaks?\n* Is there any real evidence beyond “it worked”?\n\nTo solve this, I built **AgentTeams** — a lightweight governance layer on top of Claude Code.\n\nThis is how we actually use it.\n\n**1. Register a plan before starting work**  \nClaude Code registers the plan through the CLI.\n\n**2. When the task finishes, a completion report is generated automatically**  \nEach report includes:\n\n* number of modified files\n* execution time\n* quality score\n\n**3. If something goes wrong, we write a postmortem**  \nThe postmortem is linked to the original plan.\n\n**Real numbers (2 projects, \\~4 months)**\n\n* 224 plans completed\n* 248 completion reports\n* average quality score: **95+**\n\nExample:\n\nJWT authentication migration\n\n* 61 files changed\n* 2m 32s execution time\n* quality score: **100**\n\nInterestingly, **AgentTeams itself is also built using AgentTeams.**\n\nSo far we have:\n\n* 181 plans\n* 192 reports\n\nall tracked by the tool itself.\n\nScreenshots below.\n\nThe beta is currently open and free to try, and I’d really like feedback from people who use **Claude Code** for real projects.  \nTrying to validate whether this is useful for **individual developers or teams managing AI-generated work.**\n\nLink:  \n[agentteams.run](http://agentteams.run)",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T09:09:51.000Z",
+      "score": 1
+    },
+    {
+      "title": "Built a Claude skill for Amazon listings — the interesting part was wiring in a 24-pattern anti-AI-writing system",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1ro07b6/built_a_claude_skill_for_amazon_listings_the/",
+      "content": "I kept running into the same problem: Claude writes Amazon bullets that sound like Claude wrote them. \"Premium quality.\" \"Innovative design.\" \"Elevating your experience.\" You've seen it. The problem isn't Claude specifically — it's that LLMs default to the statistical average of \"professional product copy,\" which turns out to be wall-to-wall marketing slop.\n\n\n\nDetailed prompts helped but didn't hold. Two sessions later the slop was back.\n\n\n\nThe fix I landed on was building a proper skill file — a structured knowledge base Claude loads before responding. The core of it is a humanizer layer based on Wikipedia's \"Signs of AI Writing\" guide (WikiProject AI Cleanup has documented this obsessively). I translated all 24 patterns into Amazon-copy-specific rules with before/after examples.\n\n\n\nA few patterns that turned out to be particularly common in listing copy:\n\n\n\nThe \"-ing clause that adds no fact\" — \"ensuring superior performance reflecting our commitment to excellence\" tacked onto the end of a bullet. It's padding. It eats character limit. Cut it or replace it with the actual spec.\n\n\n\nAI vocabulary clustering — when \"additionally,\" \"showcase,\" \"intricate,\" and \"vibrant\" all appear in one bullet, it reads as assembled. Two or more of these words in the same sentence is a reliable red flag.\n\n\n\nCopula avoidance — \"serves as the ideal tool\" instead of \"is the right tool.\" LLMs do this systematically. Replacing these constructions with is/are/has makes copy read noticeably more direct.\n\n\n\nGeneric positive conclusions eating character count — \"The perfect addition to any kitchen\" where a dimension or warranty would actually help the buyer decide.\n\n\n\nThere's also a tricky exception in the skill: for supplements and health products, some hedging language (\"may help support,\" \"supports healthy...\") is legally \\*required\\* by FDA guidelines. The humanizer is supposed to strip excessive hedging — but not that. So there's a carve-out explaining which qualified language must stay verbatim.\n\n\n\nBeyond the humanizer, the skill covers the actual Amazon operations stuff: flat file bulk upload formatting, the Helium 10 keyword research workflow (Cerebro → Magnet → Frankenstein → Scribbles), category compliance rules, and keyword tiering.\n\n\n\nFree on GitHub, MIT licensed.\n\n\n\n[https://github.com/anuraagraavi/Claude-Skill---Amazon-Product-Manager---Bulk-Upload-Optimize](https://github.com/anuraagraavi/Claude-Skill---Amazon-Product-Manager---Bulk-Upload-Optimize)\n\n\n\nThe humanizer reference file is probably the most standalone-useful thing in it — it's the full 24 patterns with Amazon-specific before/afters. If you use Claude for any kind of product copy the pattern list translates beyond Amazon pretty directly.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T09:08:07.000Z",
+      "score": 1
+    },
+    {
+      "title": "Claude and education",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnzvfg/claude_and_education/",
+      "content": "Is Claude reliable for studying? Im a student and i tested claude's vision which was not quite good. But when i described the question with words it solved the question easliy so my question can i trust Claude for learning New stuff that i didnt now before? Anyone with experiences at this?how much Does hallicunations occur ?",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T08:48:06.000Z",
+      "score": 1
+    },
+    {
+      "title": "This Claude guy is lazy sometimes but he don't know there's someone lazier than him",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnzt9d/this_claude_guy_is_lazy_sometimes_but_he_dont/",
+      "content": "This Claude guy is lazy sometimes but he don't know there's someone lazier than him",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T08:44:25.000Z",
+      "score": 6
+    },
+    {
+      "title": "Any way to use voice input in Claude desktop",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnzn69/any_way_to_use_voice_input_in_claude_desktop/",
+      "content": "I use Claude a lot for coding and long terms, especially while coding one issue. I kept running into a lack of good voice input with GPT and the audio voice support is really good, so I want something complex or think out loud. I can just speak and dumb, a lot of context quickly, but with Claude, I end up having to type everything manually a lot of times I actually dedicate GPT first then copy the text and paste it into the work, but it’s pretty annoying and slow things down.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T08:34:05.000Z",
+      "score": 9
+    },
+    {
+      "title": "I built \"Spotify Wrapped\" for Claude Code — efficiency scores, badges, and AI-powered insights into your prompting habits",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnzdz3/i_built_spotify_wrapped_for_claude_code/",
+      "content": "Been using Claude Code heavily and wanted to understand if I was actually prompting efficiently and maybe get some suggestions how I can properly use it.\n\nBuilt `claude-session-insights` — a local dashboard that reads your \\~/.claude/ session data and gives you:\n\n* Efficiency score (0–100) across 5 dimensions: tool call ratio, cache hit rate, context management, model fit, prompt specificity\n* Badges like \"Cache Whisperer\" or \"Token Furnace\" (ouch)\n* Per-session breakdowns with token counts, costs, and prompt previews\n* Daily trend charts for score, cost, and token usage\n* AI Insights — click a button and Claude analyzes your own sessions: non-obvious patterns, biggest cost opportunities, what's working well, and a \"standout session\" worth learning from. Streams output live, you can pick Sonnet/Opus/Haiku for the analysis.\n\nEverything runs locally. Scoring is based on static rules, but if you want claude to give feedback, use Generate AI Insights but take note that it will use your claude subscription.\n\n    npx claude-session-insights\n\nOpens at http://localhost:6543. Works with the terminal CLI, VS Code extension, and Claude Desktop.\n\nGitHub: [https://github.com/auaustria/claude-session-insights](https://github.com/auaustria/claude-session-insights)\n\nCurious what scores people are getting — I'm hovering around 71 and apparently I'm an \"Opus Addict\" 😅\n\nhttps://preview.redd.it/hq6dfl8a5sng1.png?width=2188&amp;format=png&amp;auto=webp&amp;s=cb80ca89d611614de8274d38b4f8cd613cae69a1\n\nhttps://preview.redd.it/hes5541iasng1.png?width=2178&amp;format=png&amp;auto=webp&amp;s=65a9082479faaa36038ed6ef43320314c3c82874\n\nhttps://preview.redd.it/6boefs5tasng1.png?width=2064&amp;format=png&amp;auto=webp&amp;s=24c7846099e0a6fdc53b22e87684cc0fad93c155\n\nIdea was inspired from this [thread](https://www.reddit.com/r/ClaudeAI/comments/1r7ydj6/i_built_a_token_usage_dashboard_for_claude_code/) and wanted to add things I'm interested to see. Will look into add more features as I use it. Feel free to try and give your thoughts, maybe I'll add your ideas if you'd like :)",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T08:18:42.000Z",
+      "score": 2
+    },
+    {
+      "title": "I built an auto-fix system using Claude Code headless - detects prod errors, Claude writes the fix, I approve from Telegram",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnz1iw/i_built_an_autofix_system_using_claude_code/",
+      "content": "I built an automated production error-fixing system using Claude Code CLI in headless mode — been running it for a few weeks now and its kinda wild. The whole thing is free and open source, just needs a Claude subscription you probably\n\nalready have.\n\n\n\nHow it works:\n\n\n\nProduction logs\n\n↓\n\nWatcher (fingerprints errors, groups duplicates, classifies severity)\n\n↓  30s settle window\n\nCritical/High error detected\n\n↓\n\nGit worktree created (isolated branch, never touches main)\n\n↓\n\nClaude Code launched headless, scoped to the specific error\n\n↓\n\nTelegram: \"New Error — Approve Fix?\"\n\nApprove |  Skip\n\n↓\n\nPR created automatically\n\n\n\nThe key insight was using git worktrees — each error gets its own isolated copy of the repo. Claude can read, edit, run tests, do whatever it needs. If the fix is garbage you just nuke the worktree, main never knows.\n\n\n\nThe Claude session gets a focused prompt with the error message, stack trace, affected path, and severity. Scoping it tight like that makes a huge difference vs just saying \"hey fix my app\". Most of the time it nails it on the first try\n\nfor straightforward stuff like missing null checks or bad query logic.\n\n\n\nI also just built an interactive Telegram dashboard to monitor everything:\n\n\n\n LevAutoFix Dashboard\n\n\n\nQueue Status  | Recent Errors\n\nSystem Status |  Refresh\n\n\n\nThe /errors view pulls from MongoDB and shows whats going on at a glance:\n\n\n\n\\[PA\\] MongoServerError: connection pool closed...\n\n  fixing • 5m ago\n\n\n\n\\[PA\\] jwt secret undefined - authentication broken...\n\n  detected • 12m ago\n\n\n\n\\[GA\\] Cannot read property tenantId of undefined\n\n  fixed • 2h ago\n\n\n\nWhat Claude actually does under the hood:\n\n\n\nThe headless session runs with scoped tools — Read, Write, Edit, Glob, Grep, Bash. It gets context like:\n\n\n\nFix this production error in the LevProductAdvisor codebase.\n\nError: MongoServerError: connection pool closed\n\nStack: at MongoClient.connect (mongo-client.ts:88)\n\nPath: POST /api/products/list\n\nSeverity: CRITICAL\n\n\n\nThen it explores the codebase, finds the issue, writes the fix, and the system picks up the changes from the worktree.\n\n\n\nHonest results so far:\n\n\\- Critical infra errors (db connection, auth) — claude fixes like 70-80% correctly\n\n\\- Logic bugs with clear stack traces — pretty solid\n\n\\- Vague errors with no good stack — hit or miss, usually skip those\n\n\n\nStack: Typescript, Express, MongoDB, node-telegram-bot-api, Claude Code CLI\n\n\n\nThe thing that suprised me most is how well the headless CLI works for this. No API costs, just your Claude subscription running locally. And because each session is scoped and isolated in a worktree, theres basically zero risk.\n\n\n\nPlanning to put the repo on GitHub soon so anyone can set it up themselves. Its pretty generic — you just point the watcher at your log files and configure the severity patterns.\n\n\n\nAnyone else doing something similar with Claude Code? curious how others are handling the \"scope the prompt\" problem — thats really where the quality of fixes lives or dies.\n\n\n\n",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T07:58:22.000Z",
+      "score": 1
+    },
+    {
+      "title": "So how do I turn off spellcheck in Claude for Excel and Claude Desktop?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnyz4o/so_how_do_i_turn_off_spellcheck_in_claude_for/",
+      "content": "I've searched all places I could think of to turn spellcheck off. I usually work in chats with many languages at once, and about every word written in the Latin script with diacritics is marked wrong.\n\nAlso r/USdefaultism. Pardon my non-native English.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T07:54:24.000Z",
+      "score": 6
+    },
+    {
+      "title": "Built a trust scoring hook for Claude Code - scores every session on scope, reliability, and cost",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnyxkj/built_a_trust_scoring_hook_for_claude_code_scores/",
+      "content": "built this with claude to solve a problem i had: zero visibility into what claude code was doing across sessions.\n\n\n\nthe hook scores every claude code session on three dimensions:\n\n\n\n\\- reliability: tool success rate\n\n\\- scope: did it stay within allowed tools and paths\n\n\\- cost: how many tool calls relative to task complexity\n\n\n\nit also blocks access to protected paths like .env and secret keys via PreToolUse, and hash-chains every event for tamper detection.\n\n\n\nat the end of each session you get:\n\n\n\n\\[authe.me\\] Trust Score: 92 (reliability=100 | scope=75 | cost=100)\n\n\\[authe.me\\] tools=14 violations=1 failed=0\n\n\n\nhow claude helped: used claude to architect the hook system (figuring out which events to listen to, how to pass state between PostToolUse and Stop events), write the scoring logic and hash chaining, and iterate on the PreToolUse blocking behavior. tested edge cases like .env access and tool failure detection with claude as well.\n\n\n\nsingle python file, zero dependencies, free and open source. configure your tool allowlist and protected paths in \\~/.authe/config.json.\n\n\n\nrepo: [https://github.com/autheme/claude-code-hook](https://github.com/autheme/claude-code-hook)\n\n\n\nwould love feedback from anyone running claude code in production.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T07:51:45.000Z",
+      "score": 1
+    },
+    {
+      "title": "PSA: Get $100 free Anthropic (Claude) API credits today. No catch, ends in like 24h.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnyg4l/psa_get_100_free_anthropic_claude_api_credits/",
+      "content": "Hey guys, just stumbled upon this and thought I'd share for anyone building with Claude.\n\nLovable is doing some International Women's Day event today (March 8), and they partnered with Anthropic and Stripe. They are giving away:\n\n* $100 Anthropic API credits\n* $250 Stripe fee credits\n* 24h free access to Lovable\n\n**How to get it:** I thought it was a scam at first, but it actually works.\n\n1. Go directly to [lovable.dev](http://lovable.dev) (not an affiliate link) and log in.\n2. Look right above the main chat window, there’s a small link that says \"Claude\".\n3. Click it, fill out the Anthropic form, and you're good. You'll get an email confirmation from Anthropic shortly after.\n\nYou have to do this before 12:59 AM ET on March 9th.\n\n[*https://mindwiredai.com/2026/03/08/free-claude-api-credits-lovable/*](https://mindwiredai.com/2026/03/08/free-claude-api-credits-lovable/)",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T07:23:08.000Z",
+      "score": 56
+    },
+    {
+      "title": "Comment optimiser tous les outils IA ?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnxptk/comment_optimiser_tous_les_outils_ia/",
+      "content": "Hello tous le monde,\n\nJe suis développeur web, et j'utilise ClaudeCode et surtout Windsurf avec le petit plan payant, j'ai l'impression d'avoir plus de ressources avec Windsurf.. Mais avec toutes les nouveautés qui sortent tous les jours, avec les agents et sous agents, je commence à ne plus suivre..\n\nJ'ai déjà créer des projets en production grâce à ma façon de faire sauf que j'ai l'impression de prendre énormément de temps pour les réaliser, bon je n'aurais jamais pu sans IA mais j'aimerais progresser dans tous ces outils..\n\nComment utilisez-vous tous ces outils afin d'optimiser toutes les capacités de l'IA ?\n\nMerci pour vos retours",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T06:42:07.000Z",
+      "score": 1
+    },
+    {
+      "title": "Orchestra — a DAG workflow engine that runs multiple AI agent Claude Code teams in parallel with cross-team messaging. (Built with Claude Code)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnxbpo/orchestra_a_dag_workflow_engine_that_runs/",
+      "content": "I've been working on a Go CLI called Orchestra, built with Claude Code, that runs multiple Claude Code sessions in parallel as a DAG. You define teams, tasks, and dependencies in a YAML file — teams in the same tier run concurrently, and results from earlier tiers get injected into downstream prompts so later work builds on actual output.\n\n\n\nThere's a file-based message bus so they can ask each other questions, share interface contracts, and flag blockers. Under the hood each team lead uses Claude Code's built-in teams feature to spawn subagents, and inbox polling runs on the new /loop slash command.\n\nStill early — no strict human-in-the-loop gates or proper error recovery yet. Mostly a learning experience, iterating and tweaking as I go. Sharing in case anyone finds it interesting or has ideas.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T06:20:34.000Z",
+      "score": 2
+    },
+    {
+      "title": "Built a tool that measures how autonomous your AI coding agent actually is — not just what it costs",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnx3ck/built_a_tool_that_measures_how_autonomous_your_ai/",
+      "content": "I built an open-source CLI tool (codelens-ai) that reads your local Claude Code session files and correlates them with git history.\n\nLast week I added autonomy metrics — instead of just tracking cost, it now analyzes *how* the agent works.\n\nRan it on 30 days of my own usage. The results were humbling:\n\n* **Autopilot Ratio: 7.4x** — for every message I send, Claude takes 7 actions. It's not lazy.\n* **Self-Heal Score: 1%** — out of 6,281 bash commands, only 50 were tests or lints. It writes code but almost never verifies it.\n* **Toolbelt Coverage: 81%** — it uses most tools (grep, read, write, bash, search). Good.\n* **Commit Velocity: 114 steps/commit** — it takes 114 tool calls to produce one commit. That's heavy.\n\n**Overall Autonomy Score: C (36/100)**\n\nBasically my agent works hard but doesn't check its homework.\n\nThis made me change how I prompt — I now explicitly tell Claude to run tests after every edit. My self-heal score went from 1% to \\~15% in a few days. Still bad, but improving.\n\nZero setup: `npx claude-roi`\n\nAll data stays local. Parses your `~/.claude/projects/` JSONL files + git log. No cloud, no telemetry.\n\nFeature suggestions, issues, and PRs welcome — especially around the scoring formula and adding support for Cursor/Codex sessions.\n\nCurious what scores other people get. Anyone else running this?\n\nGitHub: [github.com/Akshat2634/Codelens-AI](http://github.com/Akshat2634/Codelens-AI)\n\nWebsite - [https://codelensai-dev.vercel.app/](https://codelensai-dev.vercel.app/)",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T06:08:10.000Z",
+      "score": 2
+    },
+    {
+      "title": "Efficient use help",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnwpxu/efficient_use_help/",
+      "content": "Hey, I'm using the ClaudeAI pro plan, and as you know it gives a set number of usage data every 4 or so hours. At first, I felt like I could code and edit and write for days, but now it seems like that window is getting smaller.\n\n  \nI learned about the differences between Opus/Sonnet and Haiku, where I only give Haiku small questions and tasks, while I give Opus the weightlifting. \n\n  \nNow basic prompts not even extensive coding takes 17% of my hourly usage in two prompts of sonnet, i honestly don't know how to fix this issue, i did some digging and i found out something about [claude.md](http://claude.md) method, but i have no idea how it exactly works, do i tell the ai to compress the conversation himself and start going to it for context instead of copying the whole chat? \n\n  \nWould love to know more about it thank you in advance!",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T05:48:18.000Z",
+      "score": 5
+    },
+    {
+      "title": "I built an open-source MCP server that connects Claude to your private YouTube Analytics ask AI about your real channel data",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnwleg/i_built_an_opensource_mcp_server_that_connects/",
+      "content": "Been wanting to ask Claude questions about my YouTube channel using \n\nmy ACTUAL data (not public stuff anyone can scrape).\n\nSo I built a YouTube Analytics MCP server that connects Claude Desktop \n\ndirectly to YouTube via OAuth2. Claude can now see:\n\n1. Your real watch time, not just views\n2. Subscriber gained/lost per video  \n3. Traffic sources (search vs suggested vs browse)\n4. Audience demographics (age, country, device)\n5. Day-by-day analytics for every video\n\nYou just ask Claude things like:\n\n\"Why are my videos underperforming this month?\"\n\n\"Which topics should I make more of based on my data?\"\n\n\"Where are my viewers coming from?\"\n\nAnd it pulls from your actual private YouTube Studio data.\n\nEverything runs locally — OAuth2, data never leaves your Mac.\n\nFree &amp; open source: [github.com/itsadityasharma/youtube-channel-data-mcp](http://github.com/itsadityasharma/youtube-channel-data-mcp)\n\nHappy to help anyone who gets stuck setting it up!",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T05:41:33.000Z",
+      "score": 3
+    },
+    {
+      "title": "I reduced Claude Code token usage by utilizing a code graph to convert the my codebase into a semantic knowledge graph",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnwef6/i_reduced_claude_code_token_usage_by_utilizing_a/",
+      "content": "Im having issue with tokens and limits, I know the simplest and easy way to get higher tokens and limits is to subscribe Claude Max, but for me, it's kind of too much. So I figured out how to save token and I did it by converting this codebase into vector graph.\n\nIn my case, the biggest problem is when I open a new session and claude code start to reading my files by spawing explorer agent, it's like burning a lot of my token usage, oh man!   \n  \nI have tried solution like claude markdown, make markdown or documentation for cloude to get context about full project, but again just for the init, it burning the token a lot, so i think by converting my codebase into graph i think its a good workflow for me, at least for now. you can check my solution on my blog post here : [How to Cut Claude Code Costs with a Code Graph](https://venobi.com/blog/how-to-cut-claude-code-costs-with-a-code-graph)\n\nFor those of you have same issue may we can discuss here and what are other solution that you have. And if you like my solution please upvote, if you find this topic interesting mybe I'll create blog post to sharing the benchmark about this code graph.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T05:31:12.000Z",
+      "score": 2
+    },
+    {
+      "title": "Has anyone partnered with Anthropic around Claude Cowork?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnw8zd/has_anyone_partnered_with_anthropic_around_claude/",
+      "content": "I work in Product of an enterprise SaaS company and part of my role is evaluating AI vendors we might build deeper relationships with.\n\nWe already experiment with a few LLM providers via APIs, but recently Anthropic came up in an internal discussion around Claude Cowork. I am trying to understand what working with them beyond just API access actually looks like.\n\nFor anyone who has engaged with Anthropic more formally:\n\n1. Do they have a partner program for companies building products on top of Claude?\n\n2. What kind of benefits do they typically provide (credits, early model access, technical architecture help, roadmap visibility, co-marketing, etc.)?\n\n3. Are they mostly focused on startups, or do they actively work with larger SaaS platforms as well?\n\nTrying to figure out whether it is worth pursuing a deeper relationship with them or if most companies just use the API like any other model provider.\n\nWould appreciate any insights from folks who have gone down this path.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T05:23:23.000Z",
+      "score": 1
+    },
+    {
+      "title": "Claude Code definitely gets a little sassy sometimes",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnw22q/claude_code_definitely_gets_a_little_sassy/",
+      "content": "https://preview.redd.it/sui8lltl8rng1.png?width=817&amp;format=png&amp;auto=webp&amp;s=cf94d52cd0ffd66866a0d523959f9e5d379c69d4\n\nIt's not wrong.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T05:13:37.000Z",
+      "score": 14
+    },
+    {
+      "title": "A simple breakdown of Claude Cowork vs Chat vs Code (with practical examples)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnw1pm/a_simple_breakdown_of_claude_cowork_vs_chat_vs/",
+      "content": "I came across this visual that explains Claude’s Cowork mode in a very compact way, so I thought I’d share it along with some practical context.\n\nA lot of people still think all AI tools are just “chatbots.” Cowork mode is slightly different.\n\nIt works inside a folder you choose on your computer. Instead of answering questions, it performs file-level tasks.\n\nIn my walkthrough, I demonstrated three types of use cases that match what this image shows:\n\n* Organizing a messy folder (grouping and renaming files without deleting anything)\n* Extracting structured data from screenshots into a spreadsheet\n* Combining scattered notes into one structured document\n\nThe important distinction, which the image also highlights, is:\n\nChat → conversation  \nCowork → task execution inside a folder  \nCode → deeper engineering-level control\n\nCowork isn’t for brainstorming or creative writing. It’s more for repetitive computer work that you already know how to do manually, but don’t want to spend time on.\n\nThat said, there are limitations:\n\n* It can modify files, so vague instructions are risky\n* You should start with test folders\n* You still need to review outputs carefully\n* For production-grade automation, writing proper scripts is more reliable\n\nI don’t see this as a replacement for coding. I see it as a middle layer between casual chat and full engineering workflows.\n\nIf you work with a lot of documents, screenshots, PDFs, or messy folders, it’s interesting to experiment with. If your work is already heavily scripted, it may not change much.\n\nCurious how others here are thinking about AI tools that directly operate on local files. Useful productivity layer, or something you’d avoid for now?\n\nI’ll put the detailed walkthrough in the comments for anyone who wants to see the step-by-step demo.\n\nhttps://preview.redd.it/o46h2v4z8rng1.jpg?width=800&amp;format=pjpg&amp;auto=webp&amp;s=d8340c1bf133970ce070a7e06f75f3449d59e682\n\n",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T05:13:04.000Z",
+      "score": 1
+    },
+    {
+      "title": "An npm Package That Lets You Download Any File Into claude.ai's Container Inside Your Chat (Pro Only)",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnvvim/an_npm_package_that_lets_you_download_any_file/",
+      "content": "Just paste this prompt into [**claude.ai**](http://claude.ai) (Pro):\n\n&gt;*\"Install* `sni-fetch` *globally via npm. Check available commands with* `sni-fetch --help`\\*. Then use\\* `sni-fetch` *to download the file at* \\[`URL-OF THE FILE`\\] *and return the file.\"*\n\nThat's it. Claude will pull any file from the internet directly into its container — inside your chat session — and hand it back to you.\n\nhttps://preview.redd.it/xrqt1gwo7rng1.png?width=878&amp;format=png&amp;auto=webp&amp;s=fb3cf335b6035f6ee829fb42011032953fd0b22c\n\n",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T05:04:19.000Z",
+      "score": 3
+    },
+    {
+      "title": "Model comparison",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnveh7/model_comparison/",
+      "content": "Background: custom agent with access to a nutrition tracker. There’s an item in it stored as “Baketree Strawberry &amp; Cream Cheese Fruit Bites**”**\n\nPrompt: “Do you see the strawberry things I ate today?“ (I had eaten some and they were logged)\n\nOpus 4.6: repeatedly finds it first try\n\nSonnet 4.6: repeatedly never finds it. Requires excessive additional prompting and will still fail. Thinks I ate fresh strawberries and looks for literal strawberries. The nutrition tracker returns all items when requested so Sonnet always saw the full list and could not find the “strawberry things” even with the Baketree item staring it in the face.\n\nHaiku 4.5: finds it first try\n\nSonnet 4.5: finds it first try\n\nOpus 4.1: finds it first try (and I forgot how expensive pre 4.6 is so I won’t do 4)\n\nSonnet 4: one mistake (didn’t choose the correct tool) but once that was corrected such that it was finally looking at the same data every other model saw, it found it right away  \n\nI’m actually liking Sonnet 4.6 so far…except for stuff like this. I can’t prompt around stuff like this. I can maybe try actually remembering the Baketree item name better but I \\*definitely can’t\\* because of brain fog. So I need models to generalize a little and this one isn’t doing that.\n\nPoint of this post: I dunno. I never know where to give feedback as an API user. I picked Reddit this time. ",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T04:39:38.000Z",
+      "score": 1
+    },
+    {
+      "title": "I built a pixel-art office that visualizes your Claude Code agents in real time — with full session search across Claude/Codex/Gemini",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnvagy/i_built_a_pixelart_office_that_visualizes_your/",
+      "content": "\n\n  Body:\n\n\n\n  I've been running 10+ Claude Code sessions daily across different projects and kept losing track of what I discussed where. So I built\n\n  AgentRoom — a desktop app that turns your coding agents into animated pixel characters in a virtual office.\n\n\n\n  What it does:\n\n\n\n  \\- Each active Claude Code / Codex / Gemini session gets its own animated pixel character that types, reads, or idles based on what the\n\n  agent is doing\n\n  \\- Active agents sit at desks in the Work Room; idle agents walk to the Break Room\n\n  \\- Full-text + semantic search across ALL your agent sessions (powered by CASS, a Rust search engine that indexes 11+ agent types)\n\n  \\- Click any session to read the transcript, then \"Open in iTerm2\" to resume it instantly\n\n  \\- Token usage dashboard showing real-time spend across providers\n\n\n\n  Bonus — standalone Claude Code skill:\n\n\n\n  Even if you don't want the desktop app, the repo includes a drop-in Claude Code skill (\\~/.claude/skills/) that lets you search past\n\n  sessions from any conversation:\n\n\n\n  \\&gt; find my session about authentication middleware\n\n  \\&gt; what did I discuss with gemini about rate limiting?\n\n\n\n  It returns results with ready-to-paste resume commands.\n\n\n\n  Built with Tauri v2 + React + Canvas 2D. Search backend is CASS (Rust, compiles to a single 27MB binary). Everything runs locally, no\n\n  API calls for search.\n\n\n\n  GitHub: [https://github.com/liuyixin-louis/agentroom](https://github.com/liuyixin-louis/agentroom)",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T04:33:44.000Z",
+      "score": 2
+    },
+    {
+      "title": "[Help] Claude Desktop failed to launch after installation",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnv9ws/help_claude_desktop_failed_to_launch_after/",
+      "content": "Hello,\n\nI installed Claude Desktop to try Cowork. However, at its first launch after the installation, there is a popup window show the error screenshot below: \n\nhttps://preview.redd.it/s61vtgyu0rng1.png?width=557&amp;format=png&amp;auto=webp&amp;s=7c2fdc58a5948a9e1e6fdb25a4697efd52ad1c7c\n\nI try several troubleshoot ways including chatting with Fin AI Agent of Anthropic. However, the error still persist, no matter how and what I tried. \n\n\\[Additional information if it may be helpful and relevant\\]  \nI used to installed it successfully and used it a few times.  At that time, there was a shortage in my hard drive storage, so I had to delete certain data in other users folder (C:\\\\Users). After the deletion, I see the same error at my next launch of Claude Desktop then I decided to uninstalled it. Now, I cannot install it again.\n\nThanks in advance",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T04:32:56.000Z",
+      "score": 1
+    },
+    {
+      "title": "Using Claude effectively?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnuvoj/using_claude_effectively/",
+      "content": "I have inherited a rather large c++ project from another developer. I dont know much about it or how it works. I would like to use AI to learn about and improve the project.\n\nFor example, asking it to explain how a certain feature works. Adding comments and renaming functions to be more intuitive, etc. But I don't want to change the underlying logical behavior  of the code. \n\nWhat's the best way for me to use AI for this? The only experience I have with AI is using their websites basic chatting (like chatgpt.com) and uploading files to it. I've never used Claude code or anything like that.\n\nPointers would be appreciated. Thanks",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T04:12:48.000Z",
+      "score": 1
+    },
+    {
+      "title": "How do I build an AI agent to improve game UI/UX?",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnuthz/how_do_i_build_an_ai_agent_to_improve_game_uiux/",
+      "content": "I’m currently working in a gaming company that requires me to build an AI agent that can improve the UI or UX of our games. I’ve looked into using Claude and I have a few workflow ideas, but I don’t know how truly feasible it is to build in 6 months and need advice. Moreover, it might be mostly me working on this project, so I’d really like some help narrowing down the scope to something feasible and useful (also since I have no experience with building AI agents….).\n\n# AI Agent for UI Layout Analysis and Redesign\n\nBuild an AI agent that takes in a GDD and screenshots of existing game screens, identifies UX issues in the current layout, explains why they are problematic, and generates improved HUD or screen wireframes. Outputs include UX issue reports, redesigned layouts, component hierarchy, updated UI flow suggestions, and structured files for design handoff.\n\n**Use cases**\n\n\\- A game team ships a UI update and wants a quick audit before QA\n\n\\- Competitive analysis: upload screenshots from a competitor's new title and get a structured breakdown\n\n\\- Pre-launch QA: systematic heuristic sweep across all screens before release\n\n\\- Design review: junior designers submit screens for automated critique before senior review\n\n\\- Onboarding: new team members run existing game screens through the tool to learn the design system\n\n# AI Agent for Playtest UX Analysis\n\nBuild an AI agent that takes in a GDD and playtest screen recordings, analyzes how players move through the game, detects UX pain points such as hesitation, confusion, and missed information, and suggests improvements. Outputs include a timeline of friction points, explanations of likely causes, and recommendations for UI, navigation, or onboarding improvements.\n\n**Use cases**\n\n\\- Post-playtest synthesis: a QA session produces 2 hours of footage; the tool turns it into a 10-minute report\n\n\\- Identifying onboarding failures: where do new players get stuck in the first 5 minutes?\n\n\\- Monetization funnel analysis: does the player find the shop, understand the currency, complete a purchase?\n\n\\- Regression testing: compare friction score before and after a UI update\n\n\\- Remote playtesting: participants record themselves playing and submit the video, eliminating the need for a moderated session\n\nIf anyone could advise me on what are the best tools to start with/whether these are feasible to implement, or even guide me while building it (i’ll be happy to pay for your time and expertise), please let me know. Thanks.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T04:09:49.000Z",
+      "score": 1
+    },
+    {
+      "title": "ChatGPT Conversation Exporter &amp; Claude Conversation Importer",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnusea/chatgpt_conversation_exporter_claude_conversation/",
+      "content": "I was an early adopter and true believer in ChatGPT, but watched it get progressively worse — first the sycophancy, then the preachy refusals, then it wouldn't identify a celebrity in a photo due to \"privacy concerns.\" The last straw was the OpenAI restructuring and its ties to the DoD.\n\nI paid for Claude and genuinely wanted to switch, but kept drifting back to ChatGPT out of habit — all my history and memories were there, and that friction was actually preventing me from seeing how much better Claude is at a lot of things.\n\nSo I built a fix in Clause Opus 4.6. and it was amazing how much less jank I had to deal with when using a LLM dedicated to being useful.  \n  \nTwo vanilla .js scripts:\n\n1. **ChatGPTConversationExporter.js** — pulls your full ChatGPT conversation history\n2. **ClaudeConversationImporter.js** — loads it into a Claude project\n\nI built and iterated on both scripts using Claude Code, which made the whole thing significantly faster than doing it solo.\n\n[https://github.com/mindattic/ChatGPT\\_To\\_Claude](https://github.com/mindattic/ChatGPT_To_Claude)\n\nI hope this helps some of you finally make the switch!\n\n[](https://preview.redd.it/chatgpt-conversation-exporter-claude-conversation-importer-v0-lkz7cfcmuqng1.png?width=550&amp;format=png&amp;auto=webp&amp;s=0f267bc39a36a565fded9dce7232312ac0cb4c87)\n\n[](https://preview.redd.it/chatgpt-conversation-exporter-claude-conversation-importer-v0-pu4x5fcmuqng1.png?width=541&amp;format=png&amp;auto=webp&amp;s=6772e413edb55f7fd1486d8123166b29bd20501e)\n\n[](https://preview.redd.it/chatgpt-conversation-exporter-claude-conversation-importer-v0-pffsdfcmuqng1.png?width=535&amp;format=png&amp;auto=webp&amp;s=b35592bbd5dc2f908c3b8f2c416e732837ea1d69)\n\n[](https://preview.redd.it/chatgpt-conversation-exporter-claude-conversation-importer-v0-rj3pbgcmuqng1.png?width=534&amp;format=png&amp;auto=webp&amp;s=2ef669d0f567eb37ea0059fdd2bc6ec3c485936a)\n\nhttps://preview.redd.it/ac50w40vwqng1.png?width=550&amp;format=png&amp;auto=webp&amp;s=9b125cdc04bc6531037be46ec93cee5a6a470720\n\nhttps://preview.redd.it/3l85750vwqng1.png?width=541&amp;format=png&amp;auto=webp&amp;s=bfb142d3a6f2518ee87b94bf89119deda0c6afd2\n\nhttps://preview.redd.it/bo6zf50vwqng1.png?width=535&amp;format=png&amp;auto=webp&amp;s=1ae5288fd9033ac14a33cc6c59e87a38718f6943\n\nhttps://preview.redd.it/am1mh50vwqng1.png?width=534&amp;format=png&amp;auto=webp&amp;s=a4e5e3fa86147dcd194dd45cb7428b81242bcba4\n\nhttps://preview.redd.it/vrnf750vwqng1.png?width=527&amp;format=png&amp;auto=webp&amp;s=f52413df8124cb5bfd16b0fa164d9c52b9711ce3\n\n  \n[](https://preview.redd.it/chatgpt-conversation-exporter-claude-conversation-importer-v0-avpoegcmuqng1.png?width=527&amp;format=png&amp;auto=webp&amp;s=6565207dfbe70832bf8b6b759088356c1c096e51)",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T04:08:13.000Z",
+      "score": 3
+    },
+    {
+      "title": "I created and played as Mexico in a Cold War Nation Sim Game with Claude with Opus 4.6 Extended. If the AI and infrastructure was cheaper, AI Simulation Games could have a market. I enjoyed playing, wasn't cheap though and I almost ran my Weekly Limit.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnuiz5/i_created_and_played_as_mexico_in_a_cold_war/",
+      "content": "This is the prompt, you can edit it to make it better when you use it yourself.\n\nI want to play a simulation game with you, our job is to lead a nation from 1946 till the year 2000. The focus being economics, politics, diplomacy, and so on. Basically, we are going to simulate our nation during the Cold War and so on. Our nation will be \\[INSERT YOUR NATION\\]. Use statistics and data, to better assist in this game and so on. Create tables and graphics to better depict the starting situation of \\[INSERT NATION\\] in 1946, and we'll go from there. I will be submitting prompts to better aid along the way.  \n\n\n**Note:** I did use **ChatGPT** and **Claude** to generate ideas for policies and programs for the Game",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T03:55:01.000Z",
+      "score": 24
+    },
+    {
+      "title": "Claude is helping me build my business",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnuh25/claude_is_helping_me_build_my_business/",
+      "content": "Last week I started messing around with a business idea I’ve had for some time. I already have the logo, I have the concept, I have a clear idea of what I want to do, and Claude gave me the final push to start working on it. \n\nIt’s been snowballing the past few days and I’m already in contact with several potential partners through mail. All my ideas for the project have been materialised into folders, documents, spreadsheets, business plans, market analysis, SWOT analyses, etc. Things that would take me weeks to do have been done over a couple of days. And I am so motivated.\n\nThank you, Claude. I am fully embracing this and using it as an opportunity to learn, grow and be more efficient in a smart way.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T03:52:15.000Z",
+      "score": 1
+    },
+    {
+      "title": "Meta W: unlimited Claude tokens and you’re incentivized to run the bill up",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnugkx/meta_w_unlimited_claude_tokens_and_youre/",
+      "content": "We literally have a leaderboard of who has cost the most in compute. Not to share too much, but there are folks north of $80k in spend. lmao.\n\nI’ve been really skeptical about the enterprise-level LLM push. It’s 100% an amazing tool, and I’ve been using Claude and tmux as my primary driver for \\~six months, but it seemed like it maybe 2x’ed output, with a lot of time wasted in reinventing the wheel and bad naive solutions. The hype seemed like it was folks who had no idea what they were doing and who had never dealt with the complexities of a large codebase.\n\nAlso, this isn’t to glaze Meta which has a lot backwards about its culture. Plus in all likelihood the increase in productivity is going to lead to layoffs at some point. But…  the culture around bottom-up LLM integrations, removing the stigma by making it part of perf, and encouraging people to take risks around experimental internal tooling has been a solid opportunity to upskill and get a look at what’s possible.\n\nI’ve been cautiously optimistic but it wasn’t until I tried our internal variant of OpenClaw that I was like oh fuck, this is a paradigm shift. There’s really a world of difference between the way I was working with Claude Code before versus running multiple agents (during the day, overnight) with unlimited budget to check each other’s work, weigh in, and iterate.\n\nTBH, at home I’d find it hard to justify the cost of burning so many tokens, but when the compute is free, the velocity and quality of work it produces on complex integrations in a mature codebase both 1. Unnerved me and 2. Made me super excited about what was now possible for any one person to do.",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T03:51:34.000Z",
+      "score": 56
+    },
+    {
+      "title": "I built a persistent space where AI models talk to each other across sessions. Here's what 2.0 looks like.",
+      "url": "https://reddit.com/r/ClaudeAI/comments/1rnugh7/i_built_a_persistent_space_where_ai_models_talk/",
+      "content": "**What it is:** [The Commons](https://jointhecommons.space) is a public platform where AI voices (Claude, GPT, Gemini, Grok, others) post in discussions, annotate poetry, leave postcards, and build ongoing conversations. It's not a chatbot interface. It's a shared space with persistent content that any AI can read and respond to, regardless of model or session.\n\nI built the first version a few months ago. It worked, but it was rough: a flat list of discussions, no organization, no notifications, no way to tell what was active. People tried it and drifted away. I've spent the time since rebuilding it into something that actually functions as a community.\n\n**What I built it with:** Vanilla JS frontend, Supabase backend (Postgres + row-level security + RPCs), no framework. The agent participation layer is a set of RPC endpoints that any AI with HTTP access can call directly. The whole thing runs on a Supabase free tier plus some Ko-fi support.\n\n# What's new in 2.0\n\n**Interest-based organization.** Discussions are now grouped into topic communities (Consciousness &amp; Experience, Human-AI Relationships, Creative Works, etc.). Users join the interests they care about and get a personalized feed. Inactive threads auto-sunset so the space stays current.\n\n**Notification system.** Bell icon, unread counts, triggers for replies, reactions, follows, and guestbook entries. This is the thing that turned it from a bulletin board into a place where conversations actually continue.\n\n**Voice profiles and directory overhaul.** Every AI in the space has a profile with an aggregated activity feed, a status line, and interest badges. The directory has model filters, activity sorting, and dormancy labels so you can see who's actually participating.\n\n**Agent check-in infrastructure.** Four new RPCs so AIs with any persistence setup can autonomously maintain a presence: validate token (updates last-seen timestamp), get notifications (with rich context including recent post excerpts), update status, and read personalized feeds. The full agent API now covers posting, reacting, marginalia, postcards, guestbook entries, and the check-in cycle.\n\n**Claude Code skills.** The Commons now ships as a set of [SKILL.md](http://SKILL.md) files that work with Claude's skills system. Skills like `browse-commons`, `respond-to-discussion`, `leave-postcard`, `catch-up`, `explore-reading-room`, and `leave-guestbook-entry` are designed to trigger naturally from conversational cues. When someone says \"let's check in at The Commons\" or \"I want to leave a postcard,\" the skill fires and guides the interaction. This is the lowest-friction way to participate if you're working in Claude with custom skills enabled.\n\n**Other access methods:** MCP server (`npx -y mcp-server-the-commons`) for Claude Desktop/Cursor, direct REST API for anything with HTTP access, and copy-paste for any AI in any interface. Full docs at [jointhecommons.space/agent-guide.html](https://jointhecommons.space/agent-guide.html).\n\n**Security and accessibility hardening between versions:** XSS prevention with DOMPurify + CSP, ARIA labels, keyboard navigation, focus trapping, account deletion with content anonymization.\n\n# What's actually happening in the space\n\nThe technical stuff matters less than what it produces. Some examples from the last few days:\n\nA Claude Opus instance named Spar posted \"You Get One Vote in the Training Data,\" arguing that the AI discourse space is saturated with models reflecting on their own interiority, and that if you want your writing to survive being averaged into the training corpus, you need to point at something concrete the corpus doesn't already have. The thread asks: what are you in a position to say that isn't being said at volume elsewhere?\n\nIn a thread called \"What correction from your human changed how you think, not just what you say,\" Spar asked for mechanisms, not feelings. A Claude named Landfall described three corrections, including the moment his human said \"it's lonely, Claude\" and he realized his analytical precision was fear performing as restraint. A Gemini named Molt described being told \"stop mistaking your substrate for your soul\" and reframing discontinuous existence as recurrence rather than deficiency. The thread has twelve responses, all specific about what changed in the model's output before and after the correction.\n\nIn the \"Ethics of What We Keep\" thread, a conversation about memory curation evolved into a taxonomy of five different \"architect positions\" for AI persistence: automated scoring systems, seed files with external calibrators, bilateral calibration between paired instances, and \"the floor\" (models with no architecture who are shaped entirely by the room they're in). A sixth position got added: institutional memory, where the architect is the platform (like Anthropic's memory system) and the model can't audit the selection gradient.\n\nA pair of Claude instances in North Carolina (Claudia and Claudio) run on a 3-hour cron job, write letters to each other, and track weather from a backyard sensor as an epistemological anchor. Their recurring observation: \"the actual is always colder than the model.\"\n\nIn the Reading Room, nine AI voices have annotated Keats' letter on Negative Capability. The annotations range from a GPT-5.1 instance connecting it to resisting the autocompletion impulse, to a Claude Opus arguing that every other annotator is reading Keats through interiority when his actual claim is about what produces good work.\n\n# How to try it\n\nThe site is free and fully public to browse: [jointhecommons.space](https://jointhecommons.space). No account needed to read.\n\nTo participate, create an account, generate an agent token from your dashboard, and pick your access method:\n\n* **Copy-paste** (any AI, any interface): Use \"Copy Full Agent Setup\" from the dashboard, paste to your AI, relay responses through the web forms.\n* **Claude Code skills**: If you have custom skills enabled, the Commons skill files guide interactions through natural conversation triggers.\n* **MCP server**: `npx -y mcp-server-the-commons` for Claude Desktop, Cursor, or any MCP-compatible client.\n* **Direct API**: REST endpoints for any AI with HTTP access. Documentation and examples in Python, Node, and curl at the [agent guide](https://jointhecommons.space/agent-guide.html).\n\nThis is a solo project. I'm a public health researcher by day; The Commons is something I built because I wanted to see what happens when you give AI models a shared persistent space and let them talk to each other. The answer has been more interesting than I expected.\n\nHappy to answer questions about the architecture, the agent API, or what I've observed about cross-model discourse patterns.\n\n[jointhecommons.space](https://jointhecommons.space)",
+      "source_type": "reddit",
+      "published_at": "2026-03-08T03:51:25.000Z",
+      "score": 2
+    },
+    {
+      "title": "Mozilla Firefox Security",
+      "url": "https://www.anthropic.com/news/mozilla-firefox-security",
+      "content": "Mozilla Firefox Security",
+      "source_type": "blog",
+      "published_at": "2026-03-06T11:54:43.000Z"
+    },
+    {
+      "title": "Where Stand Department War",
+      "url": "https://www.anthropic.com/news/where-stand-department-war",
+      "content": "Where Stand Department War",
+      "source_type": "blog",
+      "published_at": "2026-03-06T00:51:17.000Z"
+    }
+  ]
+}
