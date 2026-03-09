@@ -1,25 +1,75 @@
 {
   "date": "2026-03-09",
-  "generated_at": "2026-03-09T07:20:29.560Z",
-  "digest": "Claude Code rolled out a massive v2.1.71 update with recurring commands and cron scheduling, while Mozilla partnered with Anthropic on Firefox security. The CLI also shifted Opus 4.6 to medium effort by default and introduced auto-memory features that intelligently save useful context across sessions.",
+  "generated_at": "2026-03-09T15:08:20.690Z",
+  "digest": "Today's biggest story is the rapid-fire release cycle for Claude Code, with five versions shipped in recent days adding powerful automation features like recurring prompts and cron scheduling. Meanwhile, controversial reports about Claude AI's role in US military operations against Iran are generating significant debate in the developer community.",
   "tabs": {
     "claude_ai": {
       "label": "Claude.ai",
       "stories": [
         {
           "id": "claude-ai-001",
-          "headline": "Anthropic Partners with Mozilla on Firefox Security Initiative",
-          "summary": "Anthropic announced a partnership with Mozilla focused on Firefox security [1]. The collaboration appears to leverage Claude's capabilities for browser security applications, though specific details of the implementation were not disclosed.",
+          "headline": "Opus 4.6 Now Defaults to Medium Effort for Max and Team Subscribers",
+          "summary": "Anthropic has updated Claude Code to default Opus 4.6 to medium effort for Max and Team subscribers, positioning it as the optimal balance between speed and thoroughness [4]. The change removes older Opus 4 and 4.1 models from the first-party API, automatically migrating users to the newer version [4].",
+          "key_points": [
+            "Medium effort selected as sweet spot for most tasks",
+            "\"Ultrathink\" keyword re-introduced for high effort when needed",
+            "Automatic migration from legacy Opus versions"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.68",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2168",
+              "published_at": "2026-03-09T15:07:41.194Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Mozilla Firefox Security Partnership Announced",
+          "summary": "Anthropic has announced a security partnership with Mozilla Firefox, though details remain limited in the initial announcement [11].",
           "key_points": [],
           "sources": [
             {
               "type": "blog",
               "title": "Mozilla Firefox Security",
               "url": "https://www.anthropic.com/news/mozilla-firefox-security",
-              "published_at": "2026-03-06T11:54:43.000Z"
+              "published_at": "2026-03-09T13:41:16.000Z"
             }
           ],
           "perspectives": ""
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Claude AI's Role in Iran Military Operations Sparks Debate",
+          "summary": "Multiple reports indicate Claude AI assisted US military operations against Iran, with Palantir and Anthropic technology allegedly helping target 1,000 sites in 24 hours [13]. The Pentagon has declined to confirm whether AI was used in bombing operations, including attacks on civilian infrastructure [12].",
+          "key_points": [
+            "Reports claim AI helped coordinate rapid-strike operations",
+            "Pentagon refusing transparency on AI military applications",
+            "Raises questions about AI ethics in warfare"
+          ],
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Palantir and Anthropic AI helped the US hit 1k Iran targets in 24 hours",
+              "url": "https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/world/how-palantir-and-anthropic-ai-helped-the-us-hit-1-000-iran-targets-in-24-hours-article-13853331.html",
+              "published_at": "2026-03-07T13:28:48.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Pentagon Refuses to Say If AI Was Used to Bomb Elementary School",
+              "url": "https://futurism.com/artificial-intelligence/pentagon-ai-claude-bombing-elementary-school",
+              "published_at": "2026-03-07T14:12:07.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Claude AI Helped Bomb Iran. But How Exactly?",
+              "url": "https://www.bloomberg.com/opinion/articles/2026-03-04/iran-strikes-anthropic-claude-ai-helped-us-attack-but-how-exactly",
+              "published_at": "2026-03-07T10:14:26.000Z"
+            }
+          ],
+          "perspectives": "The tech community is grappling with the implications, with some questioning the ethics of AI in military operations while others debate the technical specifics of how Claude might have been deployed."
         }
       ]
     },
@@ -28,108 +78,113 @@
       "stories": [
         {
           "id": "claude-code-001",
-          "headline": "Claude Code v2.1.71 Introduces Recurring Commands and Cron Scheduling",
-          "summary": "Claude Code's latest update adds powerful automation features including a `/loop` command for recurring prompts and cron scheduling tools [1]. The update also introduces rebindable voice activation keys and expands the bash auto-approval list with additional commands like `fmt`, `comm`, and `numfmt`.",
+          "headline": "Claude Code Adds Recurring Prompts and Automation Features",
+          "summary": "Claude Code v2.1.71 introduces powerful automation capabilities with the `/loop` command for running prompts at recurring intervals and cron scheduling tools for session-based automation [1]. The update also adds rebindable voice activation keybindings and expands the bash auto-approval command list [1].",
           "key_points": [
-            "New `/loop` command enables recurring execution of prompts or slash commands (e.g., `/loop 5m check the deploy`)",
-            "Cron scheduling tools now available for recurring prompts within sessions",
-            "Voice activation key is now rebindable in keybindings.json with modifier combinations for zero typing interference"
+            "New `/loop` command enables scheduled prompt execution",
+            "Voice activation key now customizable via keybindings.json",
+            "Enhanced bash command auto-approval for better workflow"
           ],
           "sources": [
             {
               "type": "blog",
               "title": "Claude Code v2.1.71",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2171",
-              "published_at": "2026-03-09T07:20:03.381Z"
+              "published_at": "2026-03-09T15:07:41.194Z"
             }
           ],
           "perspectives": ""
         },
         {
           "id": "claude-code-002",
-          "headline": "Claude Code Fixes Third-Party Gateway API Errors in v2.1.70",
-          "summary": "Version 2.1.70 resolves critical API 400 errors when using `ANTHROPIC_BASE_URL` with third-party gateways by improving tool search detection of proxy endpoints [1]. The update also fixes issues with custom Bedrock inference profiles and empty model responses following tool searches.",
-          "key_points": [],
+          "headline": "Third-Party API Gateway Support Fixes Rolled Out",
+          "summary": "Claude Code v2.1.70 resolves critical API 400 errors when using custom base URLs and third-party gateways [2]. The fixes address tool search detection issues and model compatibility problems with Bedrock inference profiles [2].",
+          "key_points": [
+            "Fixed proxy endpoint detection for tool references",
+            "Resolved custom model identifier compatibility issues",
+            "Improved tool schema rendering for empty responses"
+          ],
           "sources": [
             {
               "type": "blog",
               "title": "Claude Code v2.1.70",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2170",
-              "published_at": "2026-03-09T07:20:03.381Z"
+              "published_at": "2026-03-09T15:07:41.194Z"
             }
           ],
           "perspectives": ""
         },
         {
           "id": "claude-code-003",
-          "headline": "Claude Code Adds API Development Skills and Remote Control Features",
-          "summary": "Version 2.1.69 introduces the `/claude-api` skill for building applications with the Claude API and Anthropic SDK [1]. The update also enhances remote control functionality with custom session naming and improves bash mode navigation with Ctrl+U support.",
-          "key_points": [],
+          "headline": "New Claude API Skill and Remote Control Features Added",
+          "summary": "Claude Code v2.1.69 introduces the `/claude-api` skill for building applications with the Anthropic SDK and enhances remote control functionality with custom session naming [3]. The update also improves bash mode navigation and numeric keypad support [3].",
+          "key_points": [
+            "New skill specifically for Claude API development",
+            "Custom session titles for remote control sessions",
+            "Enhanced keyboard navigation in bash mode"
+          ],
           "sources": [
             {
               "type": "blog",
               "title": "Claude Code v2.1.69",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2169",
-              "published_at": "2026-03-09T07:20:03.381Z"
+              "published_at": "2026-03-09T15:07:41.194Z"
             }
           ],
           "perspectives": ""
         },
         {
           "id": "claude-code-004",
-          "headline": "Opus 4.6 Now Defaults to Medium Effort for Max and Team Users",
-          "summary": "Claude Code v2.1.68 changes the default effort level for Opus 4.6 to medium, described as the \"sweet spot between speed and thoroughness\" for most tasks [1]. Users can still access high effort using the \"ultrathink\" keyword, while older Opus models (4 and 4.1) have been removed from the first-party API.",
+          "headline": "Auto-Memory and Batch Processing Commands Launch",
+          "summary": "Claude Code now automatically saves useful context to auto-memory and introduces `/simplify` and `/batch` bundled commands for streamlined workflows [9]. The system also improves git worktree support and adds environment controls for claude.ai MCP servers [6].",
           "key_points": [
-            "Medium effort now default for Opus 4.6, balancing speed and thoroughness",
-            "\"Ultrathink\" keyword re-introduced for high effort on individual turns",
-            "Opus 4 and 4.1 removed from first-party API, users automatically moved to 4.6"
-          ],
-          "sources": [
-            {
-              "type": "blog",
-              "title": "Claude Code v2.1.68",
-              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2168",
-              "published_at": "2026-03-09T07:20:03.381Z"
-            }
-          ],
-          "perspectives": ""
-        },
-        {
-          "id": "claude-code-005",
-          "headline": "Claude Code Introduces Auto-Memory and Enhanced Command Features",
-          "summary": "Version 2.1.59 adds automatic context saving to \"auto-memory\" that intelligently preserves useful information across sessions [1]. The update also introduces a `/copy` command with interactive code block selection and improves bash command approval for compound operations.",
-          "key_points": [
-            "Auto-memory automatically saves useful context, manageable with `/memory` command",
-            "New `/copy` command provides interactive picker for selecting individual code blocks",
-            "Improved \"always allow\" suggestions for compound bash commands with per-subcommand prefixes"
+            "Automatic context saving with `/memory` management",
+            "New `/copy` command for interactive code block selection",
+            "Enhanced git worktree configuration sharing"
           ],
           "sources": [
             {
               "type": "blog",
               "title": "Claude Code v2.1.59",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2159",
-              "published_at": "2026-03-09T07:20:03.381Z"
-            }
-          ],
-          "perspectives": ""
-        },
-        {
-          "id": "claude-code-006",
-          "headline": "Claude Code Expands Remote Control Access and Adds Bundled Commands",
-          "summary": "Recent updates expand Remote Control availability to more users [1] and introduce bundled slash commands including `/simplify` and `/batch` [2]. Project configurations and auto-memory now sync across git worktrees, while users can opt out of claude.ai MCP servers with an environment variable.",
-          "key_points": [],
-          "sources": [
-            {
-              "type": "blog",
-              "title": "Claude Code v2.1.58",
-              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2158",
-              "published_at": "2026-03-09T07:20:03.381Z"
+              "published_at": "2026-03-09T15:07:41.194Z"
             },
             {
               "type": "blog",
               "title": "Claude Code v2.1.63",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2163",
-              "published_at": "2026-03-09T07:20:03.381Z"
+              "published_at": "2026-03-09T15:07:41.194Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-005",
+          "headline": "Remote Control Feature Expands to More Users",
+          "summary": "Claude Code v2.1.58 announces the expansion of Remote Control functionality to a broader user base [10]. Multiple stability fixes have also been implemented, including Windows config file corruption issues and prompt cache improvements [7][8].",
+          "key_points": [
+            "Wider rollout of collaborative remote control features",
+            "Windows-specific file system fixes",
+            "Performance improvements for prompt suggestions"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.58",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2158",
+              "published_at": "2026-03-09T15:07:41.194Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.62",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2162",
+              "published_at": "2026-03-09T15:07:41.194Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.61",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2161",
+              "published_at": "2026-03-09T15:07:41.194Z"
             }
           ],
           "perspectives": ""
@@ -138,7 +193,27 @@
     },
     "community": {
       "label": "Community",
-      "stories": []
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Developer Calls for Anthropic to Build New Slack Alternative",
+          "summary": "A Fivetran blog post arguing that Anthropic should create a modern Slack replacement has generated significant community discussion on Hacker News [15]. The post suggests Anthropic's AI capabilities could revolutionize workplace communication tools [15].",
+          "key_points": [
+            "Proposes AI-native approach to team communication",
+            "Critiques current limitations of existing platforms",
+            "Generated substantial developer community engagement"
+          ],
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic, please make a new Slack",
+              "url": "https://www.fivetran.com/blog/anthropic-please-make-a-new-slack",
+              "published_at": "2026-03-06T19:52:08.000Z"
+            }
+          ],
+          "perspectives": "The developer community appears divided between excitement about AI-powered collaboration tools and skepticism about whether Anthropic should expand beyond its core AI research focus."
+        }
+      ]
     }
   }
 }
