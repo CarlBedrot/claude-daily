@@ -37,8 +37,13 @@ async function fetchRedditUrl(
   token: string | null,
 ): Promise<RawItem[]> {
   const baseUrl = token ? "https://oauth.reddit.com" : "https://www.reddit.com";
-  const suffix = token ? "" : ".json";
-  const url = `${baseUrl}${path}${suffix}`;
+  let url: string;
+  if (token) {
+    url = `${baseUrl}${path}`;
+  } else {
+    const [pathPart, query] = path.split("?");
+    url = `${baseUrl}${pathPart}.json${query ? `?${query}` : ""}`;
+  }
 
   try {
     const headers: Record<string, string> = {

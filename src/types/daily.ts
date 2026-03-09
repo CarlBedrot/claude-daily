@@ -1,4 +1,4 @@
-export type SourceType = "blog" | "reddit" | "twitter";
+export type SourceType = "blog" | "reddit" | "twitter" | "hackernews";
 
 export type Source = {
   type: SourceType;

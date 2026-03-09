@@ -10,6 +10,7 @@ const SOURCE_LABELS: Record<SourceType, string> = {
   blog: "BLOG",
   reddit: "REDDIT",
   twitter: "X",
+  hackernews: "HN",
 };
 
 function StoryBody({ story }: { story: Story }) {
