@@ -64,21 +64,47 @@ export function StoryCard({ story, isLead = false }: StoryCardProps) {
   if (isLead) {
     return (
       <article className="border-b border-cream-dark last:border-b-0 bg-cream-dark/30 -mx-4 px-4 rounded-lg">
-        <div className="py-4">
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-medium tracking-wide text-claude-orange">
-              {sourceLabel}
-            </span>
-            <span className="text-xs text-gray-secondary">
-              {timeAgo(earliestSource.published_at)}
-            </span>
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="w-full text-left py-4 flex items-start justify-between gap-4 group cursor-pointer"
+        >
+          <div className="min-w-0">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-medium tracking-wide text-claude-orange">
+                {sourceLabel}
+              </span>
+              <span className="text-xs text-gray-secondary">
+                {timeAgo(earliestSource.published_at)}
+              </span>
+            </div>
+            <h2 className="text-lg font-semibold font-serif text-charcoal leading-snug mt-0.5 group-hover:text-claude-orange transition-colors">
+              {story.headline}
+            </h2>
           </div>
-          <h2 className="text-lg font-semibold font-serif text-charcoal leading-snug mt-0.5">
-            {story.headline}
-          </h2>
-        </div>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            className={`mt-5 shrink-0 text-gray-secondary group-hover:text-claude-orange transition-all duration-200 ${
+              expanded ? "rotate-180" : ""
+            }`}
+          >
+            <path
+              d="M4 6L8 10L12 6"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+            />
+          </svg>
+        </button>
 
-        <div className="pb-5">
+        <div
+          className={`overflow-hidden transition-all duration-200 ${
+            expanded ? "max-h-[1000px] opacity-100 pb-5" : "max-h-0 opacity-0"
+          }`}
+        >
           <StoryBody story={story} />
         </div>
       </article>
