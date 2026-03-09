@@ -1,0 +1,144 @@
+{
+  "date": "2026-03-09",
+  "generated_at": "2026-03-09T07:20:29.560Z",
+  "digest": "Claude Code rolled out a massive v2.1.71 update with recurring commands and cron scheduling, while Mozilla partnered with Anthropic on Firefox security. The CLI also shifted Opus 4.6 to medium effort by default and introduced auto-memory features that intelligently save useful context across sessions.",
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Partners with Mozilla on Firefox Security Initiative",
+          "summary": "Anthropic announced a partnership with Mozilla focused on Firefox security [1]. The collaboration appears to leverage Claude's capabilities for browser security applications, though specific details of the implementation were not disclosed.",
+          "key_points": [],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Mozilla Firefox Security",
+              "url": "https://www.anthropic.com/news/mozilla-firefox-security",
+              "published_at": "2026-03-06T11:54:43.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.71 Introduces Recurring Commands and Cron Scheduling",
+          "summary": "Claude Code's latest update adds powerful automation features including a `/loop` command for recurring prompts and cron scheduling tools [1]. The update also introduces rebindable voice activation keys and expands the bash auto-approval list with additional commands like `fmt`, `comm`, and `numfmt`.",
+          "key_points": [
+            "New `/loop` command enables recurring execution of prompts or slash commands (e.g., `/loop 5m check the deploy`)",
+            "Cron scheduling tools now available for recurring prompts within sessions",
+            "Voice activation key is now rebindable in keybindings.json with modifier combinations for zero typing interference"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.71",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2171",
+              "published_at": "2026-03-09T07:20:03.381Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code Fixes Third-Party Gateway API Errors in v2.1.70",
+          "summary": "Version 2.1.70 resolves critical API 400 errors when using `ANTHROPIC_BASE_URL` with third-party gateways by improving tool search detection of proxy endpoints [1]. The update also fixes issues with custom Bedrock inference profiles and empty model responses following tool searches.",
+          "key_points": [],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.70",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2170",
+              "published_at": "2026-03-09T07:20:03.381Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-003",
+          "headline": "Claude Code Adds API Development Skills and Remote Control Features",
+          "summary": "Version 2.1.69 introduces the `/claude-api` skill for building applications with the Claude API and Anthropic SDK [1]. The update also enhances remote control functionality with custom session naming and improves bash mode navigation with Ctrl+U support.",
+          "key_points": [],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.69",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2169",
+              "published_at": "2026-03-09T07:20:03.381Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-004",
+          "headline": "Opus 4.6 Now Defaults to Medium Effort for Max and Team Users",
+          "summary": "Claude Code v2.1.68 changes the default effort level for Opus 4.6 to medium, described as the \"sweet spot between speed and thoroughness\" for most tasks [1]. Users can still access high effort using the \"ultrathink\" keyword, while older Opus models (4 and 4.1) have been removed from the first-party API.",
+          "key_points": [
+            "Medium effort now default for Opus 4.6, balancing speed and thoroughness",
+            "\"Ultrathink\" keyword re-introduced for high effort on individual turns",
+            "Opus 4 and 4.1 removed from first-party API, users automatically moved to 4.6"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.68",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2168",
+              "published_at": "2026-03-09T07:20:03.381Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-005",
+          "headline": "Claude Code Introduces Auto-Memory and Enhanced Command Features",
+          "summary": "Version 2.1.59 adds automatic context saving to \"auto-memory\" that intelligently preserves useful information across sessions [1]. The update also introduces a `/copy` command with interactive code block selection and improves bash command approval for compound operations.",
+          "key_points": [
+            "Auto-memory automatically saves useful context, manageable with `/memory` command",
+            "New `/copy` command provides interactive picker for selecting individual code blocks",
+            "Improved \"always allow\" suggestions for compound bash commands with per-subcommand prefixes"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.59",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2159",
+              "published_at": "2026-03-09T07:20:03.381Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-006",
+          "headline": "Claude Code Expands Remote Control Access and Adds Bundled Commands",
+          "summary": "Recent updates expand Remote Control availability to more users [1] and introduce bundled slash commands including `/simplify` and `/batch` [2]. Project configurations and auto-memory now sync across git worktrees, while users can opt out of claude.ai MCP servers with an environment variable.",
+          "key_points": [],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.58",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2158",
+              "published_at": "2026-03-09T07:20:03.381Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.63",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2163",
+              "published_at": "2026-03-09T07:20:03.381Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    }
+  }
+}
