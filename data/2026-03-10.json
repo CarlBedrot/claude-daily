@@ -1,0 +1,211 @@
+{
+  "date": "2026-03-10",
+  "generated_at": "2026-03-10T07:14:52.906Z",
+  "digest": "The biggest story today is Anthropic's lawsuit against the Pentagon over being labeled a 'supply chain risk' - a move that could reshape AI-defense partnerships. Meanwhile, Claude Code users got a major productivity boost with the new /loop command for recurring tasks, while community discussions continue around Claude's controversial military applications.",
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Sues Pentagon Over 'Supply Chain Risk' Classification",
+          "summary": "Anthropic has filed a lawsuit against the U.S. Department of Defense to block being blacklisted as a 'supply chain risk' [1][2][3]. The legal action challenges restrictions on AI use that could prevent government contracts and partnerships [4]. The Pentagon's classification appears related to concerns over AI applications in military operations.",
+          "key_points": [
+            "Multiple news outlets report the lawsuit targets Pentagon blacklisting over AI use restrictions",
+            "The 'supply chain risk' label could significantly impact Anthropic's government business opportunities"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Anthropic sues US Government for calling it a risk",
+              "url": "https://www.bbc.com/news/articles/cq571w5vllxo",
+              "published_at": "2026-03-09T18:48:58.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Anthropic Sues Pentagon over 'Supply Chain Risk' Label",
+              "url": "https://www.nytimes.com/2026/03/09/technology/anthropic-defense-artificial-intelligence-lawsuit.html",
+              "published_at": "2026-03-09T17:09:47.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Anthropic sues to block Pentagon blacklisting over AI use restrictions",
+              "url": "https://www.reuters.com/world/anthropic-sues-block-pentagon-blacklisting-over-ai-use-restrictions-2026-03-09/",
+              "published_at": "2026-03-09T15:25:40.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Partners with Mozilla on Firefox Security Initiative",
+          "summary": "Anthropic announced a new partnership with Mozilla focused on Firefox security [1]. The collaboration appears to leverage Claude's capabilities for browser security applications, though specific details of the initiative remain limited.",
+          "key_points": [],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Mozilla Firefox Security",
+              "url": "https://www.anthropic.com/news/mozilla-firefox-security",
+              "published_at": "2026-03-09T13:41:16.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Adds Recurring Task Automation with /loop Command",
+          "summary": "Claude Code v2.1.71 introduces the `/loop` command for running prompts or commands on recurring intervals, such as `/loop 5m check the deploy` [1]. The update also adds cron scheduling tools for session-based recurring prompts and a rebindable voice activation key [1]. Version 2.1.72 enhanced the feature with tool search activation and direct file writing capabilities [2].",
+          "key_points": [
+            "New /loop command enables automated recurring tasks with flexible time intervals",
+            "Cron scheduling tools provide session-based automation capabilities",
+            "Voice activation key is now customizable through keybindings.json"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.71",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2171",
+              "published_at": "2026-03-10T07:14:11.608Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.72",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2172",
+              "published_at": "2026-03-10T07:14:11.607Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Opus 4.6 Becomes Default with Medium Effort Setting",
+          "summary": "Claude Code now defaults Opus 4.6 to medium effort for Max and Team subscribers, positioning it as the optimal balance between speed and thoroughness [1]. Users can adjust this setting with the `/model` command, and the \"ultrathink\" keyword enables high effort for specific tasks [1]. Legacy Opus 4 and 4.1 models have been removed from the first-party API [1].",
+          "key_points": [
+            "Medium effort is now the default setting, optimized for most common tasks",
+            "Legacy Opus models automatically migrate users to the newer 4.6 version"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.68",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2168",
+              "published_at": "2026-03-10T07:14:11.608Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-003",
+          "headline": "Claude Code Fixes API Compatibility Issues with Third-Party Gateways",
+          "summary": "Recent updates resolved API 400 errors when using `ANTHROPIC_BASE_URL` with third-party gateways by improving proxy endpoint detection [1]. The fixes also addressed compatibility issues with custom Bedrock inference profiles and non-standard model identifiers [1]. Additional improvements include better tool search functionality and reduced spurious error logging [2][3].",
+          "key_points": [],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.70",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2170",
+              "published_at": "2026-03-10T07:14:11.608Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.66",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2166",
+              "published_at": "2026-03-10T07:14:11.608Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.61",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2161",
+              "published_at": "2026-03-10T07:14:11.608Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-004",
+          "headline": "New Developer Tools Include Claude API Skill and Auto-Memory Features",
+          "summary": "Claude Code v2.1.69 added the `/claude-api` skill for building applications with the Claude API and Anthropic SDK [1]. Version 2.1.59 introduced automatic context saving to auto-memory and a `/copy` command with interactive code block selection [2]. Additional improvements include better bash command handling and enhanced remote control session naming [1][2].",
+          "key_points": [
+            "New /claude-api skill streamlines API development workflows",
+            "Auto-memory feature automatically saves useful context for later reference",
+            "Interactive /copy command simplifies code block selection and management"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.69",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2169",
+              "published_at": "2026-03-10T07:14:11.608Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.59",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2159",
+              "published_at": "2026-03-10T07:14:11.608Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Community Debates Anthropic's Claude Code Operating Costs",
+          "summary": "A detailed analysis challenges claims that Claude Code costs Anthropic $5,000 per user, sparking community discussion about the economics of AI tooling [1]. The post examines the actual infrastructure and operational costs behind the developer-focused service, generating significant engagement on Hacker News with 117 points and 62 comments [1].",
+          "key_points": [
+            "Analysis disputes widely circulated $5k per user cost estimates",
+            "Community discussion focuses on realistic AI service economics"
+          ],
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "No, it doesn't cost Anthropic $5k per Claude Code user",
+              "url": "https://martinalderson.com/posts/no-it-doesnt-cost-anthropic-5k-per-claude-code-user/",
+              "published_at": "2026-03-09T23:22:06.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "community-002",
+          "headline": "Military AI Applications Continue to Generate Controversy",
+          "summary": "Community discussions continue around Claude's involvement in military operations, with reports of AI assistance in targeting Iranian facilities generating significant debate [1][2]. Questions persist about the Pentagon's transparency regarding AI use in bombing operations, including incidents involving civilian targets [3]. The discussions reflect broader community concerns about AI ethics in warfare applications.",
+          "key_points": [
+            "Reports suggest Claude AI helped coordinate strikes against 1,000 targets in 24 hours",
+            "Pentagon faces criticism for lack of transparency about AI involvement in military operations",
+            "Community debates focus on ethical implications of AI in warfare"
+          ],
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Palantir and Anthropic AI helped the US hit 1k Iran targets in 24 hours",
+              "url": "https://www.moneycontrol.com/europe/?url=https://www.moneycontrol.com/world/how-palantir-and-anthropic-ai-helped-the-us-hit-1-000-iran-targets-in-24-hours-article-13853331.html",
+              "published_at": "2026-03-07T13:28:48.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Claude AI Helped Bomb Iran. But How Exactly?",
+              "url": "https://www.bloomberg.com/opinion/articles/2026-03-04/iran-strikes-anthropic-claude-ai-helped-us-attack-but-how-exactly",
+              "published_at": "2026-03-07T10:14:26.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Pentagon Refuses to Say If AI Was Used to Bomb Elementary School",
+              "url": "https://futurism.com/artificial-intelligence/pentagon-ai-claude-bombing-elementary-school",
+              "published_at": "2026-03-07T14:12:07.000Z"
+            }
+          ],
+          "perspectives": "The community remains divided on military AI applications - while some view them as legitimate defense tools, others express serious concerns about transparency and civilian safety in AI-assisted military operations."
+        }
+      ]
+    }
+  }
+}
