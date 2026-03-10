@@ -32,7 +32,7 @@ Output ONLY valid JSON matching this exact schema:
   "tabs": {
     "claude_ai": {
       "label": "Claude.ai",
-      "stories": [{ "id": "claude-ai-001", "headline": "", "summary": "", "key_points": [], "sources": [{ "type": "blog|reddit|twitter", "title": "", "url": "", "published_at": "" }], "perspectives": "" }]
+      "stories": [{ "id": "claude-ai-001", "headline": "", "summary": "", "key_points": [], "sources": [{ "type": "blog|reddit|twitter|hackernews", "title": "", "url": "", "published_at": "" }], "perspectives": "" }]
     },
     "claude_code": { "label": "Claude Code", "stories": [...] },
     "community": { "label": "Community", "stories": [...] }

@@ -11,15 +11,27 @@ const DAILY_TIP_COUNT = 5;
 async function main() {
   console.log("Fetching sources...");
 
-  const { blogItems, redditItems, changelogItems, filtered } =
-    await fetchAllSources();
+  const {
+    blogItems,
+    redditItems,
+    changelogItems,
+    hackernewsItems,
+    twitterItems,
+    filtered,
+  } = await fetchAllSources();
 
   console.log(`  Blog: ${blogItems.length} items`);
   console.log(`  Reddit: ${redditItems.length} items`);
   console.log(`  Changelog: ${changelogItems.length} items`);
-  console.log(
-    `  Total raw: ${blogItems.length + redditItems.length + changelogItems.length} items`,
-  );
+  console.log(`  HackerNews: ${hackernewsItems.length} items`);
+  console.log(`  Twitter: ${twitterItems.length} items`);
+  const totalRaw =
+    blogItems.length +
+    redditItems.length +
+    changelogItems.length +
+    hackernewsItems.length +
+    twitterItems.length;
+  console.log(`  Total raw: ${totalRaw} items`);
   console.log(`  After filtering: ${filtered.length} items`);
 
   if (filtered.length === 0) {
