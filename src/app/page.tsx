@@ -20,16 +20,11 @@ export default async function Home({ searchParams }: PageProps) {
     );
   }
 
-  const tips = getTips();
-  const briefingWithTips = {
-    ...briefing,
-    tabs: {
-      ...briefing.tabs,
-      tips: { label: "Tips", stories: tips },
-    },
-  };
+  // Use tips from daily file if present, fall back to global archive for old data
+  if (!briefing.tabs.tips || briefing.tabs.tips.stories.length === 0) {
+    const tips = getTips();
+    briefing.tabs.tips = { label: "Tips", stories: tips };
+  }
 
-  return (
-    <BriefingView briefing={briefingWithTips} availableDates={availableDates} />
-  );
+  return <BriefingView briefing={briefing} availableDates={availableDates} />;
 }

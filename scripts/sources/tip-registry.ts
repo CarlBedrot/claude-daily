@@ -12,6 +12,14 @@ export const TIP_REGISTRY: TipSource[] = [
     url: "https://www.reddit.com/r/ClaudeAI/search.json?q=tip+OR+trick+OR+workflow+claude+code&restrict_sr=1&sort=top&t=month&limit=10",
     author: { name: "Community", role: "r/ClaudeAI contributors" },
   },
+  {
+    url: "https://www.reddit.com/r/ClaudeAI/search.json?q=slash+command+OR+%2Fcommand+OR+%2Finit+OR+%2Fcompact+OR+%2Freview+OR+%2Fcommit+claude+code&restrict_sr=1&sort=top&t=month&limit=10",
+    author: { name: "Community", role: "r/ClaudeAI contributors" },
+  },
+  {
+    url: "https://www.reddit.com/r/ClaudeAI/search.json?q=agent+OR+subagent+OR+agentic+OR+multi-agent+claude+code&restrict_sr=1&sort=top&t=month&limit=10",
+    author: { name: "Community", role: "r/ClaudeAI contributors" },
+  },
 ];
 
 type StoredTip = {
@@ -37,40 +45,44 @@ export async function fetchTipSources(): Promise<
   const results: { item: RawItem; author: { name: string; role: string } }[] =
     [];
 
-  // Fetch Reddit tip search
-  try {
-    const redditEntry = TIP_REGISTRY[0];
-    const response = await fetch(redditEntry.url, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (compatible; ClaudeDaily/1.0; +https://github.com/CarlBedrot/claude-daily)",
-        Accept: "application/json",
-      },
-    });
+  const seenUrls = new Set<string>();
 
-    const text = await response.text();
-    if (!text.startsWith("<") && !text.startsWith("<!")) {
-      const data = JSON.parse(text);
-      for (const child of data.data.children) {
-        const post = child.data;
-        const url = `https://reddit.com${post.permalink}`;
-        if (existingUrls.has(url) || post.score < 5) continue;
+  for (const entry of TIP_REGISTRY) {
+    try {
+      const response = await fetch(entry.url, {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (compatible; ClaudeDaily/1.0; +https://github.com/CarlBedrot/claude-daily)",
+          Accept: "application/json",
+        },
+      });
 
-        results.push({
-          item: {
-            title: post.title,
-            url,
-            content: post.selftext || post.title,
-            source_type: "reddit" as const,
-            published_at: new Date(post.created_utc * 1000).toISOString(),
-            score: post.score,
-          },
-          author: redditEntry.author,
-        });
+      const text = await response.text();
+      if (!text.startsWith("<") && !text.startsWith("<!")) {
+        const data = JSON.parse(text);
+        for (const child of data.data.children) {
+          const post = child.data;
+          const url = `https://reddit.com${post.permalink}`;
+          if (existingUrls.has(url) || seenUrls.has(url) || post.score < 5)
+            continue;
+          seenUrls.add(url);
+
+          results.push({
+            item: {
+              title: post.title,
+              url,
+              content: post.selftext || post.title,
+              source_type: "reddit" as const,
+              published_at: new Date(post.created_utc * 1000).toISOString(),
+              score: post.score,
+            },
+            author: entry.author,
+          });
+        }
       }
+    } catch (error) {
+      console.error("Failed to fetch Reddit tips:", error);
     }
-  } catch (error) {
-    console.error("Failed to fetch Reddit tips:", error);
   }
 
   return results;

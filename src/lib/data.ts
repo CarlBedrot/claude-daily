@@ -20,7 +20,7 @@ export function getAvailableDates(): string[] {
 export function getBriefing(date?: string): DailyBriefing | null {
   const dates = getAvailableDates();
 
-  const targetDate = date || dates[0];
+  const targetDate = date && /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : dates[0];
   if (!targetDate) {
     try {
       const samplePath = path.join(DATA_DIR, "sample.json");

@@ -70,7 +70,7 @@ export function BriefingView({ briefing, availableDates }: BriefingViewProps) {
         ) : (
           activeStories.map((story, index) =>
             activeTab === "tips" ? (
-              <TipCard key={story.id} story={story} />
+              <TipCard key={story.id} story={story} isLead={index === 0} />
             ) : (
               <StoryCard key={story.id} story={story} isLead={index === 0} />
             ),
