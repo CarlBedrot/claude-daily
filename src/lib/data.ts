@@ -1,8 +1,16 @@
-import { DailyBriefing, Story } from "@/types/daily";
+import { DailyBriefing, Story, TabKey } from "@/types/daily";
 import fs from "fs";
 import path from "path";
 
 const DATA_DIR = path.join(process.cwd(), "data");
+
+export type SearchResult = {
+  date: string;
+  tabKey: TabKey;
+  tabLabel: string;
+  story: Story;
+  matchContext: string;
+};
 
 export function getAvailableDates(): string[] {
   try {
@@ -46,4 +54,52 @@ export function getTips(): Story[] {
   } catch {
     return [];
   }
+}
+
+export function searchBriefings(query: string): SearchResult[] {
+  const dates = getAvailableDates();
+  const results: SearchResult[] = [];
+  const lowerQuery = query.toLowerCase();
+
+  for (const date of dates) {
+    const briefing = getBriefing(date);
+    if (!briefing) continue;
+
+    for (const [tabKey, tab] of Object.entries(briefing.tabs)) {
+      for (const story of tab.stories) {
+        const searchableText = [
+          story.headline,
+          story.summary,
+          ...(story.key_points ?? []),
+          ...(story.actionable_steps ?? []),
+          story.perspectives ?? "",
+        ].join(" ");
+
+        if (searchableText.toLowerCase().includes(lowerQuery)) {
+          results.push({
+            date,
+            tabKey: tabKey as TabKey,
+            tabLabel: tab.label,
+            story,
+            matchContext: extractSnippet(story.summary, lowerQuery),
+          });
+        }
+      }
+    }
+  }
+
+  return results;
+}
+
+function extractSnippet(text: string, query: string): string {
+  const lower = text.toLowerCase();
+  const index = lower.indexOf(query);
+  if (index === -1) return text.slice(0, 150);
+
+  const start = Math.max(0, index - 60);
+  const end = Math.min(text.length, index + query.length + 60);
+  let snippet = text.slice(start, end);
+  if (start > 0) snippet = "..." + snippet;
+  if (end < text.length) snippet = snippet + "...";
+  return snippet;
 }
