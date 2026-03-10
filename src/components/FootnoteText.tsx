@@ -62,7 +62,7 @@ function FootnoteMarker({ index, source }: { index: number; source: Source }) {
       </a>
       {open && (
         <div
-          className={`absolute bottom-full mb-2 z-50 w-60 bg-charcoal text-white rounded-lg shadow-lg p-3 text-xs pointer-events-none ${
+          className={`absolute bottom-full mb-2 z-50 w-60 bg-tooltip-bg text-tooltip-text rounded-lg shadow-lg p-3 text-xs pointer-events-none ${
             alignRight ? "left-0" : "right-0"
           }`}
         >

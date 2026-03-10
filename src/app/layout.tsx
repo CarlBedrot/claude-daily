@@ -31,6 +31,11 @@ export default function RootLayout({
     <html lang="en" className={sourceSerif.variable} suppressHydrationWarning>
       <head>
         <link rel="apple-touch-icon" href="/icon-192.png" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}})()`,
+          }}
+        />
       </head>
       <body className="bg-cream text-charcoal antialiased">{children}</body>
     </html>

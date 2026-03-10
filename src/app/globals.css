@@ -1,12 +1,38 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #faf6f1;
-  --color-cream-dark: #f0ebe3;
-  --color-claude-orange: #e07a3a;
-  --color-claude-orange-hover: #c96a2f;
-  --color-charcoal: #1a1a1a;
-  --color-gray-secondary: #6b6b6b;
-  --color-card-shadow: rgba(139, 109, 79, 0.08);
+  --color-cream: var(--theme-cream);
+  --color-cream-dark: var(--theme-cream-dark);
+  --color-claude-orange: var(--theme-orange);
+  --color-claude-orange-hover: var(--theme-orange-hover);
+  --color-charcoal: var(--theme-charcoal);
+  --color-gray-secondary: var(--theme-gray);
+  --color-card-shadow: var(--theme-card-shadow);
+  --color-tooltip-bg: var(--theme-tooltip-bg);
+  --color-tooltip-text: var(--theme-tooltip-text);
   --font-serif: var(--font-source-serif), "Georgia", "Times New Roman", serif;
+}
+
+:root {
+  --theme-cream: #faf6f1;
+  --theme-cream-dark: #f0ebe3;
+  --theme-orange: #e07a3a;
+  --theme-orange-hover: #c96a2f;
+  --theme-charcoal: #1a1a1a;
+  --theme-gray: #6b6b6b;
+  --theme-card-shadow: rgba(139, 109, 79, 0.08);
+  --theme-tooltip-bg: #1a1a1a;
+  --theme-tooltip-text: #ffffff;
+}
+
+.dark {
+  --theme-cream: #1a1a1a;
+  --theme-cream-dark: #252525;
+  --theme-orange: #f0924e;
+  --theme-orange-hover: #e07a3a;
+  --theme-charcoal: #f0ebe3;
+  --theme-gray: #9a9a9a;
+  --theme-card-shadow: rgba(0, 0, 0, 0.3);
+  --theme-tooltip-bg: #f0ebe3;
+  --theme-tooltip-text: #1a1a1a;
 }
