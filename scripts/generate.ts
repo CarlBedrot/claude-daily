@@ -32,7 +32,7 @@ async function main() {
     hackernewsItems.length +
     twitterItems.length;
   console.log(`  Total raw: ${totalRaw} items`);
-  console.log(`  After filtering: ${filtered.length} items`);
+  console.log(`  After filtering (time + dedup + recent-day exclusion): ${filtered.length} items`);
 
   if (filtered.length === 0) {
     console.log("No items found. Generating placeholder...");
