@@ -1,0 +1,294 @@
+{
+  "date": "2026-03-11",
+  "generated_at": "2026-03-11T07:16:06.423Z",
+  "digest": "Today's biggest story is Anthropic's lawsuit against the Pentagon over being labeled a 'supply chain risk,' sparking debate about AI company-government relations. Meanwhile, Claude Code rolled out significant updates including automatic memory management, recurring task scheduling with /loop commands, and Opus 4.6 now defaults to medium effort for better performance.",
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Sues Pentagon Over 'Supply Chain Risk' Blacklisting",
+          "summary": "Anthropic has filed a lawsuit against the U.S. Defense Department challenging its designation as a 'supply chain risk' [1][2][3][4]. The legal action aims to block Pentagon blacklisting over AI use restrictions [4]. The case has generated significant discussion in tech circles, with multiple major outlets covering the unprecedented move by an AI company against federal classification [1][2][3][4].",
+          "key_points": [
+            "First major AI company to legally challenge government risk designation",
+            "Lawsuit targets Pentagon's supplier restriction policies",
+            "Case highlights growing tensions between AI companies and defense agencies"
+          ],
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic sues US Government for calling it a risk",
+              "url": "https://www.bbc.com/news/articles/cq571w5vllxo",
+              "published_at": "2026-03-09T18:48:58.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Anthropic Sues Pentagon over 'Supply Chain Risk' Label",
+              "url": "https://www.nytimes.com/2026/03/09/technology/anthropic-defense-artificial-intelligence-lawsuit.html",
+              "published_at": "2026-03-09T17:09:47.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Anthropic sues US defense department over blacklisting",
+              "url": "https://www.theguardian.com/technology/2026/mar/09/anthropic-defense-department-lawsuit-ai",
+              "published_at": "2026-03-09T17:04:12.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Anthropic sues to block Pentagon blacklisting over AI use restrictions",
+              "url": "https://www.reuters.com/world/anthropic-sues-block-pentagon-blacklisting-over-ai-use-restrictions-2026-03-09/",
+              "published_at": "2026-03-09T15:25:40.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Opens Fourth Office in Sydney for Asia Pacific Expansion",
+          "summary": "Anthropic has announced the opening of its fourth office location in Sydney, Australia, marking the company's continued expansion into the Asia Pacific region [1]. This represents a significant milestone in Anthropic's global growth strategy.",
+          "key_points": [],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Sydney Fourth Office Asia Pacific",
+              "url": "https://www.anthropic.com/news/sydney-fourth-office-asia-pacific",
+              "published_at": "2026-03-11T02:10:54.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic Partners with Mozilla on Firefox Security Initiative",
+          "summary": "Anthropic has announced a new partnership with Mozilla focused on Firefox security [1]. The collaboration appears to be part of Anthropic's broader efforts to work with major technology companies on security and safety initiatives.",
+          "key_points": [],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Mozilla Firefox Security",
+              "url": "https://www.anthropic.com/news/mozilla-firefox-security",
+              "published_at": "2026-03-09T13:41:16.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Introduces Automatic Memory Management and Interactive Copy Features",
+          "summary": "Claude Code v2.1.59 launched automatic memory saving where Claude stores useful context that users can manage with /memory [1]. The update also added an interactive /copy command that displays a picker for selecting individual code blocks or full responses when multiple code blocks are present [1].",
+          "key_points": [
+            "Auto-memory automatically saves useful context during sessions",
+            "Interactive /copy picker for selecting specific code blocks",
+            "Improved bash command prefix suggestions for compound commands"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.59",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2159",
+              "published_at": "2026-03-11T07:15:26.883Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code Adds Recurring Task Scheduling with /loop Command",
+          "summary": "Claude Code v2.1.71 introduced the /loop command for running prompts or slash commands on recurring intervals, such as '/loop 5m check the deploy' [1]. The update also added cron scheduling tools for recurring prompts within sessions and a rebindable voice activation key [1].",
+          "key_points": [
+            "/loop command enables scheduled recurring tasks",
+            "Built-in cron scheduling for session-based automation",
+            "Customizable voice activation keybinding with zero typing interference"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.71",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2171",
+              "published_at": "2026-03-11T07:15:26.883Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-003",
+          "headline": "Opus 4.6 Now Defaults to Medium Effort for Better Performance Balance",
+          "summary": "Claude Code v2.1.68 set Opus 4.6 to default to medium effort for Max and Team subscribers, which provides a sweet spot between speed and thoroughness [1]. Users can still change effort levels with /model, and the 'ultrathink' keyword enables high effort for individual turns [1]. Older Opus versions (4 and 4.1) have been removed from the first-party API [1].",
+          "key_points": [
+            "Medium effort becomes new default for optimal speed-quality balance",
+            "'Ultrathink' keyword available for high-effort individual responses",
+            "Legacy Opus models automatically migrated to 4.6"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.68",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2168",
+              "published_at": "2026-03-11T07:15:26.883Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-004",
+          "headline": "Claude Code Adds Enhanced File Operations and SSH Support",
+          "summary": "Claude Code v2.1.72 introduced the 'w' key in /copy to write focused selections directly to files, bypassing the clipboard for better SSH workflows [1]. The update also added an optional description argument to /plan for immediate planning mode activation and an ExitWorktree tool for leaving EnterWorktree sessions [1].",
+          "key_points": [
+            "Direct file writing from /copy bypasses clipboard for SSH users",
+            "/plan command accepts descriptions for immediate planning",
+            "ExitWorktree tool for better worktree session management"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.72",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2172",
+              "published_at": "2026-03-11T07:15:26.883Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-005",
+          "headline": "Claude Code Resolves API Compatibility Issues with Third-Party Gateways",
+          "summary": "Claude Code v2.1.70 fixed API 400 errors when using ANTHROPIC_BASE_URL with third-party gateways by correctly detecting proxy endpoints and disabling tool_reference blocks [1]. The update also resolved issues with custom Bedrock inference profiles and empty model responses after ToolSearch [1].",
+          "key_points": [
+            "Fixed compatibility with third-party API gateways and proxies",
+            "Resolved Bedrock custom inference profile errors",
+            "Improved tool search reliability after system operations"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.70",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2170",
+              "published_at": "2026-03-11T07:15:26.883Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-006",
+          "headline": "Claude Code Introduces Claude API Skill and Remote Control Enhancements",
+          "summary": "Claude Code v2.1.69 added the /claude-api skill for building applications with the Claude API and Anthropic SDK [1]. The update also improved bash mode navigation with Ctrl+U support and enhanced remote control sessions with custom naming options [1].",
+          "key_points": [
+            "New /claude-api skill for API development workflows",
+            "Enhanced keyboard navigation in bash mode",
+            "Custom session naming for remote control functionality"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.69",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2169",
+              "published_at": "2026-03-11T07:15:26.883Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Community Analysis Challenges Claims About Claude Code Operating Costs",
+          "summary": "A detailed community analysis disputed claims that Anthropic spends $5,000 per Claude Code user [1]. The blog post generated significant discussion on Hacker News with 451 points and 326 comments, suggesting the community found the cost analysis compelling and worth debating [1].",
+          "key_points": [
+            "Independent analysis questions widely cited Claude Code cost figures",
+            "Strong community engagement with 451 points and 326 comments",
+            "Demonstrates community interest in understanding AI economics"
+          ],
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "No, it doesn't cost Anthropic $5k per Claude Code user",
+              "url": "https://martinalderson.com/posts/no-it-doesnt-cost-anthropic-5k-per-claude-code-user/",
+              "published_at": "2026-03-09T23:22:06.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-001",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-002",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-003",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
