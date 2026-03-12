@@ -1,0 +1,216 @@
+{
+  "date": "2026-03-12",
+  "generated_at": "2026-03-12T07:16:42.702Z",
+  "digest": "Today's biggest story is Anthropic's major model releases — Claude Opus 4.6 and Claude Sonnet 4.6 are now available, though details remain sparse. The company is also facing significant political headwinds with Pentagon blacklisting concerns and ongoing battles with the Trump administration. Meanwhile, Claude Code continues its steady development with v2.1.74 bringing memory optimizations and context management improvements.",
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Releases Claude Opus 4.6 and Claude Sonnet 4.6",
+          "summary": "Anthropic has announced the release of Claude Opus 4.6 [1] and Claude Sonnet 4.6 [2], marking the latest iterations of their flagship AI models. The announcements appear to be placeholder pages with minimal details currently available.",
+          "key_points": [],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Opus 4 6",
+              "url": "https://www.anthropic.com/news/claude-opus-4-6",
+              "published_at": "2026-03-11T17:28:58.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Sonnet 4 6",
+              "url": "https://www.anthropic.com/news/claude-sonnet-4-6",
+              "published_at": "2026-03-11T17:28:36.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Launches The Anthropic Institute",
+          "summary": "Anthropic has announced the creation of The Anthropic Institute [1], though specific details about the organization's mission and activities are not yet available from the announcement.",
+          "key_points": [],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "The Anthropic Institute",
+              "url": "https://www.anthropic.com/news/the-anthropic-institute",
+              "published_at": "2026-03-11T15:17:09.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Legal Experts Say Anthropic Has Strong Case Against Pentagon Blacklisting",
+          "summary": "Legal experts believe Anthropic has a strong legal position in challenging potential Pentagon blacklisting measures [1]. The dispute has generated significant discussion, with some viewing the confrontation as necessary and timely [2][3].",
+          "key_points": [
+            "Legal analysts see merit in Anthropic's defense against government restrictions",
+            "The case highlights broader tensions between AI companies and federal agencies"
+          ],
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic has strong case against Pentagon blacklisting, legal experts say",
+              "url": "https://www.reuters.com/legal/legalindustry/anthropic-has-strong-case-against-pentagon-blacklisting-legal-experts-say-2026-03-11/",
+              "published_at": "2026-03-11T21:22:04.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "I'm glad the Anthropic fight is happening now",
+              "url": "https://www.dwarkesh.com/p/dow-anthropic",
+              "published_at": "2026-03-11T19:28:59.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Anthropic vs. Trump Administration: What Happens When Firms Push Back",
+              "url": "https://joycevance.substack.com/p/anthropic-sues-the-administration",
+              "published_at": "2026-03-11T12:51:25.000Z"
+            }
+          ],
+          "perspectives": "While legal experts are optimistic about Anthropic's case, there's broader debate about whether confronting the administration now is strategically wise versus potentially escalating tensions."
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.74 Improves Memory Management and Context Tools",
+          "summary": "Claude Code v2.1.74 introduces actionable suggestions for the `/context` command to help developers optimize memory usage and manage context-heavy tools [1]. The update also adds a configurable `autoMemoryDirectory` setting and fixes a critical memory leak in streaming API responses that caused unbounded memory growth in Node.js environments [1].",
+          "key_points": [
+            "New `/context` command provides specific optimization tips for memory and capacity issues",
+            "Custom directory configuration available for auto-memory storage",
+            "Critical memory leak fix prevents unbounded RSS growth in Node.js"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.74",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2174",
+              "published_at": "2026-03-12T07:16:14.800Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code v2.1.73 Adds Model Override Support and Enterprise Features",
+          "summary": "Claude Code v2.1.73 introduces `modelOverrides` settings that allow developers to map model picker entries to custom provider model IDs, including Bedrock inference profile ARNs [1]. The update also improves enterprise compatibility with better SSL certificate error guidance for corporate proxy environments [1].",
+          "key_points": [
+            "Custom model ID mapping supports enterprise deployment patterns",
+            "Enhanced SSL certificate error handling for corporate environments",
+            "Fixes for permission prompt freezes and Git-related deadlocks"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.73",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2173",
+              "published_at": "2026-03-12T07:16:14.800Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Developer Creates Context-Aware Permission Guard for Claude Code",
+          "summary": "A community developer has built 'nah', a context-aware permission guard specifically designed for Claude Code [1]. The project has gained attention on Hacker News, suggesting growing interest in security and permission management tools for AI coding assistants.",
+          "key_points": [
+            "Open-source tool addresses permission management concerns",
+            "Shows community focus on security in AI-assisted development"
+          ],
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: A context-aware permission guard for Claude Code",
+              "url": "https://github.com/manuelschipper/nah/",
+              "published_at": "2026-03-11T23:26:25.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-001",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-002",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-003",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
