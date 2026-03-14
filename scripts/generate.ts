@@ -32,7 +32,9 @@ async function main() {
     hackernewsItems.length +
     twitterItems.length;
   console.log(`  Total raw: ${totalRaw} items`);
-  console.log(`  After filtering (time + dedup + recent-day exclusion): ${filtered.length} items`);
+  console.log(
+    `  After filtering (time + dedup + recent-day exclusion): ${filtered.length} items`,
+  );
 
   if (filtered.length === 0) {
     console.log("No items found. Generating placeholder...");
@@ -95,6 +97,30 @@ async function generateTips(): Promise<Story[]> {
   }
 }
 
+function getRecentlyShownTipIds(daysBack: number = 7): Set<string> {
+  const ids = new Set<string>();
+  const dataDir = path.join(process.cwd(), "data");
+
+  for (let i = 1; i <= daysBack; i++) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const dateStr = d.toISOString().split("T")[0];
+    const filePath = path.join(dataDir, `${dateStr}.json`);
+
+    try {
+      const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      const tips = data.tabs?.tips?.stories ?? [];
+      for (const tip of tips) {
+        if (tip.id) ids.add(tip.id);
+      }
+    } catch {
+      // File doesn't exist or is malformed — skip
+    }
+  }
+
+  return ids;
+}
+
 function selectDailyTips(newTips: Story[], count: number): Story[] {
   if (newTips.length >= count) {
     return newTips.slice(0, count);
@@ -102,18 +128,41 @@ function selectDailyTips(newTips: Story[], count: number): Story[] {
 
   const archive = readTipArchive();
   const newUrls = new Set(newTips.flatMap((t) => t.sources.map((s) => s.url)));
-  const candidates = archive.filter(
-    (t) => !t.sources.some((s) => newUrls.has(s.url)),
+  const recentlyShown = getRecentlyShownTipIds(7);
+
+  // First pass: tips not shown in the last 7 days
+  const fresh = archive.filter(
+    (t) =>
+      !t.sources.some((s) => newUrls.has(s.url)) && !recentlyShown.has(t.id),
   );
 
-  // Shuffle archive tips so each day gets a different rotation
-  for (let i = candidates.length - 1; i > 0; i--) {
+  // Shuffle fresh tips
+  for (let i = fresh.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [candidates[i], candidates[j]] = [candidates[j], candidates[i]];
+    [fresh[i], fresh[j]] = [fresh[j], fresh[i]];
   }
 
-  const backfill = candidates.slice(0, count - newTips.length);
-  return [...newTips, ...backfill];
+  const needed = count - newTips.length;
+  if (fresh.length >= needed) {
+    return [...newTips, ...fresh.slice(0, needed)];
+  }
+
+  // If archive is exhausted, fall back to oldest-shown-first from recently shown
+  const remaining = needed - fresh.length;
+  const fallback = archive.filter(
+    (t) =>
+      !t.sources.some((s) => newUrls.has(s.url)) &&
+      recentlyShown.has(t.id) &&
+      !fresh.some((f) => f.id === t.id),
+  );
+
+  // Shuffle fallback too
+  for (let i = fallback.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [fallback[i], fallback[j]] = [fallback[j], fallback[i]];
+  }
+
+  return [...newTips, ...fresh, ...fallback.slice(0, remaining)];
 }
 
 function readTipArchive(): Story[] {

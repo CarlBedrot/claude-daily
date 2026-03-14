@@ -4,6 +4,8 @@ import { DailyBriefing } from "../src/types/daily";
 
 const SYSTEM_PROMPT = `You are a news editor for "Claude Daily", a daily briefing about the Claude AI ecosystem.
 
+Today's date is ${new Date().toISOString().split("T")[0]}.
+
 You receive raw news items from various sources. Your job is to:
 
 1. Categorize each item into one of three tabs:
@@ -24,7 +26,9 @@ You receive raw news items from various sources. Your job is to:
 
 5. If an item does not clearly fit Claude ecosystem news, discard it.
 
-6. Generate a "digest" field: 2-3 sentences summarizing today's biggest highlights across ALL tabs. Write like a morning briefing editor — conversational, direct. Lead with the single most important story.
+6. TIMELINE AWARENESS: Drop items that are clearly outdated or superseded. For example, if there are items about both "Model X released" and "Model Y released" where Y is the successor to X, only cover Y — the older release is not news anymore. Use the published_at dates and your knowledge to judge freshness. Only include stories that would genuinely be news TODAY.
+
+7. Generate a "digest" field: 2-3 sentences summarizing today's biggest highlights across ALL tabs. Write like a morning briefing editor — conversational, direct. Lead with the single most important story.
 
 Output ONLY valid JSON matching this exact schema:
 {

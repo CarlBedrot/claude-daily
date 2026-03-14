@@ -19,8 +19,8 @@ export async function fetchClaudeCodeChangelog(): Promise<RawItem[]> {
       sections.push({ version: match[1], start: match.index });
     }
 
-    // Extract content for each version (up to 10 most recent)
-    const recentSections = sections.slice(0, 10);
+    // Only take the 3 most recent versions — older ones aren't news
+    const recentSections = sections.slice(0, 3);
 
     for (let i = 0; i < recentSections.length; i++) {
       const section = recentSections[i];
