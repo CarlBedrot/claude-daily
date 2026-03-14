@@ -14,8 +14,11 @@ export type Story = {
   key_points?: string[];
   sources: Source[];
   perspectives?: string;
+  impact?: string;
   author?: { name: string; role: string };
   actionable_steps?: string[];
+  difficulty?: "beginner" | "intermediate" | "advanced";
+  estimated_minutes?: number;
 };
 
 export type Tab = {
@@ -31,9 +34,15 @@ export const NEWS_TAB_KEYS: readonly (
   | "community"
 )[] = ["claude_ai", "claude_code", "community"] as const;
 
+export type Digest = {
+  lead: string;
+  themes: string[];
+  summary: string;
+};
+
 export type DailyBriefing = {
   date: string;
   generated_at: string;
-  digest?: string;
+  digest?: string | Digest;
   tabs: Record<TabKey, Tab>;
 };

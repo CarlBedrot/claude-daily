@@ -42,6 +42,17 @@ function StoryBody({ story }: { story: Story }) {
         </p>
       )}
 
+      {story.impact && (
+        <div className="mt-3 bg-claude-orange/5 border-l-2 border-claude-orange/40 pl-3 pr-3 py-2 rounded-r">
+          <p className="text-xs font-semibold text-claude-orange uppercase tracking-wide mb-0.5">
+            Why this matters
+          </p>
+          <p className="text-sm text-charcoal leading-relaxed">
+            {story.impact}
+          </p>
+        </div>
+      )}
+
       <SourceList sources={story.sources} />
     </>
   );

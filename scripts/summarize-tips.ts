@@ -12,7 +12,9 @@ For each valid tip, output:
 {
   "headline": "Imperative headline — 'Use X to do Y' or 'Configure X for better Y'",
   "summary": "2-3 sentences explaining why this matters and what it does",
-  "actionable_steps": ["Step 1...", "Step 2...", "Step 3..."]
+  "actionable_steps": ["Step 1...", "Step 2...", "Step 3..."],
+  "difficulty": "beginner" | "intermediate" | "advanced",
+  "estimated_minutes": number
 }
 
 Rules:
@@ -20,9 +22,11 @@ Rules:
 - 2-4 actionable steps, each a concrete instruction
 - Discard anything without a clear "do this" takeaway
 - No marketing fluff, no vague advice like "experiment more"
+- difficulty: "beginner" = anyone can do it, "intermediate" = needs some CLI/config familiarity, "advanced" = requires deep tooling knowledge
+- estimated_minutes: rough time to implement the tip (e.g., 2, 5, 15, 30)
 
 Output a JSON array. Use null for items you discard.
-Example: [{"headline": "...", "summary": "...", "actionable_steps": [...]}, null, {"headline": "...", ...}]`;
+Example: [{"headline": "...", "summary": "...", "actionable_steps": [...], "difficulty": "beginner", "estimated_minutes": 5}, null, {"headline": "...", ...}]`;
 
 type TipInput = {
   item: RawItem;
@@ -64,6 +68,8 @@ Content: ${input.item.content.slice(0, 800)}`,
     headline: string;
     summary: string;
     actionable_steps: string[];
+    difficulty?: "beginner" | "intermediate" | "advanced";
+    estimated_minutes?: number;
   } | null)[] = JSON.parse(text);
 
   const tips: Story[] = [];
@@ -78,6 +84,8 @@ Content: ${input.item.content.slice(0, 800)}`,
       headline: result.headline,
       summary: result.summary,
       actionable_steps: result.actionable_steps,
+      difficulty: result.difficulty,
+      estimated_minutes: result.estimated_minutes,
       author: input.author,
       sources: [
         {

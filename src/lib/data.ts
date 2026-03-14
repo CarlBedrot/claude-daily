@@ -73,6 +73,7 @@ export function searchBriefings(query: string): SearchResult[] {
           ...(story.key_points ?? []),
           ...(story.actionable_steps ?? []),
           story.perspectives ?? "",
+          story.impact ?? "",
         ].join(" ");
 
         if (searchableText.toLowerCase().includes(lowerQuery)) {

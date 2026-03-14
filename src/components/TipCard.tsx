@@ -5,10 +5,36 @@ import { Story } from "@/types/daily";
 import { SourceList } from "./SourceList";
 import { FootnoteText } from "./FootnoteText";
 
+const DIFFICULTY_STYLES = {
+  beginner: "bg-green-100 text-green-700",
+  intermediate: "bg-amber-100 text-amber-700",
+  advanced: "bg-red-100 text-red-700",
+} as const;
+
 type TipCardProps = {
   story: Story;
   isLead?: boolean;
 };
+
+function TipMeta({ story }: { story: Story }) {
+  if (!story.difficulty && !story.estimated_minutes) return null;
+  return (
+    <div className="flex items-center gap-2 mt-1">
+      {story.difficulty && (
+        <span
+          className={`text-xs px-1.5 py-0.5 rounded font-medium capitalize ${DIFFICULTY_STYLES[story.difficulty]}`}
+        >
+          {story.difficulty}
+        </span>
+      )}
+      {story.estimated_minutes && (
+        <span className="text-xs text-gray-secondary">
+          ~{story.estimated_minutes} min
+        </span>
+      )}
+    </div>
+  );
+}
 
 function TipBody({ story }: { story: Story }) {
   return (
@@ -63,6 +89,7 @@ export function TipCard({ story, isLead = false }: TipCardProps) {
             <h2 className="text-lg font-semibold font-serif text-charcoal leading-snug group-hover:text-claude-orange transition-colors">
               {story.headline}
             </h2>
+            <TipMeta story={story} />
           </div>
           <svg
             width="16"
@@ -115,6 +142,7 @@ export function TipCard({ story, isLead = false }: TipCardProps) {
           <h2 className="text-base font-semibold font-serif text-charcoal leading-snug group-hover:text-claude-orange transition-colors">
             {story.headline}
           </h2>
+          <TipMeta story={story} />
         </div>
         <svg
           width="16"
