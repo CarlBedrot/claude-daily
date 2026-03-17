@@ -1,0 +1,157 @@
+{
+  "date": "2026-03-17",
+  "generated_at": "2026-03-17T07:20:53.780Z",
+  "digest": {
+    "lead": "Claude Code v2.1.77 shipped today with major token limit increases for Opus and Sonnet 4.6 models, doubling the default output to 64k tokens and raising the ceiling to 128k.",
+    "themes": [
+      "Developer tooling",
+      "Community creativity",
+      "Legal challenges"
+    ],
+    "summary": "Meanwhile, the community showcased impressive game development capabilities with Godogen, while Anthropic faces copyright pressure from the FSF."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "FSF Threatens Anthropic Over Copyright Infringement, Demands Open Source Models",
+          "summary": "The Free Software Foundation has threatened legal action against Anthropic over alleged copyright infringement in training data, demanding the company open source its LLMs [1]. The story gained limited traction on Hacker News with modest discussion.",
+          "key_points": [],
+          "impact": "Could set precedent for how AI companies handle training data copyright claims, though FSF's leverage remains unclear given limited legal precedent in this area.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "FSF threatens Anthropic over infringed copyright: share your LLMs freely",
+              "url": "https://news.slashdot.org/story/26/03/16/0539240/fsf-threatens-anthropic-over-infringed-copyright-share-your-llms-freely",
+              "published_at": "2026-03-16T05:44:28.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.77 Doubles Token Limits for Latest Models",
+          "summary": "The latest Claude Code release significantly expanded output capabilities, increasing default maximum tokens for Claude Opus 4.6 to 64k and raising the upper bound for both Opus 4.6 and Sonnet 4.6 to 128k tokens [1]. The update also improved filesystem controls with a new `allowRead` sandbox setting and enhanced the `/copy` command with optional indexing.",
+          "key_points": [
+            "Default output tokens for Opus 4.6 increased to 64k, with 128k maximum for both Opus and Sonnet 4.6",
+            "New `allowRead` setting enables selective read access within `denyRead` regions",
+            "Enhanced `/copy` command now accepts index parameter to copy specific assistant responses"
+          ],
+          "impact": "Enables developers to generate much larger codebases and documentation in single responses, particularly benefiting those working on complex projects requiring extensive output.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.77",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2177",
+              "published_at": "2026-03-17T07:20:35.924Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Godogen Skills Enable Claude to Build Complete Godot Games",
+          "summary": "A new open-source project called Godogen provides Claude Code with specialized skills for generating complete Godot game projects [1]. The project gained significant attention on Hacker News with 233 points and active discussion from the developer community.",
+          "key_points": [
+            "Enables Claude to create full game projects including scripts, scenes, and assets for the Godot engine",
+            "Strong community reception with nearly 140 comments discussing implementation and potential"
+          ],
+          "impact": "Demonstrates Claude's expanding capabilities in creative domains, offering game developers a powerful prototyping and development assistant for the popular Godot engine.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Claude Code skills that build complete Godot games",
+              "url": "https://github.com/htdt/godogen",
+              "published_at": "2026-03-16T16:07:29.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-002",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-001",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-003",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
