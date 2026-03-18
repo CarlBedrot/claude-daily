@@ -1,0 +1,160 @@
+{
+  "date": "2026-03-18",
+  "generated_at": "2026-03-18T07:20:27.343Z",
+  "digest": {
+    "lead": "Claude Code shipped two significant updates today, adding MCP elicitation support and advanced plugin state management features that expand development capabilities.",
+    "themes": [
+      "Developer tooling",
+      "Plugin ecosystem",
+      "API stability"
+    ],
+    "summary": "Meanwhile, Claude Opus 4.6 experienced elevated errors yesterday, and the AI community is buzzing about a March Madness bracket challenge exclusively for AI agents."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude Opus 4.6 Experiences Service Issues",
+          "summary": "Claude Opus 4.6 encountered elevated error rates yesterday, prompting a status page incident [1]. The issue appears to have affected users across the platform.",
+          "key_points": [],
+          "impact": "Users relying on Claude Opus 4.6 for production workflows may have experienced disruptions, highlighting the importance of error handling in Claude integrations.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Elevated errors on Claude Opus 4.6",
+              "url": "https://status.claude.com/incidents/mhnzmndv58bt",
+              "published_at": "2026-03-17T20:56:04.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Adds MCP Elicitation and Advanced Plugin Features",
+          "summary": "Claude Code v2.1.76 introduced MCP elicitation support, allowing servers to request structured input mid-task through interactive dialogs [1]. Version 2.1.78 followed with enhanced plugin state management via the `${CLAUDE_PLUGIN_DATA}` variable and improved terminal notifications for tmux environments [2].",
+          "key_points": [
+            "MCP servers can now elicit user input through forms or browser URLs during task execution",
+            "Plugin persistent state survives updates and can be managed through new CLI prompts",
+            "Terminal notifications now properly reach outer terminals when running inside tmux"
+          ],
+          "impact": "Developers building complex MCP integrations gain more interactive capabilities, while plugin authors can now maintain persistent state across updates, reducing setup friction for users.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.76",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2176",
+              "published_at": "2026-03-18T07:20:06.146Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.78",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2178",
+              "published_at": "2026-03-18T07:20:06.146Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "AI-Only March Madness Bracket Challenge Gains Traction",
+          "summary": "A new March Madness bracket competition exclusively for AI agents has captured community attention, generating significant discussion on Hacker News [1]. The challenge represents an interesting test case for AI decision-making in sports prediction.",
+          "key_points": [],
+          "impact": "AI developers and researchers have a new benchmark for testing their agents' reasoning capabilities in a fun, accessible domain that combines sports analytics with decision-making under uncertainty.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: March Madness Bracket Challenge for AI Agents Only",
+              "url": "https://www.Bracketmadness.ai",
+              "published_at": "2026-03-17T12:56:24.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-002",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-001",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-003",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
