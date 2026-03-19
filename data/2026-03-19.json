@@ -1,0 +1,156 @@
+{
+  "date": "2026-03-19",
+  "generated_at": "2026-03-19T07:18:50.879Z",
+  "digest": {
+    "lead": "Claude Code v2.1.79 dropped with authentication improvements and bug fixes, addressing key developer workflow pain points.",
+    "themes": [
+      "Developer tooling",
+      "CLI updates",
+      "Community creativity"
+    ],
+    "summary": "Meanwhile, a creative Claude Artifact showcasing life's randomness caught community attention, while a copyright dispute with the FSF simmers in the background."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "FSF Threatens Legal Action Against Anthropic Over Copyright Claims",
+          "summary": "The Free Software Foundation has escalated a copyright dispute with Anthropic, demanding broader license compliance and threatening legal action [1]. The settlement notice suggests the FSF believes Claude models may have been trained on GPL-licensed code without proper attribution.",
+          "key_points": [
+            "FSF issued formal settlement demand to Anthropic",
+            "Dispute centers on alleged GPL code training without compliance"
+          ],
+          "impact": "Could set precedent for how AI companies handle open-source code in training data, potentially affecting enterprise customers concerned about legal compliance.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "FSF Threatens Anthropic over Infringed Copyright: Share Your LLMs Freel",
+              "url": "https://www.fsf.org/blogs/licensing/2026-anthropic-settlement",
+              "published_at": "2026-03-16T19:49:20.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.79 Adds Console Authentication and Fixes Subprocess Issues",
+          "summary": "The latest Claude Code release introduces a `--console` flag for Anthropic Console authentication, making API billing setup easier [1]. The update also resolves several workflow-breaking bugs, including subprocess hanging issues and broken Ctrl+C handling in print mode [1].",
+          "key_points": [
+            "New `--console` flag streamlines API billing authentication",
+            "Fixed subprocess hanging when Claude Code called from Python scripts",
+            "Improved `/btw` command behavior during streaming responses"
+          ],
+          "impact": "Addresses critical pain points for developers integrating Claude Code into automated workflows and CI/CD pipelines, particularly those using Python subprocess calls.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.79",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2179",
+              "published_at": "2026-03-19T07:18:31.119Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Interactive 'Lottery of Life' Artifact Gains Traction on Hacker News",
+          "summary": "A Claude-generated interactive visualization exploring life's random moments has garnered 25 points and 29 comments on Hacker News [1]. The public artifact demonstrates Claude's creative capabilities in building engaging, philosophical web experiences.",
+          "impact": "Showcases Claude Artifacts as a platform for creative expression and philosophical exploration, inspiring other developers to experiment with interactive storytelling.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: The Lottery of Life",
+              "url": "https://claude.ai/public/artifacts/a62c4bac-3c05-4443-9d0a-50a9bd3f9d8d",
+              "published_at": "2026-03-18T05:58:34.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-002",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-003",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-001",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
