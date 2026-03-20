@@ -1,0 +1,134 @@
+{
+  "date": "2026-03-20",
+  "generated_at": "2026-03-20T07:16:34.945Z",
+  "digest": {
+    "lead": "The big story today is Anthropic taking legal action against OpenCode, sparking intense debate in the developer community about AI tooling competition and intellectual property.",
+    "themes": [
+      "Legal disputes",
+      "Developer tooling",
+      "Code AI competition"
+    ],
+    "summary": "Meanwhile, Claude Code quietly rolled out v2.1.80 with useful developer features like rate limit monitoring and enhanced plugin support."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.80 Adds Rate Limit Monitoring and Plugin Enhancements",
+          "summary": "The latest Claude Code release introduces rate limit tracking in the statusline, showing 5-hour and 7-day usage windows with reset timers [1]. The update also adds inline plugin declarations in settings.json and enhanced CLI tool detection for better plugin suggestions [1].",
+          "key_points": [
+            "New `rate_limits` field displays Claude.ai usage percentages and reset times",
+            "Plugins can now be declared directly in settings.json with `source: 'settings'`",
+            "`effort` frontmatter support allows overriding model effort levels for skills and commands"
+          ],
+          "impact": "These improvements help developers using Claude Code daily better manage their API usage and customize their development environment more flexibly.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.80",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2180",
+              "published_at": "2026-03-20T07:16:21.125Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Anthropic Pursues Legal Action Against OpenCode Project",
+          "summary": "Anthropic has initiated legal proceedings against the OpenCode project, generating significant discussion in the developer community [2]. The action has drawn 418 points and 336 comments on Hacker News, indicating strong interest and likely controversy around the move [2].",
+          "impact": "This legal dispute could set important precedents for AI tooling competition and affect how open-source alternatives to commercial AI development tools operate in the future.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic takes legal action against OpenCode",
+              "url": "https://github.com/anomalyco/opencode/pull/18186",
+              "published_at": "2026-03-19T19:37:26.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-002",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-001",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-003",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
