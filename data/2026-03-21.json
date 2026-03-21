@@ -1,0 +1,214 @@
+{
+  "date": "2026-03-21",
+  "generated_at": "2026-03-21T07:12:16.726Z",
+  "digest": {
+    "lead": "Claude Code v2.1.81 shipped today with channels support — a new way to push events into running sessions that's generating significant developer interest.",
+    "themes": [
+      "Developer tooling",
+      "Security concerns",
+      "Community adoption"
+    ],
+    "summary": "Meanwhile, Pentagon security concerns about Anthropic's Chinese employees are making headlines, and the community continues building impressive third-party tools."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Pentagon Flags Security Concerns Over Anthropic's Chinese Employees",
+          "summary": "The Pentagon has identified Anthropic's Chinese employees as potential security risks according to an Axios report [1]. The story has drawn attention in tech circles, though discussion remains limited.",
+          "key_points": [],
+          "impact": "Could affect Anthropic's government contracting opportunities and influence broader AI industry security policies.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Pentagon: Anthropic's Chinese employees are security risks",
+              "url": "https://www.axios.com/2026/03/19/pentagon-anthropic-foreign-workforce-security-risks",
+              "published_at": "2026-03-20T02:29:25.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic's Open Source Program Still Charging Despite Free Tier Promise",
+          "summary": "Users report being charged $200 under Anthropic's \"Claude for Open Source\" program despite expectations of free access [1]. The issue highlights ongoing confusion around the program's terms and eligibility.",
+          "key_points": [],
+          "impact": "Affects open source maintainers who expected free access and may discourage community adoption of Claude in OSS projects.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's \"Claude for Open Source\" program still charged $200",
+              "url": "https://twitter.com/i/status/2034748327628005848",
+              "published_at": "2026-03-19T23:02:59.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.81 Introduces Channels and Scripting Improvements",
+          "summary": "The latest Claude Code release adds channels support for pushing events into running sessions [1] and a new `--bare` flag for scripted operations that bypasses hooks and plugins [2]. The channels feature is generating significant developer discussion online.",
+          "key_points": [
+            "Channels enable external event injection into active Claude Code sessions",
+            "`--bare` flag streamlines scripted workflows by disabling authentication checks and memory features",
+            "Permission relay system allows channel servers to forward tool approvals to mobile devices"
+          ],
+          "impact": "Major workflow enhancement for developers using Claude Code in automated pipelines and collaborative environments, particularly those needing external integrations.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-21T07:11:46.497Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Push events into a running session with channels",
+              "url": "https://code.claude.com/docs/en/channels",
+              "published_at": "2026-03-20T00:22:08.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Senator Bernie Sanders Interviews Claude AI Agent on Video",
+          "summary": "Sen. Bernie Sanders released a YouTube video featuring a conversation with Claude, marking a notable instance of a prominent politician directly engaging with AI agents [1]. The video has drawn modest attention in tech communities.",
+          "key_points": [],
+          "impact": "Signals growing mainstream political engagement with AI assistants and could influence public policy discussions around AI interaction.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "I Spoke to AI Agent Claude – Sen Bernie Sanders",
+              "url": "https://www.youtube.com/watch?v=h3AtWdeu_G0",
+              "published_at": "2026-03-19T22:48:12.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "community-002",
+          "headline": "YC-Backed Canary Launches AI QA Tool Built on Code Understanding",
+          "summary": "Canary, a Y Combinator W26 company, launched an AI-powered QA platform that promises to understand codebases for automated testing [1]. The Launch HN post generated solid community engagement with discussions around AI testing approaches.",
+          "key_points": [
+            "Focuses on code comprehension for intelligent test generation",
+            "Part of the latest Y Combinator batch addressing AI tooling for developers"
+          ],
+          "impact": "Represents the growing trend of AI-native developer tools and could influence how teams approach automated testing workflows.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Launch HN: Canary (YC W26) – AI QA that understands your code",
+              "url": "https://news.ycombinator.com/item?id=47441629",
+              "published_at": "2026-03-19T16:01:30.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "community-003",
+          "headline": "Altimate Code: Open-Source Agentic Data Engineering Platform",
+          "summary": "Altimate AI released an open-source data engineering harness designed for agentic workflows [1]. The project aims to provide infrastructure for AI-driven data processing pipelines.",
+          "key_points": [
+            "Open-source approach to agentic data engineering",
+            "Designed specifically for AI agent orchestration in data workflows"
+          ],
+          "impact": "Provides data engineering teams with open-source tools for integrating AI agents into their pipelines, potentially accelerating adoption of agentic workflows.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Altimate Code – Open-Source Agentic Data Engineering Harness",
+              "url": "https://github.com/AltimateAI/altimate-code",
+              "published_at": "2026-03-19T13:19:20.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-002",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-003",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-001",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
