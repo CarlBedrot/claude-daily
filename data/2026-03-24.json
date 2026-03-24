@@ -1,0 +1,162 @@
+{
+  "date": "2026-03-24",
+  "generated_at": "2026-03-24T07:21:08.401Z",
+  "digest": {
+    "lead": "Claude Code v2.1.80 dropped today with rate limit monitoring, inline plugin configuration, and effort-level controls for skills — the biggest update to the CLI in weeks.",
+    "themes": [
+      "Developer tooling",
+      "AI coding workflows",
+      "Rate limiting"
+    ],
+    "summary": "Meanwhile, the broader AI coding space is seeing new tools like Cq (Stack Overflow for agents) and questions about sustainable development practices as AI assistants become central to daily workflows."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.80 Adds Rate Limit Monitoring and Plugin Improvements",
+          "summary": "The latest Claude Code update introduces rate limit visibility in the statusline, showing both 5-hour and 7-day usage windows with reset times [1]. The release also adds inline plugin configuration through settings.json and effort-level controls for skills and slash commands [1].",
+          "key_points": [
+            "Statusline now displays Claude.ai rate limit usage with percentage used and reset timestamps",
+            "New 'settings' source allows declaring plugins directly in configuration files",
+            "Skills and slash commands can override model effort levels via frontmatter"
+          ],
+          "impact": "Daily Claude Code users gain better visibility into their API usage patterns and more flexible plugin management, reducing unexpected rate limit surprises during intensive coding sessions.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.80",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2180",
+              "published_at": "2026-03-24T07:20:46.878Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Mozilla Launches Cq, a Stack Overflow for AI Coding Agents",
+          "summary": "Mozilla released Cq, described as 'Stack Overflow for AI coding agents,' generating significant discussion in the developer community [3]. The project addresses the growing need for structured knowledge sharing as AI assistants become more central to software development workflows [3].",
+          "impact": "Developers using AI coding tools like Claude Code and Cursor now have a dedicated platform for sharing solutions and debugging agent-specific issues, potentially accelerating adoption and best practices.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Cq – Stack Overflow for AI coding agents",
+              "url": "https://blog.mozilla.ai/cq-stack-overflow-for-agents/",
+              "published_at": "2026-03-23T16:11:03.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "Developers Question Sustainability of AI-Intensive Coding Workflows",
+          "summary": "A Hacker News discussion emerged around 'perpetual AI psychosis' in development work, referencing concerns raised by AI researcher Andrej Karpathy about over-reliance on AI tools [2]. The conversation reflects growing awareness of mental health and workflow sustainability as AI coding assistants become ubiquitous [2].",
+          "impact": "Teams adopting Claude Code and similar tools may need to consider balanced workflows that maintain developer agency and prevent burnout from constant AI interaction.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Ask HN: Is anyone here also developing \"perpetual AI psychosis\" like Karpathy?",
+              "url": "https://news.ycombinator.com/item?id=47493938",
+              "published_at": "2026-03-23T19:21:22.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-003",
+          "headline": "AI SDLC Scaffold Template Emerges for Structured AI Development",
+          "summary": "A new GitHub repository template for AI-assisted software development gained traction on Hacker News, offering structured workflows for teams integrating AI tools into their development lifecycle [6]. The scaffold addresses the growing need for standardized approaches to AI-augmented coding [6].",
+          "impact": "Development teams can now adopt proven patterns for integrating Claude Code and other AI tools into their workflows, reducing the trial-and-error phase of AI adoption.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: AI SDLC Scaffold, repo template for AI-assisted software development",
+              "url": "https://github.com/pangon/ai-sdlc-scaffold/",
+              "published_at": "2026-03-21T12:43:09.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-002",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-003",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-001",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
