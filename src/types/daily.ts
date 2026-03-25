@@ -45,4 +45,5 @@ export type DailyBriefing = {
   generated_at: string;
   digest?: string | Digest;
   tabs: Record<TabKey, Tab>;
+  audio_url?: string;
 };

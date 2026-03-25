@@ -94,6 +94,27 @@ function useTheme() {
   return { dark, toggle };
 }
 
+function ShareIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+      <path
+        d="M3 9v5a2 2 0 002 2h8a2 2 0 002-2V9"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9 12V2M6 5l3-3 3 3"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
 function SearchIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -114,6 +135,7 @@ export function TopBar({ date, availableDates, onDateChange }: TopBarProps) {
   const hasOlder = currentIndex < availableDates.length - 1;
   const { dark, toggle } = useTheme();
   const [searchOpen, setSearchOpen] = useState(false);
+  const [shared, setShared] = useState(false);
 
   const formattedDate = new Date(date + "T00:00:00").toLocaleDateString(
     "en-US",
@@ -123,6 +145,22 @@ export function TopBar({ date, availableDates, onDateChange }: TopBarProps) {
       day: "numeric",
     },
   );
+
+  const handleShare = async () => {
+    const url = window.location.href;
+    const title = `Claude Daily — ${formattedDate}`;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, url });
+        return;
+      } catch {
+        // User cancelled or not supported, fall through to clipboard
+      }
+    }
+    await navigator.clipboard.writeText(url);
+    setShared(true);
+    setTimeout(() => setShared(false), 2000);
+  };
 
   return (
     <header className="bg-cream">
@@ -138,13 +176,28 @@ export function TopBar({ date, availableDates, onDateChange }: TopBarProps) {
           <h1 className="text-lg font-bold font-serif text-charcoal tracking-tight">
             Claude Daily
           </h1>
-          <button
-            onClick={toggle}
-            className="p-1.5 rounded-full transition-colors cursor-pointer hover:bg-cream-dark hover:text-claude-orange text-gray-secondary"
-            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
-          >
-            {dark ? <SunIcon /> : <MoonIcon />}
-          </button>
+          <div className="flex items-center gap-1">
+            <button
+              onClick={handleShare}
+              className="p-1.5 rounded-full transition-colors cursor-pointer hover:bg-cream-dark hover:text-claude-orange text-gray-secondary relative"
+              aria-label="Share this briefing"
+            >
+              {shared ? (
+                <span className="text-xs font-medium text-claude-orange">
+                  Copied!
+                </span>
+              ) : (
+                <ShareIcon />
+              )}
+            </button>
+            <button
+              onClick={toggle}
+              className="p-1.5 rounded-full transition-colors cursor-pointer hover:bg-cream-dark hover:text-claude-orange text-gray-secondary"
+              aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {dark ? <SunIcon /> : <MoonIcon />}
+            </button>
+          </div>
         </div>
         <div className="flex items-center justify-center gap-3 mt-1">
           <button

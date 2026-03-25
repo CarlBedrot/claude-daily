@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Story, SourceType } from "@/types/daily";
 import { SourceList } from "./SourceList";
 import { FootnoteText } from "./FootnoteText";
+import { StoryAudioButton } from "./StoryAudioButton";
 import { timeAgo } from "@/lib/format";
 
 const SOURCE_LABELS: Record<SourceType, string> = {
@@ -13,7 +14,7 @@ const SOURCE_LABELS: Record<SourceType, string> = {
   hackernews: "HN",
 };
 
-function StoryBody({ story }: { story: Story }) {
+function StoryBody({ story, date }: { story: Story; date?: string }) {
   return (
     <>
       <p className="text-sm text-gray-secondary leading-relaxed">
@@ -53,7 +54,10 @@ function StoryBody({ story }: { story: Story }) {
         </div>
       )}
 
-      <SourceList sources={story.sources} />
+      <div className="flex items-center justify-between mt-3">
+        <SourceList sources={story.sources} />
+        {date && <StoryAudioButton date={date} storyId={story.id} />}
+      </div>
     </>
   );
 }
@@ -61,10 +65,31 @@ function StoryBody({ story }: { story: Story }) {
 type StoryCardProps = {
   story: Story;
   isLead?: boolean;
+  onStoryRead?: (storyId: string) => void;
+  date?: string;
 };
 
-export function StoryCard({ story, isLead = false }: StoryCardProps) {
+export function StoryCard({
+  story,
+  isLead = false,
+  onStoryRead,
+  date,
+}: StoryCardProps) {
   const [expanded, setExpanded] = useState(isLead);
+
+  useEffect(() => {
+    if (isLead && onStoryRead) {
+      onStoryRead(story.id);
+    }
+  }, []);
+
+  const handleToggle = () => {
+    const next = !expanded;
+    setExpanded(next);
+    if (next && onStoryRead) {
+      onStoryRead(story.id);
+    }
+  };
 
   const earliestSource = story.sources.reduce((earliest, s) =>
     s.published_at < earliest.published_at ? s : earliest,
@@ -76,7 +101,7 @@ export function StoryCard({ story, isLead = false }: StoryCardProps) {
     return (
       <article className="border-b border-cream-dark last:border-b-0 bg-cream-dark/30 -mx-4 px-4 rounded-lg">
         <button
-          onClick={() => setExpanded(!expanded)}
+          onClick={handleToggle}
           className="w-full text-left py-4 flex items-start justify-between gap-4 group cursor-pointer"
         >
           <div className="min-w-0">
@@ -116,7 +141,7 @@ export function StoryCard({ story, isLead = false }: StoryCardProps) {
             expanded ? "max-h-[1000px] opacity-100 pb-5" : "max-h-0 opacity-0"
           }`}
         >
-          <StoryBody story={story} />
+          <StoryBody story={story} date={date} />
         </div>
       </article>
     );
@@ -125,7 +150,7 @@ export function StoryCard({ story, isLead = false }: StoryCardProps) {
   return (
     <article className="border-b border-cream-dark last:border-b-0">
       <button
-        onClick={() => setExpanded(!expanded)}
+        onClick={handleToggle}
         className="w-full text-left py-4 flex items-start justify-between gap-4 group cursor-pointer"
       >
         <div className="min-w-0">
@@ -166,7 +191,7 @@ export function StoryCard({ story, isLead = false }: StoryCardProps) {
         }`}
       >
         <div className="pb-5 pl-0">
-          <StoryBody story={story} />
+          <StoryBody story={story} date={date} />
         </div>
       </div>
     </article>

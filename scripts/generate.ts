@@ -2,11 +2,33 @@ import { fetchAllSources } from "./sources/fetch-all";
 import { summarize } from "./summarize";
 import { fetchTipSources, getExistingSourceUrls } from "./sources/tip-registry";
 import { summarizeTips } from "./summarize-tips";
+import { generateDailyAudio } from "./generate-audio";
 import { Story } from "../src/types/daily";
+import { RawItem } from "./sources/types";
 import fs from "fs";
 import path from "path";
 
 const DAILY_TIP_COUNT = 5;
+
+const TIP_KEYWORDS =
+  /\b(tip|trick|workflow|how\s+i|how\s+to|setup|config|my\s+approach|claude\.md|til\b|psa\b|pro\s+tip|technique|hack|mcp|hooks|memory)/i;
+
+function filterTipCandidates(
+  items: RawItem[],
+  existingUrls: Set<string>,
+): { item: RawItem; author: { name: string; role: string } }[] {
+  return items
+    .filter(
+      (item) =>
+        item.source_type === "reddit" &&
+        TIP_KEYWORDS.test(item.title) &&
+        !existingUrls.has(item.url),
+    )
+    .map((item) => ({
+      item,
+      author: { name: "Community", role: "r/ClaudeAI contributors" },
+    }));
+}
 
 async function main() {
   console.log("Fetching sources...");
@@ -58,7 +80,7 @@ async function main() {
   console.log("Summarizing with Claude...");
   const [briefing, newTips] = await Promise.all([
     summarize(filtered),
-    generateTips(),
+    generateTips(redditItems),
   ]);
 
   const dailyTips = selectDailyTips(newTips, DAILY_TIP_COUNT);
@@ -67,23 +89,45 @@ async function main() {
     `  Daily tips: ${dailyTips.length} (${newTips.length} new + ${dailyTips.length - newTips.length} from archive)`,
   );
 
+  const audioUrl = await generateDailyAudio(briefing);
+  if (audioUrl) {
+    briefing.audio_url = audioUrl;
+  }
+
   writeOutput(briefing.date, briefing);
   console.log("Done!");
 }
 
-async function generateTips(): Promise<Story[]> {
+async function generateTips(redditItems: RawItem[]): Promise<Story[]> {
   console.log("\nFetching tip sources...");
   try {
-    const tipSources = await fetchTipSources();
-    console.log(`  Found ${tipSources.length} new tip candidates`);
+    const existingUrls = getExistingSourceUrls();
+    const [tipSources, piggybackCandidates] = await Promise.all([
+      fetchTipSources(),
+      Promise.resolve(filterTipCandidates(redditItems, existingUrls)),
+    ]);
 
-    if (tipSources.length === 0) {
+    // Merge and deduplicate by URL
+    const seenUrls = new Set<string>();
+    const allCandidates = [...tipSources, ...piggybackCandidates].filter(
+      (c) => {
+        if (seenUrls.has(c.item.url)) return false;
+        seenUrls.add(c.item.url);
+        return true;
+      },
+    );
+
+    console.log(
+      `  Found ${tipSources.length} from tip registry + ${piggybackCandidates.length} from news feed = ${allCandidates.length} unique candidates`,
+    );
+
+    if (allCandidates.length === 0) {
       console.log("  No new tips to process.");
       return [];
     }
 
     console.log("Summarizing tips with Claude...");
-    const newTips = await summarizeTips(tipSources);
+    const newTips = await summarizeTips(allCandidates);
     console.log(`  Extracted ${newTips.length} actionable tips`);
 
     if (newTips.length > 0) {
@@ -186,9 +230,10 @@ function appendTips(newTips: Story[]) {
   }
 
   const existingUrls = getExistingSourceUrls();
-  const deduped = newTips.filter(
-    (tip) => !tip.sources.some((s) => existingUrls.has(s.url)),
-  );
+  const now = new Date().toISOString();
+  const deduped = newTips
+    .filter((tip) => !tip.sources.some((s) => existingUrls.has(s.url)))
+    .map((tip) => ({ ...tip, created_at: now }));
 
   if (deduped.length === 0) {
     console.log("  All tips already exist, skipping.");

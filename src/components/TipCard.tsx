@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Story } from "@/types/daily";
 import { SourceList } from "./SourceList";
 import { FootnoteText } from "./FootnoteText";
+import { StoryAudioButton } from "./StoryAudioButton";
 
 const DIFFICULTY_STYLES = {
   beginner: "bg-green-100 text-green-700",
@@ -14,6 +15,8 @@ const DIFFICULTY_STYLES = {
 type TipCardProps = {
   story: Story;
   isLead?: boolean;
+  onStoryRead?: (storyId: string) => void;
+  date?: string;
 };
 
 function TipMeta({ story }: { story: Story }) {
@@ -36,7 +39,7 @@ function TipMeta({ story }: { story: Story }) {
   );
 }
 
-function TipBody({ story }: { story: Story }) {
+function TipBody({ story, date }: { story: Story; date?: string }) {
   return (
     <>
       <p className="text-sm text-gray-secondary leading-relaxed">
@@ -59,19 +62,41 @@ function TipBody({ story }: { story: Story }) {
         </div>
       )}
 
-      <SourceList sources={story.sources} />
+      <div className="flex items-center justify-between mt-3">
+        <SourceList sources={story.sources} />
+        {date && <StoryAudioButton date={date} storyId={story.id} />}
+      </div>
     </>
   );
 }
 
-export function TipCard({ story, isLead = false }: TipCardProps) {
+export function TipCard({
+  story,
+  isLead = false,
+  onStoryRead,
+  date,
+}: TipCardProps) {
   const [expanded, setExpanded] = useState(isLead);
+
+  useEffect(() => {
+    if (isLead && onStoryRead) {
+      onStoryRead(story.id);
+    }
+  }, []);
+
+  const handleToggle = () => {
+    const next = !expanded;
+    setExpanded(next);
+    if (next && onStoryRead) {
+      onStoryRead(story.id);
+    }
+  };
 
   if (isLead) {
     return (
       <article className="border-b border-cream-dark last:border-b-0 bg-cream-dark/30 -mx-4 px-4 rounded-lg">
         <button
-          onClick={() => setExpanded(!expanded)}
+          onClick={handleToggle}
           className="w-full text-left py-4 flex items-start justify-between gap-4 group cursor-pointer"
         >
           <div className="min-w-0">
@@ -115,7 +140,7 @@ export function TipCard({ story, isLead = false }: TipCardProps) {
             expanded ? "max-h-[1000px] opacity-100 pb-5" : "max-h-0 opacity-0"
           }`}
         >
-          <TipBody story={story} />
+          <TipBody story={story} date={date} />
         </div>
       </article>
     );
@@ -124,7 +149,7 @@ export function TipCard({ story, isLead = false }: TipCardProps) {
   return (
     <article className="border-b border-cream-dark last:border-b-0">
       <button
-        onClick={() => setExpanded(!expanded)}
+        onClick={handleToggle}
         className="w-full text-left py-4 flex items-start justify-between gap-4 group cursor-pointer"
       >
         <div className="min-w-0">
@@ -169,7 +194,7 @@ export function TipCard({ story, isLead = false }: TipCardProps) {
         }`}
       >
         <div className="pb-5 pl-0">
-          <TipBody story={story} />
+          <TipBody story={story} date={date} />
         </div>
       </div>
     </article>

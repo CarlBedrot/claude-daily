@@ -2,6 +2,7 @@
   "tips": [
     {
       "id": "tip-001",
+      "created_at": "2026-03-08T00:00:00Z",
       "headline": "Use @-mentions to give Claude Code precise file context",
       "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
       "author": { "name": "Boris Cherny", "role": "Creator of Claude Code" },
@@ -21,6 +22,7 @@
     },
     {
       "id": "tip-002",
+      "created_at": "2026-03-08T00:00:00Z",
       "headline": "Write a CLAUDE.md file to set project conventions once",
       "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
       "author": { "name": "Anthropic", "role": "Claude Code Documentation" },
@@ -41,6 +43,7 @@
     },
     {
       "id": "tip-003",
+      "created_at": "2026-03-08T00:00:00Z",
       "headline": "Use Claude's extended thinking for complex architectural decisions",
       "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
       "author": { "name": "Community", "role": "r/ClaudeAI contributors" },
