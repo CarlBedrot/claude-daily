@@ -1,14 +1,14 @@
 {
   "date": "2026-03-25",
-  "generated_at": "2026-03-25T07:20:33.165Z",
+  "generated_at": "2026-03-25T22:41:23.470Z",
   "digest": {
-    "lead": "Claude Code pushed two significant updates in its 2.1.8x series, introducing enterprise-friendly policy management and reactive environment hooks that signal the tool's maturation for professional development workflows.",
+    "lead": "Claude Code shipped two significant updates this week, introducing managed settings for enterprise teams and a bare scripting mode for automation workflows.",
     "themes": [
       "Developer tooling",
       "Enterprise features",
       "Community tracking"
     ],
-    "summary": "Meanwhile, a community project is tracking Claude's massive coding footprint across GitHub, and regulatory tensions around Anthropic continue to make headlines."
+    "summary": "Meanwhile, a legal challenge to government restrictions on Anthropic continues, and the community is actively tracking Claude's growing impact on open source development."
   },
   "tabs": {
     "claude_ai": {
@@ -16,10 +16,10 @@
       "stories": [
         {
           "id": "claude-ai-001",
-          "headline": "Federal Judge Criticizes Government's Anthropic Ban as 'Punishment Attempt'",
-          "summary": "A federal judge has sharply criticized the U.S. government's ban on Anthropic, characterizing it as appearing to be a punishment attempt rather than a legitimate regulatory action [1]. The legal challenge highlights ongoing tensions between AI regulators and leading companies in the space.",
+          "headline": "Federal Judge Questions Government's Anthropic Ban as 'Punishment Attempt'",
+          "summary": "A federal judge criticized the U.S. government's restrictions on Anthropic, suggesting they appear to be punitive rather than regulatory in nature [1]. The legal challenge continues as the AI company faces government scrutiny.",
           "key_points": [],
-          "impact": "This ruling could set important precedent for how AI companies challenge government restrictions, potentially affecting Anthropic's ability to operate and compete in regulated sectors.",
+          "impact": "This legal development could set important precedents for AI regulation and affect Anthropic's ability to operate and expand in government-adjacent markets.",
           "sources": [
             {
               "type": "hackernews",
@@ -37,45 +37,26 @@
       "stories": [
         {
           "id": "claude-code-001",
-          "headline": "Claude Code 2.1.83 Introduces Enterprise Policy Management and Reactive Environment Hooks",
-          "summary": "Claude Code's latest release adds enterprise-grade configuration management through a new `managed-settings.d/` drop-in directory system, allowing separate teams to deploy independent policy fragments that merge automatically [1]. The update also introduces reactive environment management with `CwdChanged` and `FileChanged` hook events, plus new sandbox safety controls [1][2].",
+          "headline": "Claude Code Adds Enterprise Policy Management and Automation Features",
+          "summary": "Claude Code v2.1.83 introduced managed settings drop-in directories for team-based policy deployment and reactive environment hooks [1]. The previous v2.1.81 release added a --bare scripting mode that disables interactive features for automation workflows [2].",
           "key_points": [
-            "New `managed-settings.d/` directory enables modular team-based policy deployment",
-            "Reactive hooks support dynamic environment changes (e.g., direnv integration)",
-            "Enhanced sandbox controls with `failIfUnavailable` setting for stricter security"
+            "New managed-settings.d/ directory allows separate teams to deploy independent policy fragments that merge automatically",
+            "Added CwdChanged and FileChanged hook events for dynamic environment management",
+            "The --bare flag enables scripted operations without hooks, LSP, or plugin sync for CI/CD integration"
           ],
-          "impact": "These features directly address enterprise deployment challenges, making Claude Code more viable for large organizations with complex development environments and security requirements.",
+          "impact": "These updates make Claude Code more enterprise-ready by enabling policy governance at scale and better automation integration for development teams.",
           "sources": [
             {
               "type": "blog",
               "title": "Claude Code v2.1.83",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
-              "published_at": "2026-03-25T07:20:07.543Z"
+              "published_at": "2026-03-25T22:41:00.735Z"
             },
             {
               "type": "blog",
               "title": "Claude Code v2.1.81",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
-              "published_at": "2026-03-25T07:20:07.543Z"
-            }
-          ],
-          "perspectives": ""
-        },
-        {
-          "id": "claude-code-002",
-          "headline": "Claude Code Adds Mobile Permission Relay and Scripting Optimizations",
-          "summary": "Version 2.1.81 introduces a `--bare` flag for lightweight scripted operations and a `--channels` permission relay system that lets channel servers forward tool approval prompts to mobile devices [2]. The release also fixes authentication issues affecting concurrent Claude Code sessions.",
-          "key_points": [
-            "New `--bare` flag optimizes Claude Code for automated scripting workflows",
-            "Mobile permission relay enables remote approval of tool usage via phone"
-          ],
-          "impact": "The mobile relay feature could streamline approval workflows for teams using Claude Code in production, while the scripting optimizations benefit CI/CD integrations.",
-          "sources": [
-            {
-              "type": "blog",
-              "title": "Claude Code v2.1.81",
-              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
-              "published_at": "2026-03-25T07:20:07.543Z"
+              "published_at": "2026-03-25T22:41:00.735Z"
             }
           ],
           "perspectives": ""
@@ -87,16 +68,32 @@
       "stories": [
         {
           "id": "community-001",
-          "headline": "Community Project Tracks 19M+ GitHub Commits Generated by Claude",
-          "summary": "A new community project called 'Claude's Code' is tracking the massive scale of Claude's coding contributions across GitHub, documenting over 19 million commits generated by the AI assistant [1]. The project provides insights into how extensively Claude is being used for software development across the open source ecosystem.",
+          "headline": "New Site Tracks 19 Million Claude-Generated Commits on GitHub",
+          "summary": "A community project called Claude's Code has launched to track the massive scale of Claude's contribution to open source development, monitoring over 19 million commits generated by Claude on GitHub [1]. The project provides visibility into Claude's impact on the software development ecosystem.",
           "key_points": [],
-          "impact": "This tracking effort provides valuable data on Claude's real-world coding impact and could inform discussions about AI attribution and contribution measurement in open source projects.",
+          "impact": "This tracking effort highlights Claude's growing influence in open source development and provides valuable metrics for developers and organizations evaluating AI coding tools.",
           "sources": [
             {
               "type": "hackernews",
               "title": "Show HN: Claude's Code – tracking the 19M+ commits generated by Claude on GitHub",
               "url": "https://www.claudescode.dev/",
               "published_at": "2026-03-24T11:55:54.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "community-002",
+          "headline": "Developers Discuss AI Coding Tool Value Under Budget Constraints",
+          "summary": "A Hacker News discussion explores which AI coding models provide the best value for developers working with a $50 monthly budget [1]. The conversation reflects growing cost consciousness as AI coding tools become essential development infrastructure.",
+          "key_points": [],
+          "impact": "This discussion highlights the importance of pricing strategy for AI coding tools as they transition from experimental to essential development infrastructure for budget-conscious developers.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Ask HN: $50 monthly budget, which coding models would you recommend now?",
+              "url": "https://news.ycombinator.com/item?id=47501690",
+              "published_at": "2026-03-24T12:31:41.000Z"
             }
           ],
           "perspectives": ""
@@ -108,6 +105,7 @@
       "stories": [
         {
           "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
           "headline": "Use @-mentions to give Claude Code precise file context",
           "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
           "author": {
@@ -130,6 +128,7 @@
         },
         {
           "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
           "headline": "Write a CLAUDE.md file to set project conventions once",
           "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
           "author": {
@@ -153,6 +152,7 @@
         },
         {
           "id": "tip-003",
+          "created_at": "2026-03-08T00:00:00Z",
           "headline": "Use Claude's extended thinking for complex architectural decisions",
           "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
           "author": {
