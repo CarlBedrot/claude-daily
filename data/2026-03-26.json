@@ -1,14 +1,14 @@
 {
   "date": "2026-03-26",
-  "generated_at": "2026-03-26T06:24:53.548Z",
+  "generated_at": "2026-03-26T07:24:52.306Z",
   "digest": {
-    "lead": "Claude Code gets PowerShell support for Windows developers in today's v2.1.84 release, expanding the tool's reach beyond Unix environments.",
+    "lead": "Claude Code gets Windows PowerShell support in its latest v2.1.84 release, marking a significant expansion for Windows developers.",
     "themes": [
       "Developer tooling",
-      "Platform expansion",
-      "Community wins"
+      "Windows support",
+      "Community innovation"
     ],
-    "summary": "Meanwhile, a lawyer's victory at Anthropic's recent hackathon is sparking discussion about AI applications beyond traditional tech use cases."
+    "summary": "Meanwhile, a surprising winner emerged from Anthropic's recent hackathon, showing Claude's potential beyond traditional tech use cases."
   },
   "tabs": {
     "claude_ai": {
@@ -17,9 +17,9 @@
         {
           "id": "claude-ai-001",
           "headline": "Mozilla Partners with Anthropic on Firefox Security Initiative",
-          "summary": "Anthropic announced a new security collaboration with Mozilla focused on Firefox browser security [1]. Details about the specific nature of the partnership remain limited in the initial announcement.",
+          "summary": "Anthropic announced a new security collaboration with Mozilla Firefox [1]. Details of the partnership remain limited in the initial announcement.",
           "key_points": [],
-          "impact": "This partnership could signal Anthropic's expansion into browser security applications, potentially affecting Firefox users and web developers working on security-focused projects.",
+          "impact": "This partnership could bring Claude's capabilities to Firefox's security infrastructure, potentially affecting millions of browser users.",
           "sources": [
             {
               "type": "blog",
@@ -38,19 +38,19 @@
         {
           "id": "claude-code-001",
           "headline": "Claude Code v2.1.84 Adds PowerShell Support for Windows Developers",
-          "summary": "The latest Claude Code release introduces PowerShell tool support as an opt-in preview feature, marking a significant expansion for Windows developers [1]. The update also adds new environment variables for customizing third-party model configurations and streaming timeouts.",
+          "summary": "The latest Claude Code release introduces PowerShell tool support as an opt-in preview for Windows users [1]. The update also includes new environment variables for customizing third-party model providers like Bedrock and Vertex, plus configurable streaming timeout settings [1].",
           "key_points": [
-            "PowerShell tool now available as opt-in preview for Windows users",
-            "New environment variables allow customization of model capabilities for Bedrock, Vertex, and Foundry integrations",
-            "Configurable streaming idle timeout via CLAUDE_STREAM_IDLE_TIMEOUT_MS (default 90 seconds)"
+            "PowerShell tool now available as preview for Windows development workflows",
+            "New environment variables allow customization of third-party model provider settings",
+            "Configurable streaming idle timeout via CLAUDE_STREAM_IDLE_TIMEOUT_MS"
           ],
-          "impact": "This update significantly improves Claude Code's accessibility for Windows-based development teams and provides more flexibility for enterprise deployments using third-party model providers.",
+          "impact": "Windows developers can now leverage Claude Code with native PowerShell integration, while enterprise teams using third-party providers gain more deployment flexibility.",
           "sources": [
             {
               "type": "blog",
               "title": "Claude Code v2.1.84",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
-              "published_at": "2026-03-26T06:24:36.961Z"
+              "published_at": "2026-03-26T07:24:35.150Z"
             }
           ],
           "perspectives": ""
@@ -62,10 +62,10 @@
       "stories": [
         {
           "id": "community-001",
-          "headline": "Lawyer's Hackathon Victory Highlights AI Applications Beyond Tech",
-          "summary": "A lawyer won Anthropic's recent hackathon, prompting discussion about overlooked applications of Claude in non-technical fields [1]. The Hacker News community is debating what the tech industry might be missing about AI's broader potential.",
+          "headline": "Lawyer Wins Anthropic Hackathon, Challenging Tech-Centric Assumptions",
+          "summary": "A lawyer took first place at Anthropic's recent hackathon, surprising many who expected traditional tech solutions to dominate [1]. The victory highlights Claude's potential applications beyond conventional software development use cases [1].",
           "key_points": [],
-          "impact": "This win suggests legal professionals and other non-technical users may be discovering innovative Claude applications that traditional developers haven't considered, potentially opening new market opportunities.",
+          "impact": "This win demonstrates Claude's versatility for non-technical professionals and could inspire more diverse applications across legal, business, and other professional domains.",
           "sources": [
             {
               "type": "hackernews",
@@ -81,30 +81,6 @@
     "tips": {
       "label": "Tips",
       "stories": [
-        {
-          "id": "tip-2026-03-26-1",
-          "headline": "Enable PowerShell tool for Windows development workflows",
-          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
-          "actionable_steps": [
-            "Update Claude Code to version 2.1.84 or later",
-            "Enable the PowerShell tool in your settings as a preview feature",
-            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
-          ],
-          "difficulty": "beginner",
-          "estimated_minutes": 5,
-          "author": {
-            "name": "Anthropic",
-            "role": "Official documentation"
-          },
-          "sources": [
-            {
-              "type": "blog",
-              "title": "Claude Code v2.1.84",
-              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
-              "published_at": "2026-03-26T06:24:36.961Z"
-            }
-          ]
-        },
         {
           "id": "tip-2026-03-26-2",
           "headline": "Configure streaming timeout for better connection handling",
@@ -127,7 +103,8 @@
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
               "published_at": "2026-03-26T06:24:36.961Z"
             }
-          ]
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
         },
         {
           "id": "tip-2026-03-26-3",
@@ -151,7 +128,33 @@
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
               "published_at": "2026-03-26T06:24:36.961Z"
             }
-          ]
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
         },
         {
           "id": "tip-003",
@@ -177,25 +180,26 @@
           ]
         },
         {
-          "id": "tip-001",
+          "id": "tip-002",
           "created_at": "2026-03-08T00:00:00Z",
-          "headline": "Use @-mentions to give Claude Code precise file context",
-          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
           "author": {
-            "name": "Boris Cherny",
-            "role": "Creator of Claude Code"
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
           },
           "actionable_steps": [
-            "Type @ in Claude Code to see a file picker with fuzzy search",
-            "Select the specific files relevant to your task before writing your prompt",
-            "Combine multiple @-mentions for cross-file tasks like refactoring"
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
           ],
           "sources": [
             {
-              "type": "twitter",
-              "title": "Boris Cherny on using @-mentions effectively",
-              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
-              "published_at": "2025-06-03T12:00:00Z"
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
             }
           ]
         }
