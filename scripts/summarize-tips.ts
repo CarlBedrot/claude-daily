@@ -78,6 +78,7 @@ Content: ${input.item.content.slice(0, 800)}`,
   parsed.forEach((result, i) => {
     if (!result) return;
     const input = inputs[i];
+    if (!input) return;
 
     tips.push({
       id: `tip-${now.split("T")[0]}-${i + 1}`,
