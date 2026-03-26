@@ -3,6 +3,7 @@ import { summarize } from "./summarize";
 import { fetchTipSources, getExistingSourceUrls } from "./sources/tip-registry";
 import { summarizeTips } from "./summarize-tips";
 import { generateDailyAudio } from "./generate-audio";
+import { fetchAnthropicDocs } from "./sources/anthropic-docs";
 import { Story } from "../src/types/daily";
 import { RawItem } from "./sources/types";
 import fs from "fs";
@@ -20,13 +21,15 @@ function filterTipCandidates(
   return items
     .filter(
       (item) =>
-        item.source_type === "reddit" &&
-        TIP_KEYWORDS.test(item.title) &&
+        TIP_KEYWORDS.test(item.title + " " + item.content) &&
         !existingUrls.has(item.url),
     )
     .map((item) => ({
       item,
-      author: { name: "Community", role: "r/ClaudeAI contributors" },
+      author:
+        item.source_type === "reddit"
+          ? { name: "Community", role: "r/ClaudeAI contributors" }
+          : { name: "Anthropic", role: "Official documentation" },
     }));
 }
 
@@ -80,7 +83,7 @@ async function main() {
   console.log("Summarizing with Claude...");
   const [briefing, newTips] = await Promise.all([
     summarize(filtered),
-    generateTips(redditItems),
+    generateTips(redditItems, changelogItems, blogItems),
   ]);
 
   const dailyTips = selectDailyTips(newTips, DAILY_TIP_COUNT);
@@ -98,14 +101,28 @@ async function main() {
   console.log("Done!");
 }
 
-async function generateTips(redditItems: RawItem[]): Promise<Story[]> {
+async function generateTips(
+  redditItems: RawItem[],
+  changelogItems: RawItem[],
+  blogItems: RawItem[],
+): Promise<Story[]> {
   console.log("\nFetching tip sources...");
   try {
     const existingUrls = getExistingSourceUrls();
-    const [tipSources, piggybackCandidates] = await Promise.all([
+
+    const [tipSources, docsItems] = await Promise.all([
       fetchTipSources(),
-      Promise.resolve(filterTipCandidates(redditItems, existingUrls)),
+      fetchAnthropicDocs(),
     ]);
+
+    // Piggyback: filter news items (Reddit, changelog, blog, docs) for tip-like content
+    const allNewsItems = [
+      ...redditItems,
+      ...changelogItems,
+      ...blogItems,
+      ...docsItems,
+    ];
+    const piggybackCandidates = filterTipCandidates(allNewsItems, existingUrls);
 
     // Merge and deduplicate by URL
     const seenUrls = new Set<string>();
@@ -118,7 +135,7 @@ async function generateTips(redditItems: RawItem[]): Promise<Story[]> {
     );
 
     console.log(
-      `  Found ${tipSources.length} from tip registry + ${piggybackCandidates.length} from news feed = ${allCandidates.length} unique candidates`,
+      `  Found ${tipSources.length} from tip registry + ${piggybackCandidates.length} from news/docs = ${allCandidates.length} unique candidates`,
     );
 
     if (allCandidates.length === 0) {
