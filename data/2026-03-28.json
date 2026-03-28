@@ -1,0 +1,224 @@
+{
+  "date": "2026-03-28",
+  "generated_at": "2026-03-28T07:18:02.614Z",
+  "digest": {
+    "lead": "Anthropic is reportedly considering an IPO as early as October, marking a potential milestone for the Claude AI maker's rapid growth.",
+    "themes": [
+      "IPO plans",
+      "Model releases",
+      "Developer tooling"
+    ],
+    "summary": "Meanwhile, new models codenamed Mythos and Capybara appear to be in development, and Claude Code received updates to improve session tracking and VCS integration."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Considers IPO as Early as October",
+          "summary": "Anthropic is reportedly preparing for a potential initial public offering as soon as October 2026 [1]. The move would mark a significant milestone for the Claude AI maker amid the ongoing AI boom.",
+          "key_points": [],
+          "impact": "An IPO would provide Anthropic with additional capital for AI research and development while offering public market access to Claude's growth story for investors.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic considers IPO as soon as October",
+              "url": "https://www.theedgesingapore.com/news/artificial-intelligence/claude-ai-maker-anthropic-considers-ipo-soon-october--bloomberg",
+              "published_at": "2026-03-27T03:01:13.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "New Claude Models 'Mythos' and 'Capybara' in Development",
+          "summary": "Anthropic appears to be preparing new AI models codenamed 'Mythos' and 'Capybara' for release [1]. Details about the models' capabilities and release timeline remain unclear, but the development signals continued expansion of Claude's model lineup.",
+          "key_points": [],
+          "impact": "New model releases could strengthen Claude's competitive position and provide enhanced capabilities for existing users across different use cases.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic is preparing to release new models – Mythos and Capybara",
+              "url": "https://m1astra-mythos.pages.dev/",
+              "published_at": "2026-03-27T07:40:15.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.86 Improves Session Tracking and VCS Integration",
+          "summary": "Claude Code released version 2.1.86 with several developer-focused improvements [1]. The update adds session ID headers for better proxy support and excludes additional version control directories from file operations.",
+          "key_points": [
+            "New `X-Claude-Code-Session-Id` header enables proxies to aggregate requests by session without parsing request bodies",
+            "Added `.jj` and `.sl` directory exclusions for Jujutsu and Sapling version control systems",
+            "Fixed resume functionality and file operations outside project root directories"
+          ],
+          "impact": "These improvements will benefit developers using Claude Code in enterprise environments with proxies and those working with modern version control systems like Jujutsu or Sapling.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Users Report Claude API 529 Errors",
+          "summary": "Community members on Hacker News are discussing 529 errors encountered when using the Claude API [1]. The HTTP 529 status typically indicates service overload or rate limiting issues.",
+          "key_points": [],
+          "impact": "API reliability issues could affect developers and applications relying on Claude for production workloads, potentially requiring fallback strategies or retry logic.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude API Error: 529",
+              "url": "https://news.ycombinator.com/item?id=47541097",
+              "published_at": "2026-03-27T10:51:09.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-03-28-1",
+          "headline": "Add session tracking header for proxy aggregation",
+          "summary": "Use the `X-Claude-Code-Session-Id` header in your API requests to help proxies group requests by session without needing to parse request bodies. This improves routing and monitoring capabilities when using Claude Code through proxy servers.",
+          "actionable_steps": [
+            "Add the `X-Claude-Code-Session-Id` header to your Claude Code API requests",
+            "Set the header value to your session identifier",
+            "Configure your proxy to use this header for request aggregation instead of body parsing"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        }
+      ]
+    }
+  }
+}
