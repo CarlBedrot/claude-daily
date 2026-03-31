@@ -1,0 +1,181 @@
+{
+  "date": "2026-03-31",
+  "generated_at": "2026-03-31T07:28:08.154Z",
+  "digest": {
+    "lead": "Claude Code shipped version 2.1.88 today with notable performance improvements, but a concerning bug report warns that cache misses could be silently inflating API costs by 10-20x.",
+    "themes": [
+      "Developer tooling",
+      "Bug fixes",
+      "Performance issues"
+    ],
+    "summary": "The update brings flicker-free rendering and permission handling improvements, though developers should monitor their API usage closely until cache issues are fully resolved."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code 2.1.88 Ships with Performance Fixes Amid Cost Bug Warnings",
+          "summary": "Claude Code released version 2.1.88 with flicker-free rendering and improved permission handling [1]. However, a community report warns of cache bugs that can silently increase API costs by 10-20x due to prompt cache misses in long sessions [2].",
+          "key_points": [
+            "New `CLAUDE_CODE_NO_FLICKER=1` environment variable enables smooth alt-screen rendering",
+            "Added `PermissionDenied` hook allowing retry logic after auto mode classifier denials",
+            "Fixed prompt cache misses caused by tool schema changes mid-session"
+          ],
+          "impact": "Critical for developers using Claude Code in production environments, who should monitor API costs closely and consider updating to benefit from cache fixes.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Claude Code bug can silently 10-20x API costs",
+              "url": "https://old.reddit.com/r/ClaudeCode/comments/1s7mitf/psa_claude_code_has_two_cache_bugs_that_can",
+              "published_at": "2026-03-31T04:50:53.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-28-1",
+          "headline": "Add session tracking header for proxy aggregation",
+          "summary": "Use the `X-Claude-Code-Session-Id` header in your API requests to help proxies group requests by session without needing to parse request bodies. This improves routing and monitoring capabilities when using Claude Code through proxy servers.",
+          "actionable_steps": [
+            "Add the `X-Claude-Code-Session-Id` header to your Claude Code API requests",
+            "Set the header value to your session identifier",
+            "Configure your proxy to use this header for request aggregation instead of body parsing"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ],
+          "created_at": "2026-03-28T07:18:00.001Z"
+        },
+        {
+          "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        }
+      ]
+    }
+  }
+}
