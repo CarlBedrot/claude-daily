@@ -219,6 +219,32 @@
         }
       ],
       "created_at": "2026-03-31T07:28:07.414Z"
+    },
+    {
+      "id": "tip-2026-04-01-1",
+      "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+      "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+      "actionable_steps": [
+        "Set up a PreToolUse hook in your Claude Code configuration",
+        "Return 'defer' as the permission decision in the hook",
+        "Resume the session using `claude-code -p --resume` command",
+        "The hook will re-evaluate the tool call upon resumption"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 10,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.89",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+          "published_at": "2026-04-01T07:28:38.482Z"
+        }
+      ],
+      "created_at": "2026-04-01T07:28:52.087Z"
     }
   ]
 }
