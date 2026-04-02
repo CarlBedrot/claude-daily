@@ -1,0 +1,231 @@
+{
+  "date": "2026-04-02",
+  "generated_at": "2026-04-02T07:27:19.499Z",
+  "digest": {
+    "lead": "The big story today is Claude Code v2.1.90's release with '/powerup' interactive learning features, addressing developer onboarding challenges.",
+    "themes": [
+      "Developer tooling",
+      "Community innovation",
+      "Market dynamics"
+    ],
+    "summary": "The community is building impressive monitoring tools for Claude agents, while secondary market activity suggests growing enterprise interest in Anthropic versus OpenAI."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Secondary Market Signals Growing Anthropic Demand Over OpenAI",
+          "summary": "Bloomberg reports that OpenAI demand is declining on secondary markets while Anthropic's Claude is seeing increased investor interest [1]. The shift reflects changing market sentiment around AI capabilities and enterprise adoption patterns.",
+          "key_points": [
+            "OpenAI shares losing favor among secondary market investors",
+            "Anthropic positioned as the rising alternative in enterprise AI"
+          ],
+          "impact": "Enterprise teams and investors are reassessing AI provider strategies, potentially accelerating Claude adoption in production environments.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "OpenAI demand sinks on secondary market as Anthropic runs hot",
+              "url": "https://www.bloomberg.com/news/articles/2026-04-01/openai-demand-sinks-on-secondary-market-as-anthropic-runs-hot",
+              "published_at": "2026-04-01T14:26:16.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.90 Introduces Interactive Learning with '/powerup' Command",
+          "summary": "The latest Claude Code update adds '/powerup' interactive lessons with animated demos to help developers learn features hands-on [1]. The release also includes improved offline marketplace caching and fixes for rate-limit dialog crashes that were disrupting coding sessions [1].",
+          "key_points": [
+            "New '/powerup' command provides interactive tutorials with visual demonstrations",
+            "Enhanced offline support with CLAUDE_CODE_PLUGIN_KEEP_MARKETPLACE_ON_FAILURE environment variable",
+            "Fixed critical rate-limit dialog loop that could crash development sessions"
+          ],
+          "impact": "Developers new to Claude Code will have a smoother onboarding experience, while existing users benefit from more stable offline development workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Cowork Dispatch Message Delivery Fixed in v2.1.87",
+          "summary": "Claude Code v2.1.87 resolved a critical bug preventing message delivery in Cowork Dispatch, the team collaboration feature [1].",
+          "key_points": [],
+          "impact": "Development teams using Claude Code's collaborative features can now communicate reliably during pair programming and code review sessions.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.87",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2187",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Real-Time Dashboard Tool Emerges for Claude Code Agent Teams",
+          "summary": "A new open-source project called 'agents-observe' provides real-time monitoring dashboards for Claude Code agent teams, gaining significant community attention [1]. The tool addresses the growing need for visibility into multi-agent development workflows.",
+          "key_points": [
+            "Open-source dashboard for monitoring Claude Code agent team activities",
+            "Strong community response with 71 upvotes on Hacker News"
+          ],
+          "impact": "Development teams managing multiple Claude Code agents now have better visibility into their automated workflows, improving debugging and performance optimization.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Real-time dashboard for Claude Code agent teams",
+              "url": "https://github.com/simple10/agents-observe",
+              "published_at": "2026-04-01T16:24:28.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
