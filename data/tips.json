@@ -270,6 +270,31 @@
         }
       ],
       "created_at": "2026-04-02T07:27:10.976Z"
+    },
+    {
+      "id": "tip-2026-04-03-1",
+      "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+      "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+      "actionable_steps": [
+        "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+        "Set the value to your desired character limit (up to 500,000)",
+        "Test with large results like database schemas to verify they pass through completely"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.91",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+          "published_at": "2026-04-03T07:25:14.262Z"
+        }
+      ],
+      "created_at": "2026-04-03T07:25:28.584Z"
     }
   ]
 }

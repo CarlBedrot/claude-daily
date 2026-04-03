@@ -1,0 +1,211 @@
+{
+  "date": "2026-04-03",
+  "generated_at": "2026-04-03T07:25:30.986Z",
+  "digest": {
+    "lead": "Claude Code v2.1.91 dropped today with significant upgrades for developers, including support for massive database schemas and multi-line deep links.",
+    "themes": [
+      "Developer tooling",
+      "Code security",
+      "Enterprise features"
+    ],
+    "summary": "The update addresses real workflow pain points while adding new security controls, though broader ecosystem discussions remain light today."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Addresses Code Leak Behind Claude AI Agent",
+          "summary": "Anthropic is working to contain a leak of code related to Claude's AI agent capabilities [1]. The incident has drawn attention on Hacker News, though details about the scope and impact remain limited.",
+          "key_points": [],
+          "impact": "Security teams and enterprise customers evaluating Claude for sensitive applications will want to monitor how Anthropic handles this incident and any resulting security improvements.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic Races to Contain Leak of Code Behind Claude AI Agent",
+              "url": "https://www.wsj.com/tech/ai/anthropic-races-to-contain-leak-of-code-behind-claude-ai-agent-4bc5acc7",
+              "published_at": "2026-04-01T14:19:37.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.91 Enables Massive Data Handling and Enhanced Security Controls",
+          "summary": "The latest Claude Code release introduces MCP tool result persistence override supporting up to 500K characters, solving truncation issues with large database schemas [1]. The update also adds security controls to disable shell execution and improves deep link handling for multi-line prompts.",
+          "key_points": [
+            "Database schemas and large results can now pass through without truncation via `_meta[\"anthropic/maxResultSizeChars\"]` annotation",
+            "New `disableSkillShellExecution` setting provides granular control over shell execution in skills and plugins",
+            "Multi-line deep links now supported with encoded newlines in `claude-cli://open?q=` URLs"
+          ],
+          "impact": "Database developers and enterprise teams will benefit immediately from handling larger schemas, while security-conscious organizations gain better control over shell execution permissions.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Community Questions AutoDream Implementation",
+          "summary": "A critical analysis of Anthropic's AutoDream feature has surfaced, highlighting potential flaws in the system [1]. The discussion has gained modest traction on Hacker News with limited community engagement so far.",
+          "key_points": [],
+          "impact": "Users relying on AutoDream for automated workflows should review the critique to understand potential limitations and adjust their implementations accordingly.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's AutoDream Is Flawed",
+              "url": "https://substack.com/home/post/p-192893121",
+              "published_at": "2026-04-02T17:00:15.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-03-1",
+          "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+          "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+          "actionable_steps": [
+            "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+            "Set the value to your desired character limit (up to 500,000)",
+            "Test with large results like database schemas to verify they pass through completely"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ],
+          "created_at": "2026-03-31T07:28:07.414Z"
+        },
+        {
+          "id": "tip-2026-03-28-1",
+          "headline": "Add session tracking header for proxy aggregation",
+          "summary": "Use the `X-Claude-Code-Session-Id` header in your API requests to help proxies group requests by session without needing to parse request bodies. This improves routing and monitoring capabilities when using Claude Code through proxy servers.",
+          "actionable_steps": [
+            "Add the `X-Claude-Code-Session-Id` header to your Claude Code API requests",
+            "Set the header value to your session identifier",
+            "Configure your proxy to use this header for request aggregation instead of body parsing"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ],
+          "created_at": "2026-03-28T07:18:00.001Z"
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        }
+      ]
+    }
+  }
+}
