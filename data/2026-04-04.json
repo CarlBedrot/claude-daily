@@ -1,14 +1,14 @@
 {
   "date": "2026-04-04",
-  "generated_at": "2026-04-04T07:34:28.093Z",
+  "generated_at": "2026-04-04T07:38:44.561Z",
   "digest": {
-    "lead": "Anthropic is cracking down on third-party harnesses like OpenClaw for Claude Code subscriptions, sparking heated community debate about platform openness.",
+    "lead": "Anthropic is restricting Claude Code subscription users from accessing third-party harnesses like OpenClaw, sparking significant community backlash with nearly 500 comments on Hacker News.",
     "themes": [
-      "Platform restrictions",
+      "Policy changes",
       "Developer tooling",
-      "Security research"
+      "Community reaction"
     ],
-    "summary": "Meanwhile, Claude Code v2.1.92 shipped with new enterprise features and Bedrock integration, while Claude's security research capabilities made headlines for finding critical RCE vulnerabilities in popular editors."
+    "summary": "Meanwhile, Claude Code v2.1.92 shipped with new enterprise features including Bedrock integration and cost breakdowns, while Claude's security research capabilities made headlines for discovering critical RCE vulnerabilities in Vim and Emacs."
   },
   "tabs": {
     "claude_ai": {
@@ -17,13 +17,13 @@
         {
           "id": "claude-ai-001",
           "headline": "Anthropic Restricts Third-Party Harnesses for Claude Subscriptions",
-          "summary": "Anthropic is limiting the use of third-party harnesses with Claude subscriptions [3], specifically targeting tools like OpenClaw that allowed users to access Claude through alternative interfaces [4]. The move has generated significant community pushback, with over 570 points and 489 comments on Hacker News discussing the implications.",
+          "summary": "Anthropic is no longer allowing Claude Code subscription users to access third-party harnesses like OpenClaw [3][4]. The policy change has generated significant community discussion, with one Hacker News thread attracting nearly 500 comments [4].",
           "key_points": [
-            "OpenClaw and similar third-party tools are no longer supported for Claude Code subscriptions",
-            "Community response has been overwhelmingly negative, with concerns about platform lock-in"
+            "Policy specifically affects Claude Code subscriptions and third-party integration tools",
+            "Community response suggests this is seen as a significant limitation"
           ],
-          "perspectives": "The restriction appears to be part of Anthropic's broader effort to maintain control over how Claude is accessed, though users see this as reducing the flexibility that made Claude appealing to developers.",
-          "impact": "This affects developers who rely on third-party tools for Claude integration and may drive some users to consider alternative AI platforms that offer more open access.",
+          "perspectives": "The limited discussion visible suggests mixed reactions, with some users expressing frustration over reduced flexibility in their development workflows.",
+          "impact": "This directly affects developers who rely on third-party tools integrated with Claude Code for their daily workflows, potentially forcing tool migrations or subscription changes.",
           "sources": [
             {
               "type": "hackernews",
@@ -46,20 +46,20 @@
       "stories": [
         {
           "id": "claude-code-001",
-          "headline": "Claude Code v2.1.92 Adds Enterprise Security and AWS Bedrock Integration",
-          "summary": "The latest Claude Code release introduces enterprise-focused features including a `forceRemoteSettingsRefresh` policy for secure deployments and an interactive Bedrock setup wizard [1]. The update also adds detailed cost breakdowns per model and cache-hit analysis for subscription users.",
+          "headline": "Claude Code v2.1.92 Adds Enterprise Features and Bedrock Integration",
+          "summary": "The latest Claude Code release introduces a `forceRemoteSettingsRefresh` policy for enterprise deployments and an interactive Bedrock setup wizard for AWS integration [1]. Subscription users also gain detailed cost breakdowns with per-model and cache-hit analytics [1].",
           "key_points": [
-            "New fail-closed security policy ensures remote settings are always fresh before CLI startup",
-            "Interactive AWS Bedrock wizard simplifies third-party platform configuration",
-            "Enhanced cost tracking with per-model and cache-hit breakdowns for better usage insights"
+            "New fail-closed policy setting ensures fresh remote settings before startup",
+            "Interactive Bedrock wizard simplifies AWS authentication and model configuration",
+            "Enhanced cost visibility with granular usage breakdowns for subscription users"
           ],
-          "impact": "Enterprise teams managing Claude Code deployments gain better security controls and cost visibility, while AWS users get streamlined setup for Bedrock integration.",
+          "impact": "Enterprise teams get better security controls and AWS integration, while subscription users gain transparency into their usage patterns and costs.",
           "sources": [
             {
               "type": "blog",
               "title": "Claude Code v2.1.92",
               "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
-              "published_at": "2026-04-04T07:34:05.586Z"
+              "published_at": "2026-04-04T07:38:23.024Z"
             }
           ]
         }
@@ -71,8 +71,8 @@
         {
           "id": "community-001",
           "headline": "Claude Discovers Critical RCE Vulnerabilities in Vim and Emacs",
-          "summary": "Claude AI successfully identified remote code execution vulnerabilities in both Vim and Emacs that can be triggered simply by opening a malicious file [5]. The discovery highlights AI's growing role in automated security research and vulnerability detection.",
-          "impact": "This demonstrates Claude's potential as a security research tool and may encourage more organizations to use AI for proactive vulnerability scanning in their codebases.",
+          "summary": "Claude AI has identified remote code execution vulnerabilities in both Vim and Emacs that can be triggered simply by opening malicious files [5]. The security research demonstrates Claude's capability in automated vulnerability discovery.",
+          "impact": "This showcases Claude's potential for security research and could influence how development teams approach AI-assisted code auditing and vulnerability assessment.",
           "sources": [
             {
               "type": "hackernews",
@@ -84,9 +84,9 @@
         },
         {
           "id": "community-002",
-          "headline": "Travel Hacking Toolkit Uses AI for Points Optimization and Trip Planning",
-          "summary": "A new open-source project combines AI with travel hacking strategies to help users find optimal points redemptions and plan trips more efficiently [2]. The toolkit appears to be gaining traction with 60 points and active discussion on Hacker News.",
-          "impact": "Shows how Claude and other AI tools are being integrated into niche domains like travel optimization, potentially inspiring similar specialized applications.",
+          "headline": "Travel Hacking Toolkit Uses AI for Points Search and Trip Planning",
+          "summary": "A new open-source project combines AI capabilities with travel hacking strategies, helping users find optimal point redemptions and plan trips [2]. The toolkit has gained community attention on Hacker News with 60 points and active discussion.",
+          "impact": "This represents an interesting application of AI for personal finance optimization, potentially inspiring similar tools in other domains.",
           "sources": [
             {
               "type": "hackernews",
@@ -127,30 +127,6 @@
           "created_at": "2026-04-04T07:20:24.316Z"
         },
         {
-          "id": "tip-002",
-          "created_at": "2026-03-08T00:00:00Z",
-          "headline": "Write a CLAUDE.md file to set project conventions once",
-          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
-          "author": {
-            "name": "Anthropic",
-            "role": "Claude Code Documentation"
-          },
-          "actionable_steps": [
-            "Create a CLAUDE.md in your project root with build/test/lint commands",
-            "Add coding conventions like naming patterns, preferred libraries, and file structure",
-            "Include architectural decisions and constraints Claude should respect",
-            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
-          ],
-          "sources": [
-            {
-              "type": "blog",
-              "title": "Claude Code Best Practices — CLAUDE.md",
-              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
-              "published_at": "2025-05-01T00:00:00Z"
-            }
-          ]
-        },
-        {
           "id": "tip-2026-03-31-1",
           "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
           "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
@@ -176,40 +152,63 @@
           "created_at": "2026-03-31T07:28:07.414Z"
         },
         {
-          "id": "tip-003",
+          "id": "tip-002",
           "created_at": "2026-03-08T00:00:00Z",
-          "headline": "Use Claude's extended thinking for complex architectural decisions",
-          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
           "author": {
-            "name": "Community",
-            "role": "r/ClaudeAI contributors"
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
           },
           "actionable_steps": [
-            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
-            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
-            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
           ],
           "sources": [
             {
-              "type": "reddit",
-              "title": "Tips for getting better architectural advice from Claude",
-              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
-              "published_at": "2025-07-15T00:00:00Z"
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
             }
           ]
         },
         {
-          "id": "tip-2026-04-01-1",
-          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
-          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
           "actionable_steps": [
-            "Set up a PreToolUse hook in your Claude Code configuration",
-            "Return 'defer' as the permission decision in the hook",
-            "Resume the session using `claude-code -p --resume` command",
-            "The hook will re-evaluate the tool call upon resumption"
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
           ],
-          "difficulty": "intermediate",
-          "estimated_minutes": 10,
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
           "author": {
             "name": "Anthropic",
             "role": "Official documentation"
@@ -217,12 +216,12 @@
           "sources": [
             {
               "type": "blog",
-              "title": "Claude Code v2.1.89",
-              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
-              "published_at": "2026-04-01T07:28:38.482Z"
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
             }
           ],
-          "created_at": "2026-04-01T07:28:52.087Z"
+          "created_at": "2026-03-26T06:24:56.786Z"
         }
       ]
     }
