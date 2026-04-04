@@ -295,6 +295,31 @@
         }
       ],
       "created_at": "2026-04-03T07:25:28.584Z"
+    },
+    {
+      "id": "tip-2026-04-04-1",
+      "headline": "Use forceRemoteSettingsRefresh policy to ensure fresh configuration on startup",
+      "summary": "This setting forces Claude Code CLI to fetch the latest remote managed settings before starting and exits if the fetch fails. This ensures your CLI always runs with the most current configuration and prevents running with stale settings that might cause issues.",
+      "actionable_steps": [
+        "Open your Claude Code CLI configuration",
+        "Add the policy setting `forceRemoteSettingsRefresh: true`",
+        "Restart the CLI to verify it blocks startup until fresh settings are fetched"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.92",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+          "published_at": "2026-04-04T07:20:10.106Z"
+        }
+      ],
+      "created_at": "2026-04-04T07:20:24.316Z"
     }
   ]
 }
