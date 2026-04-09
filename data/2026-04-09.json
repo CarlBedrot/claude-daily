@@ -1,0 +1,229 @@
+{
+  "date": "2026-04-09",
+  "generated_at": "2026-04-09T07:29:11.933Z",
+  "digest": {
+    "lead": "Anthropic faces mounting criticism over customer support as a developer's month-long billing dispute goes viral, highlighting concerns about the company's support infrastructure.",
+    "themes": [
+      "Customer support",
+      "Developer tooling",
+      "Model analysis"
+    ],
+    "summary": "Meanwhile, Claude Code pushed another incremental update with focus view improvements, and researchers published analysis comparing writing styles across 178 AI models including Claude variants."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Customer Support Under Fire Over Month-Long Billing Dispute",
+          "summary": "A developer's blog post about waiting over a month for Anthropic to resolve a billing issue has gained significant attention on Hacker News [3]. The post criticizes Anthropic's support infrastructure and responsiveness to customer issues.",
+          "key_points": [
+            "Developer waited over 30 days for response to billing problem",
+            "Post sparked broader discussion about Anthropic's customer service quality"
+          ],
+          "impact": "This highlights potential scaling challenges in Anthropic's customer support as the company grows, affecting developers and businesses relying on Claude for production workloads.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "I've been waiting over a month for Anthropic to respond to my billing issue",
+              "url": "https://nickvecchioni.github.io/thoughts/2026/04/08/anthropic-support-doesnt-exist/",
+              "published_at": "2026-04-08T17:44:25.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Court Declines to Block Pentagon's Anthropic Blacklisting",
+          "summary": "A US court has declined to block the Pentagon's blacklisting of Anthropic for now [2]. The decision maintains restrictions on the AI company's ability to work with the Department of Defense.",
+          "impact": "This affects Anthropic's potential for government contracts and may influence how other federal agencies view partnerships with the company.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "US court declines to block Pentagon's Anthropic blacklisting for now",
+              "url": "https://www.reuters.com/world/us-court-declines-block-pentagons-anthropic-blacklisting-now-2026-04-08/",
+              "published_at": "2026-04-08T22:37:05.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.97 Adds Focus View and Status Line Enhancements",
+          "summary": "The latest Claude Code release introduces a focus view toggle (Ctrl+O) in NO_FLICKER mode and several status line improvements [1]. The update includes better visualization of running agents and support for git worktrees.",
+          "key_points": [
+            "New focus view shows prompt, tool summaries with diff stats, and responses",
+            "Added refresh interval setting and git worktree support in status line",
+            "Enhanced agent monitoring with live instance indicators"
+          ],
+          "impact": "These UI improvements should help developers working with Claude Code better track their workflows and manage multiple concurrent tasks.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.97",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2197",
+              "published_at": "2026-04-09T07:28:50.119Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Researchers Fingerprint Writing Styles of 178 AI Models Including Claude",
+          "summary": "A new research project has analyzed and fingerprinted the writing styles of 178 AI models, creating similarity clusters that help identify model characteristics [4]. The study appears to include Claude models among those analyzed.",
+          "key_points": [
+            "Comprehensive analysis covers 178 different AI models",
+            "Creates similarity clusters based on writing patterns and style"
+          ],
+          "impact": "This research helps developers and researchers better understand model behavior differences and could inform model selection decisions for specific use cases.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: We fingerprinted 178 AI models' writing styles and similarity clusters",
+              "url": "https://rival.tips/research/model-similarity",
+              "published_at": "2026-04-08T14:06:03.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-003",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        },
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-09.mp3"
+}
