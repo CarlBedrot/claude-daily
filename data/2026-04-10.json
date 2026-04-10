@@ -1,0 +1,210 @@
+{
+  "date": "2026-04-10",
+  "generated_at": "2026-04-10T07:29:24.188Z",
+  "digest": {
+    "lead": "Claude Code v2.1.98 dropped with enterprise-friendly updates including Google Vertex AI integration and Perforce workflow support.",
+    "themes": [
+      "Developer tooling",
+      "Enterprise integration"
+    ],
+    "summary": "Anthropic also published new healthcare industry resources, while the community continues building automation tools with Claude."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Publishes Healthcare and Life Sciences Resources",
+          "summary": "Anthropic released new healthcare and life sciences focused content [1], likely targeting enterprise adoption in regulated industries.",
+          "key_points": [],
+          "impact": "Healthcare organizations evaluating Claude for clinical workflows and research applications now have dedicated resources to guide implementation.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Healthcare Life Sciences",
+              "url": "https://www.anthropic.com/news/healthcare-life-sciences",
+              "published_at": "2026-04-09T20:25:31.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.98 Adds Google Vertex AI Integration and Enterprise Features",
+          "summary": "The latest Claude Code release introduces an interactive Google Vertex AI setup wizard accessible from the login screen [1]. The update also adds Perforce integration with a new `CLAUDE_CODE_PERFORCE_MODE` environment variable that prevents accidental overwrites of read-only files [1]. Additional features include a Monitor tool for streaming background script events and enhanced subprocess sandboxing [1].",
+          "key_points": [
+            "Interactive Google Vertex AI wizard guides users through GCP authentication, project setup, and model configuration",
+            "Perforce mode prevents overwrites of read-only files and suggests `p4 edit` commands instead",
+            "New Monitor tool enables real-time tracking of background script execution"
+          ],
+          "impact": "Enterprise developers using version control systems like Perforce and Google Cloud infrastructure can now integrate Claude Code more seamlessly into existing workflows, reducing setup friction and preventing accidental file modifications.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "YC-Backed Relvy Launches AI-Powered On-Call Automation",
+          "summary": "Relvy, a Y Combinator F24 company, launched their platform for automating on-call runbooks, generating discussion on Hacker News [1]. The startup appears to be leveraging AI for incident response automation, though specific Claude integration details weren't provided.",
+          "key_points": [],
+          "impact": "DevOps teams managing incident response may find new automation options, though the specific role of Claude or other AI models in Relvy's platform remains unclear.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Launch HN: Relvy (YC F24) – On-call runbooks, automated",
+              "url": "https://www.relvy.ai",
+              "published_at": "2026-04-09T12:11:56.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-03-1",
+          "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+          "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+          "actionable_steps": [
+            "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+            "Set the value to your desired character limit (up to 500,000)",
+            "Test with large results like database schemas to verify they pass through completely"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ],
+          "created_at": "2026-04-03T07:25:28.584Z"
+        },
+        {
+          "id": "tip-2026-04-08-1",
+          "headline": "Enable Amazon Bedrock support with Mantle integration",
+          "summary": "Claude Code v2.1.94 added support for Amazon Bedrock through Mantle integration. This allows you to use Claude Code with Amazon's Bedrock service instead of the default API endpoints, potentially offering better performance or compliance for enterprise users.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_USE_MANTLE=1 in your system or terminal",
+            "Restart Claude Code to apply the new configuration",
+            "Verify the connection is working by running a test query"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.94",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2194",
+              "published_at": "2026-04-08T07:28:46.896Z"
+            }
+          ],
+          "created_at": "2026-04-08T07:29:00.150Z"
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-10.mp3"
+}
