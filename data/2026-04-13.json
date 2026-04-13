@@ -1,0 +1,213 @@
+{
+  "date": "2026-04-13",
+  "generated_at": "2026-04-13T07:31:41.876Z",
+  "digest": {
+    "lead": "A concerning performance regression has emerged in Claude Opus 4.6, with accuracy on the BridgeBench hallucination test dropping from 83% to 68%.",
+    "themes": [
+      "Model performance",
+      "Cache infrastructure",
+      "Developer tooling"
+    ],
+    "summary": "Meanwhile, Claude Code received a feature-rich v2.1.97 update with new focus view capabilities, and developers are still discussing the impact of Anthropic's cache TTL changes from March."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude Opus 4.6 Shows Significant Accuracy Drop on Hallucination Benchmark",
+          "summary": "Claude Opus 4.6's performance on the BridgeBench hallucination test has declined from 83% to 68% accuracy [1]. The regression has sparked discussion in the developer community about model reliability.",
+          "key_points": [
+            "15 percentage point drop in hallucination detection accuracy",
+            "BridgeBench is a key benchmark for measuring AI truthfulness"
+          ],
+          "impact": "This affects teams relying on Claude Opus for factual accuracy in production applications, particularly those in domains where hallucination detection is critical.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Opus 4.6 accuracy on BridgeBench hallucination test drops from 83% to 68%",
+              "url": "https://twitter.com/bridgemindai/status/2043321284113670594",
+              "published_at": "2026-04-12T18:53:35.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Developer Backlash Continues Over Anthropic Cache TTL Changes",
+          "summary": "A GitHub issue discussing Anthropic's cache TTL downgrade from March 6th has generated significant community discussion [1]. The changes appear to have impacted developer workflows and application performance.",
+          "key_points": [],
+          "impact": "This affects developers who built applications relying on longer cache durations, potentially requiring architecture changes or increased API costs.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic downgraded cache TTL on March 6th",
+              "url": "https://github.com/anthropics/claude-code/issues/46829",
+              "published_at": "2026-04-12T05:45:52.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.97 Adds Focus View and Enhanced Status Line Features",
+          "summary": "Claude Code's latest release introduces a focus view toggle accessible via Ctrl+O in NO_FLICKER mode, displaying prompts, tool summaries with diff statistics, and responses [1]. The update also adds configurable status line refresh intervals and git worktree support.",
+          "key_points": [
+            "New focus view mode provides cleaner interface for code review workflows",
+            "Status line now supports automatic refresh and git worktree detection",
+            "Added Cedar policy file syntax highlighting"
+          ],
+          "impact": "These features streamline the development workflow for Claude Code users, particularly those working with git worktrees and requiring real-time status updates.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.97",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2197",
+              "published_at": "2026-04-13T07:31:25.650Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        },
+        {
+          "id": "tip-2026-04-03-1",
+          "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+          "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+          "actionable_steps": [
+            "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+            "Set the value to your desired character limit (up to 500,000)",
+            "Test with large results like database schemas to verify they pass through completely"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ],
+          "created_at": "2026-04-03T07:25:28.584Z"
+        },
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ],
+          "created_at": "2026-03-31T07:28:07.414Z"
+        },
+        {
+          "id": "tip-003",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-28-1",
+          "headline": "Add session tracking header for proxy aggregation",
+          "summary": "Use the `X-Claude-Code-Session-Id` header in your API requests to help proxies group requests by session without needing to parse request bodies. This improves routing and monitoring capabilities when using Claude Code through proxy servers.",
+          "actionable_steps": [
+            "Add the `X-Claude-Code-Session-Id` header to your Claude Code API requests",
+            "Set the header value to your session identifier",
+            "Configure your proxy to use this header for request aggregation instead of body parsing"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ],
+          "created_at": "2026-03-28T07:18:00.001Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-13.mp3"
+}
