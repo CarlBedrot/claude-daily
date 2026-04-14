@@ -397,6 +397,31 @@
         }
       ],
       "created_at": "2026-04-11T07:20:14.398Z"
+    },
+    {
+      "id": "tip-2026-04-14-1",
+      "headline": "Use the path parameter with EnterWorktree to switch between git worktrees",
+      "summary": "The EnterWorktree tool now accepts a path parameter that lets you switch into existing worktrees of your current repository. This makes it easier to work with multiple branches or feature development in parallel without switching repositories.",
+      "actionable_steps": [
+        "Identify the worktree path you want to switch to in your current repository",
+        "Use the EnterWorktree tool with the path parameter: `EnterWorktree(path=\"/path/to/your/worktree\")`",
+        "Verify you're in the correct worktree by checking the current branch or directory"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.105",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+          "published_at": "2026-04-14T07:29:33.318Z"
+        }
+      ],
+      "created_at": "2026-04-14T07:29:49.280Z"
     }
   ]
 }

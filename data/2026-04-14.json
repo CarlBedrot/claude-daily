@@ -1,0 +1,233 @@
+{
+  "date": "2026-04-14",
+  "generated_at": "2026-04-14T07:29:54.475Z",
+  "digest": {
+    "lead": "Claude Code shipped two updates today, with v2.1.107 improving thinking hints and v2.1.105 adding significant developer workflow features like worktree switching and plugin monitoring.",
+    "themes": [
+      "Developer tooling",
+      "Platform stability",
+      "Security research"
+    ],
+    "summary": "Meanwhile, a new security benchmark tests whether LLMs can find real vulnerabilities in codebases, and Anthropic faced a legal setback over supply chain risk labeling."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude.ai Service Disruption Draws Community Attention",
+          "summary": "Claude.ai experienced a service outage that generated significant discussion on Hacker News [1]. The incident was tracked on Anthropic's status page and drew 123 comments from users.",
+          "key_points": [],
+          "impact": "Affects all Claude.ai users and highlights the platform's growing importance as service disruptions now generate substantial community discussion.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude.ai down",
+              "url": "https://status.claude.com/incidents/6jd2m42f8mld",
+              "published_at": "2026-04-13T15:41:08.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Loses Legal Challenge Over Supply Chain Risk Designation",
+          "summary": "A federal appeals court rejected Anthropic's bid to pause a supply chain risk label [1]. The decision represents a setback for the company's legal strategy regarding regulatory compliance.",
+          "key_points": [],
+          "impact": "Could affect Anthropic's business operations and regulatory standing, particularly for enterprise customers evaluating Claude for sensitive applications.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic loses appeals court bid to pause supply chain risk label",
+              "url": "https://www.politico.com/news/2026/04/08/d-c-circuit-rejects-anthropic-plea-to-pause-supply-chain-risk-label-00864880",
+              "published_at": "2026-04-12T02:38:56.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Ships Two Updates with Developer Workflow Improvements",
+          "summary": "Claude Code released v2.1.107 with faster thinking hints during long operations [1], followed by the more substantial v2.1.105 update [2]. The larger release adds worktree switching via a new `path` parameter, plugin monitoring capabilities, and improved API stream handling with 5-minute timeouts.",
+          "key_points": [
+            "v2.1.105 introduces worktree switching and plugin background monitoring",
+            "PreCompact hooks can now block compaction operations",
+            "Improved handling of stalled API streams with automatic 5-minute timeouts"
+          ],
+          "impact": "Benefits developers using Claude Code for complex repository management and long-running operations, with better plugin support for workflow automation.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.107",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21107",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.105",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "New Security Benchmark Tests LLMs on Real Vulnerability Detection",
+          "summary": "N-Day-Bench launched as a benchmark to evaluate whether large language models can identify genuine security vulnerabilities in real codebases [1]. The project has gained attention on Hacker News with 59 points and active discussion.",
+          "key_points": [],
+          "impact": "Relevant for developers and security teams evaluating Claude's capabilities for code security analysis and vulnerability detection workflows.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "N-Day-Bench – Can LLMs find real vulnerabilities in real codebases?",
+              "url": "https://ndaybench.winfunc.com",
+              "published_at": "2026-04-13T21:54:03.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-14-1",
+          "headline": "Use the path parameter with EnterWorktree to switch between git worktrees",
+          "summary": "The EnterWorktree tool now accepts a path parameter that lets you switch into existing worktrees of your current repository. This makes it easier to work with multiple branches or feature development in parallel without switching repositories.",
+          "actionable_steps": [
+            "Identify the worktree path you want to switch to in your current repository",
+            "Use the EnterWorktree tool with the path parameter: `EnterWorktree(path=\"/path/to/your/worktree\")`",
+            "Verify you're in the correct worktree by checking the current branch or directory"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.105",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-03-28-1",
+          "headline": "Add session tracking header for proxy aggregation",
+          "summary": "Use the `X-Claude-Code-Session-Id` header in your API requests to help proxies group requests by session without needing to parse request bodies. This improves routing and monitoring capabilities when using Claude Code through proxy servers.",
+          "actionable_steps": [
+            "Add the `X-Claude-Code-Session-Id` header to your Claude Code API requests",
+            "Set the header value to your session identifier",
+            "Configure your proxy to use this header for request aggregation instead of body parsing"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ],
+          "created_at": "2026-03-28T07:18:00.001Z"
+        },
+        {
+          "id": "tip-2026-04-03-1",
+          "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+          "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+          "actionable_steps": [
+            "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+            "Set the value to your desired character limit (up to 500,000)",
+            "Test with large results like database schemas to verify they pass through completely"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ],
+          "created_at": "2026-04-03T07:25:28.584Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-14.mp3"
+}
