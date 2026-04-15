@@ -422,6 +422,31 @@
         }
       ],
       "created_at": "2026-04-14T07:29:49.280Z"
+    },
+    {
+      "id": "tip-2026-04-15-1",
+      "headline": "Use ENABLE_PROMPT_CACHING_1H to extend prompt cache duration",
+      "summary": "Setting this environment variable enables 1-hour prompt cache TTL instead of the default, which can reduce API costs and improve response times for longer coding sessions. This works across API key, Bedrock, Vertex, and Foundry deployments.",
+      "actionable_steps": [
+        "Set the environment variable ENABLE_PROMPT_CACHING_1H=true in your system or deployment configuration",
+        "Restart Claude Code to apply the new caching setting",
+        "Monitor your usage to verify extended caching is working"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.108",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+          "published_at": "2026-04-15T07:29:39.027Z"
+        }
+      ],
+      "created_at": "2026-04-15T07:29:51.069Z"
     }
   ]
 }

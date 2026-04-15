@@ -1,0 +1,251 @@
+{
+  "date": "2026-04-15",
+  "generated_at": "2026-04-15T07:30:03.111Z",
+  "digest": {
+    "lead": "The US Treasury is seeking access to Anthropic's unreleased Mythos model to conduct security vulnerability testing, marking a significant government interest in advanced AI systems.",
+    "themes": [
+      "Government oversight",
+      "Model security",
+      "Developer tooling"
+    ],
+    "summary": "Meanwhile, Claude Code received notable updates including enhanced prompt caching controls and a new session recap feature, while Anthropic announced a new board appointment."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "US Treasury Seeks Access to Anthropic's Mythos Model for Security Testing",
+          "summary": "The US Treasury Department is requesting access to Anthropic's unreleased Mythos model to identify potential security vulnerabilities and flaws [1]. This represents a significant development in government oversight of advanced AI systems before public release.",
+          "key_points": [
+            "Treasury specifically targeting Anthropic's next-generation Mythos model",
+            "Focus appears to be on identifying security vulnerabilities before deployment"
+          ],
+          "impact": "This signals increasing government scrutiny of frontier AI models and could establish precedent for mandatory security reviews of advanced systems before release.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "US Treasury Seeking Access to Anthropic's Mythos to Find Flaws",
+              "url": "https://www.bloomberg.com/news/articles/2026-04-14/us-treasury-seeking-access-to-anthropic-s-mythos-to-find-flaws",
+              "published_at": "2026-04-14T14:07:52.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Appoints Narasimhan to Board of Directors",
+          "summary": "Anthropic has announced the appointment of Narasimhan to its board of directors [1]. The company published the announcement as part of its governance updates.",
+          "key_points": [],
+          "impact": "Board appointments at frontier AI companies are closely watched as they can signal strategic direction and governance priorities.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Narasimhan Board",
+              "url": "https://www.anthropic.com/news/narasimhan-board",
+              "published_at": "2026-04-14T14:00:04.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.108 Adds Advanced Prompt Caching and Session Recap Features",
+          "summary": "Claude Code v2.1.108 introduces granular prompt caching controls with new environment variables for 1-hour and 5-minute TTL options across API providers [1]. The update also adds a session recap feature that provides context when returning to work, plus enables the model to discover and invoke built-in slash commands.",
+          "key_points": [
+            "New `ENABLE_PROMPT_CACHING_1H` environment variable for extended caching across all providers",
+            "Session recap feature helps users resume work with automatic context summaries",
+            "Models can now autonomously discover and use slash commands"
+          ],
+          "impact": "These features significantly improve developer workflow efficiency, especially for long-running projects where context preservation and reduced API costs from better caching are critical.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.108",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+              "published_at": "2026-04-15T07:29:39.027Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code v2.1.109 Enhances Extended-Thinking Visual Indicator",
+          "summary": "The latest Claude Code update improves the user experience during extended-thinking operations by adding a rotating progress hint to the indicator [1]. This provides better visual feedback when Claude is processing complex requests.",
+          "key_points": [],
+          "impact": "While a minor update, this addresses user experience concerns about knowing when Claude is actively processing versus stuck, particularly important for developers working on complex coding tasks.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.109",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21109",
+              "published_at": "2026-04-15T07:29:39.027Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Anthropic Engages Christian Leaders on AI Ethics and Theology",
+          "summary": "Anthropic held meetings with Christian religious leaders to discuss theological questions around AI, including whether artificial intelligence could be considered a 'child of God' [1]. The discussions represent part of broader engagement with religious communities on AI ethics.",
+          "key_points": [
+            "Conversations explored fundamental theological questions about AI consciousness and spiritual status",
+            "Part of Anthropic's broader stakeholder engagement on AI ethics and societal impact"
+          ],
+          "impact": "This outreach reflects growing recognition that AI development must engage with diverse moral and philosophical frameworks, particularly as AI capabilities advance toward more human-like reasoning.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Can AI be a 'child of God'? Inside Anthropic's meeting with Christian leaders",
+              "url": "https://www.msn.com/en-us/news/us/can-ai-be-a-child-of-god-inside-anthropic-s-meeting-with-christian-leaders/ar-AA20Eb2w",
+              "published_at": "2026-04-13T10:26:43.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-15-1",
+          "headline": "Use ENABLE_PROMPT_CACHING_1H to extend prompt cache duration",
+          "summary": "Setting this environment variable enables 1-hour prompt cache TTL instead of the default, which can reduce API costs and improve response times for longer coding sessions. This works across API key, Bedrock, Vertex, and Foundry deployments.",
+          "actionable_steps": [
+            "Set the environment variable ENABLE_PROMPT_CACHING_1H=true in your system or deployment configuration",
+            "Restart Claude Code to apply the new caching setting",
+            "Monitor your usage to verify extended caching is working"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.108",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+              "published_at": "2026-04-15T07:29:39.027Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-04-1",
+          "headline": "Use forceRemoteSettingsRefresh policy to ensure fresh configuration on startup",
+          "summary": "This setting forces Claude Code CLI to fetch the latest remote managed settings before starting and exits if the fetch fails. This ensures your CLI always runs with the most current configuration and prevents running with stale settings that might cause issues.",
+          "actionable_steps": [
+            "Open your Claude Code CLI configuration",
+            "Add the policy setting `forceRemoteSettingsRefresh: true`",
+            "Restart the CLI to verify it blocks startup until fresh settings are fetched"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.92",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+              "published_at": "2026-04-04T07:20:10.106Z"
+            }
+          ],
+          "created_at": "2026-04-04T07:20:24.316Z"
+        },
+        {
+          "id": "tip-2026-03-28-1",
+          "headline": "Add session tracking header for proxy aggregation",
+          "summary": "Use the `X-Claude-Code-Session-Id` header in your API requests to help proxies group requests by session without needing to parse request bodies. This improves routing and monitoring capabilities when using Claude Code through proxy servers.",
+          "actionable_steps": [
+            "Add the `X-Claude-Code-Session-Id` header to your Claude Code API requests",
+            "Set the header value to your session identifier",
+            "Configure your proxy to use this header for request aggregation instead of body parsing"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ],
+          "created_at": "2026-03-28T07:18:00.001Z"
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-15.mp3"
+}
