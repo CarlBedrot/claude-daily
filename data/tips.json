@@ -447,6 +447,31 @@
         }
       ],
       "created_at": "2026-04-15T07:29:51.069Z"
+    },
+    {
+      "id": "tip-2026-04-16-1",
+      "headline": "Use `/tui fullscreen` for flicker-free Claude Code rendering",
+      "summary": "The `/tui fullscreen` command switches Claude Code to a flicker-free rendering mode within the same conversation. This improves visual stability and reduces screen flicker during interactions.",
+      "actionable_steps": [
+        "Open Claude Code",
+        "Type `/tui fullscreen` in the conversation",
+        "Press Enter to activate flicker-free rendering mode"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 1,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.110",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21110",
+          "published_at": "2026-04-16T07:29:41.642Z"
+        }
+      ],
+      "created_at": "2026-04-16T07:29:58.901Z"
     }
   ]
 }
