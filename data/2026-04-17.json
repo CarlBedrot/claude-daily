@@ -1,0 +1,260 @@
+{
+  "date": "2026-04-17",
+  "generated_at": "2026-04-17T07:30:34.170Z",
+  "digest": {
+    "lead": "Claude Opus 4.7 officially launched yesterday with new effort levels and auto mode for Claude Code subscribers, marking Anthropic's latest flagship model release.",
+    "themes": [
+      "Model release",
+      "Government adoption",
+      "Developer tooling"
+    ],
+    "summary": "The White House is reportedly giving US agencies access to Anthropic's Mythos system, while the community debates Opus 4.7's capabilities against competing models."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude Opus 4.7 Officially Launches with New Capabilities",
+          "summary": "Anthropic released Claude Opus 4.7, their latest flagship model [5][6][7]. The model card provides detailed technical specifications and safety evaluations [6]. The launch generated significant discussion on Hacker News with hundreds of comments [7].",
+          "key_points": [
+            "Full model card published with technical details and safety assessments",
+            "Community response has been mixed, with debates about performance compared to competitors"
+          ],
+          "impact": "This affects all Claude users as the new flagship model becomes available across platforms, with Pro and API users gaining access to Anthropic's most capable model.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Opus 4 7",
+              "url": "https://www.anthropic.com/news/claude-opus-4-7",
+              "published_at": "2026-04-16T14:53:34.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Claude Opus 4.7 Model Card",
+              "url": "https://anthropic.com/claude-opus-4-7-system-card",
+              "published_at": "2026-04-16T14:32:24.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Claude Opus 4.7",
+              "url": "https://www.anthropic.com/claude/opus",
+              "published_at": "2026-04-16T14:29:09.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "White House Reportedly Grants US Agencies Access to Anthropic's Mythos",
+          "summary": "According to Bloomberg News, the White House is providing US government agencies access to Anthropic's Mythos system [3]. The news generated discussion on Hacker News with 29 points and 17 comments.",
+          "impact": "This represents a significant government endorsement of Anthropic's technology and could accelerate enterprise adoption as agencies begin using Claude for official operations.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "White House to give US agencies Anthropic Mythos access, Bloomberg News reports",
+              "url": "https://www.reuters.com/technology/white-house-give-us-agencies-anthropic-mythos-access-bloomberg-news-reports-2026-04-16/",
+              "published_at": "2026-04-16T19:06:45.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Adds Opus 4.7 Support with New Effort Levels and Auto Mode",
+          "summary": "Claude Code v2.1.111 introduced support for Claude Opus 4.7 with a new 'xhigh' effort level and auto mode for Max subscribers [2]. A quick follow-up v2.1.112 fixed availability issues with Opus 4.7 in auto mode [1].",
+          "key_points": [
+            "New /effort command opens interactive slider for tuning speed vs. intelligence",
+            "'xhigh' effort level sits between 'high' and 'max' for Opus 4.7",
+            "Auto mode now available for Max subscribers when using Opus 4.7"
+          ],
+          "impact": "Daily Claude Code users now have granular control over model performance, with Max subscribers getting automated model selection for optimal development workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.111",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21111",
+              "published_at": "2026-04-17T07:30:04.444Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.112",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21112",
+              "published_at": "2026-04-17T07:30:04.444Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Community Benchmarks Question Opus 4.7's Visual Capabilities",
+          "summary": "Simon Willison's comparison showed Qwen3.6-35B outperforming Claude Opus 4.7 at drawing a pelican on local hardware [4]. The post gained significant traction with 383 points and 83 comments on Hacker News, sparking debate about the new model's visual reasoning abilities.",
+          "perspectives": "While Anthropic positioned Opus 4.7 as their most capable model, early community testing suggests mixed results in specific domains like visual generation compared to open-source alternatives.",
+          "impact": "This affects developers evaluating Claude for visual tasks and multimodal applications, highlighting the importance of domain-specific benchmarking beyond general capabilities.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Qwen3.6-35B-A3B on my laptop drew me a better pelican than Claude Opus 4.7",
+              "url": "https://simonwillison.net/2026/Apr/16/qwen-beats-opus/",
+              "published_at": "2026-04-16T17:37:20.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "Creative Project Lets Claude Gamble Until Bankruptcy",
+          "summary": "A Show HN project called \"Let AI Gamble\" gives Claude a casino bankroll and lets it gamble until it's too broke to continue thinking [8]. The experimental project received 34 points and generated discussion about AI behavior under resource constraints.",
+          "impact": "This creative experiment demonstrates novel ways the community is exploring Claude's decision-making and resource management, contributing to broader understanding of AI behavior patterns.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Gave Claude a casino bankroll – it gambles till it's too broke to think",
+              "url": "https://letaigamble.com/",
+              "published_at": "2026-04-16T01:10:44.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-04-16-1",
+          "headline": "Use `/tui fullscreen` for flicker-free Claude Code rendering",
+          "summary": "The `/tui fullscreen` command switches Claude Code to a flicker-free rendering mode within the same conversation. This improves visual stability and reduces screen flicker during interactions.",
+          "actionable_steps": [
+            "Open Claude Code",
+            "Type `/tui fullscreen` in the conversation",
+            "Press Enter to activate flicker-free rendering mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.110",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21110",
+              "published_at": "2026-04-16T07:29:41.642Z"
+            }
+          ],
+          "created_at": "2026-04-16T07:29:58.901Z"
+        },
+        {
+          "id": "tip-2026-03-28-1",
+          "headline": "Add session tracking header for proxy aggregation",
+          "summary": "Use the `X-Claude-Code-Session-Id` header in your API requests to help proxies group requests by session without needing to parse request bodies. This improves routing and monitoring capabilities when using Claude Code through proxy servers.",
+          "actionable_steps": [
+            "Add the `X-Claude-Code-Session-Id` header to your Claude Code API requests",
+            "Set the header value to your session identifier",
+            "Configure your proxy to use this header for request aggregation instead of body parsing"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ],
+          "created_at": "2026-03-28T07:18:00.001Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-17.mp3"
+}
