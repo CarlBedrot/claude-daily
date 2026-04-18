@@ -1,0 +1,222 @@
+{
+  "date": "2026-04-18",
+  "generated_at": "2026-04-18T07:24:26.089Z",
+  "digest": {
+    "lead": "Anthropic quietly launched Claude Design, a new offering from their Labs division, though details remain sparse.",
+    "themes": [
+      "Product launches",
+      "Developer tooling",
+      "Security research"
+    ],
+    "summary": "Meanwhile, Claude Code received significant updates including native binary execution and improved networking controls, while security researchers successfully replicated Anthropic's Mythos vulnerability findings using public models."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Launches Claude Design Labs Offering",
+          "summary": "Anthropic has announced Claude Design, a new product from their Labs division [1]. The announcement provides minimal details about the offering's capabilities or intended use cases.",
+          "key_points": [],
+          "impact": "The sparse announcement suggests this may be an early-stage or experimental offering, potentially targeting design workflows or creative applications.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Design Anthropic Labs",
+              "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+              "published_at": "2026-04-17T14:58:21.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Ships Native Binary Execution and Enhanced Networking Controls",
+          "summary": "Claude Code released version 2.1.113 with a major architectural change, replacing bundled JavaScript with native binaries for better performance [1]. The update also introduces granular network controls, allowing users to block specific domains even when broader wildcards are permitted, plus improved fullscreen editing with better keyboard navigation [1]. A follow-up patch (v2.1.114) fixed a crash affecting agent team permission dialogs [2].",
+          "key_points": [
+            "CLI now spawns native binaries instead of JavaScript for improved performance",
+            "New `sandbox.network.deniedDomains` setting enables fine-grained domain blocking",
+            "Enhanced fullscreen mode with better selection scrolling and readline-style navigation"
+          ],
+          "impact": "These updates significantly improve Claude Code's performance and security posture for development teams, particularly those working in restricted network environments or requiring granular access controls.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.113",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21113",
+              "published_at": "2026-04-18T07:24:06.032Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.114",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21114",
+              "published_at": "2026-04-18T07:24:06.032Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Security Researchers Replicate Anthropic's Mythos Vulnerability Findings",
+          "summary": "Vidoc Security successfully reproduced Anthropic's Mythos research findings using publicly available models, generating significant discussion on Hacker News with 99 points and 56 comments [1]. This work validates Anthropic's security research methodology and demonstrates that the vulnerabilities identified in Mythos aren't limited to Anthropic's models.",
+          "key_points": [
+            "Independent validation of Anthropic's Mythos security research using public models",
+            "Strong community engagement with nearly 100 upvotes on Hacker News"
+          ],
+          "impact": "This independent replication strengthens the credibility of AI safety research and provides valuable data for organizations evaluating AI security risks across different model providers.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "We reproduced Anthropic's Mythos findings with public models",
+              "url": "https://blog.vidocsecurity.com/blog/we-reproduced-anthropics-mythos-findings-with-public-models",
+              "published_at": "2026-04-17T14:09:32.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "created_at": "2026-04-10T07:29:24.319Z"
+        },
+        {
+          "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-08-1",
+          "headline": "Enable Amazon Bedrock support with Mantle integration",
+          "summary": "Claude Code v2.1.94 added support for Amazon Bedrock through Mantle integration. This allows you to use Claude Code with Amazon's Bedrock service instead of the default API endpoints, potentially offering better performance or compliance for enterprise users.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_USE_MANTLE=1 in your system or terminal",
+            "Restart Claude Code to apply the new configuration",
+            "Verify the connection is working by running a test query"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.94",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2194",
+              "published_at": "2026-04-08T07:28:46.896Z"
+            }
+          ],
+          "created_at": "2026-04-08T07:29:00.150Z"
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-04-16-1",
+          "headline": "Use `/tui fullscreen` for flicker-free Claude Code rendering",
+          "summary": "The `/tui fullscreen` command switches Claude Code to a flicker-free rendering mode within the same conversation. This improves visual stability and reduces screen flicker during interactions.",
+          "actionable_steps": [
+            "Open Claude Code",
+            "Type `/tui fullscreen` in the conversation",
+            "Press Enter to activate flicker-free rendering mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.110",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21110",
+              "published_at": "2026-04-16T07:29:41.642Z"
+            }
+          ],
+          "created_at": "2026-04-16T07:29:58.901Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-18.mp3"
+}
