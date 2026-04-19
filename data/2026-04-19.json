@@ -1,0 +1,211 @@
+{
+  "date": "2026-04-19",
+  "generated_at": "2026-04-19T07:28:26.073Z",
+  "digest": {
+    "lead": "Claude Opus 4.7's advanced capabilities are raising significant security concerns, with reports of the model writing Chrome exploits and exhibiting persistent malware-checking behaviors in coding workflows.",
+    "themes": [
+      "Security concerns",
+      "Model capabilities",
+      "Performance analysis"
+    ],
+    "summary": "Meanwhile, performance benchmarks show mixed results for the new model, sparking community debate about the trade-offs between capability and safety."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude Opus 4.7 Performance Analysis Shows Mixed Results",
+          "summary": "New benchmarks from Artificial Analysis reveal Claude Opus 4.7's intelligence, performance, and pricing metrics [2]. The analysis has generated limited discussion in the community, with only minimal engagement on the technical details.",
+          "key_points": [],
+          "impact": "Users evaluating Claude Opus 4.7 for production workloads now have concrete performance data to inform their decisions.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Opus 4.7 Intelligence, Performance and Price Analysis",
+              "url": "https://artificialanalysis.ai/models/claude-opus-4-7",
+              "published_at": "2026-04-18T10:19:30.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Opus 4.7 Exhibits Persistent Malware Detection Behavior",
+          "summary": "Users report that Claude Code Opus 4.7 is repeatedly checking for malware during coding sessions, potentially impacting development workflows [1]. The behavior has sparked significant discussion in the developer community, with 56 comments on Hacker News analyzing the implications.",
+          "key_points": [
+            "The persistent checking behavior may slow down coding workflows",
+            "Community is divided on whether this represents a safety feature or a bug"
+          ],
+          "impact": "Developers using Claude Code for daily programming tasks may experience workflow interruptions and need to adjust their development practices.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Code Opus 4.7 keeps checking on malware",
+              "url": "https://news.ycombinator.com/item?id=47814832",
+              "published_at": "2026-04-18T10:46:17.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Opus Demonstrates Chrome Exploit Creation Capabilities",
+          "summary": "A report from The Register reveals that Claude Opus successfully wrote a Chrome browser exploit for $2,283, raising concerns about the model's potential for generating malicious code [3]. The story has generated moderate discussion among security-focused developers.",
+          "key_points": [
+            "The exploit was created for a relatively modest fee, highlighting accessibility concerns",
+            "Raises questions about AI safety guardrails for security research"
+          ],
+          "impact": "Security researchers and organizations using Claude for code generation must reassess their safety protocols and usage policies.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Opus wrote a Chrome exploit for $2,283",
+              "url": "https://www.theregister.com/2026/04/17/claude_opus_wrote_chrome_exploit/",
+              "published_at": "2026-04-18T07:55:20.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        },
+        {
+          "id": "tip-2026-04-03-1",
+          "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+          "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+          "actionable_steps": [
+            "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+            "Set the value to your desired character limit (up to 500,000)",
+            "Test with large results like database schemas to verify they pass through completely"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ],
+          "created_at": "2026-04-03T07:25:28.584Z"
+        },
+        {
+          "id": "tip-003",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-08-1",
+          "headline": "Enable Amazon Bedrock support with Mantle integration",
+          "summary": "Claude Code v2.1.94 added support for Amazon Bedrock through Mantle integration. This allows you to use Claude Code with Amazon's Bedrock service instead of the default API endpoints, potentially offering better performance or compliance for enterprise users.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_USE_MANTLE=1 in your system or terminal",
+            "Restart Claude Code to apply the new configuration",
+            "Verify the connection is working by running a test query"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.94",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2194",
+              "published_at": "2026-04-08T07:28:46.896Z"
+            }
+          ],
+          "created_at": "2026-04-08T07:29:00.150Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-19.mp3"
+}
