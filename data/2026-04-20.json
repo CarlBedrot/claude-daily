@@ -1,0 +1,228 @@
+{
+  "date": "2026-04-20",
+  "generated_at": "2026-04-20T07:32:25.912Z",
+  "digest": {
+    "lead": "The big story today is Claude Opus 4.7's updated system prompt revealing significant changes to the model's instructions and capabilities, sparking extensive developer discussion.",
+    "themes": [
+      "Model updates",
+      "Platform policies",
+      "Enterprise challenges"
+    ],
+    "summary": "Meanwhile, privacy concerns emerge over Anthropic's software practices, and Uber reportedly faces obstacles with its Claude AI integration efforts."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude Opus 4.7 System Prompt Changes Analyzed by Developers",
+          "summary": "Simon Willison published a detailed analysis of the system prompt differences between Claude Opus 4.6 and 4.7 [1]. The changes have generated significant discussion among developers about the model's evolving capabilities and instructions.",
+          "key_points": [
+            "Comprehensive breakdown of prompt modifications between versions",
+            "Community analysis reveals insights into Anthropic's model development approach"
+          ],
+          "impact": "Developers and researchers working with Claude Opus can better understand recent behavioral changes and adapt their applications accordingly.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Changes in the system prompt between Claude Opus 4.6 and 4.7",
+              "url": "https://simonwillison.net/2026/Apr/18/opus-system-prompt/",
+              "published_at": "2026-04-19T10:36:29.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Users Launch Website Documenting Anthropic Account Bans",
+          "summary": "A new website called \"Banned by Anthropic\" has emerged, collecting stories from users who claim their accounts were suspended [1]. The site has attracted significant community attention and discussion about platform moderation policies.",
+          "key_points": [],
+          "impact": "Claude users and potential enterprise customers may scrutinize Anthropic's content policies and account suspension practices more closely.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Banned by Anthropic?",
+              "url": "https://bannedbyanthropic.com/",
+              "published_at": "2026-04-19T22:33:31.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Privacy Concerns Raised Over Anthropic Software Installation",
+          "summary": "A privacy researcher has published claims that Anthropic installed what they characterize as \"spyware bridge\" software on their machine [1]. The allegations have sparked debate in the developer community about data collection practices.",
+          "key_points": [],
+          "impact": "Enterprise IT teams and privacy-conscious developers may demand more transparency about Anthropic's software components and data handling practices.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic installed a spyware bridge on my machine?",
+              "url": "https://www.thatprivacyguy.com/blog/anthropic-spyware/",
+              "published_at": "2026-04-20T02:41:50.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Uber's Claude AI Integration Reportedly Faces Implementation Challenges",
+          "summary": "According to a Yahoo Finance report, Uber's efforts to integrate Anthropic's AI technology have encountered obstacles [1]. The news has generated discussion about enterprise AI adoption challenges and implementation hurdles.",
+          "key_points": [],
+          "impact": "Enterprise teams considering Claude integration may want to understand common deployment challenges and plan accordingly for potential implementation complexities.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Uber's Anthropic AI push hits a wall",
+              "url": "https://finance.yahoo.com/sectors/technology/articles/ubers-anthropic-ai-push-hits-223109852.html",
+              "published_at": "2026-04-19T18:13:32.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        },
+        {
+          "id": "tip-2026-04-04-1",
+          "headline": "Use forceRemoteSettingsRefresh policy to ensure fresh configuration on startup",
+          "summary": "This setting forces Claude Code CLI to fetch the latest remote managed settings before starting and exits if the fetch fails. This ensures your CLI always runs with the most current configuration and prevents running with stale settings that might cause issues.",
+          "actionable_steps": [
+            "Open your Claude Code CLI configuration",
+            "Add the policy setting `forceRemoteSettingsRefresh: true`",
+            "Restart the CLI to verify it blocks startup until fresh settings are fetched"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.92",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+              "published_at": "2026-04-04T07:20:10.106Z"
+            }
+          ],
+          "created_at": "2026-04-04T07:20:24.316Z"
+        },
+        {
+          "id": "tip-2026-04-16-1",
+          "headline": "Use `/tui fullscreen` for flicker-free Claude Code rendering",
+          "summary": "The `/tui fullscreen` command switches Claude Code to a flicker-free rendering mode within the same conversation. This improves visual stability and reduces screen flicker during interactions.",
+          "actionable_steps": [
+            "Open Claude Code",
+            "Type `/tui fullscreen` in the conversation",
+            "Press Enter to activate flicker-free rendering mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.110",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21110",
+              "published_at": "2026-04-16T07:29:41.642Z"
+            }
+          ],
+          "created_at": "2026-04-16T07:29:58.901Z"
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-20.mp3"
+}
