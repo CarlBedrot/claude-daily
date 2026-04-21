@@ -1,0 +1,247 @@
+{
+  "date": "2026-04-21",
+  "generated_at": "2026-04-21T07:30:30.377Z",
+  "digest": {
+    "lead": "Anthropic unveiled Claude Opus 4.7, its latest flagship model, while also announcing a major partnership with Amazon for dedicated compute infrastructure.",
+    "themes": [
+      "Model releases",
+      "Enterprise partnerships",
+      "Developer tooling"
+    ],
+    "summary": "Meanwhile, Claude Code got faster session handling and better terminal scrolling, and the OpenClaw CLI tool is back in Anthropic's good graces after previous restrictions."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Releases Claude Opus 4.7",
+          "summary": "Anthropic announced the release of Claude Opus 4.7, the latest iteration of its flagship AI model [1].",
+          "key_points": [],
+          "impact": "This represents the newest capabilities available to Claude users, likely bringing improvements in reasoning, knowledge, and task performance across enterprise and individual use cases.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Opus 4 7",
+              "url": "https://www.anthropic.com/news/claude-opus-4-7",
+              "published_at": "2026-04-20T17:27:26.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Partners with Amazon for Dedicated Compute Infrastructure",
+          "summary": "Anthropic announced a new partnership with Amazon to provide dedicated compute infrastructure, marking a significant expansion of their cloud capabilities [1].",
+          "key_points": [],
+          "impact": "This partnership could enable better performance, availability, and potentially lower costs for enterprise Claude users, while giving Anthropic more control over their infrastructure stack.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Anthropic Amazon Compute",
+              "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+              "published_at": "2026-04-21T01:50:34.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "NSA Uses Anthropic's Mythos Despite Pentagon Blacklist Restrictions",
+          "summary": "Reports indicate the NSA is utilizing Anthropic's Mythos system despite existing Pentagon blacklist restrictions, sparking significant discussion in the tech community [1].",
+          "key_points": [
+            "The usage appears to contradict existing Pentagon guidelines",
+            "The revelation has generated substantial debate with over 300 comments on Hacker News"
+          ],
+          "impact": "This highlights ongoing tensions between government AI adoption needs and security restrictions, potentially affecting how federal agencies evaluate and deploy Claude for sensitive applications.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "NSA is using Anthropic's Mythos despite blacklist",
+              "url": "https://www.axios.com/2026/04/19/nsa-anthropic-mythos-pentagon",
+              "published_at": "2026-04-20T10:00:35.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.116 Delivers Major Performance Improvements",
+          "summary": "The latest Claude Code update brings significant speed improvements to large session resumption (up to 67% faster on 40MB+ sessions) and better handling of sessions with many dead-fork entries [1]. The update also includes faster MCP startup times and smoother terminal scrolling in popular editors.",
+          "key_points": [
+            "Session resumption up to 67% faster for large sessions over 40MB",
+            "Improved MCP startup performance with deferred resource loading",
+            "Enhanced terminal scrolling in VS Code, Cursor, and Windsurf with new `/terminal-setup` configuration"
+          ],
+          "impact": "These performance gains will significantly improve the daily workflow for developers working on large codebases or long-running sessions, reducing wait times and providing a smoother coding experience.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.116",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+              "published_at": "2026-04-21T07:30:03.998Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Anthropic Allows OpenClaw CLI Usage Again",
+          "summary": "Anthropic has reversed its previous restrictions on OpenClaw-style Claude CLI usage, allowing developers to use this popular command-line interface tool again [1]. The news has generated significant community interest with over 100 upvotes on Hacker News.",
+          "key_points": [],
+          "impact": "This reversal removes a significant friction point for developers who prefer command-line workflows, potentially increasing Claude adoption among technical users who rely on CLI tools for their daily development work.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+              "url": "https://docs.openclaw.ai/providers/anthropic",
+              "published_at": "2026-04-21T03:43:03.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-21-1",
+          "headline": "Use `/terminal-setup` to configure smoother fullscreen scrolling in VS Code, Cursor, and Windsurf",
+          "summary": "Claude Code v2.1.116 improved terminal scrolling performance by automatically configuring your editor's scroll sensitivity. This eliminates choppy scrolling when working in fullscreen terminal mode.",
+          "actionable_steps": [
+            "Open Claude Code in your VS Code, Cursor, or Windsurf editor",
+            "Run the `/terminal-setup` command",
+            "Allow Claude Code to configure your editor's scroll sensitivity settings"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.116",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+              "published_at": "2026-04-21T07:30:03.998Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        },
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ],
+          "created_at": "2026-03-31T07:28:07.414Z"
+        },
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "created_at": "2026-04-10T07:29:24.319Z"
+        },
+        {
+          "id": "tip-2026-04-14-1",
+          "headline": "Use the path parameter with EnterWorktree to switch between git worktrees",
+          "summary": "The EnterWorktree tool now accepts a path parameter that lets you switch into existing worktrees of your current repository. This makes it easier to work with multiple branches or feature development in parallel without switching repositories.",
+          "actionable_steps": [
+            "Identify the worktree path you want to switch to in your current repository",
+            "Use the EnterWorktree tool with the path parameter: `EnterWorktree(path=\"/path/to/your/worktree\")`",
+            "Verify you're in the correct worktree by checking the current branch or directory"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.105",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            }
+          ],
+          "created_at": "2026-04-14T07:29:49.280Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-21.mp3"
+}
