@@ -1,0 +1,231 @@
+{
+  "date": "2026-04-22",
+  "generated_at": "2026-04-22T07:30:13.205Z",
+  "digest": {
+    "lead": "Anthropic secured a massive $5B investment from Amazon with a commitment to spend $100B on AWS cloud services, signaling major enterprise expansion plans.",
+    "themes": [
+      "Enterprise funding",
+      "Developer tooling",
+      "Platform changes"
+    ],
+    "summary": "Meanwhile, Claude Code received incremental updates with improved session management, though speculation continues about potential Pro plan changes."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Secures $5B Amazon Investment with $100B Cloud Spending Commitment",
+          "summary": "Anthropic has received a $5 billion investment from Amazon, committing to spend $100 billion on AWS cloud services in return [1]. The deal has generated significant discussion in the tech community, with over 270 points and 281 comments on Hacker News.",
+          "key_points": [
+            "Investment represents one of the largest AI funding rounds to date",
+            "Cloud spending commitment ties Anthropic closely to AWS infrastructure",
+            "Deal structure suggests long-term enterprise expansion strategy"
+          ],
+          "impact": "This massive funding round positions Anthropic for significant scaling and enterprise market expansion, while the AWS commitment may influence future infrastructure decisions for Claude deployments.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic takes $5B from Amazon and pledges $100B in cloud spending in return",
+              "url": "https://techcrunch.com/2026/04/20/anthropic-takes-5b-from-amazon-and-pledges-100b-in-cloud-spending-in-return/",
+              "published_at": "2026-04-21T13:08:25.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.117 Enhances Session Management and Agent Configuration",
+          "summary": "The latest Claude Code update introduces forked subagents for external builds via environment variable configuration [1]. The release also improves model selection persistence across restarts and adds session summarization for stale, large sessions in the `/resume` command.",
+          "key_points": [
+            "Forked subagents now available on external builds with CLAUDE_CODE_FORK_SUBAGENT=1",
+            "Model selections persist across restarts regardless of project-pinned models",
+            "Resume command now offers to summarize large stale sessions before re-reading"
+          ],
+          "impact": "These improvements enhance developer productivity by maintaining session context and model preferences, particularly benefiting teams working with long-running development sessions.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.117",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21117",
+              "published_at": "2026-04-22T07:29:52.517Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code v2.1.114 Fixes Agent Teams Permission Dialog Crash",
+          "summary": "A targeted bug fix addresses a crash in the permission dialog that occurred when agent team teammates requested tool permissions [1]. This minor update focuses on stability improvements for collaborative development workflows.",
+          "impact": "The fix ensures smoother collaboration for development teams using Claude Code's agent teams feature, preventing workflow interruptions during permission requests.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.114",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21114",
+              "published_at": "2026-04-22T07:29:52.517Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Speculation Grows Around Potential Claude Code Removal from Pro Plans",
+          "summary": "A social media post has sparked widespread community discussion about potential changes to Claude Code availability in Anthropic's Pro plan [1]. The speculation has generated significant engagement with over 500 comments on Hacker News, though no official confirmation has been provided.",
+          "impact": "If true, this change could significantly affect individual developers and small teams currently relying on Pro plan access to Claude Code, potentially forcing them to consider enterprise plans or alternative tools.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Code to be removed from Anthropic's Pro plan?",
+              "url": "https://bsky.app/profile/edzitron.com/post/3mjzxwfx3qs2a",
+              "published_at": "2026-04-21T21:03:04.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-22-1",
+          "headline": "Enable forked subagents in external Claude Code builds",
+          "summary": "Forked subagents allow Claude Code to spawn separate agent processes for parallel task execution. This can improve performance for complex workflows that benefit from concurrent processing.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_FORK_SUBAGENT=1",
+            "Restart Claude Code to apply the setting",
+            "Verify subagents are working by checking for multiple agent processes during complex tasks"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.117",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21117",
+              "published_at": "2026-04-22T07:29:52.517Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-14-1",
+          "headline": "Use the path parameter with EnterWorktree to switch between git worktrees",
+          "summary": "The EnterWorktree tool now accepts a path parameter that lets you switch into existing worktrees of your current repository. This makes it easier to work with multiple branches or feature development in parallel without switching repositories.",
+          "actionable_steps": [
+            "Identify the worktree path you want to switch to in your current repository",
+            "Use the EnterWorktree tool with the path parameter: `EnterWorktree(path=\"/path/to/your/worktree\")`",
+            "Verify you're in the correct worktree by checking the current branch or directory"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.105",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            }
+          ],
+          "created_at": "2026-04-14T07:29:49.280Z"
+        },
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        },
+        {
+          "id": "tip-2026-04-21-1",
+          "headline": "Use `/terminal-setup` to configure smoother fullscreen scrolling in VS Code, Cursor, and Windsurf",
+          "summary": "Claude Code v2.1.116 improved terminal scrolling performance by automatically configuring your editor's scroll sensitivity. This eliminates choppy scrolling when working in fullscreen terminal mode.",
+          "actionable_steps": [
+            "Open Claude Code in your VS Code, Cursor, or Windsurf editor",
+            "Run the `/terminal-setup` command",
+            "Allow Claude Code to configure your editor's scroll sensitivity settings"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.116",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+              "published_at": "2026-04-21T07:30:03.998Z"
+            }
+          ],
+          "created_at": "2026-04-21T07:30:17.044Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-22.mp3"
+}
