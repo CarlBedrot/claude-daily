@@ -522,6 +522,31 @@
         }
       ],
       "created_at": "2026-04-22T07:30:03.420Z"
+    },
+    {
+      "id": "tip-2026-04-23-1",
+      "headline": "Use visual mode in Claude Code for text selection and editing",
+      "summary": "Claude Code now supports vim-style visual mode (v) and visual-line mode (V) for selecting and manipulating text. This enables more efficient text editing workflows similar to vim editors.",
+      "actionable_steps": [
+        "Press 'v' to enter visual mode for character-by-character selection",
+        "Press 'V' to enter visual-line mode for line-by-line selection",
+        "Use standard vim operators on your selected text"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.118",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21118",
+          "published_at": "2026-04-23T07:30:08.080Z"
+        }
+      ],
+      "created_at": "2026-04-23T07:30:24.917Z"
     }
   ]
 }

@@ -1,0 +1,190 @@
+{
+  "date": "2026-04-23",
+  "generated_at": "2026-04-23T07:30:26.034Z",
+  "digest": {
+    "lead": "Claude Code gets significant vim enhancements in v2.1.118, bringing visual mode selection and operators to the AI-powered editor.",
+    "themes": [
+      "Developer tooling",
+      "Editor features",
+      "Community projects"
+    ],
+    "summary": "Also worth noting is a community tool called Ctx that enables cross-platform context sharing between Claude Code and other AI coding tools."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.118 Brings Vim Visual Mode and Theme Customization",
+          "summary": "The latest Claude Code update introduces vim visual mode (`v`) and visual-line mode (`V`) with full selection, operators, and visual feedback [1]. The release also consolidates the `/cost` and `/stats` commands into a unified `/usage` interface and adds support for creating and switching between named custom themes [1].",
+          "key_points": [
+            "Vim visual mode implementation includes selection capabilities and visual feedback",
+            "Theme system now supports custom JSON themes stored in ~/.claude/themes/ directory",
+            "Hooks can invoke MCP tools directly via new `type: \"mcp_tool\"` option"
+          ],
+          "impact": "This update significantly improves the editing experience for vim users and provides more customization options for developers who spend significant time in Claude Code daily.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.118",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21118",
+              "published_at": "2026-04-23T07:30:08.080Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Community Tool Ctx Enables Context Sharing Between Claude Code and Other AI Editors",
+          "summary": "A developer has built Ctx, a tool that implements a `/resume` command that works across multiple AI coding platforms including Claude Code and Codex [2]. The project has gained traction on Hacker News with 71 points and active discussion [2].",
+          "impact": "This addresses a common pain point for developers who switch between different AI coding tools and need to maintain context across platforms.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Ctx – a /resume that works across Claude Code and Codex",
+              "url": "https://github.com/dchu917/ctx",
+              "published_at": "2026-04-20T16:35:05.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-23-1",
+          "headline": "Use visual mode in Claude Code for text selection and editing",
+          "summary": "Claude Code now supports vim-style visual mode (v) and visual-line mode (V) for selecting and manipulating text. This enables more efficient text editing workflows similar to vim editors.",
+          "actionable_steps": [
+            "Press 'v' to enter visual mode for character-by-character selection",
+            "Press 'V' to enter visual-line mode for line-by-line selection",
+            "Use standard vim operators on your selected text"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.118",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21118",
+              "published_at": "2026-04-23T07:30:08.080Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-15-1",
+          "headline": "Use ENABLE_PROMPT_CACHING_1H to extend prompt cache duration",
+          "summary": "Setting this environment variable enables 1-hour prompt cache TTL instead of the default, which can reduce API costs and improve response times for longer coding sessions. This works across API key, Bedrock, Vertex, and Foundry deployments.",
+          "actionable_steps": [
+            "Set the environment variable ENABLE_PROMPT_CACHING_1H=true in your system or deployment configuration",
+            "Restart Claude Code to apply the new caching setting",
+            "Monitor your usage to verify extended caching is working"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.108",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+              "published_at": "2026-04-15T07:29:39.027Z"
+            }
+          ],
+          "created_at": "2026-04-15T07:29:51.069Z"
+        },
+        {
+          "id": "tip-2026-04-14-1",
+          "headline": "Use the path parameter with EnterWorktree to switch between git worktrees",
+          "summary": "The EnterWorktree tool now accepts a path parameter that lets you switch into existing worktrees of your current repository. This makes it easier to work with multiple branches or feature development in parallel without switching repositories.",
+          "actionable_steps": [
+            "Identify the worktree path you want to switch to in your current repository",
+            "Use the EnterWorktree tool with the path parameter: `EnterWorktree(path=\"/path/to/your/worktree\")`",
+            "Verify you're in the correct worktree by checking the current branch or directory"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.105",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            }
+          ],
+          "created_at": "2026-04-14T07:29:49.280Z"
+        },
+        {
+          "id": "tip-003",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-23.mp3"
+}
