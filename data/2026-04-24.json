@@ -1,0 +1,235 @@
+{
+  "date": "2026-04-24",
+  "generated_at": "2026-04-24T07:33:06.128Z",
+  "digest": {
+    "lead": "Anthropic faces a trust crisis as reports emerge of unauthorized access to their Mythos model, with security concerns mounting around the Claude Desktop app's undisclosed browser integration.",
+    "themes": [
+      "Security concerns",
+      "Developer tooling",
+      "Trust issues"
+    ],
+    "summary": "Meanwhile, Claude Code received useful persistence updates for developer workflows, and Mozilla showcased Mythos' debugging capabilities by finding 271 Firefox bugs."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Security Concerns Mount Over Claude Desktop's Undisclosed Browser Integration",
+          "summary": "Claude Desktop app has been installing an undisclosed native messaging bridge that enables browser communication without explicit user consent [1]. The discovery has raised privacy and security questions about the app's permissions and data access capabilities.",
+          "key_points": [
+            "Native messaging bridge installed without clear disclosure to users",
+            "Enables browser communication capabilities that weren't explicitly announced"
+          ],
+          "impact": "Desktop users and security-conscious organizations may need to reassess Claude Desktop deployments and review browser integration permissions.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's Claude Desktop App Installs Undisclosed Native Messaging Bridge",
+              "url": "https://letsdatascience.com/news/claude-desktop-installs-preauthorized-browser-extension-mani-4064fb1a",
+              "published_at": "2026-04-23T19:43:08.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Trust Crisis Emerges as Mythos Model Faces Unauthorized Access Reports",
+          "summary": "Multiple reports indicate Anthropic's Mythos model is being accessed by unauthorized users [1], leading to growing verification and trust concerns [2]. The incidents have sparked broader questions about Anthropic's security practices and model access controls.",
+          "key_points": [
+            "Unauthorized access to Mythos model confirmed by multiple sources",
+            "Trust and verification issues affecting Anthropic's reputation"
+          ],
+          "impact": "Enterprise customers evaluating Claude models may delay deployments pending security clarifications, while existing users reassess access controls.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's Mythos Model Is Being Accessed by Unauthorized Users",
+              "url": "https://www.bloomberg.com/news/articles/2026-04-21/anthropic-s-mythos-model-is-being-accessed-by-unauthorized-users",
+              "published_at": "2026-04-21T21:57:43.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "A Boy That Cried Mythos: Verification Is Collapsing Trust in Anthropic",
+              "url": "https://www.flyingpenguin.com/the-boy-that-cried-mythos-verification-is-collapsing-trust-in-anthropic/",
+              "published_at": "2026-04-23T04:17:14.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Mozilla Demonstrates Mythos' Debugging Capabilities with 271 Firefox Bug Discoveries",
+          "summary": "Mozilla successfully used Anthropic's Mythos model to identify and fix 271 bugs in Firefox [1]. The collaboration showcases the model's potential for large-scale code analysis and quality assurance in major software projects.",
+          "impact": "Development teams at major software companies may accelerate Mythos adoption for automated bug detection and code quality initiatives.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Mozilla Used Anthropic's Mythos to Find and Fix 271 Bugs in Firefox",
+              "url": "https://www.wired.com/story/mozilla-used-anthropics-mythos-to-find-271-bugs-in-firefox/",
+              "published_at": "2026-04-21T19:49:53.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.119 Adds Persistent Settings and Enhanced PR Integration",
+          "summary": "The latest Claude Code release introduces persistent configuration storage in `~/.claude/settings.json` with project-level override support [1]. The update also expands pull request integration beyond GitHub to include GitLab merge requests and Bitbucket PRs, plus adds customizable PR review URL templates.",
+          "key_points": [
+            "Settings now persist across sessions with hierarchical override support",
+            "Expanded PR integration for GitLab, Bitbucket, and GitHub Enterprise",
+            "Added environment variable to hide working directory in startup display"
+          ],
+          "impact": "Daily Claude Code users will benefit from streamlined configuration management and broader git platform support, reducing setup friction in diverse development environments.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.119",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21119",
+              "published_at": "2026-04-24T07:32:40.639Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-24-1",
+          "headline": "Configure persistent Claude Code settings using ~/.claude/settings.json",
+          "summary": "Claude Code now saves your /config preferences (theme, editor mode, verbose output) to a persistent file instead of resetting each session. This eliminates the need to reconfigure your preferences every time you start Claude Code.",
+          "actionable_steps": [
+            "Run Claude Code and use /config to set your preferred theme, editor mode, and other settings",
+            "Verify settings are saved to ~/.claude/settings.json file",
+            "Test persistence by restarting Claude Code and confirming settings remain"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.119",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21119",
+              "published_at": "2026-04-24T07:32:40.639Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-22-1",
+          "headline": "Enable forked subagents in external Claude Code builds",
+          "summary": "Forked subagents allow Claude Code to spawn separate agent processes for parallel task execution. This can improve performance for complex workflows that benefit from concurrent processing.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_FORK_SUBAGENT=1",
+            "Restart Claude Code to apply the setting",
+            "Verify subagents are working by checking for multiple agent processes during complex tasks"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.117",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21117",
+              "published_at": "2026-04-22T07:29:52.517Z"
+            }
+          ],
+          "created_at": "2026-04-22T07:30:03.420Z"
+        },
+        {
+          "id": "tip-2026-04-23-1",
+          "headline": "Use visual mode in Claude Code for text selection and editing",
+          "summary": "Claude Code now supports vim-style visual mode (v) and visual-line mode (V) for selecting and manipulating text. This enables more efficient text editing workflows similar to vim editors.",
+          "actionable_steps": [
+            "Press 'v' to enter visual mode for character-by-character selection",
+            "Press 'V' to enter visual-line mode for line-by-line selection",
+            "Use standard vim operators on your selected text"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.118",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21118",
+              "published_at": "2026-04-23T07:30:08.080Z"
+            }
+          ],
+          "created_at": "2026-04-23T07:30:24.917Z"
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        },
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-24.mp3"
+}

@@ -547,6 +547,31 @@
         }
       ],
       "created_at": "2026-04-23T07:30:24.917Z"
+    },
+    {
+      "id": "tip-2026-04-24-1",
+      "headline": "Configure persistent Claude Code settings using ~/.claude/settings.json",
+      "summary": "Claude Code now saves your /config preferences (theme, editor mode, verbose output) to a persistent file instead of resetting each session. This eliminates the need to reconfigure your preferences every time you start Claude Code.",
+      "actionable_steps": [
+        "Run Claude Code and use /config to set your preferred theme, editor mode, and other settings",
+        "Verify settings are saved to ~/.claude/settings.json file",
+        "Test persistence by restarting Claude Code and confirming settings remain"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.119",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21119",
+          "published_at": "2026-04-24T07:32:40.639Z"
+        }
+      ],
+      "created_at": "2026-04-24T07:32:59.167Z"
     }
   ]
 }
