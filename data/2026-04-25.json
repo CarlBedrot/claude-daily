@@ -1,0 +1,217 @@
+{
+  "date": "2026-04-25",
+  "generated_at": "2026-04-25T07:28:14.895Z",
+  "digest": {
+    "lead": "Google is planning a massive $40 billion investment in Anthropic, marking one of the largest AI partnerships to date and potentially reshaping the competitive landscape.",
+    "themes": [
+      "Major investment",
+      "Enterprise partnerships",
+      "Election safety"
+    ],
+    "summary": "Beyond the Google news, Anthropic expanded its cloud infrastructure partnerships with Amazon and NEC, while also updating its election safeguards ahead of the 2026 cycle."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Google Plans $40 Billion Investment in Anthropic",
+          "summary": "Google is reportedly planning to invest up to $40 billion in Anthropic through a combination of cash and compute resources [1][3]. The massive investment has generated significant discussion in the tech community, with over 500 comments on Hacker News alone [3].",
+          "key_points": [
+            "Investment includes both direct funding and compute infrastructure",
+            "Represents one of the largest AI company investments to date",
+            "Generated substantial community discussion and analysis"
+          ],
+          "impact": "This investment could dramatically accelerate Anthropic's development capabilities and market position, while giving Google significant influence in the Claude ecosystem. Enterprise customers and competitors will be closely watching how this partnership affects Claude's roadmap and pricing.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Google to invest up to $40B in Anthropic in cash and compute",
+              "url": "https://techcrunch.com/2026/04/24/google-to-invest-up-to-40b-in-anthropic-in-cash-and-compute/",
+              "published_at": "2026-04-24T20:00:30.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Google plans to invest up to $40B in Anthropic",
+              "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic",
+              "published_at": "2026-04-24T16:04:41.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Updates Election Safeguards for 2026 Cycle",
+          "summary": "Anthropic has released an update on its election safeguards [2], detailing measures to ensure responsible AI use during the 2026 election cycle.",
+          "impact": "This update affects users asking Claude about political topics and demonstrates Anthropic's commitment to preventing AI misuse in democratic processes, particularly relevant for journalists, political researchers, and civic organizations.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Election Safeguards Update",
+              "url": "https://www.anthropic.com/news/election-safeguards-update",
+              "published_at": "2026-04-24T18:01:39.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic Expands Cloud Partnerships with Amazon and NEC",
+          "summary": "Anthropic announced new compute partnerships with Amazon [4] and NEC [5], expanding its infrastructure capabilities and global reach.",
+          "impact": "These partnerships provide more deployment options for enterprise customers, particularly those already invested in Amazon or NEC infrastructure ecosystems, potentially reducing integration costs and improving regional availability.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Anthropic Amazon Compute",
+              "url": "https://www.anthropic.com/news/anthropic-amazon-compute",
+              "published_at": "2026-04-24T15:50:13.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Anthropic Nec",
+              "url": "https://www.anthropic.com/news/anthropic-nec",
+              "published_at": "2026-04-24T04:06:50.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-03-28-1",
+          "headline": "Add session tracking header for proxy aggregation",
+          "summary": "Use the `X-Claude-Code-Session-Id` header in your API requests to help proxies group requests by session without needing to parse request bodies. This improves routing and monitoring capabilities when using Claude Code through proxy servers.",
+          "actionable_steps": [
+            "Add the `X-Claude-Code-Session-Id` header to your Claude Code API requests",
+            "Set the header value to your session identifier",
+            "Configure your proxy to use this header for request aggregation instead of body parsing"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ],
+          "created_at": "2026-03-28T07:18:00.001Z"
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-003",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-15-1",
+          "headline": "Use ENABLE_PROMPT_CACHING_1H to extend prompt cache duration",
+          "summary": "Setting this environment variable enables 1-hour prompt cache TTL instead of the default, which can reduce API costs and improve response times for longer coding sessions. This works across API key, Bedrock, Vertex, and Foundry deployments.",
+          "actionable_steps": [
+            "Set the environment variable ENABLE_PROMPT_CACHING_1H=true in your system or deployment configuration",
+            "Restart Claude Code to apply the new caching setting",
+            "Monitor your usage to verify extended caching is working"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.108",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+              "published_at": "2026-04-15T07:29:39.027Z"
+            }
+          ],
+          "created_at": "2026-04-15T07:29:51.069Z"
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-25.mp3"
+}
