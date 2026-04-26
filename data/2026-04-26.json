@@ -1,0 +1,195 @@
+{
+  "date": "2026-04-26",
+  "generated_at": "2026-04-26T07:29:24.835Z",
+  "digest": {
+    "lead": "The community is building the infrastructure that AI agents need to be truly useful, with two significant open source projects tackling persistent memory and knowledge management.",
+    "themes": [
+      "Agent infrastructure",
+      "Open source tools",
+      "Memory systems"
+    ],
+    "summary": "Both projects aim to give AI agents the kind of persistent context and knowledge management that users see in Claude.ai, but in open, self-hosted formats."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Developers Launch Open Source Memory Layer to Replicate Claude.ai's Persistent Context",
+          "summary": "A new open source project called Stash provides a memory layer that allows any AI agent to maintain persistent context across conversations, similar to what Claude.ai and ChatGPT offer [2]. The system aims to give developers the building blocks for creating agents with long-term memory capabilities.",
+          "key_points": [
+            "Provides persistent memory functionality for any AI agent or application",
+            "Open source alternative to proprietary memory systems in commercial AI platforms"
+          ],
+          "impact": "This could accelerate development of custom AI agents and applications by providing a key missing piece of infrastructure that developers previously had to build from scratch.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Open source memory layer so any AI agent can do what Claude.ai and ChatGPT do",
+              "url": "https://alash3al.github.io/stash?_v01",
+              "published_at": "2026-04-25T01:24:40.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "New Open Source Project Creates Agent-Maintained Knowledge Wikis Using Git and Markdown",
+          "summary": "Wuphf is a new open source tool that creates Karpathy-style LLM wikis that AI agents can automatically maintain using Markdown files and Git version control [1]. The project has gained significant traction on Hacker News with strong community engagement.",
+          "key_points": [
+            "Combines familiar developer tools (Git, Markdown) with AI agent automation",
+            "Inspired by Andrej Karpathy's approach to LLM documentation and knowledge management"
+          ],
+          "impact": "This addresses a growing need for AI agents to maintain and version their own knowledge bases, particularly valuable for development teams and researchers who want transparent, version-controlled AI knowledge systems.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: A Karpathy-style LLM wiki your agents maintain (Markdown and Git)",
+              "url": "https://github.com/nex-crm/wuphf",
+              "published_at": "2026-04-25T08:53:53.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-16-1",
+          "headline": "Use `/tui fullscreen` for flicker-free Claude Code rendering",
+          "summary": "The `/tui fullscreen` command switches Claude Code to a flicker-free rendering mode within the same conversation. This improves visual stability and reduces screen flicker during interactions.",
+          "actionable_steps": [
+            "Open Claude Code",
+            "Type `/tui fullscreen` in the conversation",
+            "Press Enter to activate flicker-free rendering mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.110",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21110",
+              "published_at": "2026-04-16T07:29:41.642Z"
+            }
+          ],
+          "created_at": "2026-04-16T07:29:58.901Z"
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-04-14-1",
+          "headline": "Use the path parameter with EnterWorktree to switch between git worktrees",
+          "summary": "The EnterWorktree tool now accepts a path parameter that lets you switch into existing worktrees of your current repository. This makes it easier to work with multiple branches or feature development in parallel without switching repositories.",
+          "actionable_steps": [
+            "Identify the worktree path you want to switch to in your current repository",
+            "Use the EnterWorktree tool with the path parameter: `EnterWorktree(path=\"/path/to/your/worktree\")`",
+            "Verify you're in the correct worktree by checking the current branch or directory"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.105",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            }
+          ],
+          "created_at": "2026-04-14T07:29:49.280Z"
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-26.mp3"
+}
