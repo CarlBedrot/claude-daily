@@ -572,6 +572,55 @@
         }
       ],
       "created_at": "2026-04-24T07:32:59.167Z"
+    },
+    {
+      "id": "tip-2026-04-28-1",
+      "headline": "Use `alwaysLoad: true` in MCP server config to skip tool-search deferral",
+      "summary": "By default, Claude Code defers loading some MCP tools until they're needed. Setting `alwaysLoad: true` in your MCP server configuration ensures all tools from that server are immediately available without waiting for tool search to activate them.",
+      "actionable_steps": [
+        "Open your MCP server configuration file",
+        "Add `\"alwaysLoad\": true` to the server config object",
+        "Restart Claude Code to apply the changes"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.121",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21121",
+          "published_at": "2026-04-28T07:44:25.570Z"
+        }
+      ],
+      "created_at": "2026-04-28T07:44:45.297Z"
+    },
+    {
+      "id": "tip-2026-04-28-2",
+      "headline": "Use `claude plugin prune` to clean up orphaned plugin dependencies",
+      "summary": "Auto-installed plugin dependencies can accumulate over time, taking up disk space. The prune command removes dependencies that are no longer needed by any installed plugins.",
+      "actionable_steps": [
+        "Run `claude plugin prune` in your terminal",
+        "Alternatively, use `claude plugin uninstall --prune [plugin-name]` to uninstall a plugin and clean up its dependencies in one step"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.120",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21120",
+          "published_at": "2026-04-28T07:44:25.570Z"
+        }
+      ],
+      "created_at": "2026-04-28T07:44:45.297Z"
     }
   ]
 }
