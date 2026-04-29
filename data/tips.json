@@ -621,6 +621,31 @@
         }
       ],
       "created_at": "2026-04-28T07:44:45.297Z"
+    },
+    {
+      "id": "tip-2026-04-29-1",
+      "headline": "Set ANTHROPIC_BEDROCK_SERVICE_TIER to control AWS Bedrock performance",
+      "summary": "You can now configure which AWS Bedrock service tier Claude Code uses by setting an environment variable. This lets you choose between default performance, flexible pricing, or priority processing depending on your needs.",
+      "actionable_steps": [
+        "Set the environment variable ANTHROPIC_BEDROCK_SERVICE_TIER to one of: 'default', 'flex', or 'priority'",
+        "Restart Claude Code to apply the new service tier setting",
+        "Verify the tier is active by checking that requests include the X-Amzn-Bedrock-Service-Tier header"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.122",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21122",
+          "published_at": "2026-04-29T07:40:05.702Z"
+        }
+      ],
+      "created_at": "2026-04-29T07:40:17.675Z"
     }
   ]
 }

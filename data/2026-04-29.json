@@ -1,0 +1,276 @@
+{
+  "date": "2026-04-29",
+  "generated_at": "2026-04-29T07:40:39.748Z",
+  "digest": {
+    "lead": "Claude.ai experienced a significant outage yesterday that sparked widespread discussion about reliability, while Anthropic announced new creative work features and joined Blender's development fund.",
+    "themes": [
+      "Service reliability",
+      "Creative tooling",
+      "Open source support"
+    ],
+    "summary": "Claude Code received multiple updates including Bedrock service tier controls and improved PR integration, while the community debates Anthropic's approach to AI safety."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude.ai Suffers Major Outage with API Errors",
+          "summary": "Claude.ai became unavailable with elevated API errors yesterday [1], generating significant community discussion with 282 upvotes and 243 comments on Hacker News.",
+          "key_points": [
+            "Service disruption affected both web interface and API endpoints",
+            "High community engagement suggests widespread impact on users"
+          ],
+          "impact": "The outage likely disrupted daily workflows for developers and businesses relying on Claude for production applications, highlighting concerns about service reliability for enterprise users.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude.ai unavailable and elevated errors on the API",
+              "url": "https://status.claude.com/incidents/9l93x2ht4s5w",
+              "published_at": "2026-04-28T18:01:21.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Launches New Creative Work Features for Claude",
+          "summary": "Anthropic announced Claude For Creative Work [1], introducing new capabilities designed to assist users with creative projects and workflows.",
+          "impact": "This expands Claude's appeal beyond technical use cases to creative professionals, potentially opening new market segments including writers, designers, and content creators.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude For Creative Work",
+              "url": "https://www.anthropic.com/news/claude-for-creative-work",
+              "published_at": "2026-04-28T17:25:41.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic Updates Election Safety Measures",
+          "summary": "Anthropic released an update on election safeguards [1], detailing measures to ensure responsible AI behavior during election periods.",
+          "impact": "This addresses growing concerns about AI's role in political discourse and demonstrates Anthropic's commitment to preventing misuse during sensitive political periods.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Election Safeguards Update",
+              "url": "https://www.anthropic.com/news/election-safeguards-update",
+              "published_at": "2026-04-28T08:59:45.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Adds Bedrock Service Tier Controls and PR Integration",
+          "summary": "Claude Code v2.1.122 introduced the `ANTHROPIC_BEDROCK_SERVICE_TIER` environment variable for selecting Bedrock service tiers and improved PR URL handling in search [1]. A follow-up patch v2.1.123 fixed OAuth authentication issues when experimental betas are disabled [2].",
+          "key_points": [
+            "New Bedrock service tier options: default, flex, or priority",
+            "Pasting PR URLs into /resume now finds the session that created the PR",
+            "Improved MCP connector visibility and duplicate detection"
+          ],
+          "impact": "These updates give developers more control over Bedrock performance tiers and streamline PR-based workflows, particularly valuable for teams using Claude Code in continuous integration environments.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.122",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21122",
+              "published_at": "2026-04-29T07:40:05.702Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.123",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21123",
+              "published_at": "2026-04-29T07:40:05.702Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Anthropic Joins Blender Development Fund as Corporate Patron",
+          "summary": "Anthropic became a corporate patron of the Blender Development Fund [1], supporting the open-source 3D creation software with significant community interest shown by 248 upvotes and 198 comments on Hacker News.",
+          "impact": "This partnership signals Anthropic's commitment to supporting open-source creative tools and may lead to deeper integration between Claude and 3D modeling workflows, benefiting the creative technology community.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic Joins the Blender Development Fund as Corporate Patron",
+              "url": "https://www.blender.org/press/anthropic-joins-the-blender-development-fund-as-corporate-patron/",
+              "published_at": "2026-04-28T16:07:58.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "Community Debates Anthropic's Narrow Definition of AI Safety",
+          "summary": "A critical analysis argues that Anthropic's definition of safety is too narrow [1], sparking community discussion about the company's approach to AI safety and alignment.",
+          "perspectives": "The critique suggests Anthropic focuses too heavily on certain safety aspects while potentially overlooking others, though the piece received limited engagement with only 23 upvotes and no comments.",
+          "impact": "This debate reflects ongoing tensions in the AI community about how companies should prioritize different aspects of AI safety, particularly relevant for researchers and ethicists working on AI alignment.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's definition of safety is too narrow",
+              "url": "https://jonathannen.com/anthropic-safety-too-narrow/",
+              "published_at": "2026-04-28T00:37:39.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-003",
+          "headline": "New Tool Enables Background macOS App Control Without Cursor Stealing",
+          "summary": "A developer released CUA, an open-source tool for driving macOS applications in the background without stealing cursor focus [1], generating interest with 91 upvotes and 28 comments on Hacker News.",
+          "impact": "This tool could be valuable for developers building automation workflows with Claude or other AI assistants that need to interact with multiple macOS applications simultaneously.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Drive any macOS app in the background without stealing the cursor",
+              "url": "https://github.com/trycua/cua",
+              "published_at": "2026-04-28T16:03:34.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-29-1",
+          "headline": "Set ANTHROPIC_BEDROCK_SERVICE_TIER to control AWS Bedrock performance",
+          "summary": "You can now configure which AWS Bedrock service tier Claude Code uses by setting an environment variable. This lets you choose between default performance, flexible pricing, or priority processing depending on your needs.",
+          "actionable_steps": [
+            "Set the environment variable ANTHROPIC_BEDROCK_SERVICE_TIER to one of: 'default', 'flex', or 'priority'",
+            "Restart Claude Code to apply the new service tier setting",
+            "Verify the tier is active by checking that requests include the X-Amzn-Bedrock-Service-Tier header"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.122",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21122",
+              "published_at": "2026-04-29T07:40:05.702Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "created_at": "2026-04-10T07:29:24.319Z"
+        },
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ],
+          "created_at": "2026-03-31T07:28:07.414Z"
+        },
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-29.mp3"
+}
