@@ -1,0 +1,213 @@
+{
+  "date": "2026-04-30",
+  "generated_at": "2026-04-30T07:43:16.867Z",
+  "digest": {
+    "lead": "Claude.ai experienced a significant outage early today that has since been resolved, sparking widespread discussion about reliability expectations for AI services.",
+    "themes": [
+      "Service reliability",
+      "Developer advocacy",
+      "Performance benchmarking"
+    ],
+    "summary": "Meanwhile, Anthropic launched a Champion Kit to help engineers advocate for Claude Code adoption internally, and new benchmarking tools are emerging to test LLM structured output capabilities."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude.ai Suffers Major Outage, Service Now Restored",
+          "summary": "Claude.ai and its API experienced a significant outage early today [1][2], generating substantial discussion on Hacker News with over 100 points and extensive user comments about the disruption. The service has since been restored according to Anthropic's status page.",
+          "key_points": [
+            "Outage affected both Claude.ai web interface and API endpoints",
+            "Generated significant community discussion with 113 points on primary HN thread"
+          ],
+          "impact": "This outage likely affected thousands of developers and businesses relying on Claude for daily operations, highlighting the growing dependency on AI services and the need for robust infrastructure.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude.ai and API unavailable [fixed]",
+              "url": "https://status.claude.com/incidents/2gf1jpyty350",
+              "published_at": "2026-04-30T01:21:03.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Claude.ai down again?",
+              "url": "https://news.ycombinator.com/item?id=47956890",
+              "published_at": "2026-04-30T01:20:39.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Anthropic Releases Champion Kit to Help Engineers Advocate for Claude Code Adoption",
+          "summary": "Anthropic has launched a Champion Kit designed to help engineers make the business case for adopting Claude Code within their organizations [1]. The resource appears to provide materials and guidance for internal advocacy efforts.",
+          "impact": "This targets the common challenge of individual developers who want to bring Claude Code into their workplace but need help convincing decision-makers, potentially accelerating enterprise adoption.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's Champion Kit for engineers pushing Claude Code at their company",
+              "url": "https://code.claude.com/docs/en/champion-kit",
+              "published_at": "2026-04-29T07:02:59.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "New Benchmark Tests LLM Structured Output Capabilities",
+          "summary": "Interfaze.ai has introduced a new benchmark specifically designed to test large language models' ability to produce deterministic, structured outputs [1]. The benchmark has gained community attention with discussion on Hacker News.",
+          "impact": "This addresses a critical need for developers working with LLMs in production environments where consistent, structured responses are essential for reliable automation and integration.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: A new benchmark for testing LLMs for deterministic outputs",
+              "url": "https://interfaze.ai/blog/introducing-structured-output-benchmark",
+              "published_at": "2026-04-29T16:01:51.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-21-1",
+          "headline": "Use `/terminal-setup` to configure smoother fullscreen scrolling in VS Code, Cursor, and Windsurf",
+          "summary": "Claude Code v2.1.116 improved terminal scrolling performance by automatically configuring your editor's scroll sensitivity. This eliminates choppy scrolling when working in fullscreen terminal mode.",
+          "actionable_steps": [
+            "Open Claude Code in your VS Code, Cursor, or Windsurf editor",
+            "Run the `/terminal-setup` command",
+            "Allow Claude Code to configure your editor's scroll sensitivity settings"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.116",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+              "published_at": "2026-04-21T07:30:03.998Z"
+            }
+          ],
+          "created_at": "2026-04-21T07:30:17.044Z"
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        },
+        {
+          "id": "tip-2026-04-29-1",
+          "headline": "Set ANTHROPIC_BEDROCK_SERVICE_TIER to control AWS Bedrock performance",
+          "summary": "You can now configure which AWS Bedrock service tier Claude Code uses by setting an environment variable. This lets you choose between default performance, flexible pricing, or priority processing depending on your needs.",
+          "actionable_steps": [
+            "Set the environment variable ANTHROPIC_BEDROCK_SERVICE_TIER to one of: 'default', 'flex', or 'priority'",
+            "Restart Claude Code to apply the new service tier setting",
+            "Verify the tier is active by checking that requests include the X-Amzn-Bedrock-Service-Tier header"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.122",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21122",
+              "published_at": "2026-04-29T07:40:05.702Z"
+            }
+          ],
+          "created_at": "2026-04-29T07:40:17.675Z"
+        },
+        {
+          "id": "tip-2026-04-15-1",
+          "headline": "Use ENABLE_PROMPT_CACHING_1H to extend prompt cache duration",
+          "summary": "Setting this environment variable enables 1-hour prompt cache TTL instead of the default, which can reduce API costs and improve response times for longer coding sessions. This works across API key, Bedrock, Vertex, and Foundry deployments.",
+          "actionable_steps": [
+            "Set the environment variable ENABLE_PROMPT_CACHING_1H=true in your system or deployment configuration",
+            "Restart Claude Code to apply the new caching setting",
+            "Monitor your usage to verify extended caching is working"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.108",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+              "published_at": "2026-04-15T07:29:39.027Z"
+            }
+          ],
+          "created_at": "2026-04-15T07:29:51.069Z"
+        },
+        {
+          "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-04-30.mp3"
+}
