@@ -646,6 +646,31 @@
         }
       ],
       "created_at": "2026-04-29T07:40:17.675Z"
+    },
+    {
+      "id": "tip-2026-05-01-1",
+      "headline": "Use claude project purge to clean up Claude Code project state",
+      "summary": "The new purge command removes all Claude Code artifacts for a project including transcripts, tasks, file history, and config entries. This is useful for cleaning up projects or starting fresh without manual file deletion.",
+      "actionable_steps": [
+        "Run 'claude project purge [path]' to delete all Claude Code state for a project",
+        "Use '--dry-run' flag first to preview what will be deleted",
+        "Add '-y' or '--yes' to skip confirmation prompts, or '-i' for interactive mode"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.126",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21126",
+          "published_at": "2026-05-01T07:42:32.347Z"
+        }
+      ],
+      "created_at": "2026-05-01T07:42:46.183Z"
     }
   ]
 }

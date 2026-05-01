@@ -1,0 +1,217 @@
+{
+  "date": "2026-05-01",
+  "generated_at": "2026-05-01T07:42:50.666Z",
+  "digest": {
+    "lead": "Anthropic announced a major governance shift with the Long Term Benefit Trust, establishing new oversight structures for the company's development as AI capabilities advance.",
+    "themes": [
+      "Governance",
+      "Developer tools",
+      "AI safety"
+    ],
+    "summary": "Meanwhile, Claude Code received gateway compatibility improvements and new project management commands, while the community continues building innovative coding agent tools."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Establishes Long Term Benefit Trust for AI Governance",
+          "summary": "Anthropic announced the creation of the Long Term Benefit Trust, a new governance structure designed to ensure the company's AI development remains aligned with long-term public benefit [1]. The trust represents a significant shift in how AI companies approach oversight and accountability as capabilities continue to advance.",
+          "key_points": [
+            "New governance framework focused on long-term benefit rather than short-term profits",
+            "Represents growing industry focus on AI safety and alignment structures"
+          ],
+          "impact": "This affects AI researchers, policymakers, and organizations evaluating Anthropic's commitment to responsible AI development, potentially influencing how other AI companies structure their governance.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "The Long Term Benefit Trust",
+              "url": "https://www.anthropic.com/news/the-long-term-benefit-trust",
+              "published_at": "2026-04-30T16:44:34.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.126 Adds Gateway Compatibility and Project Purge Commands",
+          "summary": "The latest Claude Code update introduces support for Anthropic-compatible gateways through the `/model` picker, which now lists models from custom endpoints when `ANTHROPIC_BASE_URL` is configured [1]. The release also adds a new `claude project purge` command for comprehensive cleanup of project state including transcripts, tasks, and file history.",
+          "key_points": [
+            "Gateway compatibility allows developers to use Claude Code with custom API endpoints",
+            "New purge command offers granular control with dry-run, interactive, and bypass options"
+          ],
+          "impact": "This benefits enterprise developers using custom API gateways and teams needing better project state management, making Claude Code more flexible for varied deployment scenarios.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.126",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21126",
+              "published_at": "2026-05-01T07:42:32.347Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Pu.sh: Minimal Coding Agent Built in 400 Lines of Shell Script",
+          "summary": "A developer shared Pu.sh, a lightweight coding agent harness implemented in just 400 lines of shell script, demonstrating how AI coding assistants can be built with minimal tooling [1]. The project gained traction on Hacker News with 75 points and active discussion from the developer community.",
+          "key_points": [
+            "Proves that effective coding agents don't require complex frameworks",
+            "Shows growing interest in lightweight, hackable AI development tools"
+          ],
+          "impact": "This appeals to developers seeking simpler alternatives to complex AI frameworks and those interested in understanding the core mechanics of coding agents without abstraction layers.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Pu.sh – a full coding-agent harness in 400 lines of shell",
+              "url": "https://pu.dev/",
+              "published_at": "2026-04-30T20:55:12.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-01-1",
+          "headline": "Use claude project purge to clean up Claude Code project state",
+          "summary": "The new purge command removes all Claude Code artifacts for a project including transcripts, tasks, file history, and config entries. This is useful for cleaning up projects or starting fresh without manual file deletion.",
+          "actionable_steps": [
+            "Run 'claude project purge [path]' to delete all Claude Code state for a project",
+            "Use '--dry-run' flag first to preview what will be deleted",
+            "Add '-y' or '--yes' to skip confirmation prompts, or '-i' for interactive mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.126",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21126",
+              "published_at": "2026-05-01T07:42:32.347Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ],
+          "created_at": "2026-03-31T07:28:07.414Z"
+        },
+        {
+          "id": "tip-2026-04-23-1",
+          "headline": "Use visual mode in Claude Code for text selection and editing",
+          "summary": "Claude Code now supports vim-style visual mode (v) and visual-line mode (V) for selecting and manipulating text. This enables more efficient text editing workflows similar to vim editors.",
+          "actionable_steps": [
+            "Press 'v' to enter visual mode for character-by-character selection",
+            "Press 'V' to enter visual-line mode for line-by-line selection",
+            "Use standard vim operators on your selected text"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.118",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21118",
+              "published_at": "2026-04-23T07:30:08.080Z"
+            }
+          ],
+          "created_at": "2026-04-23T07:30:24.917Z"
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        },
+        {
+          "id": "tip-2026-04-28-2",
+          "headline": "Use `claude plugin prune` to clean up orphaned plugin dependencies",
+          "summary": "Auto-installed plugin dependencies can accumulate over time, taking up disk space. The prune command removes dependencies that are no longer needed by any installed plugins.",
+          "actionable_steps": [
+            "Run `claude plugin prune` in your terminal",
+            "Alternatively, use `claude plugin uninstall --prune [plugin-name]` to uninstall a plugin and clean up its dependencies in one step"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.120",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21120",
+              "published_at": "2026-04-28T07:44:25.570Z"
+            }
+          ],
+          "created_at": "2026-04-28T07:44:45.297Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-01.mp3"
+}
