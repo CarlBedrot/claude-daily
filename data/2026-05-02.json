@@ -1,0 +1,190 @@
+{
+  "date": "2026-05-02",
+  "generated_at": "2026-05-02T07:29:44.765Z",
+  "digest": {
+    "lead": "OpenAI found itself in an awkward position after restricting access to its Cyber model, having previously criticized Anthropic for similar limitations on Mythos.",
+    "themes": [
+      "AI safety policies",
+      "Model access debates"
+    ],
+    "summary": "The Hacker News discussion highlights the ongoing tension between AI capabilities and responsible deployment across major AI companies."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "OpenAI Restricts Cyber Model Access After Criticizing Anthropic's Mythos Limitations",
+          "summary": "OpenAI has restricted access to its Cyber model, creating an ironic situation after the company previously criticized Anthropic for implementing similar access limitations on its Mythos model [1]. The move has sparked significant discussion in the AI community about consistency in AI safety policies.",
+          "key_points": [
+            "OpenAI's decision mirrors the same type of access restrictions it criticized Anthropic for implementing",
+            "The situation highlights ongoing debates about balancing AI capabilities with responsible deployment"
+          ],
+          "perspectives": "The Hacker News community discussion reveals mixed reactions, with some pointing out the hypocrisy while others defend the need for cautious AI deployment regardless of previous statements.",
+          "impact": "This development affects the broader AI policy landscape, particularly for organizations evaluating different AI providers' commitment to consistent safety standards and access policies.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "After dissing Anthropic for limiting Mythos, OpenAI restricts access to Cyber",
+              "url": "https://techcrunch.com/2026/04/30/after-dissing-anthropic-for-limiting-mythos-openai-restricts-access-to-cyber-too/",
+              "published_at": "2026-05-01T10:28:12.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "New AI CAD Harness Tool Launches for Design Workflows",
+          "summary": "A new AI-powered CAD harness tool has been released, garnering attention from the developer community with 82 points and 85 comments on Hacker News [1]. The tool appears to integrate AI capabilities into computer-aided design workflows.",
+          "impact": "This tool could benefit engineers and designers looking to incorporate AI assistance into their CAD workflows, particularly those working with design automation and parametric modeling.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: AI CAD Harness",
+              "url": "https://fusion.adam.new/install",
+              "published_at": "2026-05-01T17:43:53.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        },
+        {
+          "id": "tip-2026-04-22-1",
+          "headline": "Enable forked subagents in external Claude Code builds",
+          "summary": "Forked subagents allow Claude Code to spawn separate agent processes for parallel task execution. This can improve performance for complex workflows that benefit from concurrent processing.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_FORK_SUBAGENT=1",
+            "Restart Claude Code to apply the setting",
+            "Verify subagents are working by checking for multiple agent processes during complex tasks"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.117",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21117",
+              "published_at": "2026-04-22T07:29:52.517Z"
+            }
+          ],
+          "created_at": "2026-04-22T07:30:03.420Z"
+        },
+        {
+          "id": "tip-2026-04-24-1",
+          "headline": "Configure persistent Claude Code settings using ~/.claude/settings.json",
+          "summary": "Claude Code now saves your /config preferences (theme, editor mode, verbose output) to a persistent file instead of resetting each session. This eliminates the need to reconfigure your preferences every time you start Claude Code.",
+          "actionable_steps": [
+            "Run Claude Code and use /config to set your preferred theme, editor mode, and other settings",
+            "Verify settings are saved to ~/.claude/settings.json file",
+            "Test persistence by restarting Claude Code and confirming settings remain"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.119",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21119",
+              "published_at": "2026-04-24T07:32:40.639Z"
+            }
+          ],
+          "created_at": "2026-04-24T07:32:59.167Z"
+        },
+        {
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-28-1",
+          "headline": "Add session tracking header for proxy aggregation",
+          "summary": "Use the `X-Claude-Code-Session-Id` header in your API requests to help proxies group requests by session without needing to parse request bodies. This improves routing and monitoring capabilities when using Claude Code through proxy servers.",
+          "actionable_steps": [
+            "Add the `X-Claude-Code-Session-Id` header to your Claude Code API requests",
+            "Set the header value to your session identifier",
+            "Configure your proxy to use this header for request aggregation instead of body parsing"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ],
+          "created_at": "2026-03-28T07:18:00.001Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-02.mp3"
+}
