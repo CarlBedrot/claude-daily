@@ -671,6 +671,31 @@
         }
       ],
       "created_at": "2026-05-01T07:42:46.183Z"
+    },
+    {
+      "id": "tip-2026-05-05-1",
+      "headline": "Use bare /color command to randomize your Claude Code session color",
+      "summary": "The /color command without arguments now automatically selects a random color for your session. This provides a quick way to visually distinguish different sessions without manually choosing colors.",
+      "actionable_steps": [
+        "Open Claude Code terminal",
+        "Type `/color` (without any arguments)",
+        "Press Enter to apply a random session color"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 1,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.128",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21128",
+          "published_at": "2026-05-05T07:35:25.104Z"
+        }
+      ],
+      "created_at": "2026-05-05T07:35:34.870Z"
     }
   ]
 }

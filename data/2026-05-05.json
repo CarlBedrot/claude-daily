@@ -1,0 +1,227 @@
+{
+  "date": "2026-05-05",
+  "generated_at": "2026-05-05T07:35:44.388Z",
+  "digest": {
+    "lead": "Claude Code received two updates this weekend with enhanced project management tools, including a new purge command for clearing project state and improved model picker integration with custom gateways.",
+    "themes": [
+      "Developer tooling",
+      "Model updates",
+      "Enterprise features"
+    ],
+    "summary": "The updates also bring quality-of-life improvements like random session colors and better MCP server diagnostics for daily Claude Code users."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude Opus 4.7 Release Details Remain Under Wraps",
+          "summary": "Anthropic published a brief announcement for Claude Opus 4.7 [1], though the content details are not yet available. A separate enterprise AI services announcement was also made [2].",
+          "key_points": [],
+          "impact": "Organizations evaluating Claude's latest capabilities will need to wait for full documentation to understand Opus 4.7's improvements over previous versions.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Opus 4 7",
+              "url": "https://www.anthropic.com/news/claude-opus-4-7",
+              "published_at": "2026-05-04T23:23:49.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Enterprise Ai Services Company",
+              "url": "https://www.anthropic.com/news/enterprise-ai-services-company",
+              "published_at": "2026-05-04T15:43:58.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Adds Project Purge Command and Gateway Model Integration",
+          "summary": "Version 2.1.128 introduces a `claude project purge` command for completely clearing project state including transcripts, tasks, and file history [1]. The model picker now integrates with custom Anthropic-compatible gateways via the `/v1/models` endpoint when using `ANTHROPIC_BASE_URL` [2].",
+          "key_points": [
+            "New purge command supports dry-run, interactive, and bulk deletion modes for project cleanup [1]",
+            "Model picker now works with third-party gateways and shows cleaner Opus labeling [1][2]",
+            "Enhanced MCP diagnostics show tool counts and flag servers with zero tools [1]"
+          ],
+          "impact": "Developers using Claude Code in complex workflows gain better project state management, while teams using custom model gateways get seamless model switching without manual configuration.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.128",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21128",
+              "published_at": "2026-05-05T07:35:25.104Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.126",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21126",
+              "published_at": "2026-05-05T07:35:25.104Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Quality-of-Life Improvements for Daily Claude Code Users",
+          "summary": "The latest updates bring several workflow enhancements: bare `/color` commands now assign random session colors, zip archive support for plugins, and channels functionality for console authentication users [1].",
+          "key_points": [
+            "Random color assignment eliminates the need to manually specify session colors [1]",
+            "Plugin installation now accepts zip files alongside directories for easier distribution [1]",
+            "Console users can enable channels with proper org settings configuration [1]"
+          ],
+          "impact": "Regular Claude Code users benefit from streamlined session management and plugin installation, while enterprise teams gain more deployment flexibility through zip-based plugin distribution.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.128",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21128",
+              "published_at": "2026-05-05T07:35:25.104Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-05-1",
+          "headline": "Use bare /color command to randomize your Claude Code session color",
+          "summary": "The /color command without arguments now automatically selects a random color for your session. This provides a quick way to visually distinguish different sessions without manually choosing colors.",
+          "actionable_steps": [
+            "Open Claude Code terminal",
+            "Type `/color` (without any arguments)",
+            "Press Enter to apply a random session color"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.128",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21128",
+              "published_at": "2026-05-05T07:35:25.104Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-03-1",
+          "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+          "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+          "actionable_steps": [
+            "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+            "Set the value to your desired character limit (up to 500,000)",
+            "Test with large results like database schemas to verify they pass through completely"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ],
+          "created_at": "2026-04-03T07:25:28.584Z"
+        },
+        {
+          "id": "tip-2026-04-16-1",
+          "headline": "Use `/tui fullscreen` for flicker-free Claude Code rendering",
+          "summary": "The `/tui fullscreen` command switches Claude Code to a flicker-free rendering mode within the same conversation. This improves visual stability and reduces screen flicker during interactions.",
+          "actionable_steps": [
+            "Open Claude Code",
+            "Type `/tui fullscreen` in the conversation",
+            "Press Enter to activate flicker-free rendering mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.110",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21110",
+              "published_at": "2026-04-16T07:29:41.642Z"
+            }
+          ],
+          "created_at": "2026-04-16T07:29:58.901Z"
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-04-08-1",
+          "headline": "Enable Amazon Bedrock support with Mantle integration",
+          "summary": "Claude Code v2.1.94 added support for Amazon Bedrock through Mantle integration. This allows you to use Claude Code with Amazon's Bedrock service instead of the default API endpoints, potentially offering better performance or compliance for enterprise users.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_USE_MANTLE=1 in your system or terminal",
+            "Restart Claude Code to apply the new configuration",
+            "Verify the connection is working by running a test query"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.94",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2194",
+              "published_at": "2026-04-08T07:28:46.896Z"
+            }
+          ],
+          "created_at": "2026-04-08T07:29:00.150Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-05.mp3"
+}
