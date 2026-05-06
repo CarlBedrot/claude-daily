@@ -1,0 +1,240 @@
+{
+  "date": "2026-05-06",
+  "generated_at": "2026-05-06T07:48:33.568Z",
+  "digest": {
+    "lead": "Amazon is rolling out Claude Code and Codex to all employees after initial pushback, marking a major enterprise adoption milestone.",
+    "themes": [
+      "Enterprise adoption",
+      "Developer tooling",
+      "AI R&D"
+    ],
+    "summary": "Anthropic also launched Finance Agents for specialized use cases, while Claude Code v2.1.129 shipped with new plugin capabilities and terminal improvements."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Amazon Deploys Claude Code and Codex Company-Wide After Employee Pushback",
+          "summary": "Amazon is rolling out Claude Code and Codex to all employees following initial resistance from staff [1]. The deployment represents one of the largest enterprise adoptions of Claude's developer tools to date.",
+          "key_points": [
+            "Move comes after overcoming internal employee pushback",
+            "Represents major validation for Claude's enterprise strategy"
+          ],
+          "impact": "This signals growing enterprise confidence in Claude's developer tools and could accelerate adoption at other large tech companies evaluating AI coding assistants.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Amazon rolls out Claude Code and Codex internally",
+              "url": "https://www.businessinsider.com/amazon-claude-code-codex-all-employees-after-pushback-2026-5",
+              "published_at": "2026-05-05T06:09:49.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Launches Finance Agents for Specialized Financial Workflows",
+          "summary": "Anthropic has released Finance Agents, a new offering targeting specialized financial use cases [1]. The launch expands Claude's vertical-specific capabilities beyond general-purpose applications.",
+          "impact": "Financial services teams looking to automate complex workflows now have a Claude-native solution, potentially accelerating adoption in the heavily regulated finance sector.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Finance Agents",
+              "url": "https://www.anthropic.com/news/finance-agents",
+              "published_at": "2026-05-05T17:38:31.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic Co-Founder Predicts 60%+ Chance of Automated AI R&D by 2029",
+          "summary": "Jack Clark, Anthropic's co-founder, stated there's a greater than 60% probability that AI research and development will be largely automated by 2029 [1]. The prediction reflects growing confidence in AI's ability to accelerate its own development.",
+          "impact": "This timeline suggests rapid changes ahead for AI research teams and could influence how organizations plan their AI strategy and talent investments.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic co-founder Jack Clark: 60%+ chance of automated AI R&D by 2029",
+              "url": "https://importai.substack.com/p/import-ai-455-automating-ai-research",
+              "published_at": "2026-05-05T04:56:44.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.129 Adds Plugin URL Support and Terminal Improvements",
+          "summary": "The latest Claude Code release introduces a `--plugin-url` flag for fetching plugins directly from URLs and adds better terminal compatibility [1]. New environment variables enable synchronized output control and automatic package manager updates for Homebrew and WinGet installations.",
+          "key_points": [
+            "Plugin system now supports direct URL installation for easier distribution",
+            "Enhanced terminal support includes fix for Emacs `eat` compatibility",
+            "Auto-update functionality added for package manager installations"
+          ],
+          "impact": "Daily Claude Code users will benefit from streamlined plugin installation and better terminal integration, while the auto-update feature reduces maintenance overhead for teams.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.129",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21129",
+              "published_at": "2026-05-06T07:48:10.877Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Semble Tool Reduces AI Code Search Token Usage by 98% Compared to Grep",
+          "summary": "A new open-source tool called Semble promises to dramatically reduce token consumption for AI agents performing code searches [1]. The tool claims to use 98% fewer tokens than traditional grep-based approaches while maintaining search effectiveness.",
+          "impact": "Developers building AI agents that analyze codebases could see significant cost savings and performance improvements, especially when working with large repositories.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+              "url": "https://github.com/MinishLab/semble",
+              "published_at": "2026-05-03T15:02:08.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-14-1",
+          "headline": "Use the path parameter with EnterWorktree to switch between git worktrees",
+          "summary": "The EnterWorktree tool now accepts a path parameter that lets you switch into existing worktrees of your current repository. This makes it easier to work with multiple branches or feature development in parallel without switching repositories.",
+          "actionable_steps": [
+            "Identify the worktree path you want to switch to in your current repository",
+            "Use the EnterWorktree tool with the path parameter: `EnterWorktree(path=\"/path/to/your/worktree\")`",
+            "Verify you're in the correct worktree by checking the current branch or directory"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.105",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            }
+          ],
+          "created_at": "2026-04-14T07:29:49.280Z"
+        },
+        {
+          "id": "tip-2026-04-28-1",
+          "headline": "Use `alwaysLoad: true` in MCP server config to skip tool-search deferral",
+          "summary": "By default, Claude Code defers loading some MCP tools until they're needed. Setting `alwaysLoad: true` in your MCP server configuration ensures all tools from that server are immediately available without waiting for tool search to activate them.",
+          "actionable_steps": [
+            "Open your MCP server configuration file",
+            "Add `\"alwaysLoad\": true` to the server config object",
+            "Restart Claude Code to apply the changes"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.121",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21121",
+              "published_at": "2026-04-28T07:44:25.570Z"
+            }
+          ],
+          "created_at": "2026-04-28T07:44:45.297Z"
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-04-04-1",
+          "headline": "Use forceRemoteSettingsRefresh policy to ensure fresh configuration on startup",
+          "summary": "This setting forces Claude Code CLI to fetch the latest remote managed settings before starting and exits if the fetch fails. This ensures your CLI always runs with the most current configuration and prevents running with stale settings that might cause issues.",
+          "actionable_steps": [
+            "Open your Claude Code CLI configuration",
+            "Add the policy setting `forceRemoteSettingsRefresh: true`",
+            "Restart the CLI to verify it blocks startup until fresh settings are fetched"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.92",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+              "published_at": "2026-04-04T07:20:10.106Z"
+            }
+          ],
+          "created_at": "2026-04-04T07:20:24.316Z"
+        },
+        {
+          "id": "tip-2026-05-05-1",
+          "headline": "Use bare /color command to randomize your Claude Code session color",
+          "summary": "The /color command without arguments now automatically selects a random color for your session. This provides a quick way to visually distinguish different sessions without manually choosing colors.",
+          "actionable_steps": [
+            "Open Claude Code terminal",
+            "Type `/color` (without any arguments)",
+            "Press Enter to apply a random session color"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.128",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21128",
+              "published_at": "2026-05-05T07:35:25.104Z"
+            }
+          ],
+          "created_at": "2026-05-05T07:35:34.870Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-06.mp3"
+}
