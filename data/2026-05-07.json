@@ -1,0 +1,228 @@
+{
+  "date": "2026-05-07",
+  "generated_at": "2026-05-07T07:52:51.788Z",
+  "digest": {
+    "lead": "Anthropic announced a major compute partnership with xAI to access SpaceX's Colossus 1 supercomputer, enabling higher Claude Code usage limits for developers.",
+    "themes": [
+      "Infrastructure partnerships",
+      "Developer tooling",
+      "Usage scaling"
+    ],
+    "summary": "Meanwhile, Claude Code received incremental updates with better Windows support and new environment variables for enhanced developer workflows."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Partners with xAI for Colossus 1 Supercomputer Access, Raises Claude Code Limits",
+          "summary": "Anthropic announced a compute partnership with xAI to access SpaceX's Colossus 1 supercomputer infrastructure [4][5][6]. The deal enables Anthropic to raise usage limits for Claude Code, addressing developer demand for higher computational resources [3].",
+          "key_points": [
+            "Partnership provides access to SpaceX's advanced computing infrastructure",
+            "Direct result is increased Claude Code usage limits for developers"
+          ],
+          "impact": "This partnership significantly expands Anthropic's computational capacity, directly benefiting developers who have been constrained by Claude Code usage limits and enabling more intensive AI-assisted development workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Higher Limits Spacex",
+              "url": "https://www.anthropic.com/news/higher-limits-spacex",
+              "published_at": "2026-05-06T16:35:37.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "SpaceXAI will provide Anthropic with access to Colossus 1",
+              "url": "https://twitter.com/xai/status/2052060350770515978",
+              "published_at": "2026-05-06T16:28:25.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "New Compute Partnership with Anthropic",
+              "url": "https://x.ai/news/anthropic-compute-partnership",
+              "published_at": "2026-05-06T16:15:31.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Anthropic raises Claude Code usage limits, credits new deal with SpaceX",
+              "url": "https://arstechnica.com/ai/2026/05/anthropic-raises-claude-code-usage-limits-credits-new-deal-with-spacex/",
+              "published_at": "2026-05-06T22:59:43.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.132 Adds Session Environment Variables and Terminal Display Options",
+          "summary": "The latest Claude Code update introduces the `CLAUDE_CODE_SESSION_ID` environment variable for Bash subprocess integration and adds `CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN` option for users who prefer native terminal scrollback [1]. The release also includes UI improvements like a \"Pasting...\" indicator for clipboard operations and fixes for external interrupt handling.",
+          "key_points": [
+            "New environment variables enable better integration with external tools and hooks",
+            "Terminal display options give users more control over their development environment"
+          ],
+          "impact": "These updates improve Claude Code's integration with existing developer workflows, particularly for teams using custom tooling that needs to track session state or developers who prefer traditional terminal interfaces.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.132",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21132",
+              "published_at": "2026-05-07T07:52:29.358Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code v2.1.131 Fixes Windows VS Code Extension Activation Issues",
+          "summary": "A critical Windows compatibility fix resolves VS Code extension activation failures caused by hardcoded build paths in the bundled SDK [2]. The update also addresses Mantle endpoint authentication problems with missing API key headers.",
+          "impact": "This fix is crucial for Windows developers using the VS Code extension, removing a major barrier to adoption on Microsoft's platform where many enterprise development teams operate.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.131",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21131",
+              "published_at": "2026-05-07T07:52:29.358Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-07-1",
+          "headline": "Use CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN to keep conversation in terminal scrollback",
+          "summary": "Claude Code normally uses a fullscreen alternate-screen renderer that clears when you exit. Setting this environment variable keeps your conversation in your terminal's native scrollback buffer, making it easier to review past interactions after closing Claude Code.",
+          "actionable_steps": [
+            "Set the environment variable: export CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1",
+            "Launch Claude Code as normal",
+            "Your conversation will now remain in terminal scrollback when you exit"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.132",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21132",
+              "published_at": "2026-05-07T07:52:29.358Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "created_at": "2026-04-10T07:29:24.319Z"
+        },
+        {
+          "id": "tip-2026-05-01-1",
+          "headline": "Use claude project purge to clean up Claude Code project state",
+          "summary": "The new purge command removes all Claude Code artifacts for a project including transcripts, tasks, file history, and config entries. This is useful for cleaning up projects or starting fresh without manual file deletion.",
+          "actionable_steps": [
+            "Run 'claude project purge [path]' to delete all Claude Code state for a project",
+            "Use '--dry-run' flag first to preview what will be deleted",
+            "Add '-y' or '--yes' to skip confirmation prompts, or '-i' for interactive mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.126",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21126",
+              "published_at": "2026-05-01T07:42:32.347Z"
+            }
+          ],
+          "created_at": "2026-05-01T07:42:46.183Z"
+        },
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        },
+        {
+          "id": "tip-2026-04-23-1",
+          "headline": "Use visual mode in Claude Code for text selection and editing",
+          "summary": "Claude Code now supports vim-style visual mode (v) and visual-line mode (V) for selecting and manipulating text. This enables more efficient text editing workflows similar to vim editors.",
+          "actionable_steps": [
+            "Press 'v' to enter visual mode for character-by-character selection",
+            "Press 'V' to enter visual-line mode for line-by-line selection",
+            "Use standard vim operators on your selected text"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.118",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21118",
+              "published_at": "2026-04-23T07:30:08.080Z"
+            }
+          ],
+          "created_at": "2026-04-23T07:30:24.917Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-07.mp3"
+}

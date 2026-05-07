@@ -696,6 +696,31 @@
         }
       ],
       "created_at": "2026-05-05T07:35:34.870Z"
+    },
+    {
+      "id": "tip-2026-05-07-1",
+      "headline": "Use CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN to keep conversation in terminal scrollback",
+      "summary": "Claude Code normally uses a fullscreen alternate-screen renderer that clears when you exit. Setting this environment variable keeps your conversation in your terminal's native scrollback buffer, making it easier to review past interactions after closing Claude Code.",
+      "actionable_steps": [
+        "Set the environment variable: export CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1",
+        "Launch Claude Code as normal",
+        "Your conversation will now remain in terminal scrollback when you exit"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.132",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21132",
+          "published_at": "2026-05-07T07:52:29.358Z"
+        }
+      ],
+      "created_at": "2026-05-07T07:52:41.155Z"
     }
   ]
 }
