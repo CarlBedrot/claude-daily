@@ -1,0 +1,242 @@
+{
+  "date": "2026-05-08",
+  "generated_at": "2026-05-08T07:29:56.596Z",
+  "digest": {
+    "lead": "The big story today is Anthropic's official announcement of the Model Context Protocol, marking a significant step toward standardizing AI-human integration workflows.",
+    "themes": [
+      "Protocol standardization",
+      "Security concerns",
+      "Developer tooling"
+    ],
+    "summary": "Meanwhile, Claude Code received updates to worktree management settings, and security researchers continue probing Claude's trust boundaries with social engineering attacks."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Launches Model Context Protocol for Standardized AI Integration",
+          "summary": "Anthropic has officially announced the Model Context Protocol, a new framework designed to standardize how AI models interact with external systems and data sources [1]. The protocol appears aimed at creating consistent integration patterns across different AI applications and workflows.",
+          "key_points": [
+            "New standardization effort for AI-system integration",
+            "Could impact how Claude integrates with third-party tools and services"
+          ],
+          "impact": "This could significantly streamline how developers and enterprises integrate Claude into their existing workflows, potentially reducing complexity and improving interoperability across AI tools.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Model Context Protocol",
+              "url": "https://www.anthropic.com/news/model-context-protocol",
+              "published_at": "2026-05-07T20:07:05.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Security Researchers Probe Claude's Social Engineering Vulnerabilities",
+          "summary": "Security researchers have identified potential social engineering attack vectors in Claude Code, with Anthropic responding that users should exercise caution when clicking approval prompts [1]. The research highlights ongoing concerns about trust boundaries in AI development tools.",
+          "key_points": [
+            "One-click remote code execution scenarios identified",
+            "Anthropic emphasizes user responsibility in security decisions"
+          ],
+          "impact": "This affects developers using Claude Code in production environments, emphasizing the need for careful security practices when approving AI-generated actions.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic response to 1-click pwn: Shouldn't have clicked 'ok'",
+              "url": "https://www.theregister.com/security/2026/05/07/claude-code-trust-prompt-can-trigger-one-click-rce/5235319",
+              "published_at": "2026-05-08T02:38:54.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Discord Group Reportedly Accessed Unreleased Anthropic 'Mythos' Model",
+          "summary": "A Discord group allegedly discovered and accessed Anthropic's unreleased 'Mythos' model through URL guessing, using it before CISA officials according to reports [1]. The incident raises questions about Anthropic's internal security practices for unreleased models.",
+          "impact": "This highlights potential security gaps in how Anthropic manages access to experimental or dangerous AI models, particularly relevant for researchers and security professionals monitoring AI safety practices.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Discord group guessed the URL to Anthropic's Mythos model before CISA used it",
+              "url": "https://www.msn.com/en-us/technology/cybersecurity/discord-group-guessed-the-url-to-anthropic-s-most-dangerous-ai-and-used-it-before-cisa-did/ar-AA22enqY",
+              "published_at": "2026-05-07T01:13:13.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.133 Updates Worktree Management Settings",
+          "summary": "The latest Claude Code release introduces new worktree configuration options, including the `worktree.baseRef` setting that lets users choose between branching from `origin/<default>` or local `HEAD` [1]. The update changes the default behavior for `EnterWorktree` back to using `origin/<default>` as the base branch.",
+          "key_points": [
+            "New `worktree.baseRef` setting offers 'fresh' or 'head' options",
+            "Default behavior change may affect workflows relying on unpushed commits",
+            "Additional Linux/WSL sandbox path configuration options added"
+          ],
+          "impact": "Developers using Claude Code's worktree features daily should review their configurations, especially those who rely on including unpushed commits in new worktrees.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.133",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21133",
+              "published_at": "2026-05-08T07:29:29.198Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Industry Analysts Examine xAI-Anthropic Data Center Partnership",
+          "summary": "Technology analyst Simon Willison has published detailed notes examining the recent data center partnership between xAI and Anthropic [1]. The analysis provides insights into the strategic implications and technical considerations of this collaboration between AI competitors.",
+          "impact": "This affects enterprise customers and investors trying to understand the competitive landscape and infrastructure strategies in the AI industry.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Notes on the xAI/Anthropic data center deal",
+              "url": "https://simonwillison.net/2026/May/7/xai-anthropic/",
+              "published_at": "2026-05-07T17:18:27.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-08-1",
+          "headline": "Configure worktree base reference to preserve unpushed commits",
+          "summary": "The latest Claude Code update changed the default behavior for worktrees to branch from origin instead of local HEAD, potentially losing unpushed commits. Setting the baseRef to 'head' preserves your local work when creating new worktrees.",
+          "actionable_steps": [
+            "Open your Claude Code settings",
+            "Add or modify the setting: \"worktree.baseRef\": \"head\"",
+            "Save the configuration file"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.133",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21133",
+              "published_at": "2026-05-08T07:29:29.198Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-21-1",
+          "headline": "Use `/terminal-setup` to configure smoother fullscreen scrolling in VS Code, Cursor, and Windsurf",
+          "summary": "Claude Code v2.1.116 improved terminal scrolling performance by automatically configuring your editor's scroll sensitivity. This eliminates choppy scrolling when working in fullscreen terminal mode.",
+          "actionable_steps": [
+            "Open Claude Code in your VS Code, Cursor, or Windsurf editor",
+            "Run the `/terminal-setup` command",
+            "Allow Claude Code to configure your editor's scroll sensitivity settings"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.116",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+              "published_at": "2026-04-21T07:30:03.998Z"
+            }
+          ],
+          "created_at": "2026-04-21T07:30:17.044Z"
+        },
+        {
+          "id": "tip-2026-04-15-1",
+          "headline": "Use ENABLE_PROMPT_CACHING_1H to extend prompt cache duration",
+          "summary": "Setting this environment variable enables 1-hour prompt cache TTL instead of the default, which can reduce API costs and improve response times for longer coding sessions. This works across API key, Bedrock, Vertex, and Foundry deployments.",
+          "actionable_steps": [
+            "Set the environment variable ENABLE_PROMPT_CACHING_1H=true in your system or deployment configuration",
+            "Restart Claude Code to apply the new caching setting",
+            "Monitor your usage to verify extended caching is working"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.108",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+              "published_at": "2026-04-15T07:29:39.027Z"
+            }
+          ],
+          "created_at": "2026-04-15T07:29:51.069Z"
+        },
+        {
+          "id": "tip-2026-04-29-1",
+          "headline": "Set ANTHROPIC_BEDROCK_SERVICE_TIER to control AWS Bedrock performance",
+          "summary": "You can now configure which AWS Bedrock service tier Claude Code uses by setting an environment variable. This lets you choose between default performance, flexible pricing, or priority processing depending on your needs.",
+          "actionable_steps": [
+            "Set the environment variable ANTHROPIC_BEDROCK_SERVICE_TIER to one of: 'default', 'flex', or 'priority'",
+            "Restart Claude Code to apply the new service tier setting",
+            "Verify the tier is active by checking that requests include the X-Amzn-Bedrock-Service-Tier header"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.122",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21122",
+              "published_at": "2026-04-29T07:40:05.702Z"
+            }
+          ],
+          "created_at": "2026-04-29T07:40:17.675Z"
+        },
+        {
+          "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-08.mp3"
+}
