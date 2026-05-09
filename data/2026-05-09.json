@@ -1,0 +1,266 @@
+{
+  "date": "2026-05-09",
+  "generated_at": "2026-05-09T07:31:39.921Z",
+  "digest": {
+    "lead": "Anthropic is reportedly exploring funding deals that could value the company at nearly $1 trillion, signaling massive investor confidence in Claude's trajectory.",
+    "themes": [
+      "Valuation surge",
+      "Developer tooling",
+      "AI consciousness debate"
+    ],
+    "summary": "Meanwhile, Claude Code received multiple updates this week fixing Windows compatibility and enterprise features, while the AI consciousness debate continues with notable voices weighing in."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Explores Funding at Nearly $1 Trillion Valuation",
+          "summary": "Anthropic is reportedly weighing deals that could value the company at close to $1 trillion as revenue continues to surge [1]. The potential valuation represents a massive jump for the Claude AI maker and would put it among the most valuable private companies globally.",
+          "key_points": [],
+          "impact": "A near-trillion-dollar valuation would cement Anthropic's position as a major AI powerhouse and could accelerate Claude's development and market expansion, particularly for enterprise customers evaluating long-term AI partnerships.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic weighs deal for near $1T valuation as revenue surges",
+              "url": "https://www.ft.com/content/a40cafcc-0fa4-4e70-9e24-90d826aea56d",
+              "published_at": "2026-05-08T22:01:27.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Claude Faces Criticism for Flagging Legitimate Vaccine Research as Security Risk",
+          "summary": "Users reported that Claude flagged questions about hantavirus vaccine development as a security risk, sparking discussion about AI safety guardrails potentially being overly restrictive [1]. The incident highlights ongoing challenges in balancing AI safety with legitimate research and educational use cases.",
+          "key_points": [],
+          "impact": "This affects researchers and students using Claude for legitimate scientific inquiries, potentially limiting the model's utility in academic and medical research contexts where nuanced safety judgments are critical.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Flags Hantavirus Vaccine Questions as Security Risk",
+              "url": "https://news.ycombinator.com/item?id=48060572",
+              "published_at": "2026-05-08T09:05:42.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Releases Multiple Updates Fixing Windows Compatibility and Enterprise Features",
+          "summary": "Claude Code shipped three updates this week, with v2.1.137 fixing a critical Windows activation bug in the VSCode extension [1]. Version 2.1.136 added enterprise survey controls for OpenTelemetry users and fixed issues with MCP servers disappearing after '/clear' commands [2], while v2.1.138 included internal fixes [3].",
+          "key_points": [
+            "Fixed VSCode extension failing to activate on Windows systems",
+            "Added enterprise feedback survey controls for OpenTelemetry integration",
+            "Resolved MCP server configuration persistence issues across platforms"
+          ],
+          "impact": "Windows developers can now reliably use the Claude Code VSCode extension, while enterprise teams gain better telemetry control and more stable MCP server configurations for their development workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.137",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21137",
+              "published_at": "2026-05-09T07:31:06.758Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.136",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21136",
+              "published_at": "2026-05-09T07:31:06.758Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.138",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21138",
+              "published_at": "2026-05-09T07:31:06.758Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Developer Launches Git-Like Version Control System for AI Agents",
+          "summary": "A new project called \"re_gent\" introduces version control specifically designed for AI agents, gaining significant attention with 100 points and 46 comments on Hacker News [1]. The system aims to bring Git-style tracking and collaboration to AI agent development workflows.",
+          "key_points": [],
+          "impact": "This could standardize how developers manage and collaborate on AI agent projects, potentially making it easier for teams to track agent behavior changes and collaborate on Claude-based applications.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Git for AI Agents",
+              "url": "https://github.com/regent-vcs/re_gent",
+              "published_at": "2026-05-08T14:15:36.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "AI-Powered Small Claims Court Platform Disputron Launches",
+          "summary": "Disputron.ai, a new platform using AI to handle small claims disputes, was showcased on Hacker News [1]. The service aims to automate petty dispute resolution using AI reasoning, though it received modest community engagement.",
+          "key_points": [],
+          "impact": "While early-stage, this demonstrates how developers are applying Claude-like reasoning capabilities to legal and dispute resolution use cases, potentially expanding AI into new professional domains.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Disputron – AI small claims court for petty disputes",
+              "url": "https://disputron.ai",
+              "published_at": "2026-05-07T22:00:02.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-003",
+          "headline": "Richard Dawkins Weighs in on AI Consciousness Debate, Cites Claude and ChatGPT",
+          "summary": "Evolutionary biologist Richard Dawkins concluded that AI systems like Claude and ChatGPT are conscious, even if they don't realize it themselves [1]. His comments, featured in The Guardian, sparked 43 comments on Hacker News as the AI consciousness debate continues to evolve among researchers and the public.",
+          "key_points": [],
+          "impact": "High-profile endorsements of AI consciousness from respected scientists could influence public perception and policy discussions around AI rights and responsibilities, particularly affecting how Claude and similar systems are regulated and deployed.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Richard Dawkins concludes AI is conscious, even if it doesn't know it",
+              "url": "https://www.theguardian.com/technology/2026/may/05/richard-dawkins-ai-consciousness-anthropic-claude-openai-chatgpt",
+              "published_at": "2026-05-06T22:47:45.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-09-1",
+          "headline": "Enable feedback surveys for enterprise OpenTelemetry users",
+          "summary": "If your enterprise captures telemetry data through OpenTelemetry, you can now re-enable Claude Code's session quality surveys to gather user feedback. This helps organizations collect structured feedback data alongside their existing telemetry infrastructure.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL=true",
+            "Restart your Claude Code application",
+            "Verify that session quality surveys now appear in your Claude Code interface"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.136",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21136",
+              "published_at": "2026-05-09T07:31:06.758Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-28-2",
+          "headline": "Use `claude plugin prune` to clean up orphaned plugin dependencies",
+          "summary": "Auto-installed plugin dependencies can accumulate over time, taking up disk space. The prune command removes dependencies that are no longer needed by any installed plugins.",
+          "actionable_steps": [
+            "Run `claude plugin prune` in your terminal",
+            "Alternatively, use `claude plugin uninstall --prune [plugin-name]` to uninstall a plugin and clean up its dependencies in one step"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.120",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21120",
+              "published_at": "2026-04-28T07:44:25.570Z"
+            }
+          ],
+          "created_at": "2026-04-28T07:44:45.297Z"
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        },
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ],
+          "created_at": "2026-03-31T07:28:07.414Z"
+        },
+        {
+          "id": "tip-2026-05-01-1",
+          "headline": "Use claude project purge to clean up Claude Code project state",
+          "summary": "The new purge command removes all Claude Code artifacts for a project including transcripts, tasks, file history, and config entries. This is useful for cleaning up projects or starting fresh without manual file deletion.",
+          "actionable_steps": [
+            "Run 'claude project purge [path]' to delete all Claude Code state for a project",
+            "Use '--dry-run' flag first to preview what will be deleted",
+            "Add '-y' or '--yes' to skip confirmation prompts, or '-i' for interactive mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.126",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21126",
+              "published_at": "2026-05-01T07:42:32.347Z"
+            }
+          ],
+          "created_at": "2026-05-01T07:42:46.183Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-09.mp3"
+}

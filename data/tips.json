@@ -746,6 +746,31 @@
         }
       ],
       "created_at": "2026-05-08T07:29:43.717Z"
+    },
+    {
+      "id": "tip-2026-05-09-1",
+      "headline": "Enable feedback surveys for enterprise OpenTelemetry users",
+      "summary": "If your enterprise captures telemetry data through OpenTelemetry, you can now re-enable Claude Code's session quality surveys to gather user feedback. This helps organizations collect structured feedback data alongside their existing telemetry infrastructure.",
+      "actionable_steps": [
+        "Set the environment variable CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL=true",
+        "Restart your Claude Code application",
+        "Verify that session quality surveys now appear in your Claude Code interface"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.136",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21136",
+          "published_at": "2026-05-09T07:31:06.758Z"
+        }
+      ],
+      "created_at": "2026-05-09T07:31:18.385Z"
     }
   ]
 }
