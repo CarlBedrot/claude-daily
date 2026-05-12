@@ -1,0 +1,226 @@
+{
+  "date": "2026-05-12",
+  "generated_at": "2026-05-12T07:54:25.906Z",
+  "digest": {
+    "lead": "Claude Code shipped v2.1.139 with agent view and goal-setting capabilities, marking another step toward more autonomous development workflows.",
+    "themes": [
+      "Developer tooling",
+      "AI safety discussions",
+      "Platform integrity"
+    ],
+    "summary": "Meanwhile, Anthropic addressed investment scams and engaged with religious leaders on AI ethics, while the cURL creator called their security research a marketing stunt."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic and OpenAI Meet Religious Leaders to Discuss AI Ethics",
+          "summary": "Anthropic and OpenAI held discussions with religious leaders about faith and AI, exploring how artificial intelligence intersects with religious values and beliefs [3]. The meeting appears to be part of broader industry efforts to engage diverse stakeholders in AI development conversations.",
+          "key_points": [],
+          "impact": "Shows AI companies expanding stakeholder engagement beyond tech and policy circles to include faith communities, potentially influencing how AI systems handle religious content and ethical considerations.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic,OpenAI meet religious leaders to discuss faith and AI",
+              "url": "https://www.fastcompany.com/91538977/openai-anthropic-just-met-religious-leaders-faith-ai-covenant-heres-why",
+              "published_at": "2026-05-11T18:52:20.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Warns Users of Unauthorized Stock Sales and Investment Scams",
+          "summary": "Anthropic published a security advisory warning users about unauthorized stock sales and investment scams targeting the company's name and reputation [4]. The advisory aims to protect users from fraudulent schemes attempting to exploit Anthropic's brand recognition.",
+          "key_points": [],
+          "impact": "Important for investors and users to verify legitimate investment opportunities and avoid financial fraud targeting AI company brands.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Unauthorized Anthropic stock sales and investment scams",
+              "url": "https://support.claude.com/en/articles/13704655-unauthorized-anthropic-stock-sales-and-investment-scams",
+              "published_at": "2026-05-11T17:04:08.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.139 Introduces Agent View and Goal-Setting Features",
+          "summary": "Claude Code's latest update introduces agent view, a centralized dashboard showing all Claude Code sessions across different states, and a new `/goal` command that lets Claude work autonomously toward completion conditions [1]. The update also includes quality-of-life improvements like customizable scroll speed settings.",
+          "key_points": [
+            "Agent view provides unified visibility into running, blocked, and completed sessions via `claude agents` command",
+            "New `/goal` command enables autonomous work across turns with live progress tracking",
+            "Added `/scroll-speed` command with live preview for better user experience"
+          ],
+          "impact": "Significant for developers using Claude Code daily, as agent view and goal-setting move the tool closer to autonomous development workflows and better session management.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.139",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21139",
+              "published_at": "2026-05-12T07:54:06.056Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "cURL Creator Calls Anthropic's Security Research 'Greatest Marketing Stunt Ever'",
+          "summary": "The creator of cURL characterized Anthropic's bug-hunting initiative as a marketing stunt rather than genuine security research [2]. This critique suggests skepticism within the developer community about the motivations behind AI companies' security research efforts.",
+          "key_points": [],
+          "impact": "Reflects ongoing debate in the security community about whether AI companies' research initiatives represent genuine contributions or primarily serve marketing purposes.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's bug-hunting Mythos greatest marketing stunt ever says cURL creator",
+              "url": "https://www.theregister.com/security/2026/05/11/anthropics-bug-hunting-mythos-was-greatest-marketing-stunt-ever-says-curl-creator/5238111",
+              "published_at": "2026-05-11T20:33:24.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-29-1",
+          "headline": "Set ANTHROPIC_BEDROCK_SERVICE_TIER to control AWS Bedrock performance",
+          "summary": "You can now configure which AWS Bedrock service tier Claude Code uses by setting an environment variable. This lets you choose between default performance, flexible pricing, or priority processing depending on your needs.",
+          "actionable_steps": [
+            "Set the environment variable ANTHROPIC_BEDROCK_SERVICE_TIER to one of: 'default', 'flex', or 'priority'",
+            "Restart Claude Code to apply the new service tier setting",
+            "Verify the tier is active by checking that requests include the X-Amzn-Bedrock-Service-Tier header"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.122",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21122",
+              "published_at": "2026-04-29T07:40:05.702Z"
+            }
+          ],
+          "created_at": "2026-04-29T07:40:17.675Z"
+        },
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        },
+        {
+          "id": "tip-2026-05-09-1",
+          "headline": "Enable feedback surveys for enterprise OpenTelemetry users",
+          "summary": "If your enterprise captures telemetry data through OpenTelemetry, you can now re-enable Claude Code's session quality surveys to gather user feedback. This helps organizations collect structured feedback data alongside their existing telemetry infrastructure.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL=true",
+            "Restart your Claude Code application",
+            "Verify that session quality surveys now appear in your Claude Code interface"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.136",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21136",
+              "published_at": "2026-05-09T07:31:06.758Z"
+            }
+          ],
+          "created_at": "2026-05-09T07:31:18.385Z"
+        },
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "created_at": "2026-04-10T07:29:24.319Z"
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-12.mp3"
+}
