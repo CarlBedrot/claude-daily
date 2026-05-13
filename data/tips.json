@@ -771,6 +771,31 @@
         }
       ],
       "created_at": "2026-05-09T07:31:18.385Z"
+    },
+    {
+      "id": "tip-2026-05-13-1",
+      "headline": "Use case-insensitive agent type names in Claude Code configurations",
+      "summary": "Claude Code now accepts agent type names with any casing and separators. This makes configuration more flexible and reduces errors from formatting inconsistencies.",
+      "actionable_steps": [
+        "In your Claude Code configuration, use any casing for agent types (e.g., 'Code Reviewer', 'code-reviewer', 'CODE_REVIEWER')",
+        "Test that your existing configurations still work with the new flexible matching",
+        "Update documentation to reflect the more flexible naming convention"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.140",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21140",
+          "published_at": "2026-05-13T07:57:26.247Z"
+        }
+      ],
+      "created_at": "2026-05-13T07:57:42.216Z"
     }
   ]
 }
