@@ -796,6 +796,31 @@
         }
       ],
       "created_at": "2026-05-13T07:57:42.216Z"
+    },
+    {
+      "id": "tip-2026-05-14-1",
+      "headline": "Use terminalSequence field to enable desktop notifications from Claude Code hooks",
+      "summary": "The terminalSequence field allows Claude Code hooks to emit desktop notifications, window titles, and terminal bells even when running without a controlling terminal. This is particularly useful for background processes or automated workflows that need to communicate status updates to users.",
+      "actionable_steps": [
+        "Update your hook JSON output to include the terminalSequence field",
+        "Configure the field to emit the desired notification type (desktop notification, window title, or bell)",
+        "Test the hook in an environment without a controlling terminal to verify notifications work"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 10,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.141",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21141",
+          "published_at": "2026-05-14T07:54:03.971Z"
+        }
+      ],
+      "created_at": "2026-05-14T07:54:20.369Z"
     }
   ]
 }

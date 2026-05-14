@@ -1,0 +1,212 @@
+{
+  "date": "2026-05-14",
+  "generated_at": "2026-05-14T07:54:19.003Z",
+  "digest": {
+    "lead": "Anthropic rolled out Claude for Small Business yesterday while Claude Code received a significant update with new terminal integration features.",
+    "themes": [
+      "Business expansion",
+      "Developer tooling",
+      "Agent workflows"
+    ],
+    "summary": "The community is also building new agent-focused tools like Rotunda, a browser specifically designed for AI agents."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Launches Claude for Small Business",
+          "summary": "Anthropic announced a new Claude for Small Business offering [1], targeting smaller organizations with tailored AI solutions.",
+          "key_points": [],
+          "impact": "Small business owners now have a dedicated Claude package, potentially lowering barriers to AI adoption for companies that found existing enterprise plans too complex or expensive.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude For Small Business",
+              "url": "https://www.anthropic.com/news/claude-for-small-business",
+              "published_at": "2026-05-13T20:25:06.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.141 Adds Terminal Integration and Workspace Features",
+          "summary": "The latest Claude Code update introduces terminal sequence support for desktop notifications and window titles, plus new environment variables for GitHub authentication and workspace identity federation [1].",
+          "key_points": [
+            "New `terminalSequence` field enables hooks to send desktop notifications without a controlling terminal",
+            "Added `CLAUDE_CODE_PLUGIN_PREFER_HTTPS` for GitHub plugin authentication in SSH-restricted environments",
+            "Workspace identity federation support through `ANTHROPIC_WORKSPACE_ID` environment variable"
+          ],
+          "impact": "Developers working in restricted corporate environments or containerized setups will have smoother authentication flows, while the terminal integration makes Claude Code more desktop-native.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.141",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21141",
+              "published_at": "2026-05-14T07:54:03.971Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Rotunda Browser Built Specifically for AI Agents",
+          "summary": "A new open-source browser called Rotunda has been developed specifically for AI agents, featuring simulated typing capabilities to make agent interactions more natural [1].",
+          "key_points": [],
+          "impact": "Developers building AI agent workflows now have a purpose-built browser tool that could improve how agents interact with web interfaces, potentially making automation more reliable.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Rotunda - A browser built for agents with simulated typing",
+              "url": "https://github.com/monkeysee-ai/rotunda",
+              "published_at": "2026-05-13T13:44:01.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-14-1",
+          "headline": "Use terminalSequence field to enable desktop notifications from Claude Code hooks",
+          "summary": "The terminalSequence field allows Claude Code hooks to emit desktop notifications, window titles, and terminal bells even when running without a controlling terminal. This is particularly useful for background processes or automated workflows that need to communicate status updates to users.",
+          "actionable_steps": [
+            "Update your hook JSON output to include the terminalSequence field",
+            "Configure the field to emit the desired notification type (desktop notification, window title, or bell)",
+            "Test the hook in an environment without a controlling terminal to verify notifications work"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.141",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21141",
+              "published_at": "2026-05-14T07:54:03.971Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-28-1",
+          "headline": "Use `alwaysLoad: true` in MCP server config to skip tool-search deferral",
+          "summary": "By default, Claude Code defers loading some MCP tools until they're needed. Setting `alwaysLoad: true` in your MCP server configuration ensures all tools from that server are immediately available without waiting for tool search to activate them.",
+          "actionable_steps": [
+            "Open your MCP server configuration file",
+            "Add `\"alwaysLoad\": true` to the server config object",
+            "Restart Claude Code to apply the changes"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.121",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21121",
+              "published_at": "2026-04-28T07:44:25.570Z"
+            }
+          ],
+          "created_at": "2026-04-28T07:44:45.297Z"
+        },
+        {
+          "id": "tip-2026-04-04-1",
+          "headline": "Use forceRemoteSettingsRefresh policy to ensure fresh configuration on startup",
+          "summary": "This setting forces Claude Code CLI to fetch the latest remote managed settings before starting and exits if the fetch fails. This ensures your CLI always runs with the most current configuration and prevents running with stale settings that might cause issues.",
+          "actionable_steps": [
+            "Open your Claude Code CLI configuration",
+            "Add the policy setting `forceRemoteSettingsRefresh: true`",
+            "Restart the CLI to verify it blocks startup until fresh settings are fetched"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.92",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+              "published_at": "2026-04-04T07:20:10.106Z"
+            }
+          ],
+          "created_at": "2026-04-04T07:20:24.316Z"
+        },
+        {
+          "id": "tip-2026-05-05-1",
+          "headline": "Use bare /color command to randomize your Claude Code session color",
+          "summary": "The /color command without arguments now automatically selects a random color for your session. This provides a quick way to visually distinguish different sessions without manually choosing colors.",
+          "actionable_steps": [
+            "Open Claude Code terminal",
+            "Type `/color` (without any arguments)",
+            "Press Enter to apply a random session color"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.128",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21128",
+              "published_at": "2026-05-05T07:35:25.104Z"
+            }
+          ],
+          "created_at": "2026-05-05T07:35:34.870Z"
+        },
+        {
+          "id": "tip-2026-04-14-1",
+          "headline": "Use the path parameter with EnterWorktree to switch between git worktrees",
+          "summary": "The EnterWorktree tool now accepts a path parameter that lets you switch into existing worktrees of your current repository. This makes it easier to work with multiple branches or feature development in parallel without switching repositories.",
+          "actionable_steps": [
+            "Identify the worktree path you want to switch to in your current repository",
+            "Use the EnterWorktree tool with the path parameter: `EnterWorktree(path=\"/path/to/your/worktree\")`",
+            "Verify you're in the correct worktree by checking the current branch or directory"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.105",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            }
+          ],
+          "created_at": "2026-04-14T07:29:49.280Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-14.mp3"
+}
