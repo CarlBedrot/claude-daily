@@ -821,6 +821,31 @@
         }
       ],
       "created_at": "2026-05-14T07:54:20.369Z"
+    },
+    {
+      "id": "tip-2026-05-16-1",
+      "headline": "Use --add-dir flag to configure Claude agents with additional directories",
+      "summary": "The new --add-dir flag allows you to specify additional directories for Claude agents to access during background sessions. This expands the scope of files and resources your agent can work with beyond the default project directory.",
+      "actionable_steps": [
+        "Update Claude Code to version 2.1.142 or later",
+        "Run 'claude agents --add-dir /path/to/additional/directory' when starting an agent session",
+        "Verify the agent can access files in the specified directory"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.142",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21142",
+          "published_at": "2026-05-16T07:33:58.480Z"
+        }
+      ],
+      "created_at": "2026-05-16T07:34:13.249Z"
     }
   ]
 }

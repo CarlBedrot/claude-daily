@@ -1,0 +1,270 @@
+{
+  "date": "2026-05-16",
+  "generated_at": "2026-05-16T07:34:28.140Z",
+  "digest": {
+    "lead": "Anthropic faces scrutiny over valuation discrepancies between court filings ($5B) and public statements ($19B), while Claude Code gets significant updates with plugin dependency management.",
+    "themes": [
+      "Valuation controversy",
+      "Developer tooling",
+      "Enterprise partnerships"
+    ],
+    "summary": "Meanwhile, Anthropic announced major partnerships with PwC and Gates Foundation, and users continue finding creative applications like Bitcoin wallet recovery."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Faces Questions Over $5B Court Filing vs $19B Public Valuation",
+          "summary": "A report reveals Anthropic told a court it was worth $5 billion while publicly claiming a $19 billion valuation [1]. The discrepancy has sparked significant discussion in the tech community about AI company valuations and transparency [2].",
+          "key_points": [
+            "Court documents show $5B valuation while public statements claim $19B",
+            "Community debate centers on valuation transparency in AI companies"
+          ],
+          "impact": "This raises questions for investors and enterprise customers about Anthropic's financial positioning and could affect future funding rounds and partnership negotiations.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Where's Ed: Anthropic Told Court $5B but Public $19B",
+              "url": "https://www.flyingpenguin.com/wheres-ed-anthropic-told-court-5-billion-but-public-19-billion/",
+              "published_at": "2026-05-15T08:16:39.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Where's Ed: Anthropic Told Court $5B but Public $19B",
+              "url": "https://www.flyingpenguin.com/wheres-ed-anthropic-told-court-5-billion-but-public-19-billion/",
+              "published_at": "2026-05-15T08:16:39.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Expands Enterprise Partnerships with PwC and Gates Foundation",
+          "summary": "Anthropic announced expanded partnerships with consulting giant PwC [1] and a new collaboration with the Gates Foundation [2]. Both partnerships signal growing enterprise adoption of Claude for professional and humanitarian applications.",
+          "impact": "These high-profile partnerships validate Claude's enterprise readiness and could accelerate adoption among other large organizations in consulting and non-profit sectors.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Pwc Expanded Partnership",
+              "url": "https://www.anthropic.com/news/pwc-expanded-partnership",
+              "published_at": "2026-05-15T17:32:36.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Gates Foundation Partnership",
+              "url": "https://www.anthropic.com/news/gates-foundation-partnership",
+              "published_at": "2026-05-14T16:05:24.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Claude Opus 4.7 Experiences Elevated Error Rates",
+          "summary": "Anthropic's status page reported elevated error rates affecting Claude Opus 4.7 [1]. The incident generated community discussion about reliability expectations for production AI systems.",
+          "impact": "This affects users relying on Opus 4.7 for critical workflows and highlights the ongoing reliability challenges facing AI services in production environments.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Elevated error rates on Opus 4.7",
+              "url": "https://status.claude.com/incidents/8z7l5zcy0v3b",
+              "published_at": "2026-05-15T00:22:53.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.143 Adds Plugin Dependency Management",
+          "summary": "The latest Claude Code update introduces smart plugin dependency enforcement, preventing users from disabling plugins that others depend on [1]. The update also adds projected context cost estimates to the plugin marketplace and new worktree background isolation settings [1].",
+          "key_points": [
+            "Plugin disable/enable commands now handle dependencies automatically with helpful hints",
+            "Marketplace shows per-turn and per-invocation token cost estimates for plugins",
+            "New worktree.bgIsolation setting allows direct working copy edits"
+          ],
+          "impact": "This makes plugin management much safer for developers working with complex plugin setups, reducing workflow breakage and providing better cost visibility for context-heavy plugins.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.143",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21143",
+              "published_at": "2026-05-16T07:33:58.480Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code Upgrades Fast Mode to Opus 4.7 by Default",
+          "summary": "Claude Code v2.1.142 switches fast mode to use Opus 4.7 by default, upgrading from Opus 4.6 [1]. The update also adds extensive configuration options for background agents and improves plugin skill detection [1].",
+          "key_points": [
+            "Fast mode now defaults to Opus 4.7 with override option for 4.6",
+            "New agent configuration flags for directories, settings, permissions, and model selection",
+            "Enhanced skill detection for plugins with root-level SKILL.md files"
+          ],
+          "impact": "Developers using fast mode will see improved performance with Opus 4.7, while the new agent configuration options give teams more control over background session behavior.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.142",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21142",
+              "published_at": "2026-05-16T07:33:58.480Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Bitcoin Trader Recovers $400K Wallet Using Claude After 11-Year Password Loss",
+          "summary": "A Bitcoin trader successfully recovered a wallet worth $400,000 using Claude AI after losing the password 11 years ago [1]. Claude helped generate and test 3.5 trillion password combinations before successfully decrypting an old wallet backup, showcasing AI's potential for complex problem-solving tasks.",
+          "impact": "This demonstrates Claude's capability for intensive computational tasks and could inspire similar applications for data recovery and cryptographic challenges in the community.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Bitcoin trader recovers wallet with help of Claude",
+              "url": "https://www.tomshardware.com/tech-industry/cryptocurrency/bitcoin-trader-recovers-usd400-000-using-claude-ai-after-losing-wallet-password-11-years-ago-bot-tried-3-5-trillion-passwords-before-decrypting-an-old-wallet-backup",
+              "published_at": "2026-05-14T14:49:48.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-16-1",
+          "headline": "Use --add-dir flag to configure Claude agents with additional directories",
+          "summary": "The new --add-dir flag allows you to specify additional directories for Claude agents to access during background sessions. This expands the scope of files and resources your agent can work with beyond the default project directory.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.142 or later",
+            "Run 'claude agents --add-dir /path/to/additional/directory' when starting an agent session",
+            "Verify the agent can access files in the specified directory"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.142",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21142",
+              "published_at": "2026-05-16T07:33:58.480Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-07-1",
+          "headline": "Use CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN to keep conversation in terminal scrollback",
+          "summary": "Claude Code normally uses a fullscreen alternate-screen renderer that clears when you exit. Setting this environment variable keeps your conversation in your terminal's native scrollback buffer, making it easier to review past interactions after closing Claude Code.",
+          "actionable_steps": [
+            "Set the environment variable: export CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1",
+            "Launch Claude Code as normal",
+            "Your conversation will now remain in terminal scrollback when you exit"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.132",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21132",
+              "published_at": "2026-05-07T07:52:29.358Z"
+            }
+          ],
+          "created_at": "2026-05-07T07:52:41.155Z"
+        },
+        {
+          "id": "tip-2026-05-08-1",
+          "headline": "Configure worktree base reference to preserve unpushed commits",
+          "summary": "The latest Claude Code update changed the default behavior for worktrees to branch from origin instead of local HEAD, potentially losing unpushed commits. Setting the baseRef to 'head' preserves your local work when creating new worktrees.",
+          "actionable_steps": [
+            "Open your Claude Code settings",
+            "Add or modify the setting: \"worktree.baseRef\": \"head\"",
+            "Save the configuration file"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.133",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21133",
+              "published_at": "2026-05-08T07:29:29.198Z"
+            }
+          ],
+          "created_at": "2026-05-08T07:29:43.717Z"
+        },
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        },
+        {
+          "id": "tip-2026-04-21-1",
+          "headline": "Use `/terminal-setup` to configure smoother fullscreen scrolling in VS Code, Cursor, and Windsurf",
+          "summary": "Claude Code v2.1.116 improved terminal scrolling performance by automatically configuring your editor's scroll sensitivity. This eliminates choppy scrolling when working in fullscreen terminal mode.",
+          "actionable_steps": [
+            "Open Claude Code in your VS Code, Cursor, or Windsurf editor",
+            "Run the `/terminal-setup` command",
+            "Allow Claude Code to configure your editor's scroll sensitivity settings"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.116",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+              "published_at": "2026-04-21T07:30:03.998Z"
+            }
+          ],
+          "created_at": "2026-04-21T07:30:17.044Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-16.mp3"
+}
