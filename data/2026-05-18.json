@@ -1,0 +1,191 @@
+{
+  "date": "2026-05-18",
+  "generated_at": "2026-05-18T08:18:32.560Z",
+  "digest": {
+    "lead": "Claude Code shipped a significant update with enhanced terminal control and workspace federation features, while the developer community unveiled Semble, a token-efficient code search tool designed specifically for AI agents.",
+    "themes": [
+      "Developer tooling",
+      "Agent optimization",
+      "Workspace management"
+    ],
+    "summary": "The update brings better integration capabilities for development environments, while community tools continue advancing AI-assisted workflows."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.141 Ships Terminal Control and Workspace Federation",
+          "summary": "Claude Code released a feature-packed update adding terminal sequence hooks for desktop notifications and window management without requiring a controlling terminal [1]. The release also introduces workspace-scoped authentication via the ANTHROPIC_WORKSPACE_ID environment variable and HTTPS cloning preferences for GitHub plugin sources [1].",
+          "key_points": [
+            "New `terminalSequence` field enables hooks to emit notifications, titles, and bells independently",
+            "ANTHROPIC_WORKSPACE_ID variable provides granular workspace token scoping for federation rules",
+            "CLAUDE_CODE_PLUGIN_PREFER_HTTPS option supports environments without SSH keys"
+          ],
+          "impact": "These updates significantly improve Claude Code's integration with existing development environments and enterprise authentication systems, particularly benefiting teams using workload identity federation across multiple workspaces.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.141",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21141",
+              "published_at": "2026-05-18T08:18:17.901Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Semble Tool Promises 98% Token Reduction for Agent Code Search",
+          "summary": "Developer MinishLab released Semble, an open-source code search tool specifically optimized for AI agents that claims to use 98% fewer tokens than traditional grep-based approaches [2]. The project has gained significant attention with over 300 upvotes and active discussion on Hacker News [2].",
+          "impact": "This addresses a critical efficiency problem for developers using AI agents for code analysis, potentially reducing API costs and improving response times for large codebases where token usage is a constraint.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Semble – Code search for agents that uses 98% fewer tokens than grep",
+              "url": "https://github.com/MinishLab/semble",
+              "published_at": "2026-05-17T15:37:07.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ],
+          "created_at": "2026-03-31T07:28:07.414Z"
+        },
+        {
+          "id": "tip-2026-04-22-1",
+          "headline": "Enable forked subagents in external Claude Code builds",
+          "summary": "Forked subagents allow Claude Code to spawn separate agent processes for parallel task execution. This can improve performance for complex workflows that benefit from concurrent processing.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_FORK_SUBAGENT=1",
+            "Restart Claude Code to apply the setting",
+            "Verify subagents are working by checking for multiple agent processes during complex tasks"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.117",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21117",
+              "published_at": "2026-04-22T07:29:52.517Z"
+            }
+          ],
+          "created_at": "2026-04-22T07:30:03.420Z"
+        },
+        {
+          "id": "tip-2026-03-28-1",
+          "headline": "Add session tracking header for proxy aggregation",
+          "summary": "Use the `X-Claude-Code-Session-Id` header in your API requests to help proxies group requests by session without needing to parse request bodies. This improves routing and monitoring capabilities when using Claude Code through proxy servers.",
+          "actionable_steps": [
+            "Add the `X-Claude-Code-Session-Id` header to your Claude Code API requests",
+            "Set the header value to your session identifier",
+            "Configure your proxy to use this header for request aggregation instead of body parsing"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.86",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2186",
+              "published_at": "2026-03-28T07:17:40.679Z"
+            }
+          ],
+          "created_at": "2026-03-28T07:18:00.001Z"
+        },
+        {
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-18.mp3"
+}
