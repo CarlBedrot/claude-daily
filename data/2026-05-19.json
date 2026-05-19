@@ -1,0 +1,213 @@
+{
+  "date": "2026-05-19",
+  "generated_at": "2026-05-19T08:07:27.027Z",
+  "digest": {
+    "lead": "Anthropic acquired Stainless, signaling major investment in developer tooling infrastructure as Claude Code gets refined with background session improvements.",
+    "themes": [
+      "Acquisition",
+      "Developer tooling",
+      "Claude Code updates"
+    ],
+    "summary": "Meanwhile, Claude Code v2.1.144 brings enhanced background session management, and security tools like Sieve are emerging to help developers protect API keys in Claude workflows."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Acquires Stainless, Developer Tooling Company",
+          "summary": "Anthropic has acquired Stainless, though details about the acquisition terms and integration plans remain limited [1]. The move suggests Anthropic is expanding its developer infrastructure capabilities beyond Claude Code.",
+          "key_points": [],
+          "impact": "This acquisition could significantly enhance Anthropic's developer tooling ecosystem, potentially benefiting teams building production applications with Claude APIs.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Anthropic Acquires Stainless",
+              "url": "https://www.anthropic.com/news/anthropic-acquires-stainless",
+              "published_at": "2026-05-18T18:12:57.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.144 Improves Background Session Management",
+          "summary": "The latest Claude Code update introduces `/resume` support for background sessions, allowing users to manage sessions started via `claude --bg` alongside interactive ones [1]. The update also adds elapsed duration notifications for background agents and improves plugin discovery with last-updated timestamps [1].",
+          "key_points": [
+            "Background sessions now appear in `/resume` with 'bg' markers for easy identification",
+            "Plugin browser shows when plugins were last updated",
+            "Model changes now apply to current session only, with 'd' key for setting defaults"
+          ],
+          "impact": "These improvements make Claude Code more practical for developers running long-running background tasks and managing multiple development workflows simultaneously.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.144",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21144",
+              "published_at": "2026-05-19T08:07:07.469Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Sieve App Launches to Scan Claude Chat History for Leaked API Keys",
+          "summary": "A new Mac app called Sieve has launched to help developers scan their Cursor and Claude chat histories for accidentally leaked API keys and secrets [1]. The security tool gained modest attention on Hacker News with 13 points and minimal discussion [1].",
+          "key_points": [],
+          "impact": "This addresses a real security concern for developers using Claude for coding assistance, where sensitive credentials might accidentally be shared in chat sessions.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Sieve – scans Cursor/Claude chat history for leaked API keys",
+              "url": "https://apps.apple.com/us/app/sieve-secret-scanner/id6767409365?mt=12",
+              "published_at": "2026-05-19T03:06:45.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-01-1",
+          "headline": "Use claude project purge to clean up Claude Code project state",
+          "summary": "The new purge command removes all Claude Code artifacts for a project including transcripts, tasks, file history, and config entries. This is useful for cleaning up projects or starting fresh without manual file deletion.",
+          "actionable_steps": [
+            "Run 'claude project purge [path]' to delete all Claude Code state for a project",
+            "Use '--dry-run' flag first to preview what will be deleted",
+            "Add '-y' or '--yes' to skip confirmation prompts, or '-i' for interactive mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.126",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21126",
+              "published_at": "2026-05-01T07:42:32.347Z"
+            }
+          ],
+          "created_at": "2026-05-01T07:42:46.183Z"
+        },
+        {
+          "id": "tip-2026-04-24-1",
+          "headline": "Configure persistent Claude Code settings using ~/.claude/settings.json",
+          "summary": "Claude Code now saves your /config preferences (theme, editor mode, verbose output) to a persistent file instead of resetting each session. This eliminates the need to reconfigure your preferences every time you start Claude Code.",
+          "actionable_steps": [
+            "Run Claude Code and use /config to set your preferred theme, editor mode, and other settings",
+            "Verify settings are saved to ~/.claude/settings.json file",
+            "Test persistence by restarting Claude Code and confirming settings remain"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.119",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21119",
+              "published_at": "2026-04-24T07:32:40.639Z"
+            }
+          ],
+          "created_at": "2026-04-24T07:32:59.167Z"
+        },
+        {
+          "id": "tip-003",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-19.mp3"
+}
