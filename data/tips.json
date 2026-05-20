@@ -846,6 +846,32 @@
         }
       ],
       "created_at": "2026-05-16T07:34:13.249Z"
+    },
+    {
+      "id": "tip-2026-05-20-1",
+      "headline": "Use `claude agents --json` to integrate Claude sessions with external tools",
+      "summary": "The new JSON output format allows you to programmatically access live Claude session information. This enables integration with terminal multiplexers like tmux, status bars, and custom session management tools.",
+      "actionable_steps": [
+        "Run `claude agents --json` in your terminal to see the JSON output format",
+        "Parse the JSON output in your scripts to extract session information",
+        "Integrate the JSON data with tools like tmux-resurrect or custom status bars",
+        "Set up automated session monitoring or management based on the structured data"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 15,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.145",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21145",
+          "published_at": "2026-05-20T08:07:02.323Z"
+        }
+      ],
+      "created_at": "2026-05-20T08:07:19.268Z"
     }
   ]
 }

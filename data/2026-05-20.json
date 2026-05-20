@@ -1,0 +1,271 @@
+{
+  "date": "2026-05-20",
+  "generated_at": "2026-05-20T08:07:34.919Z",
+  "digest": {
+    "lead": "Andrej Karpathy's surprise move to Anthropic dominated headlines today, sparking widespread discussion about the competitive landscape in AI talent.",
+    "themes": [
+      "Leadership changes",
+      "Developer tooling",
+      "Enterprise partnerships"
+    ],
+    "summary": "Meanwhile, Claude Code received its latest updates with improved plugin management and observability features, and Anthropic announced a new partnership with KPMG."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Andrej Karpathy Joins Anthropic as Key Hire",
+          "summary": "Former OpenAI co-founder and Tesla AI director Andrej Karpathy announced he has joined Anthropic [1][2]. The move has generated significant attention across the AI community, with over 1,300 points and 500+ comments on Hacker News.",
+          "key_points": [
+            "Karpathy previously co-founded OpenAI and led AI initiatives at Tesla",
+            "The announcement sparked widespread discussion about talent competition in AI"
+          ],
+          "impact": "This high-profile hire signals Anthropic's continued push to attract top AI talent and could influence the company's research direction and competitive positioning.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Andrej Karpathy Joins Anthropic",
+              "url": "https://twitter.com/i/status/2056753169888334312",
+              "published_at": "2026-05-19T16:12:32.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "I've joined Anthropic",
+              "url": "https://twitter.com/karpathy/status/2056753169888334312",
+              "published_at": "2026-05-19T15:07:45.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Announces Partnership with KPMG",
+          "summary": "Anthropic has announced a new partnership with professional services firm KPMG [1]. Details about the collaboration scope and objectives have not yet been disclosed publicly.",
+          "impact": "This partnership likely focuses on enterprise adoption and consulting services, potentially expanding Claude's reach into large enterprise clients through KPMG's extensive client base.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Anthropic Kpmg",
+              "url": "https://www.anthropic.com/news/anthropic-kpmg",
+              "published_at": "2026-05-19T13:30:59.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "IPO Speculation Raises Developer Concerns",
+          "summary": "A blog post argues that Anthropic's preparation for an IPO should concern developers, suggesting potential negative impacts on the platform [1]. The piece has generated substantial discussion with 81 points and 88 comments on Hacker News.",
+          "impact": "Developer sentiment around potential monetization changes could affect adoption decisions, particularly for teams heavily invested in Claude-based workflows.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic Is Preparing for IPO and We Should Be Worried",
+              "url": "https://www.vincentschmalbach.com/anthropic-ipo-developers-should-be-worried-v2/",
+              "published_at": "2026-05-19T13:30:58.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.145 Adds Session Management and Observability Features",
+          "summary": "The latest Claude Code release introduces `claude agents --json` for scripting live sessions [1], enhanced OpenTelemetry spans with agent IDs, and improved status line integration with GitHub repositories. The update also expands plugin marketplace information to show projected context costs.",
+          "key_points": [
+            "New JSON output enables integration with tmux-resurrect, status bars, and session pickers",
+            "Enhanced OTEL tracing with proper span nesting for background subagent operations",
+            "Plugin marketplace now displays projected per-turn and per-invocation token estimates"
+          ],
+          "impact": "These updates improve Claude Code's integration with existing developer workflows and provide better cost visibility for teams managing large projects.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.145",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21145",
+              "published_at": "2026-05-20T08:07:02.323Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Plugin Dependency Management Enhanced in v2.1.143",
+          "summary": "Claude Code v2.1.143 introduces intelligent plugin dependency enforcement [1]. The system now prevents disabling plugins when others depend on them and automatically enables required dependencies when activating plugins.",
+          "key_points": [
+            "Plugin disable operations now show copy-pasteable disable-chain hints for dependencies",
+            "Enable operations automatically force-enable transitive dependencies",
+            "Added `worktree.bgIsolation: \"none\"` setting for direct working copy editing"
+          ],
+          "impact": "These changes reduce configuration errors and improve the plugin ecosystem experience for developers managing complex Claude Code setups.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.143",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21143",
+              "published_at": "2026-05-20T08:07:02.323Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Forge Project Demonstrates 99% Success Rate on Agentic Tasks Using Guardrails",
+          "summary": "A new open-source project called Forge shows how guardrails can improve an 8B model's performance from 53% to 99% on agentic tasks [1]. The project has gained significant community attention with 439 points and 171 comments on Hacker News.",
+          "key_points": [
+            "Demonstrates dramatic performance improvements through structured guardrails",
+            "Open-source implementation available for community experimentation",
+            "Shows potential for smaller models to achieve high reliability with proper constraints"
+          ],
+          "impact": "This research could influence how developers implement Claude-based agents, particularly those seeking reliable performance from smaller or local models in production environments.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Forge – Guardrails take an 8B model from 53% to 99% on agentic tasks",
+              "url": "https://github.com/antoinezambelli/forge",
+              "published_at": "2026-05-19T12:23:07.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-20-1",
+          "headline": "Use `claude agents --json` to integrate Claude sessions with external tools",
+          "summary": "The new JSON output format allows you to programmatically access live Claude session information. This enables integration with terminal multiplexers like tmux, status bars, and custom session management tools.",
+          "actionable_steps": [
+            "Run `claude agents --json` in your terminal to see the JSON output format",
+            "Parse the JSON output in your scripts to extract session information",
+            "Integrate the JSON data with tools like tmux-resurrect or custom status bars",
+            "Set up automated session monitoring or management based on the structured data"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.145",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21145",
+              "published_at": "2026-05-20T08:07:02.323Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-05-09-1",
+          "headline": "Enable feedback surveys for enterprise OpenTelemetry users",
+          "summary": "If your enterprise captures telemetry data through OpenTelemetry, you can now re-enable Claude Code's session quality surveys to gather user feedback. This helps organizations collect structured feedback data alongside their existing telemetry infrastructure.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL=true",
+            "Restart your Claude Code application",
+            "Verify that session quality surveys now appear in your Claude Code interface"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.136",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21136",
+              "published_at": "2026-05-09T07:31:06.758Z"
+            }
+          ],
+          "created_at": "2026-05-09T07:31:18.385Z"
+        },
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "created_at": "2026-04-10T07:29:24.319Z"
+        },
+        {
+          "id": "tip-2026-04-29-1",
+          "headline": "Set ANTHROPIC_BEDROCK_SERVICE_TIER to control AWS Bedrock performance",
+          "summary": "You can now configure which AWS Bedrock service tier Claude Code uses by setting an environment variable. This lets you choose between default performance, flexible pricing, or priority processing depending on your needs.",
+          "actionable_steps": [
+            "Set the environment variable ANTHROPIC_BEDROCK_SERVICE_TIER to one of: 'default', 'flex', or 'priority'",
+            "Restart Claude Code to apply the new service tier setting",
+            "Verify the tier is active by checking that requests include the X-Amzn-Bedrock-Service-Tier header"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.122",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21122",
+              "published_at": "2026-04-29T07:40:05.702Z"
+            }
+          ],
+          "created_at": "2026-04-29T07:40:17.675Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-20.mp3"
+}
