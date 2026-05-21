@@ -1,0 +1,226 @@
+{
+  "date": "2026-05-21",
+  "generated_at": "2026-05-21T08:10:47.140Z",
+  "digest": {
+    "lead": "Anthropic is reportedly heading toward its first profitable quarter driven by 'mind-blowing growth', while expanding infrastructure with GB200 chips on Colossus2.",
+    "themes": [
+      "Profitability milestone",
+      "Infrastructure expansion",
+      "Developer tooling"
+    ],
+    "summary": "Meanwhile, Claude Code v2.1.146 ships with improved code review commands and Windows fixes, and the community continues exploring AI-assisted development workflows."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Approaching First Profitable Quarter Amid Infrastructure Expansion",
+          "summary": "Anthropic is reportedly on track for its first profitable quarter driven by significant revenue growth [1]. The company is simultaneously expanding its infrastructure by moving to Colossus2 with GB200 chips [2].",
+          "key_points": [
+            "Revenue growth described as 'mind-blowing' by WSJ report",
+            "Infrastructure expansion includes deployment of NVIDIA GB200 chips",
+            "Move to Colossus2 represents major scaling of compute capacity"
+          ],
+          "impact": "This milestone signals Anthropic's transition from research startup to sustainable AI company, potentially affecting competitive dynamics in the LLM market and enterprise AI adoption.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Mind-Blowing Growth Is About to Propel Anthropic into First Profitable Quarter",
+              "url": "https://www.wsj.com/tech/ai/mind-blowing-growth-is-about-to-propel-anthropic-into-its-first-profitable-quarter-7edbf2f4",
+              "published_at": "2026-05-20T22:03:52.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Anthropic is expanding to Colossus2. Will use GB200",
+              "url": "https://twitter.com/nottombrown/status/2057194829986300375",
+              "published_at": "2026-05-20T20:55:52.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.146 Improves Code Review Commands and Fixes Windows Issues",
+          "summary": "Claude Code's latest update renames the `/simplify` command to `/code-review` with optional effort levels and fixes several bugs including Windows PowerShell compatibility issues [1]. The release also resolves MCP pagination problems and screen rendering issues.",
+          "key_points": [
+            "New `/code-review` command replaces `/simplify` with configurable effort levels",
+            "Fixes Windows PowerShell tool failures when pwsh is installed via winget or Microsoft Store",
+            "Resolves MCP pagination issues that were dropping items beyond page 1"
+          ],
+          "impact": "These improvements make Claude Code more reliable for Windows developers and provide better code review workflows for teams using the CLI tool daily.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.146",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21146",
+              "published_at": "2026-05-21T08:10:25.551Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Developer Shares Insights from 100,000 Lines of Rust Code Written with AI",
+          "summary": "A detailed retrospective examines the experience of writing 100K lines of Rust code using AI assistance, including Claude Code, covering lessons learned about spec-driven development and AI-assisted programming workflows [1]. The post has generated significant discussion in the developer community.",
+          "key_points": [
+            "Covers practical experiences with AI-assisted Rust development at scale",
+            "Discusses spec-driven development approaches when working with AI",
+            "Provides real-world insights into AI coding tool effectiveness"
+          ],
+          "impact": "This retrospective offers valuable guidance for developers considering AI-assisted development workflows, particularly those working with systems programming languages like Rust.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Learnings from 100K lines of Rust with AI (2025)",
+              "url": "https://zfhuang99.github.io/rust/claude%20code/codex/contracts/spec-driven%20development/2025/12/01/rust-with-ai.html",
+              "published_at": "2026-05-20T10:04:28.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-21-1",
+          "headline": "Use `/code-review` with effort levels for better code analysis",
+          "summary": "The `/simplify` command has been renamed to `/code-review` and now accepts optional effort levels like 'high' for more thorough analysis. This gives you better control over how deeply Claude examines your code for potential improvements.",
+          "actionable_steps": [
+            "Replace any existing `/simplify` commands with `/code-review`",
+            "Add effort levels like `/code-review high` for more thorough analysis",
+            "Use `/code-review low` for quick reviews or `/code-review medium` for standard analysis"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.146",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21146",
+              "published_at": "2026-05-21T08:10:25.551Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-03-1",
+          "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+          "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+          "actionable_steps": [
+            "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+            "Set the value to your desired character limit (up to 500,000)",
+            "Test with large results like database schemas to verify they pass through completely"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ],
+          "created_at": "2026-04-03T07:25:28.584Z"
+        },
+        {
+          "id": "tip-2026-05-13-1",
+          "headline": "Use case-insensitive agent type names in Claude Code configurations",
+          "summary": "Claude Code now accepts agent type names with any casing and separators. This makes configuration more flexible and reduces errors from formatting inconsistencies.",
+          "actionable_steps": [
+            "In your Claude Code configuration, use any casing for agent types (e.g., 'Code Reviewer', 'code-reviewer', 'CODE_REVIEWER')",
+            "Test that your existing configurations still work with the new flexible matching",
+            "Update documentation to reflect the more flexible naming convention"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.140",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21140",
+              "published_at": "2026-05-13T07:57:26.247Z"
+            }
+          ],
+          "created_at": "2026-05-13T07:57:42.216Z"
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-21.mp3"
+}
