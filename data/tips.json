@@ -897,6 +897,31 @@
         }
       ],
       "created_at": "2026-05-21T08:10:38.448Z"
+    },
+    {
+      "id": "tip-2026-05-22-1",
+      "headline": "Pin Claude Code sessions to keep them alive during idle periods",
+      "summary": "Pinned sessions in Claude Code now persist even when not actively used and are only terminated under memory pressure after non-pinned sessions are closed first. This prevents losing your work context during breaks or when switching between tasks.",
+      "actionable_steps": [
+        "Open Claude Code and start an agents session",
+        "Press Ctrl+T to pin the current session",
+        "The session will now remain active even during idle periods"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 1,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.147",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21147",
+          "published_at": "2026-05-22T08:05:02.020Z"
+        }
+      ],
+      "created_at": "2026-05-22T08:05:13.276Z"
     }
   ]
 }
