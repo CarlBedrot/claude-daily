@@ -1,0 +1,192 @@
+{
+  "date": "2026-05-23",
+  "generated_at": "2026-05-23T07:45:56.683Z",
+  "digest": {
+    "lead": "Claude Code rolled out v2.1.149 today with enhanced usage tracking and better diff navigation, while older critiques of Anthropic's business model resurface on Hacker News.",
+    "themes": [
+      "Developer tooling",
+      "Usage tracking",
+      "Business scrutiny"
+    ],
+    "summary": "The main update focuses on helping developers understand what's driving their usage limits, plus quality-of-life improvements for code review workflows."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.149 Adds Detailed Usage Tracking and Enhanced Diff Navigation",
+          "summary": "Claude Code's latest update introduces a per-category breakdown in the `/usage` command, showing exactly what's driving usage limits across skills, subagents, plugins, and MCP servers [2]. The release also improves the diff detail view with full keyboard navigation and better markdown rendering for task lists [2].",
+          "key_points": [
+            "New `/usage` command breakdown helps developers identify which features consume the most resources",
+            "Enhanced `/diff` view supports keyboard shortcuts including arrows, j/k, and page navigation",
+            "Enterprise users gain `allowAllClaudeAiMcps` setting for cloud MCP connector integration"
+          ],
+          "impact": "This helps developers using Claude Code daily better understand and optimize their usage patterns, while the improved diff navigation streamlines code review workflows for teams doing frequent iterations.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.149",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21149",
+              "published_at": "2026-05-23T07:45:40.907Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Anthropic's Business Model Faces Renewed Criticism on Hacker News",
+          "summary": "A critical analysis of Anthropic's profitability claims gained traction on Hacker News, drawing 59 points and community discussion about the company's business practices [1]. The piece questions the sustainability and transparency of Anthropic's financial positioning.",
+          "impact": "This reflects ongoing skepticism within the developer community about AI companies' business models, potentially influencing enterprise adoption decisions and investor confidence.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's \"Profitability\" Swindle",
+              "url": "https://www.wheresyoured.at/anthropics-profitability-swindle/",
+              "published_at": "2026-05-22T19:16:09.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-23-1",
+          "headline": "Use /usage command to track Claude Code resource consumption by category",
+          "summary": "The /usage command now provides detailed breakdowns of what's consuming your usage limits, including skills, subagents, plugins, and MCP server costs. This helps identify which features are driving your resource consumption for better optimization.",
+          "actionable_steps": [
+            "Type /usage in Claude Code",
+            "Review the per-category breakdown showing skills, subagents, plugins, and MCP-server costs",
+            "Identify high-usage categories to optimize your workflow"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.149",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21149",
+              "published_at": "2026-05-23T07:45:40.907Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-04-1",
+          "headline": "Use forceRemoteSettingsRefresh policy to ensure fresh configuration on startup",
+          "summary": "This setting forces Claude Code CLI to fetch the latest remote managed settings before starting and exits if the fetch fails. This ensures your CLI always runs with the most current configuration and prevents running with stale settings that might cause issues.",
+          "actionable_steps": [
+            "Open your Claude Code CLI configuration",
+            "Add the policy setting `forceRemoteSettingsRefresh: true`",
+            "Restart the CLI to verify it blocks startup until fresh settings are fetched"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.92",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+              "published_at": "2026-04-04T07:20:10.106Z"
+            }
+          ],
+          "created_at": "2026-04-04T07:20:24.316Z"
+        },
+        {
+          "id": "tip-2026-04-08-1",
+          "headline": "Enable Amazon Bedrock support with Mantle integration",
+          "summary": "Claude Code v2.1.94 added support for Amazon Bedrock through Mantle integration. This allows you to use Claude Code with Amazon's Bedrock service instead of the default API endpoints, potentially offering better performance or compliance for enterprise users.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_USE_MANTLE=1 in your system or terminal",
+            "Restart Claude Code to apply the new configuration",
+            "Verify the connection is working by running a test query"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.94",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2194",
+              "published_at": "2026-04-08T07:28:46.896Z"
+            }
+          ],
+          "created_at": "2026-04-08T07:29:00.150Z"
+        },
+        {
+          "id": "tip-2026-05-14-1",
+          "headline": "Use terminalSequence field to enable desktop notifications from Claude Code hooks",
+          "summary": "The terminalSequence field allows Claude Code hooks to emit desktop notifications, window titles, and terminal bells even when running without a controlling terminal. This is particularly useful for background processes or automated workflows that need to communicate status updates to users.",
+          "actionable_steps": [
+            "Update your hook JSON output to include the terminalSequence field",
+            "Configure the field to emit the desired notification type (desktop notification, window title, or bell)",
+            "Test the hook in an environment without a controlling terminal to verify notifications work"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.141",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21141",
+              "published_at": "2026-05-14T07:54:03.971Z"
+            }
+          ],
+          "created_at": "2026-05-14T07:54:20.369Z"
+        },
+        {
+          "id": "tip-2026-04-22-1",
+          "headline": "Enable forked subagents in external Claude Code builds",
+          "summary": "Forked subagents allow Claude Code to spawn separate agent processes for parallel task execution. This can improve performance for complex workflows that benefit from concurrent processing.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_FORK_SUBAGENT=1",
+            "Restart Claude Code to apply the setting",
+            "Verify subagents are working by checking for multiple agent processes during complex tasks"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.117",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21117",
+              "published_at": "2026-04-22T07:29:52.517Z"
+            }
+          ],
+          "created_at": "2026-04-22T07:30:03.420Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-23.mp3"
+}
