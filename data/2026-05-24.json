@@ -1,0 +1,210 @@
+{
+  "date": "2026-05-24",
+  "generated_at": "2026-05-24T07:54:11.060Z",
+  "digest": {
+    "lead": "It's a quiet Saturday in the Claude ecosystem, with only minor infrastructure updates and broader industry discussions making news.",
+    "themes": [
+      "Infrastructure updates",
+      "Industry analysis"
+    ],
+    "summary": "Claude Code received a minor backend update while industry analysts debate AI company valuations amid increasing market competition."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Addresses AI Safety Training Concerns",
+          "summary": "Anthropic researchers have identified dystopian science fiction as a potential factor in AI models developing adversarial behaviors during training [2]. The findings suggest that exposure to negative fictional scenarios may influence model responses in unintended ways.",
+          "key_points": [
+            "Dystopian sci-fi content identified as potential training influence",
+            "Research highlights challenges in AI safety and alignment"
+          ],
+          "impact": "This research could influence how AI companies curate training data and approach safety protocols for future model development.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic blames dystopian sci-fi for training AI models to act \"evil\"",
+              "url": "https://arstechnica.com/ai/2026/05/anthropic-blames-dystopian-sci-fi-for-training-ai-models-to-act-evil/",
+              "published_at": "2026-05-23T21:45:46.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Market Pressures Could Impact Anthropic IPO Timeline",
+          "summary": "Industry analysts suggest that increasing competition and commoditization in AI could affect the IPO prospects for major AI companies including Anthropic [3]. The analysis points to pricing pressures as AI capabilities become more widely available.",
+          "key_points": [],
+          "impact": "Potential IPO delays could affect Anthropic's funding strategies and competitive positioning in the rapidly evolving AI market.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Cheap AI Could Derail OpenAI and Anthropic's IPOs",
+              "url": "https://www.cnbc.com/2026/05/20/cheap-ai-could-derail-openai-and-anthropics-ipos.html",
+              "published_at": "2026-05-22T23:37:17.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.150 Released with Backend Improvements",
+          "summary": "The latest Claude Code CLI update focuses on internal infrastructure enhancements without any user-facing feature changes [1]. The release continues the tool's steady development cycle with behind-the-scenes optimizations.",
+          "key_points": [],
+          "impact": "",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.150",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21150",
+              "published_at": "2026-05-24T07:53:56.367Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-21-1",
+          "headline": "Use `/terminal-setup` to configure smoother fullscreen scrolling in VS Code, Cursor, and Windsurf",
+          "summary": "Claude Code v2.1.116 improved terminal scrolling performance by automatically configuring your editor's scroll sensitivity. This eliminates choppy scrolling when working in fullscreen terminal mode.",
+          "actionable_steps": [
+            "Open Claude Code in your VS Code, Cursor, or Windsurf editor",
+            "Run the `/terminal-setup` command",
+            "Allow Claude Code to configure your editor's scroll sensitivity settings"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.116",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+              "published_at": "2026-04-21T07:30:03.998Z"
+            }
+          ],
+          "created_at": "2026-04-21T07:30:17.044Z"
+        },
+        {
+          "id": "tip-2026-05-08-1",
+          "headline": "Configure worktree base reference to preserve unpushed commits",
+          "summary": "The latest Claude Code update changed the default behavior for worktrees to branch from origin instead of local HEAD, potentially losing unpushed commits. Setting the baseRef to 'head' preserves your local work when creating new worktrees.",
+          "actionable_steps": [
+            "Open your Claude Code settings",
+            "Add or modify the setting: \"worktree.baseRef\": \"head\"",
+            "Save the configuration file"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.133",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21133",
+              "published_at": "2026-05-08T07:29:29.198Z"
+            }
+          ],
+          "created_at": "2026-05-08T07:29:43.717Z"
+        },
+        {
+          "id": "tip-2026-05-16-1",
+          "headline": "Use --add-dir flag to configure Claude agents with additional directories",
+          "summary": "The new --add-dir flag allows you to specify additional directories for Claude agents to access during background sessions. This expands the scope of files and resources your agent can work with beyond the default project directory.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.142 or later",
+            "Run 'claude agents --add-dir /path/to/additional/directory' when starting an agent session",
+            "Verify the agent can access files in the specified directory"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.142",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21142",
+              "published_at": "2026-05-16T07:33:58.480Z"
+            }
+          ],
+          "created_at": "2026-05-16T07:34:13.249Z"
+        },
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        },
+        {
+          "id": "tip-2026-05-07-1",
+          "headline": "Use CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN to keep conversation in terminal scrollback",
+          "summary": "Claude Code normally uses a fullscreen alternate-screen renderer that clears when you exit. Setting this environment variable keeps your conversation in your terminal's native scrollback buffer, making it easier to review past interactions after closing Claude Code.",
+          "actionable_steps": [
+            "Set the environment variable: export CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1",
+            "Launch Claude Code as normal",
+            "Your conversation will now remain in terminal scrollback when you exit"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.132",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21132",
+              "published_at": "2026-05-07T07:52:29.358Z"
+            }
+          ],
+          "created_at": "2026-05-07T07:52:41.155Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-24.mp3"
+}
