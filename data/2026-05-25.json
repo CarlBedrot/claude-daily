@@ -1,0 +1,147 @@
+{
+  "date": "2026-05-25",
+  "generated_at": "2026-05-25T08:27:35.525Z",
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-28-2",
+          "headline": "Use `claude plugin prune` to clean up orphaned plugin dependencies",
+          "summary": "Auto-installed plugin dependencies can accumulate over time, taking up disk space. The prune command removes dependencies that are no longer needed by any installed plugins.",
+          "actionable_steps": [
+            "Run `claude plugin prune` in your terminal",
+            "Alternatively, use `claude plugin uninstall --prune [plugin-name]` to uninstall a plugin and clean up its dependencies in one step"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.120",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21120",
+              "published_at": "2026-04-28T07:44:25.570Z"
+            }
+          ],
+          "created_at": "2026-04-28T07:44:45.297Z"
+        },
+        {
+          "id": "tip-2026-04-15-1",
+          "headline": "Use ENABLE_PROMPT_CACHING_1H to extend prompt cache duration",
+          "summary": "Setting this environment variable enables 1-hour prompt cache TTL instead of the default, which can reduce API costs and improve response times for longer coding sessions. This works across API key, Bedrock, Vertex, and Foundry deployments.",
+          "actionable_steps": [
+            "Set the environment variable ENABLE_PROMPT_CACHING_1H=true in your system or deployment configuration",
+            "Restart Claude Code to apply the new caching setting",
+            "Monitor your usage to verify extended caching is working"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.108",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+              "published_at": "2026-04-15T07:29:39.027Z"
+            }
+          ],
+          "created_at": "2026-04-15T07:29:51.069Z"
+        },
+        {
+          "id": "tip-2026-04-23-1",
+          "headline": "Use visual mode in Claude Code for text selection and editing",
+          "summary": "Claude Code now supports vim-style visual mode (v) and visual-line mode (V) for selecting and manipulating text. This enables more efficient text editing workflows similar to vim editors.",
+          "actionable_steps": [
+            "Press 'v' to enter visual mode for character-by-character selection",
+            "Press 'V' to enter visual-line mode for line-by-line selection",
+            "Use standard vim operators on your selected text"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.118",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21118",
+              "published_at": "2026-04-23T07:30:08.080Z"
+            }
+          ],
+          "created_at": "2026-04-23T07:30:24.917Z"
+        },
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "created_at": "2026-04-10T07:29:24.319Z"
+        }
+      ]
+    }
+  }
+}
