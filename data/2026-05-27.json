@@ -1,0 +1,310 @@
+{
+  "date": "2026-05-27",
+  "generated_at": "2026-05-27T08:16:31.599Z",
+  "digest": {
+    "lead": "Claude Code gets a major productivity boost with v2.1.152's new `/code-review --fix` feature that automatically applies review suggestions to your working tree.",
+    "themes": [
+      "Developer tooling",
+      "Enterprise adoption",
+      "Community innovation"
+    ],
+    "summary": "Meanwhile, enterprise teams are seeing real budget impact from AI adoption, and the community continues building creative tools around Claude's capabilities."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Appoints Kiyoung Choi as Representative Director for Korea Operations",
+          "summary": "Anthropic has named Kiyoung Choi as Representative Director for Anthropic Korea [1], marking the company's continued international expansion.",
+          "key_points": [],
+          "impact": "Signals Anthropic's commitment to the Korean market and likely indicates plans for localized Claude services and partnerships in the region.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Kiyoung Choi Representative Director Anthropic Korea",
+              "url": "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea",
+              "published_at": "2026-05-26T23:11:06.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Uber Burns Through AI Budget in Single Quarter Due to Heavy Claude Code Usage",
+          "summary": "Uber's COO revealed the company exhausted its entire quarterly AI budget in just three months, with significant spending attributed to Claude Code token usage [1]. The disclosure highlights the real financial impact of enterprise AI adoption at scale.",
+          "key_points": [
+            "Major enterprise customer experiencing budget overruns from AI tool usage",
+            "Demonstrates both the value and cost considerations of deploying Claude Code in large organizations"
+          ],
+          "impact": "Shows enterprise teams need careful budget planning and usage monitoring when deploying Claude Code at scale, while validating strong adoption among major tech companies.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Uber blows through its AI budget in 1 quarter",
+              "url": "https://fortune.com/2026/05/26/uber-coo-ai-spending-tokens-claude-code/",
+              "published_at": "2026-05-26T22:44:31.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.152 Adds Automatic Code Review Fixes and Enhanced Skill Management",
+          "summary": "The latest Claude Code update introduces `/code-review --fix` which automatically applies review findings to your working tree, while `/simplify` now leverages this functionality [1]. The release also adds skill management improvements including `disallowed-tools` frontmatter and a `/reload-skills` command [1].",
+          "key_points": [
+            "Automated code review application saves manual work on suggested improvements",
+            "Enhanced skill system allows better tool control and hot-reloading during development",
+            "SessionStart hooks can now trigger skill directory rescanning"
+          ],
+          "impact": "Significantly reduces friction in the code review workflow for developers using Claude Code daily, while giving skill developers better debugging and iteration tools.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.152",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21152",
+              "published_at": "2026-05-27T08:15:50.297Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code v2.1.149 Improves Usage Tracking and Enterprise MCP Management",
+          "summary": "Claude Code now provides detailed usage breakdowns showing costs by category including skills, subagents, plugins, and MCP servers [1]. The update also enhances the diff viewer with keyboard navigation and adds enterprise support for claude.ai cloud MCP connectors [1].",
+          "key_points": [
+            "Per-category usage tracking helps teams understand and optimize AI spending",
+            "Enterprise teams can now mix managed MCP servers with claude.ai cloud connectors",
+            "Improved diff navigation and markdown rendering enhance daily workflow"
+          ],
+          "impact": "Critical for enterprise teams managing Claude Code budgets and deployment strategies, providing visibility into cost drivers and more flexible MCP configuration options.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.149",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21149",
+              "published_at": "2026-05-27T08:15:50.297Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Claude Discovers Critical macOS Kernel Vulnerability, Earns CVE Credit",
+          "summary": "Apple has credited Claude with discovering CVE-2026-28952, a kernel vulnerability in macOS 26.5 [1]. The discovery showcases AI's potential in automated security research and vulnerability detection.",
+          "key_points": [
+            "First known instance of Claude receiving official CVE credit for vulnerability discovery",
+            "Demonstrates AI capabilities in complex security analysis beyond typical use cases"
+          ],
+          "impact": "Validates AI-assisted security research as a legitimate approach and may encourage more organizations to explore Claude for vulnerability assessment workflows.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "CVE-2026-28952: Apple macOS 26.5 Kernel Vuln found by Claude",
+              "url": "https://support.apple.com/en-us/127115",
+              "published_at": "2026-05-25T23:40:40.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "community-002",
+          "headline": "Timeglass Launches Enhanced Memory System for AI Coding Workflows",
+          "summary": "Timeglass.ai has launched a new tool claiming to provide more accurate memory capabilities than standard MCPs for Codex and Claude [1]. The project aims to address limitations in current AI memory systems for development workflows.",
+          "key_points": [
+            "Addresses perceived gaps in MCP memory capabilities for coding tasks",
+            "Focuses on providing comprehensive context retention across sessions"
+          ],
+          "impact": "Could benefit developers frustrated with current MCP memory limitations, though adoption will depend on demonstrating clear advantages over existing solutions.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: MCPs aren't enough, give Codex/Claude accurate memory of everything",
+              "url": "https://timeglass.ai",
+              "published_at": "2026-05-26T15:23:38.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "community-003",
+          "headline": "YC-Backed Minicor Launches Windows Automation Platform",
+          "summary": "Minicor (YC P26) has launched a platform for Windows desktop automation at scale [1]. While not Claude-specific, the timing and focus on automation workflows aligns with the broader AI-assisted productivity trend.",
+          "key_points": [
+            "Y Combinator backing suggests validation of the automation space",
+            "Focuses on enterprise-scale desktop automation use cases"
+          ],
+          "impact": "Represents the growing ecosystem of automation tools that often integrate with AI assistants like Claude for enhanced workflow capabilities.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Launch HN: Minicor (YC P26) – Windows desktop automations at scale",
+              "url": "https://www.minicor.com/",
+              "published_at": "2026-05-26T14:57:27.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "community-004",
+          "headline": "Developer Builds Terminal-Based Personal Finance App with Modern Stack",
+          "summary": "A developer has released Fungible, a local personal finance application built for the terminal [1]. The project demonstrates the continued interest in building sophisticated terminal-based tools in the era of AI-assisted development.",
+          "key_points": [
+            "Local-first approach appeals to privacy-conscious users",
+            "Terminal interface provides fast, keyboard-driven workflow"
+          ],
+          "impact": "Shows how developers are creating specialized tools that can complement AI workflows, particularly for users who prefer terminal-based development environments.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Fungible – A local personal finance app in the terminal",
+              "url": "https://github.com/tomfunk/fungible",
+              "published_at": "2026-05-25T21:35:51.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-27-1",
+          "headline": "Use `/code-review --fix` to automatically apply review findings",
+          "summary": "Instead of manually implementing code review suggestions, this command automatically applies reuse, simplification, and efficiency improvements to your working tree. This streamlines the code review process by eliminating the manual step of implementing suggested changes.",
+          "actionable_steps": [
+            "Run `/code-review --fix` command in Claude Code",
+            "Review the automatically applied changes in your working tree",
+            "Verify the improvements match your expectations"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.152",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21152",
+              "published_at": "2026-05-27T08:15:50.297Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-27-2",
+          "headline": "Use `/reload-skills` to refresh skills without restarting",
+          "summary": "When you add or modify Claude Code skills, you can reload them instantly without losing your current session context. This saves time during skill development and testing workflows.",
+          "actionable_steps": [
+            "Make changes to your skill files",
+            "Run `/reload-skills` command in Claude Code",
+            "Verify new or updated skills are available in the current session"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Best Practices",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2026-05-27T08:15:51.074Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-27-3",
+          "headline": "Configure `disallowed-tools` in skill frontmatter to restrict model access",
+          "summary": "You can prevent Claude from using specific tools while a skill is active by declaring them in the skill's frontmatter. This gives you fine-grained control over tool availability during skill execution.",
+          "actionable_steps": [
+            "Open your skill file",
+            "Add `disallowed-tools: [\"tool1\", \"tool2\"]` to the frontmatter section",
+            "Save the file and reload skills with `/reload-skills`",
+            "Test that the specified tools are unavailable when the skill is active"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Overview",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+              "published_at": "2026-05-27T08:15:51.205Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-27-4",
+          "headline": "Set up MCP servers to extend Claude's capabilities",
+          "summary": "Model Context Protocol (MCP) servers allow Claude to connect to external services like databases, APIs, and monitoring tools. This dramatically expands what Claude can do beyond just code editing.",
+          "actionable_steps": [
+            "Create or locate a `.mcp.json` file in your project",
+            "Add server configuration with connection details",
+            "Install the MCP server using Claude Code's MCP management",
+            "Verify the connection and test available tools"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Mcp",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+              "published_at": "2026-05-27T08:15:51.352Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-27-5",
+          "headline": "Create a CLAUDE.md file to provide project context",
+          "summary": "CLAUDE.md files give Claude persistent knowledge about your project's structure, conventions, and requirements. This helps Claude make better decisions and follow your specific guidelines consistently.",
+          "actionable_steps": [
+            "Create a CLAUDE.md file in your project root",
+            "Add project overview, coding standards, and key architectural decisions",
+            "Include file structure explanations and important context",
+            "Test that Claude references this information in its responses"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Settings",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/settings",
+              "published_at": "2026-05-27T08:15:51.508Z"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-27.mp3"
+}

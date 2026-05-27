@@ -947,6 +947,134 @@
         }
       ],
       "created_at": "2026-05-23T07:45:56.432Z"
+    },
+    {
+      "id": "tip-2026-05-27-1",
+      "headline": "Use `/code-review --fix` to automatically apply review findings",
+      "summary": "Instead of manually implementing code review suggestions, this command automatically applies reuse, simplification, and efficiency improvements to your working tree. This streamlines the code review process by eliminating the manual step of implementing suggested changes.",
+      "actionable_steps": [
+        "Run `/code-review --fix` command in Claude Code",
+        "Review the automatically applied changes in your working tree",
+        "Verify the improvements match your expectations"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.152",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21152",
+          "published_at": "2026-05-27T08:15:50.297Z"
+        }
+      ],
+      "created_at": "2026-05-27T08:16:08.822Z"
+    },
+    {
+      "id": "tip-2026-05-27-2",
+      "headline": "Use `/reload-skills` to refresh skills without restarting",
+      "summary": "When you add or modify Claude Code skills, you can reload them instantly without losing your current session context. This saves time during skill development and testing workflows.",
+      "actionable_steps": [
+        "Make changes to your skill files",
+        "Run `/reload-skills` command in Claude Code",
+        "Verify new or updated skills are available in the current session"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 1,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Best Practices",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+          "published_at": "2026-05-27T08:15:51.074Z"
+        }
+      ],
+      "created_at": "2026-05-27T08:16:08.822Z"
+    },
+    {
+      "id": "tip-2026-05-27-3",
+      "headline": "Configure `disallowed-tools` in skill frontmatter to restrict model access",
+      "summary": "You can prevent Claude from using specific tools while a skill is active by declaring them in the skill's frontmatter. This gives you fine-grained control over tool availability during skill execution.",
+      "actionable_steps": [
+        "Open your skill file",
+        "Add `disallowed-tools: [\"tool1\", \"tool2\"]` to the frontmatter section",
+        "Save the file and reload skills with `/reload-skills`",
+        "Test that the specified tools are unavailable when the skill is active"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Overview",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+          "published_at": "2026-05-27T08:15:51.205Z"
+        }
+      ],
+      "created_at": "2026-05-27T08:16:08.822Z"
+    },
+    {
+      "id": "tip-2026-05-27-4",
+      "headline": "Set up MCP servers to extend Claude's capabilities",
+      "summary": "Model Context Protocol (MCP) servers allow Claude to connect to external services like databases, APIs, and monitoring tools. This dramatically expands what Claude can do beyond just code editing.",
+      "actionable_steps": [
+        "Create or locate a `.mcp.json` file in your project",
+        "Add server configuration with connection details",
+        "Install the MCP server using Claude Code's MCP management",
+        "Verify the connection and test available tools"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 15,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Mcp",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+          "published_at": "2026-05-27T08:15:51.352Z"
+        }
+      ],
+      "created_at": "2026-05-27T08:16:08.822Z"
+    },
+    {
+      "id": "tip-2026-05-27-5",
+      "headline": "Create a CLAUDE.md file to provide project context",
+      "summary": "CLAUDE.md files give Claude persistent knowledge about your project's structure, conventions, and requirements. This helps Claude make better decisions and follow your specific guidelines consistently.",
+      "actionable_steps": [
+        "Create a CLAUDE.md file in your project root",
+        "Add project overview, coding standards, and key architectural decisions",
+        "Include file structure explanations and important context",
+        "Test that Claude references this information in its responses"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 10,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Settings",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/settings",
+          "published_at": "2026-05-27T08:15:51.508Z"
+        }
+      ],
+      "created_at": "2026-05-27T08:16:08.822Z"
     }
   ]
 }
