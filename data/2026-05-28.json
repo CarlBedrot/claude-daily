@@ -1,0 +1,212 @@
+{
+  "date": "2026-05-28",
+  "generated_at": "2026-05-28T08:16:23.767Z",
+  "digest": {
+    "lead": "The big story today is Simon Willison's analysis that Anthropic and OpenAI have reached product-market fit, sparking major discussion on Hacker News with 835 points and nearly 1,000 comments.",
+    "themes": [
+      "Product-market fit",
+      "Developer tooling updates",
+      "Industry positioning"
+    ],
+    "summary": "Meanwhile, Claude Code shipped incremental improvements with better Git LFS handling and terminal sizing, while tensions between AI leaders continue over jobs impact messaging."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Industry Observer Declares Anthropic Has Achieved Product-Market Fit",
+          "summary": "Simon Willison published an analysis arguing that both Anthropic and OpenAI have found genuine product-market fit [1]. The post generated significant discussion on Hacker News, attracting 835 points and 963 comments [1].",
+          "key_points": [],
+          "impact": "This validates Anthropic's strategic positioning and suggests Claude has moved beyond early adoption into mainstream utility for knowledge workers and developers.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "I think Anthropic and OpenAI have found product-market fit",
+              "url": "https://simonwillison.net/2026/May/27/product-market-fit/",
+              "published_at": "2026-05-27T16:39:13.000Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic and OpenAI Clash Over AI Jobs Impact Messaging",
+          "summary": "The two leading AI companies are taking opposing stances on how to communicate about AI's potential impact on employment [1]. The disagreement highlights strategic differences in public positioning around AI safety and economic disruption [1].",
+          "key_points": [],
+          "impact": "This public disagreement could influence regulatory discussions and enterprise adoption decisions as companies weigh AI investment against workforce concerns.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "OpenAI and Anthropic dig in against each other on AI jobs apocalypse",
+              "url": "https://www.axios.com/2026/05/27/ai-hype-doom-openai-anthropic",
+              "published_at": "2026-05-27T16:26:16.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Adds Git LFS Support and Terminal Improvements",
+          "summary": "Version 2.1.153 introduces a `skipLfs` option for Git operations, better npm update notifications, and enhanced terminal integration [1]. The update also improves autocomplete functionality in agent dispatch and provides better terminal sizing for status line commands [1].",
+          "key_points": [
+            "New `skipLfs` option prevents unnecessary Git LFS downloads during repository operations",
+            "Status line commands now receive terminal dimensions for properly sized output",
+            "Agent autocomplete now suggests native slash commands and bundled skills"
+          ],
+          "impact": "These improvements streamline developer workflows, particularly for teams working with large repositories or custom terminal setups in Claude Code.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.153",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21153",
+              "published_at": "2026-05-28T08:16:04.350Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-28-1",
+          "headline": "Use CLAUDE.md files to provide persistent context for your projects",
+          "summary": "CLAUDE.md files let you give Claude permanent instructions and context about your project that persist across conversations. Claude automatically loads these files when working in your codebase, eliminating the need to repeatedly explain project structure and conventions.",
+          "actionable_steps": [
+            "Create a CLAUDE.md file in your project root directory",
+            "Write clear instructions about your project's structure, conventions, and requirements",
+            "Add import statements for additional context files if needed"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Hooks",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/hooks",
+              "published_at": "2026-05-28T08:16:08.919Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-28-2",
+          "headline": "Set up hooks to automate Claude Code workflows at key events",
+          "summary": "Hooks allow you to run custom scripts or commands automatically when specific events occur in Claude Code, such as session start, prompt submission, or instruction loading. This enables automated setup, validation, or custom integrations.",
+          "actionable_steps": [
+            "Create hook configuration files in your project's .claude directory",
+            "Define hook events (SessionStart, UserPromptSubmit, etc.) and their corresponding actions",
+            "Configure hook handlers with command, HTTP, or MCP tool fields as needed",
+            "Test hooks using the /hooks menu to verify they trigger correctly"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 20,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Memory",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+              "published_at": "2026-05-28T08:16:09.064Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-28-3",
+          "headline": "Organize project rules using .claude/rules/ directory structure",
+          "summary": "The .claude/rules/ directory lets you break down complex project instructions into organized, manageable files. This makes it easier to maintain large codebases and share specific rules across multiple projects.",
+          "actionable_steps": [
+            "Create a .claude/rules/ directory in your project root",
+            "Split your CLAUDE.md instructions into focused rule files (e.g., coding-style.md, testing.md)",
+            "Use symlinks to share common rules across multiple projects",
+            "Reference rule files from your main CLAUDE.md using import statements"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Ide Integrations",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
+              "published_at": "2026-05-28T08:16:10.322Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-09-1",
+          "headline": "Enable feedback surveys for enterprise OpenTelemetry users",
+          "summary": "If your enterprise captures telemetry data through OpenTelemetry, you can now re-enable Claude Code's session quality surveys to gather user feedback. This helps organizations collect structured feedback data alongside their existing telemetry infrastructure.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL=true",
+            "Restart your Claude Code application",
+            "Verify that session quality surveys now appear in your Claude Code interface"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.136",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21136",
+              "published_at": "2026-05-09T07:31:06.758Z"
+            }
+          ],
+          "created_at": "2026-05-09T07:31:18.385Z"
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-28.mp3"
+}

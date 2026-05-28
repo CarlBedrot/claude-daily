@@ -1075,6 +1075,83 @@
         }
       ],
       "created_at": "2026-05-27T08:16:08.822Z"
+    },
+    {
+      "id": "tip-2026-05-28-1",
+      "headline": "Use CLAUDE.md files to provide persistent context for your projects",
+      "summary": "CLAUDE.md files let you give Claude permanent instructions and context about your project that persist across conversations. Claude automatically loads these files when working in your codebase, eliminating the need to repeatedly explain project structure and conventions.",
+      "actionable_steps": [
+        "Create a CLAUDE.md file in your project root directory",
+        "Write clear instructions about your project's structure, conventions, and requirements",
+        "Add import statements for additional context files if needed"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 10,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Hooks",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/hooks",
+          "published_at": "2026-05-28T08:16:08.919Z"
+        }
+      ],
+      "created_at": "2026-05-28T08:16:26.129Z"
+    },
+    {
+      "id": "tip-2026-05-28-2",
+      "headline": "Set up hooks to automate Claude Code workflows at key events",
+      "summary": "Hooks allow you to run custom scripts or commands automatically when specific events occur in Claude Code, such as session start, prompt submission, or instruction loading. This enables automated setup, validation, or custom integrations.",
+      "actionable_steps": [
+        "Create hook configuration files in your project's .claude directory",
+        "Define hook events (SessionStart, UserPromptSubmit, etc.) and their corresponding actions",
+        "Configure hook handlers with command, HTTP, or MCP tool fields as needed",
+        "Test hooks using the /hooks menu to verify they trigger correctly"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 20,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Memory",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+          "published_at": "2026-05-28T08:16:09.064Z"
+        }
+      ],
+      "created_at": "2026-05-28T08:16:26.129Z"
+    },
+    {
+      "id": "tip-2026-05-28-3",
+      "headline": "Organize project rules using .claude/rules/ directory structure",
+      "summary": "The .claude/rules/ directory lets you break down complex project instructions into organized, manageable files. This makes it easier to maintain large codebases and share specific rules across multiple projects.",
+      "actionable_steps": [
+        "Create a .claude/rules/ directory in your project root",
+        "Split your CLAUDE.md instructions into focused rule files (e.g., coding-style.md, testing.md)",
+        "Use symlinks to share common rules across multiple projects",
+        "Reference rule files from your main CLAUDE.md using import statements"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 15,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Ide Integrations",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
+          "published_at": "2026-05-28T08:16:10.322Z"
+        }
+      ],
+      "created_at": "2026-05-28T08:16:26.129Z"
     }
   ]
 }
