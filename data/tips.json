@@ -1152,6 +1152,31 @@
         }
       ],
       "created_at": "2026-05-28T08:16:26.129Z"
+    },
+    {
+      "id": "tip-2026-05-29-1",
+      "headline": "Use /effort xhigh command for complex tasks requiring maximum processing power",
+      "summary": "Claude Code v2.1.154 introduced the /effort xhigh command which enables high-effort processing mode for challenging tasks. This mode is now the default in Opus 4.8 and provides enhanced problem-solving capabilities for complex coding challenges.",
+      "actionable_steps": [
+        "Type /effort xhigh at the beginning of your prompt or conversation",
+        "Present your most challenging coding task or problem",
+        "Allow Claude to process with maximum effort for better results"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.154",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21154",
+          "published_at": "2026-05-29T08:14:31.545Z"
+        }
+      ],
+      "created_at": "2026-05-29T08:14:47.087Z"
     }
   ]
 }

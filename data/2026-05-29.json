@@ -1,0 +1,270 @@
+{
+  "date": "2026-05-29",
+  "generated_at": "2026-05-29T08:15:02.907Z",
+  "digest": {
+    "lead": "Claude Opus 4.8 has arrived with major new capabilities including dynamic workflows that orchestrate hundreds of agents and improved high-effort reasoning, while fast mode pricing has been dramatically reduced.",
+    "themes": [
+      "Model updates",
+      "Workflow automation",
+      "Developer tooling"
+    ],
+    "summary": "Anthropic also announced a new Milan office and the Claude Design Labs initiative, while the community discusses cost optimization strategies and tool integrations."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude Opus 4.8 Launches with Dynamic Workflows and Reduced Fast Mode Pricing",
+          "summary": "Anthropic has released Claude Opus 4.8, featuring dynamic workflows that can orchestrate work across tens to hundreds of agents for complex tasks [2]. The update also introduces high-effort reasoning as the default and reduces fast mode pricing to 2x standard rate for 2.5x speed, down from previous costs [2].",
+          "key_points": [
+            "Dynamic workflows enable Claude to manage large-scale multi-agent orchestration",
+            "High-effort reasoning (/effort xhigh) now defaults for challenging tasks",
+            "Fast mode pricing significantly reduced while maintaining 2.5x speed improvement"
+          ],
+          "impact": "This represents a major capability leap for teams handling complex, multi-step projects, while the pricing changes make high-performance Claude more accessible to cost-conscious developers.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.154",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21154",
+              "published_at": "2026-05-29T08:14:31.545Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Opus 4 8",
+              "url": "https://www.anthropic.com/news/claude-opus-4-8",
+              "published_at": "2026-05-28T16:53:42.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Announces Series H Funding Round",
+          "summary": "Anthropic has completed a Series H funding round, though specific details about the amount and investors have not been disclosed [1].",
+          "impact": "This continued funding signals strong investor confidence in Anthropic's trajectory and likely provides resources for scaling Claude's capabilities and infrastructure.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Series H",
+              "url": "https://www.anthropic.com/news/series-h",
+              "published_at": "2026-05-28T18:07:20.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic Opens Milan Office, Expands European Presence",
+          "summary": "Anthropic has opened a new office in Milan, Italy, expanding its international footprint [1].",
+          "impact": "This expansion suggests Anthropic is prioritizing European markets and may indicate preparations for EU AI regulation compliance and local customer support.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Milan Office Opening",
+              "url": "https://www.anthropic.com/news/milan-office-opening",
+              "published_at": "2026-05-28T13:00:32.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-004",
+          "headline": "Anthropic Launches Claude Design Labs Initiative",
+          "summary": "Anthropic has announced Claude Design Labs, a new initiative focused on design-related AI applications, though specific details about the program remain limited [1].",
+          "impact": "This suggests Anthropic is targeting creative and design professionals as a key user segment, potentially expanding Claude's appeal beyond traditional coding and text use cases.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Design Anthropic Labs",
+              "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+              "published_at": "2026-05-28T19:33:59.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.156 Fixes Opus 4.8 Thinking Block Issues",
+          "summary": "A critical bug fix has been released for Claude Code that resolves API errors occurring when Opus 4.8's thinking blocks were being modified during processing [1].",
+          "impact": "This fix is essential for developers who upgraded to Opus 4.8 and experienced workflow disruptions, ensuring stable operation of the new model's enhanced reasoning capabilities.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.156",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21156",
+              "published_at": "2026-05-29T08:14:31.545Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Zot Platform Adds Claude Opus 4.8 Support",
+          "summary": "The Zot development platform has integrated support for Claude Opus 4.8, generating discussion among developers on Hacker News [1].",
+          "impact": "This integration gives Zot users immediate access to Opus 4.8's new workflow capabilities and improved reasoning, expanding the ecosystem of tools supporting the latest Claude model.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Zot now supports Claude Opus 4.8",
+              "url": "https://www.zot.sh",
+              "published_at": "2026-05-29T05:48:21.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "Developer Reports 99% Cost Reduction Switching from Claude to DeepSeek",
+          "summary": "A developer shared their experience achieving significant cost savings by migrating from Claude to DeepSeek for their AI API usage, sparking discussion about cost optimization strategies [1].",
+          "impact": "This highlights the ongoing pressure on AI providers to balance performance with pricing, and may influence how cost-sensitive developers choose between different AI services.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "I cut my AI API costs 99% by switching from Claude to DeepSeek",
+              "url": "https://twitter.com/kevinsays/status/2059724146221662339",
+              "published_at": "2026-05-28T11:27:36.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-29-1",
+          "headline": "Use /effort xhigh command for complex tasks requiring maximum processing power",
+          "summary": "Claude Code v2.1.154 introduced the /effort xhigh command which enables high-effort processing mode for challenging tasks. This mode is now the default in Opus 4.8 and provides enhanced problem-solving capabilities for complex coding challenges.",
+          "actionable_steps": [
+            "Type /effort xhigh at the beginning of your prompt or conversation",
+            "Present your most challenging coding task or problem",
+            "Allow Claude to process with maximum effort for better results"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.154",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21154",
+              "published_at": "2026-05-29T08:14:31.545Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-24-1",
+          "headline": "Configure persistent Claude Code settings using ~/.claude/settings.json",
+          "summary": "Claude Code now saves your /config preferences (theme, editor mode, verbose output) to a persistent file instead of resetting each session. This eliminates the need to reconfigure your preferences every time you start Claude Code.",
+          "actionable_steps": [
+            "Run Claude Code and use /config to set your preferred theme, editor mode, and other settings",
+            "Verify settings are saved to ~/.claude/settings.json file",
+            "Test persistence by restarting Claude Code and confirming settings remain"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.119",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21119",
+              "published_at": "2026-04-24T07:32:40.639Z"
+            }
+          ],
+          "created_at": "2026-04-24T07:32:59.167Z"
+        },
+        {
+          "id": "tip-2026-05-20-1",
+          "headline": "Use `claude agents --json` to integrate Claude sessions with external tools",
+          "summary": "The new JSON output format allows you to programmatically access live Claude session information. This enables integration with terminal multiplexers like tmux, status bars, and custom session management tools.",
+          "actionable_steps": [
+            "Run `claude agents --json` in your terminal to see the JSON output format",
+            "Parse the JSON output in your scripts to extract session information",
+            "Integrate the JSON data with tools like tmux-resurrect or custom status bars",
+            "Set up automated session monitoring or management based on the structured data"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.145",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21145",
+              "published_at": "2026-05-20T08:07:02.323Z"
+            }
+          ],
+          "created_at": "2026-05-20T08:07:19.268Z"
+        },
+        {
+          "id": "tip-2026-05-13-1",
+          "headline": "Use case-insensitive agent type names in Claude Code configurations",
+          "summary": "Claude Code now accepts agent type names with any casing and separators. This makes configuration more flexible and reduces errors from formatting inconsistencies.",
+          "actionable_steps": [
+            "In your Claude Code configuration, use any casing for agent types (e.g., 'Code Reviewer', 'code-reviewer', 'CODE_REVIEWER')",
+            "Test that your existing configurations still work with the new flexible matching",
+            "Update documentation to reflect the more flexible naming convention"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.140",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21140",
+              "published_at": "2026-05-13T07:57:26.247Z"
+            }
+          ],
+          "created_at": "2026-05-13T07:57:42.216Z"
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-29.mp3"
+}
