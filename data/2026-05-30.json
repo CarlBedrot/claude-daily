@@ -1,0 +1,233 @@
+{
+  "date": "2026-05-30",
+  "generated_at": "2026-05-30T07:51:45.755Z",
+  "digest": {
+    "lead": "Claude Code v2.1.158 brings Auto mode to enterprise cloud platforms, while a mystery company's $500M spending mishap highlights the need for better usage controls.",
+    "themes": [
+      "Developer tooling",
+      "Enterprise controls",
+      "Platform expansion"
+    ],
+    "summary": "Today also saw plugin management improvements in Claude Code and community discussion around AI engineering roles."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Mystery Company Burns $500M on Claude in Single Month Due to Missing Usage Limits",
+          "summary": "An unidentified company accidentally spent $500 million on Claude AI services in one month after failing to implement usage limits on employee licenses [3]. The incident highlights critical gaps in enterprise cost management for AI services.",
+          "key_points": [
+            "Company lacked proper usage controls on Claude licenses",
+            "Massive overspend occurred within a single billing period"
+          ],
+          "impact": "This serves as a wake-up call for enterprises deploying Claude at scale, emphasizing the urgent need for robust usage monitoring and spending controls in AI procurement strategies.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Mystery company accidentally blew $500M on Claude AI in a single month",
+              "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/mystery-company-accidentally-blew-usd500-million-on-claude-in-a-single-month-failed-to-put-usage-limit-on-licenses-for-employees",
+              "published_at": "2026-05-29T16:38:57.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Auto Mode Expands to Enterprise Cloud Platforms",
+          "summary": "Claude Code v2.1.158 brings Auto mode support to Bedrock, Vertex, and Foundry for Opus 4.7 and 4.8 models [1]. Users can enable the feature by setting the CLAUDE_CODE_ENABLE_AUTO_MODE=1 environment variable.",
+          "key_points": [],
+          "impact": "Enterprise developers using cloud-hosted Claude instances can now access autonomous coding capabilities, potentially accelerating development workflows in corporate environments.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.158",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21158",
+              "published_at": "2026-05-30T07:51:26.225Z"
+            }
+          ],
+          "perspectives": ""
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code Streamlines Plugin Development with Local Directory Support",
+          "summary": "Claude Code v2.1.157 introduces automatic loading of plugins from `.claude/skills` directories and adds `claude plugin init <name>` for scaffolding new plugins [2]. The update also enhances autocomplete for plugin commands and improves agent session management.",
+          "key_points": [
+            "No marketplace required for local plugin development",
+            "Enhanced autocomplete for plugin commands and names",
+            "Agent settings now persist across dispatched sessions"
+          ],
+          "impact": "These changes lower the barrier for custom plugin development and improve the developer experience for teams building specialized Claude Code workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.157",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21157",
+              "published_at": "2026-05-30T07:51:26.225Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Community Discusses AI Engineering Role Definition",
+          "summary": "A Hacker News discussion explores the evolving definition of \"AI Engineer\" roles, generating 29 comments from practitioners sharing their perspectives on skills and responsibilities [5].",
+          "key_points": [],
+          "impact": "This ongoing conversation reflects the industry's struggle to define emerging AI-focused roles as Claude and other AI tools reshape software development practices.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Ask HN: What Is an \"AI Engineer\"?",
+              "url": "https://news.ycombinator.com/item?id=48312377",
+              "published_at": "2026-05-28T17:26:50.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-04-16-1",
+          "headline": "Use `/tui fullscreen` for flicker-free Claude Code rendering",
+          "summary": "The `/tui fullscreen` command switches Claude Code to a flicker-free rendering mode within the same conversation. This improves visual stability and reduces screen flicker during interactions.",
+          "actionable_steps": [
+            "Open Claude Code",
+            "Type `/tui fullscreen` in the conversation",
+            "Press Enter to activate flicker-free rendering mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.110",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21110",
+              "published_at": "2026-04-16T07:29:41.642Z"
+            }
+          ],
+          "created_at": "2026-04-16T07:29:58.901Z"
+        },
+        {
+          "id": "tip-2026-04-14-1",
+          "headline": "Use the path parameter with EnterWorktree to switch between git worktrees",
+          "summary": "The EnterWorktree tool now accepts a path parameter that lets you switch into existing worktrees of your current repository. This makes it easier to work with multiple branches or feature development in parallel without switching repositories.",
+          "actionable_steps": [
+            "Identify the worktree path you want to switch to in your current repository",
+            "Use the EnterWorktree tool with the path parameter: `EnterWorktree(path=\"/path/to/your/worktree\")`",
+            "Verify you're in the correct worktree by checking the current branch or directory"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.105",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            }
+          ],
+          "created_at": "2026-04-14T07:29:49.280Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-30.mp3"
+}
