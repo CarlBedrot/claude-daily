@@ -1,0 +1,191 @@
+{
+  "date": "2026-05-31",
+  "generated_at": "2026-05-31T08:01:39.539Z",
+  "digest": {
+    "lead": "Anthropic has reportedly overtaken OpenAI as the world's most valuable AI startup, marking a significant shift in the competitive landscape.",
+    "themes": [
+      "Valuation milestone",
+      "Market leadership"
+    ],
+    "summary": "Beyond the valuation news, there's scattered discussion about model distillation techniques involving Claude Opus."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Reportedly Surpasses OpenAI as Most Valuable AI Startup",
+          "summary": "According to reports, Anthropic has become the world's most valuable AI startup, overtaking OpenAI in valuation [1]. The news has generated significant discussion in the tech community.",
+          "key_points": [
+            "Marks a major shift in the competitive AI landscape",
+            "Generated substantial community discussion with 400+ points on Hacker News"
+          ],
+          "impact": "This valuation milestone positions Anthropic as the market leader and could influence funding, talent acquisition, and strategic partnerships across the AI industry.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic surpasses OpenAI to become most valuable AI startup",
+              "url": "https://qazinform.com/news/anthropic-surpasses-openai-to-become-worlds-most-valuable-ai-startup",
+              "published_at": "2026-05-30T13:56:34.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Discussion Around Claude Opus Model Distillation Techniques",
+          "summary": "Community members are discussing distillation of Claude Opus 4.8 into Alibaba's Qwen models [1]. The conversation appears to be exploring technical approaches to model optimization.",
+          "impact": "Developers working on model efficiency and deployment may find these distillation discussions relevant for their own optimization efforts.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Opus 4.8 distilled Alibaba Qwen models",
+              "url": "https://twitter.com/maxforai/status/2060053228566495410",
+              "published_at": "2026-05-29T15:10:18.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-22-1",
+          "headline": "Pin Claude Code sessions to keep them alive during idle periods",
+          "summary": "Pinned sessions in Claude Code now persist even when not actively used and are only terminated under memory pressure after non-pinned sessions are closed first. This prevents losing your work context during breaks or when switching between tasks.",
+          "actionable_steps": [
+            "Open Claude Code and start an agents session",
+            "Press Ctrl+T to pin the current session",
+            "The session will now remain active even during idle periods"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.147",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21147",
+              "published_at": "2026-05-22T08:05:02.020Z"
+            }
+          ],
+          "created_at": "2026-05-22T08:05:13.276Z"
+        },
+        {
+          "id": "tip-2026-04-03-1",
+          "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+          "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+          "actionable_steps": [
+            "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+            "Set the value to your desired character limit (up to 500,000)",
+            "Test with large results like database schemas to verify they pass through completely"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ],
+          "created_at": "2026-04-03T07:25:28.584Z"
+        },
+        {
+          "id": "tip-2026-04-22-1",
+          "headline": "Enable forked subagents in external Claude Code builds",
+          "summary": "Forked subagents allow Claude Code to spawn separate agent processes for parallel task execution. This can improve performance for complex workflows that benefit from concurrent processing.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_FORK_SUBAGENT=1",
+            "Restart Claude Code to apply the setting",
+            "Verify subagents are working by checking for multiple agent processes during complex tasks"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.117",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21117",
+              "published_at": "2026-04-22T07:29:52.517Z"
+            }
+          ],
+          "created_at": "2026-04-22T07:30:03.420Z"
+        },
+        {
+          "id": "tip-2026-04-08-1",
+          "headline": "Enable Amazon Bedrock support with Mantle integration",
+          "summary": "Claude Code v2.1.94 added support for Amazon Bedrock through Mantle integration. This allows you to use Claude Code with Amazon's Bedrock service instead of the default API endpoints, potentially offering better performance or compliance for enterprise users.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_USE_MANTLE=1 in your system or terminal",
+            "Restart Claude Code to apply the new configuration",
+            "Verify the connection is working by running a test query"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.94",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2194",
+              "published_at": "2026-04-08T07:28:46.896Z"
+            }
+          ],
+          "created_at": "2026-04-08T07:29:00.150Z"
+        },
+        {
+          "id": "tip-2026-05-23-1",
+          "headline": "Use /usage command to track Claude Code resource consumption by category",
+          "summary": "The /usage command now provides detailed breakdowns of what's consuming your usage limits, including skills, subagents, plugins, and MCP server costs. This helps identify which features are driving your resource consumption for better optimization.",
+          "actionable_steps": [
+            "Type /usage in Claude Code",
+            "Review the per-category breakdown showing skills, subagents, plugins, and MCP-server costs",
+            "Identify high-usage categories to optimize your workflow"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.149",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21149",
+              "published_at": "2026-05-23T07:45:40.907Z"
+            }
+          ],
+          "created_at": "2026-05-23T07:45:56.432Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-05-31.mp3"
+}
