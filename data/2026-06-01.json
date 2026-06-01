@@ -1,0 +1,173 @@
+{
+  "date": "2026-06-01",
+  "generated_at": "2026-06-01T08:48:06.071Z",
+  "digest": {
+    "lead": "A quiet Sunday in the Claude ecosystem with only a minor Claude Code infrastructure update.",
+    "themes": [
+      "Maintenance updates"
+    ],
+    "summary": "The v2.1.159 release focuses on behind-the-scenes improvements with no visible changes for users."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.159 Ships Infrastructure Improvements",
+          "summary": "Anthropic released Claude Code v2.1.159 with internal infrastructure improvements [1]. The update contains no user-facing changes, focusing on backend optimizations.",
+          "key_points": [],
+          "impact": "Developers using Claude Code should see improved stability and performance, though no new features are available in this maintenance release.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.159",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21159",
+              "published_at": "2026-06-01T08:47:57.489Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-04-1",
+          "headline": "Use forceRemoteSettingsRefresh policy to ensure fresh configuration on startup",
+          "summary": "This setting forces Claude Code CLI to fetch the latest remote managed settings before starting and exits if the fetch fails. This ensures your CLI always runs with the most current configuration and prevents running with stale settings that might cause issues.",
+          "actionable_steps": [
+            "Open your Claude Code CLI configuration",
+            "Add the policy setting `forceRemoteSettingsRefresh: true`",
+            "Restart the CLI to verify it blocks startup until fresh settings are fetched"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.92",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+              "published_at": "2026-04-04T07:20:10.106Z"
+            }
+          ],
+          "created_at": "2026-04-04T07:20:24.316Z"
+        },
+        {
+          "id": "tip-2026-04-28-1",
+          "headline": "Use `alwaysLoad: true` in MCP server config to skip tool-search deferral",
+          "summary": "By default, Claude Code defers loading some MCP tools until they're needed. Setting `alwaysLoad: true` in your MCP server configuration ensures all tools from that server are immediately available without waiting for tool search to activate them.",
+          "actionable_steps": [
+            "Open your MCP server configuration file",
+            "Add `\"alwaysLoad\": true` to the server config object",
+            "Restart Claude Code to apply the changes"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.121",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21121",
+              "published_at": "2026-04-28T07:44:25.570Z"
+            }
+          ],
+          "created_at": "2026-04-28T07:44:45.297Z"
+        },
+        {
+          "id": "tip-2026-04-29-1",
+          "headline": "Set ANTHROPIC_BEDROCK_SERVICE_TIER to control AWS Bedrock performance",
+          "summary": "You can now configure which AWS Bedrock service tier Claude Code uses by setting an environment variable. This lets you choose between default performance, flexible pricing, or priority processing depending on your needs.",
+          "actionable_steps": [
+            "Set the environment variable ANTHROPIC_BEDROCK_SERVICE_TIER to one of: 'default', 'flex', or 'priority'",
+            "Restart Claude Code to apply the new service tier setting",
+            "Verify the tier is active by checking that requests include the X-Amzn-Bedrock-Service-Tier header"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.122",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21122",
+              "published_at": "2026-04-29T07:40:05.702Z"
+            }
+          ],
+          "created_at": "2026-04-29T07:40:17.675Z"
+        },
+        {
+          "id": "tip-2026-05-16-1",
+          "headline": "Use --add-dir flag to configure Claude agents with additional directories",
+          "summary": "The new --add-dir flag allows you to specify additional directories for Claude agents to access during background sessions. This expands the scope of files and resources your agent can work with beyond the default project directory.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.142 or later",
+            "Run 'claude agents --add-dir /path/to/additional/directory' when starting an agent session",
+            "Verify the agent can access files in the specified directory"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.142",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21142",
+              "published_at": "2026-05-16T07:33:58.480Z"
+            }
+          ],
+          "created_at": "2026-05-16T07:34:13.249Z"
+        },
+        {
+          "id": "tip-2026-05-05-1",
+          "headline": "Use bare /color command to randomize your Claude Code session color",
+          "summary": "The /color command without arguments now automatically selects a random color for your session. This provides a quick way to visually distinguish different sessions without manually choosing colors.",
+          "actionable_steps": [
+            "Open Claude Code terminal",
+            "Type `/color` (without any arguments)",
+            "Press Enter to apply a random session color"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.128",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21128",
+              "published_at": "2026-05-05T07:35:25.104Z"
+            }
+          ],
+          "created_at": "2026-05-05T07:35:34.870Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-06-01.mp3"
+}
