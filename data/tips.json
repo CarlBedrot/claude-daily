@@ -1177,6 +1177,32 @@
         }
       ],
       "created_at": "2026-05-29T08:14:47.087Z"
+    },
+    {
+      "id": "tip-2026-06-02-1",
+      "headline": "Enable acceptEdits mode for safer file modifications in Claude Code",
+      "summary": "Claude Code v2.1.160 introduced enhanced safety prompts in acceptEdits mode that warn before writing to potentially dangerous files like shell startup files and build configs. This prevents unintended command execution while still allowing necessary edits.",
+      "actionable_steps": [
+        "Update Claude Code to version 2.1.160 or later",
+        "Enable acceptEdits mode in your Claude Code configuration",
+        "Review and approve prompts when Claude attempts to edit shell startup files or build configs",
+        "Test that the safety prompts appear when editing files like .zshenv, .npmrc, or .pre-commit-config.yaml"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.160",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21160",
+          "published_at": "2026-06-02T08:29:37.508Z"
+        }
+      ],
+      "created_at": "2026-06-02T08:29:51.663Z"
     }
   ]
 }
