@@ -1,0 +1,221 @@
+{
+  "date": "2026-06-03",
+  "generated_at": "2026-06-03T08:36:47.682Z",
+  "digest": {
+    "lead": "Anthropic is making major infrastructure moves today, scaling Claude Mythos to critical infrastructure across 15 countries while expanding Project Glasswing.",
+    "themes": [
+      "Infrastructure scaling",
+      "Developer tooling",
+      "Market valuation"
+    ],
+    "summary": "Meanwhile, Claude Code gets useful workflow improvements with better metrics and parallel tool handling, and Michael Burry weighs in on Anthropic's trillion-dollar valuation prospects."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Scales Claude Mythos to Critical Infrastructure in 15 Countries",
+          "summary": "Anthropic has expanded Claude Mythos deployment to critical infrastructure systems across 15 countries [1], marking a significant milestone in the company's enterprise and government adoption.",
+          "key_points": [],
+          "impact": "This represents a major validation of Claude's capabilities for mission-critical applications and signals growing institutional trust in Anthropic's technology for sensitive infrastructure use cases.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic scales Claude Mythos to critical infrastructure in 15 countries",
+              "url": "https://techcrunch.com/2026/06/02/anthropic-scales-claude-mythos-to-critical-infrastructure-in-15-countries/",
+              "published_at": "2026-06-02T17:44:05.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Expands Project Glasswing Initiative",
+          "summary": "Anthropic has announced the expansion of Project Glasswing [1], though specific details about the project's scope and objectives remain limited in the initial announcement.",
+          "key_points": [],
+          "impact": "The expansion suggests Anthropic is scaling up a strategic initiative, potentially related to research, safety, or enterprise partnerships.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Expanding Project Glasswing",
+              "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+              "published_at": "2026-06-02T14:03:15.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Michael Burry Questions Anthropic's Trillion-Dollar Valuation",
+          "summary": "Investor Michael Burry has publicly stated that neither SpaceX nor Anthropic deserves a $1 trillion valuation [1], adding to ongoing debates about AI company valuations in the current market.",
+          "key_points": [],
+          "impact": "This criticism from a prominent investor could influence market sentiment around Anthropic's valuation ahead of potential IPO discussions and may prompt broader questions about AI sector valuations.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Michael Burry says neither SpaceX nor Anthropic is worth $1T",
+              "url": "https://www.businessinsider.com/big-short-michael-burry-spacex-anthropic-ipo-ai-bubble-claude-2026-6",
+              "published_at": "2026-06-02T10:09:21.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.161 Improves Metrics and Parallel Tool Handling",
+          "summary": "The latest Claude Code release adds support for custom metric dimensions through OTEL_RESOURCE_ATTRIBUTES labels [1], enhances agent workflow visibility with done/total progress indicators [1], and improves parallel tool call reliability by preventing failed Bash commands from canceling other operations [1].",
+          "key_points": [
+            "Usage metrics can now be sliced by custom dimensions like team or repository",
+            "Agent workflows show clearer progress tracking with longest-running item visibility",
+            "Failed commands in parallel tool batches no longer cancel other operations"
+          ],
+          "impact": "These improvements will help development teams better monitor Claude Code usage patterns and make agent workflows more robust for complex automation tasks.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.161",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21161",
+              "published_at": "2026-06-03T08:36:29.449Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-06-03-1",
+          "headline": "Set up OTEL_RESOURCE_ATTRIBUTES to track Claude Code usage by team",
+          "summary": "Claude Code v2.1.161 now includes OTEL_RESOURCE_ATTRIBUTES values as labels on metric datapoints. This allows you to slice and analyze usage metrics by custom dimensions like team, repository, or project. Essential for organizations wanting to track and optimize Claude usage across different groups.",
+          "actionable_steps": [
+            "Set the OTEL_RESOURCE_ATTRIBUTES environment variable with your desired labels (e.g., 'team=backend,repo=api-service')",
+            "Restart Claude Code to apply the new resource attributes",
+            "Check your metrics dashboard to verify the new labels appear on datapoints",
+            "Create queries or dashboards filtering by your custom dimensions"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.161",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21161",
+              "published_at": "2026-06-03T08:36:29.449Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-003",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        },
+        {
+          "id": "tip-2026-05-07-1",
+          "headline": "Use CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN to keep conversation in terminal scrollback",
+          "summary": "Claude Code normally uses a fullscreen alternate-screen renderer that clears when you exit. Setting this environment variable keeps your conversation in your terminal's native scrollback buffer, making it easier to review past interactions after closing Claude Code.",
+          "actionable_steps": [
+            "Set the environment variable: export CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1",
+            "Launch Claude Code as normal",
+            "Your conversation will now remain in terminal scrollback when you exit"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.132",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21132",
+              "published_at": "2026-05-07T07:52:29.358Z"
+            }
+          ],
+          "created_at": "2026-05-07T07:52:41.155Z"
+        },
+        {
+          "id": "tip-2026-04-28-2",
+          "headline": "Use `claude plugin prune` to clean up orphaned plugin dependencies",
+          "summary": "Auto-installed plugin dependencies can accumulate over time, taking up disk space. The prune command removes dependencies that are no longer needed by any installed plugins.",
+          "actionable_steps": [
+            "Run `claude plugin prune` in your terminal",
+            "Alternatively, use `claude plugin uninstall --prune [plugin-name]` to uninstall a plugin and clean up its dependencies in one step"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.120",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21120",
+              "published_at": "2026-04-28T07:44:25.570Z"
+            }
+          ],
+          "created_at": "2026-04-28T07:44:45.297Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-06-03.mp3"
+}
