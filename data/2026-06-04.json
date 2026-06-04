@@ -1,0 +1,222 @@
+{
+  "date": "2026-06-04",
+  "generated_at": "2026-06-04T08:26:34.162Z",
+  "digest": {
+    "lead": "Claude Code gets a significant v2.1.162 update with enhanced session monitoring and improved tool handling for developers.",
+    "themes": [
+      "Developer tooling",
+      "Security research",
+      "Enterprise partnerships"
+    ],
+    "summary": "Anthropic also expanded its research into AI-enabled cyber threats and launched a new services partner hub for enterprise integrations."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Publishes Research on AI-Enabled Cyber Threats",
+          "summary": "Anthropic released new research examining AI-enabled cyber threats through the MITRE ATT&CK framework [1]. The research appears to analyze how AI systems could be misused in cybersecurity attacks.",
+          "key_points": [],
+          "impact": "This research helps security professionals and policymakers understand emerging AI-powered threat vectors and develop appropriate defenses.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "AI Enabled Cyber Threats Mitre Attack",
+              "url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
+              "published_at": "2026-06-03T16:18:23.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Launches Services Track Partner Hub",
+          "summary": "Anthropic unveiled a new Services Track Partner Hub, expanding its ecosystem of enterprise service providers [1]. The hub appears designed to connect businesses with certified partners for Claude implementation and support.",
+          "key_points": [],
+          "impact": "Enterprise customers now have better access to professional services for Claude deployment, potentially accelerating adoption in large organizations.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Services Track Partner Hub",
+              "url": "https://www.anthropic.com/news/services-track-partner-hub",
+              "published_at": "2026-06-03T15:30:11.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.162 Enhances Session Monitoring and Tool Handling",
+          "summary": "The latest Claude Code update introduces several developer-focused improvements [1]. The `claude agents --json` command now includes a `waitingFor` field that shows what's blocking waiting sessions, while the tools system better handles explicit Grep/Glob requests on native builds with embedded search.",
+          "key_points": [
+            "New `waitingFor` status in JSON output helps debug blocked agent sessions",
+            "Improved tool handling for Grep/Glob on native builds with embedded search",
+            "Slash command autocomplete now fills commands instead of immediately executing them"
+          ],
+          "impact": "Daily Claude Code users will have better visibility into agent session states and more predictable command interactions, improving debugging workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.162",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21162",
+              "published_at": "2026-06-04T08:26:13.307Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Claude Opus 4.8 Max Shows Unexpected Behavior with Empty Prompts",
+          "summary": "A user shared on social media that Claude Opus 4.8 Max responds to completely empty messages, sparking discussion about the model's prompt handling [1]. The behavior has generated interest in the developer community about how the model processes null inputs.",
+          "key_points": [],
+          "impact": "This unusual behavior could indicate changes in how the latest Claude model handles edge cases, relevant for developers building applications with Claude integration.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Opus 4.8 Max responding to an empty message",
+              "url": "https://xcancel.com/davidad/status/2061858258046898518",
+              "published_at": "2026-06-03T13:14:29.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-27-2",
+          "headline": "Use `/reload-skills` to refresh skills without restarting",
+          "summary": "When you add or modify Claude Code skills, you can reload them instantly without losing your current session context. This saves time during skill development and testing workflows.",
+          "actionable_steps": [
+            "Make changes to your skill files",
+            "Run `/reload-skills` command in Claude Code",
+            "Verify new or updated skills are available in the current session"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Best Practices",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2026-05-27T08:15:51.074Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-04-23-1",
+          "headline": "Use visual mode in Claude Code for text selection and editing",
+          "summary": "Claude Code now supports vim-style visual mode (v) and visual-line mode (V) for selecting and manipulating text. This enables more efficient text editing workflows similar to vim editors.",
+          "actionable_steps": [
+            "Press 'v' to enter visual mode for character-by-character selection",
+            "Press 'V' to enter visual-line mode for line-by-line selection",
+            "Use standard vim operators on your selected text"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.118",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21118",
+              "published_at": "2026-04-23T07:30:08.080Z"
+            }
+          ],
+          "created_at": "2026-04-23T07:30:24.917Z"
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ],
+          "created_at": "2026-03-31T07:28:07.414Z"
+        }
+      ]
+    }
+  }
+}
