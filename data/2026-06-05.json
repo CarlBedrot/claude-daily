@@ -1,0 +1,246 @@
+{
+  "date": "2026-06-05",
+  "generated_at": "2026-06-05T08:19:03.273Z",
+  "digest": {
+    "lead": "Major security news today as reports surface that the NSA is using Anthropic's Mythos model for cyber operations, while Anthropic releases new open-source vulnerability discovery tools.",
+    "themes": [
+      "Security & Defense",
+      "Developer tooling",
+      "Cost optimization"
+    ],
+    "summary": "Claude Code gets version management features and plugin controls, while the community discusses AI safety concerns and cost-aware agent frameworks."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "NSA Using Anthropic's Mythos Model for Cyber Operations",
+          "summary": "Reports indicate the NSA is utilizing Anthropic's Mythos model for cyber attack operations [1]. The news has generated significant discussion in the tech community about the implications of AI models being used for offensive cyber capabilities.",
+          "key_points": [],
+          "impact": "This raises important questions about AI governance and the use of commercial AI models by government agencies for offensive capabilities, potentially affecting Anthropic's reputation and regulatory landscape.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "NSA using Anthropic's Mythos for cyber attacks",
+              "url": "https://www.ft.com/content/d02d91b3-2636-454e-9442-dc7e69f51815",
+              "published_at": "2026-06-04T20:33:02.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Calls for Global AI Development Pause Over Self-Improvement Risks",
+          "summary": "Anthropic has urged a global pause in AI development, specifically flagging concerns about AI systems achieving 'self-improvement' capabilities [1]. The announcement has received mixed reception in the tech community with limited engagement compared to other AI safety discussions.",
+          "key_points": [],
+          "impact": "This positions Anthropic as taking a cautious stance on AI safety, potentially influencing industry discussions about responsible AI development timelines and regulatory approaches.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic Urges Global Pause in AI Development, Flags 'Self-Improvement' Risk",
+              "url": "https://www.wsj.com/tech/ai/anthropic-urges-global-pause-in-ai-development-flags-self-improvement-risk-99cefb73",
+              "published_at": "2026-06-04T19:57:24.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic Releases Open-Source AI Vulnerability Discovery Framework",
+          "summary": "Anthropic has open-sourced a framework for AI-powered vulnerability discovery, generating substantial community interest [1]. The release appears to be part of Anthropic's broader security research initiatives and has attracted significant developer attention.",
+          "key_points": [],
+          "impact": "This provides security researchers and developers with new tools for automated vulnerability discovery, potentially improving software security practices across the industry.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's open-source framework for AI-powered vulnerability discovery",
+              "url": "https://github.com/anthropics/defending-code-reference-harness",
+              "published_at": "2026-06-04T20:11:20.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Adds Version Management and Plugin Controls",
+          "summary": "Claude Code v2.1.163 introduces enterprise-friendly version management with `requiredMinimumVersion` and `requiredMaximumVersion` settings that prevent startup outside allowed ranges [1]. The update also adds a `/plugin list` command with filtering options and a convenient copy shortcut for `/btw` responses [1]. A minor bug fix release (v2.1.165) followed shortly after [2].",
+          "key_points": [
+            "New version enforcement prevents Claude Code from starting outside approved version ranges",
+            "Plugin management improved with list command and enable/disable filters",
+            "Enhanced clipboard integration for `/btw` responses with preserved formatting"
+          ],
+          "impact": "These updates primarily benefit enterprise teams managing Claude Code deployments at scale, providing better version control and plugin oversight for IT administrators.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.163",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21163",
+              "published_at": "2026-06-05T08:18:39.804Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.165",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21165",
+              "published_at": "2026-06-05T08:18:39.804Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Cost.dev Launches Cost-Aware AI Agent Framework",
+          "summary": "Y Combinator-backed Cost.dev has launched a framework designed to make AI agents more cost-aware and cheaper to operate [1]. The project is gaining attention from developers looking to optimize their AI agent deployment costs.",
+          "key_points": [],
+          "impact": "This addresses a growing concern among developers deploying AI agents at scale, potentially reducing operational costs for teams using Claude and other models in production workflows.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Cost.dev (YC W21) – making agents cost-aware and cheaper to call",
+              "url": "https://cost.dev/",
+              "published_at": "2026-06-04T11:30:13.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-06-05-1",
+          "headline": "Use /plugin list command to manage Claude Code plugins",
+          "summary": "The new /plugin list command helps you track which plugins are installed and their status. You can filter to see only enabled or disabled plugins, making plugin management much easier.",
+          "actionable_steps": [
+            "Type `/plugin list` in Claude Code to see all installed plugins",
+            "Use `/plugin list --enabled` to see only active plugins",
+            "Use `/plugin list --disabled` to see only inactive plugins"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.163",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21163",
+              "published_at": "2026-06-05T08:18:39.804Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-27-4",
+          "headline": "Set up MCP servers to extend Claude's capabilities",
+          "summary": "Model Context Protocol (MCP) servers allow Claude to connect to external services like databases, APIs, and monitoring tools. This dramatically expands what Claude can do beyond just code editing.",
+          "actionable_steps": [
+            "Create or locate a `.mcp.json` file in your project",
+            "Add server configuration with connection details",
+            "Install the MCP server using Claude Code's MCP management",
+            "Verify the connection and test available tools"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Mcp",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+              "published_at": "2026-05-27T08:15:51.352Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-05-28-3",
+          "headline": "Organize project rules using .claude/rules/ directory structure",
+          "summary": "The .claude/rules/ directory lets you break down complex project instructions into organized, manageable files. This makes it easier to maintain large codebases and share specific rules across multiple projects.",
+          "actionable_steps": [
+            "Create a .claude/rules/ directory in your project root",
+            "Split your CLAUDE.md instructions into focused rule files (e.g., coding-style.md, testing.md)",
+            "Use symlinks to share common rules across multiple projects",
+            "Reference rule files from your main CLAUDE.md using import statements"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Ide Integrations",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
+              "published_at": "2026-05-28T08:16:10.322Z"
+            }
+          ],
+          "created_at": "2026-05-28T08:16:26.129Z"
+        },
+        {
+          "id": "tip-2026-05-01-1",
+          "headline": "Use claude project purge to clean up Claude Code project state",
+          "summary": "The new purge command removes all Claude Code artifacts for a project including transcripts, tasks, file history, and config entries. This is useful for cleaning up projects or starting fresh without manual file deletion.",
+          "actionable_steps": [
+            "Run 'claude project purge [path]' to delete all Claude Code state for a project",
+            "Use '--dry-run' flag first to preview what will be deleted",
+            "Add '-y' or '--yes' to skip confirmation prompts, or '-i' for interactive mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.126",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21126",
+              "published_at": "2026-05-01T07:42:32.347Z"
+            }
+          ],
+          "created_at": "2026-05-01T07:42:46.183Z"
+        },
+        {
+          "id": "tip-2026-05-14-1",
+          "headline": "Use terminalSequence field to enable desktop notifications from Claude Code hooks",
+          "summary": "The terminalSequence field allows Claude Code hooks to emit desktop notifications, window titles, and terminal bells even when running without a controlling terminal. This is particularly useful for background processes or automated workflows that need to communicate status updates to users.",
+          "actionable_steps": [
+            "Update your hook JSON output to include the terminalSequence field",
+            "Configure the field to emit the desired notification type (desktop notification, window title, or bell)",
+            "Test the hook in an environment without a controlling terminal to verify notifications work"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.141",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21141",
+              "published_at": "2026-05-14T07:54:03.971Z"
+            }
+          ],
+          "created_at": "2026-05-14T07:54:20.369Z"
+        }
+      ]
+    }
+  }
+}

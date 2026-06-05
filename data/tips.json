@@ -1229,6 +1229,31 @@
         }
       ],
       "created_at": "2026-06-03T08:36:43.310Z"
+    },
+    {
+      "id": "tip-2026-06-05-1",
+      "headline": "Use /plugin list command to manage Claude Code plugins",
+      "summary": "The new /plugin list command helps you track which plugins are installed and their status. You can filter to see only enabled or disabled plugins, making plugin management much easier.",
+      "actionable_steps": [
+        "Type `/plugin list` in Claude Code to see all installed plugins",
+        "Use `/plugin list --enabled` to see only active plugins",
+        "Use `/plugin list --disabled` to see only inactive plugins"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.163",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21163",
+          "published_at": "2026-06-05T08:18:39.804Z"
+        }
+      ],
+      "created_at": "2026-06-05T08:18:52.541Z"
     }
   ]
 }
