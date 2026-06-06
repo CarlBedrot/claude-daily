@@ -1254,6 +1254,32 @@
         }
       ],
       "created_at": "2026-06-05T08:18:52.541Z"
+    },
+    {
+      "id": "tip-2026-06-06-1",
+      "headline": "Configure fallback models for better reliability when primary model fails",
+      "summary": "Claude Code v2.1.166 introduced a fallbackModel setting that lets you specify up to three backup models that will be tried in order when your primary model is overloaded or unavailable. This prevents workflow interruptions during high-traffic periods.",
+      "actionable_steps": [
+        "Update Claude Code to version 2.1.166 or later",
+        "Add 'fallbackModel' setting to your configuration with up to 3 model names in priority order",
+        "Use '--fallback-model' flag when starting interactive sessions to apply fallbacks",
+        "Test the configuration by temporarily blocking access to your primary model"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 10,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.166",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21166",
+          "published_at": "2026-06-06T07:54:43.477Z"
+        }
+      ],
+      "created_at": "2026-06-06T07:54:56.589Z"
     }
   ]
 }

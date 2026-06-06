@@ -1,0 +1,244 @@
+{
+  "date": "2026-06-06",
+  "generated_at": "2026-06-06T07:55:09.372Z",
+  "digest": {
+    "lead": "Claude Code shipped meaningful updates today with v2.1.166 adding fallback model configuration and security hardening, while the community is building cloud-based development environments around Claude's coding tools.",
+    "themes": [
+      "Developer tooling",
+      "Cloud development",
+      "AI market dynamics"
+    ],
+    "summary": "Meanwhile, the S&P 500's rejection of AI companies like Anthropic highlights ongoing questions about AI firm valuations and market positioning."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "S&P 500 Blocks Entry for Anthropic and Other AI Companies",
+          "summary": "The S&P 500 has rejected entry for major AI companies including Anthropic and OpenAI, citing profitability requirements [1]. The decision blocks fast-track entry and maintains existing rules that require consistent profitability for index inclusion.",
+          "key_points": [
+            "S&P 500 won't waive profitability rules for AI firms despite their high valuations",
+            "Decision affects multiple major AI companies including Anthropic and OpenAI"
+          ],
+          "impact": "This signals continued skepticism from traditional financial markets about AI company business models and may affect institutional investment flows into the sector.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "S&P 500 rejects SpaceX, also blocking entry for OpenAI and Anthropic",
+              "url": "https://arstechnica.com/tech-policy/2026/06/sp-500-blocks-fast-spacex-entry-wont-waive-rule-for-unprofitable-ai-firms/",
+              "published_at": "2026-06-06T04:38:36.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.166 Adds Fallback Models and Security Improvements",
+          "summary": "Claude Code's latest release introduces configurable fallback models for when the primary model is unavailable, plus enhanced security measures [1]. The update includes glob pattern support for tool denial rules and hardened cross-session messaging to prevent privilege escalation.",
+          "key_points": [
+            "New `fallbackModel` setting allows up to three backup models in order of preference",
+            "Glob patterns now supported in deny rules, with `\"*\"` blocking all tools",
+            "Cross-session messages no longer carry user authority for improved security"
+          ],
+          "impact": "This addresses a major pain point for developers who face model unavailability during peak hours, while the security improvements make Claude Code safer for team environments.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.166",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21166",
+              "published_at": "2026-06-06T07:54:43.477Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code v2.1.167 Ships Bug Fixes",
+          "summary": "A follow-up release to v2.1.166 focused on bug fixes and reliability improvements [1]. The quick turnaround suggests active development and responsiveness to user feedback.",
+          "impact": "Shows Anthropic's commitment to rapid iteration on developer tooling, important for maintaining developer confidence in Claude Code's stability.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.167",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21167",
+              "published_at": "2026-06-06T07:54:43.477Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Boxes.dev Launches Cloud-Based Claude Code Environment",
+          "summary": "A new service called Boxes.dev eliminates localhost development by running Claude Code and other AI coding tools entirely in the cloud [1]. The launch generated significant discussion among developers exploring cloud-first coding workflows.",
+          "key_points": [
+            "Removes need for local Claude Code installations",
+            "Supports both Claude Code and Codex in cloud environment"
+          ],
+          "impact": "This could accelerate adoption of AI coding tools by reducing setup friction, particularly valuable for teams wanting consistent environments across developers.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Boxes.dev: ditch localhost; run Claude Code and Codex in the cloud",
+              "url": "https://boxes.dev",
+              "published_at": "2026-06-04T14:38:35.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "Hacker News Debates AI Skepticism in Tech Community",
+          "summary": "A popular Hacker News discussion examined why the platform's users often express anti-AI sentiment [1]. The conversation touched on concerns about hype cycles, job displacement, and technical limitations of current AI systems.",
+          "impact": "Reflects broader tensions in the developer community about AI adoption and highlights the need for more nuanced discussions about AI's role in software development.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Ask HN: Why is the HN crowd so anti-AI?",
+              "url": "https://news.ycombinator.com/item?id=48420827",
+              "published_at": "2026-06-06T02:31:51.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-06-06-1",
+          "headline": "Configure fallback models for better reliability when primary model fails",
+          "summary": "Claude Code v2.1.166 introduced a fallbackModel setting that lets you specify up to three backup models that will be tried in order when your primary model is overloaded or unavailable. This prevents workflow interruptions during high-traffic periods.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.166 or later",
+            "Add 'fallbackModel' setting to your configuration with up to 3 model names in priority order",
+            "Use '--fallback-model' flag when starting interactive sessions to apply fallbacks",
+            "Test the configuration by temporarily blocking access to your primary model"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.166",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21166",
+              "published_at": "2026-06-06T07:54:43.477Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-29-1",
+          "headline": "Use /effort xhigh command for complex tasks requiring maximum processing power",
+          "summary": "Claude Code v2.1.154 introduced the /effort xhigh command which enables high-effort processing mode for challenging tasks. This mode is now the default in Opus 4.8 and provides enhanced problem-solving capabilities for complex coding challenges.",
+          "actionable_steps": [
+            "Type /effort xhigh at the beginning of your prompt or conversation",
+            "Present your most challenging coding task or problem",
+            "Allow Claude to process with maximum effort for better results"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.154",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21154",
+              "published_at": "2026-05-29T08:14:31.545Z"
+            }
+          ],
+          "created_at": "2026-05-29T08:14:47.087Z"
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-05-27-3",
+          "headline": "Configure `disallowed-tools` in skill frontmatter to restrict model access",
+          "summary": "You can prevent Claude from using specific tools while a skill is active by declaring them in the skill's frontmatter. This gives you fine-grained control over tool availability during skill execution.",
+          "actionable_steps": [
+            "Open your skill file",
+            "Add `disallowed-tools: [\"tool1\", \"tool2\"]` to the frontmatter section",
+            "Save the file and reload skills with `/reload-skills`",
+            "Test that the specified tools are unavailable when the skill is active"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Overview",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+              "published_at": "2026-05-27T08:15:51.205Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-05-27-1",
+          "headline": "Use `/code-review --fix` to automatically apply review findings",
+          "summary": "Instead of manually implementing code review suggestions, this command automatically applies reuse, simplification, and efficiency improvements to your working tree. This streamlines the code review process by eliminating the manual step of implementing suggested changes.",
+          "actionable_steps": [
+            "Run `/code-review --fix` command in Claude Code",
+            "Review the automatically applied changes in your working tree",
+            "Verify the improvements match your expectations"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.152",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21152",
+              "published_at": "2026-05-27T08:15:50.297Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        }
+      ]
+    }
+  }
+}
