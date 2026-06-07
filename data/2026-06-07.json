@@ -1,0 +1,174 @@
+{
+  "date": "2026-06-07",
+  "generated_at": "2026-06-07T08:09:13.256Z",
+  "digest": {
+    "lead": "A quiet day in the Claude ecosystem with a routine Claude Code maintenance update being the only fresh development.",
+    "themes": [
+      "Developer tooling",
+      "Maintenance updates"
+    ],
+    "summary": "The main activity was a minor Claude Code CLI update with bug fixes and reliability improvements."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code CLI Receives Minor Bug Fix Update",
+          "summary": "Claude Code v2.1.168 was released today with bug fixes and reliability improvements [1]. The update appears to be a routine maintenance release focused on stability rather than new features.",
+          "key_points": [],
+          "impact": "Developers using Claude Code daily should see improved stability and fewer edge-case issues in their coding workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.168",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21168",
+              "published_at": "2026-06-07T08:09:02.048Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-13-1",
+          "headline": "Use case-insensitive agent type names in Claude Code configurations",
+          "summary": "Claude Code now accepts agent type names with any casing and separators. This makes configuration more flexible and reduces errors from formatting inconsistencies.",
+          "actionable_steps": [
+            "In your Claude Code configuration, use any casing for agent types (e.g., 'Code Reviewer', 'code-reviewer', 'CODE_REVIEWER')",
+            "Test that your existing configurations still work with the new flexible matching",
+            "Update documentation to reflect the more flexible naming convention"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.140",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21140",
+              "published_at": "2026-05-13T07:57:26.247Z"
+            }
+          ],
+          "created_at": "2026-05-13T07:57:42.216Z"
+        },
+        {
+          "id": "tip-2026-04-16-1",
+          "headline": "Use `/tui fullscreen` for flicker-free Claude Code rendering",
+          "summary": "The `/tui fullscreen` command switches Claude Code to a flicker-free rendering mode within the same conversation. This improves visual stability and reduces screen flicker during interactions.",
+          "actionable_steps": [
+            "Open Claude Code",
+            "Type `/tui fullscreen` in the conversation",
+            "Press Enter to activate flicker-free rendering mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.110",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21110",
+              "published_at": "2026-04-16T07:29:41.642Z"
+            }
+          ],
+          "created_at": "2026-04-16T07:29:58.901Z"
+        },
+        {
+          "id": "tip-2026-04-21-1",
+          "headline": "Use `/terminal-setup` to configure smoother fullscreen scrolling in VS Code, Cursor, and Windsurf",
+          "summary": "Claude Code v2.1.116 improved terminal scrolling performance by automatically configuring your editor's scroll sensitivity. This eliminates choppy scrolling when working in fullscreen terminal mode.",
+          "actionable_steps": [
+            "Open Claude Code in your VS Code, Cursor, or Windsurf editor",
+            "Run the `/terminal-setup` command",
+            "Allow Claude Code to configure your editor's scroll sensitivity settings"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.116",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+              "published_at": "2026-04-21T07:30:03.998Z"
+            }
+          ],
+          "created_at": "2026-04-21T07:30:17.044Z"
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-05-28-2",
+          "headline": "Set up hooks to automate Claude Code workflows at key events",
+          "summary": "Hooks allow you to run custom scripts or commands automatically when specific events occur in Claude Code, such as session start, prompt submission, or instruction loading. This enables automated setup, validation, or custom integrations.",
+          "actionable_steps": [
+            "Create hook configuration files in your project's .claude directory",
+            "Define hook events (SessionStart, UserPromptSubmit, etc.) and their corresponding actions",
+            "Configure hook handlers with command, HTTP, or MCP tool fields as needed",
+            "Test hooks using the /hooks menu to verify they trigger correctly"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 20,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Memory",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+              "published_at": "2026-05-28T08:16:09.064Z"
+            }
+          ],
+          "created_at": "2026-05-28T08:16:26.129Z"
+        }
+      ]
+    }
+  }
+}
