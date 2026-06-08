@@ -1,0 +1,210 @@
+{
+  "date": "2026-06-08",
+  "generated_at": "2026-06-08T08:32:19.365Z",
+  "digest": {
+    "lead": "Linux users are making their voices heard with a high-traction request for official Claude Desktop support, while concerns about AI economics bubble up from cost analysis showing potential unsustainability.",
+    "themes": [
+      "Linux support",
+      "AI economics",
+      "Learning tools"
+    ],
+    "summary": "Meanwhile, the community continues building creative learning tools like Lathe, which uses LLMs to help users understand domains rather than bypass them entirely."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Linux Users Rally for Official Claude Desktop Support",
+          "summary": "A GitHub issue requesting official Claude Desktop for Linux has gained significant traction on Hacker News with 490 points and 279 comments [1]. The community discussion highlights the demand for native Linux support beyond browser-based access.",
+          "key_points": [
+            "High engagement suggests substantial Linux user base interested in Claude",
+            "Current workarounds include browser usage and unofficial solutions"
+          ],
+          "impact": "This could influence Anthropic's desktop development priorities, especially given the strong developer community overlap between Linux users and AI tool adopters.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic, please ship an official Claude Desktop for Linux",
+              "url": "https://github.com/anthropics/claude-code/issues/65697",
+              "published_at": "2026-06-07T13:06:52.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Analysis Suggests AI Companies May Be Losing Money on Consumer Plans",
+          "summary": "A new analysis suggests Anthropic and OpenAI may be spending over $1000 for every $100 customers pay them [2]. The piece examines the economics of AI inference costs versus subscription pricing, raising questions about long-term sustainability of current pricing models.",
+          "impact": "This could signal potential future price adjustments or feature limitations as AI companies work toward profitability, affecting both individual users and enterprise customers planning long-term AI budgets.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic/OpenAI may be spending more than $1000 for every $100 you pay them",
+              "url": "https://ea.rna.nl/2026/06/07/anthropic-openai-may-be-spending-more-than-1000-for-every-100-you-pay-them/",
+              "published_at": "2026-06-07T12:54:54.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Developer Builds 'Lathe' Tool to Use LLMs for Learning, Not Skipping",
+          "summary": "A new open-source project called Lathe aims to help users learn new domains with LLM assistance rather than bypassing the learning process entirely [3]. The tool has gained attention on Hacker News with 303 points and positive community feedback.",
+          "key_points": [
+            "Focuses on educational scaffolding rather than task automation",
+            "Open-source approach allows community contributions and customization"
+          ],
+          "impact": "This represents a growing trend toward using AI as a learning companion rather than a replacement, potentially influencing how educational tools and developer workflows incorporate LLMs.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Lathe – Use LLMs to learn a new domain, not skip past it",
+              "url": "https://github.com/devenjarvis/lathe",
+              "published_at": "2026-06-07T11:16:46.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-09-1",
+          "headline": "Enable feedback surveys for enterprise OpenTelemetry users",
+          "summary": "If your enterprise captures telemetry data through OpenTelemetry, you can now re-enable Claude Code's session quality surveys to gather user feedback. This helps organizations collect structured feedback data alongside their existing telemetry infrastructure.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL=true",
+            "Restart your Claude Code application",
+            "Verify that session quality surveys now appear in your Claude Code interface"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.136",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21136",
+              "published_at": "2026-05-09T07:31:06.758Z"
+            }
+          ],
+          "created_at": "2026-05-09T07:31:18.385Z"
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        },
+        {
+          "id": "tip-2026-04-22-1",
+          "headline": "Enable forked subagents in external Claude Code builds",
+          "summary": "Forked subagents allow Claude Code to spawn separate agent processes for parallel task execution. This can improve performance for complex workflows that benefit from concurrent processing.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_FORK_SUBAGENT=1",
+            "Restart Claude Code to apply the setting",
+            "Verify subagents are working by checking for multiple agent processes during complex tasks"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.117",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21117",
+              "published_at": "2026-04-22T07:29:52.517Z"
+            }
+          ],
+          "created_at": "2026-04-22T07:30:03.420Z"
+        },
+        {
+          "id": "tip-2026-04-03-1",
+          "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+          "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+          "actionable_steps": [
+            "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+            "Set the value to your desired character limit (up to 500,000)",
+            "Test with large results like database schemas to verify they pass through completely"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ],
+          "created_at": "2026-04-03T07:25:28.584Z"
+        },
+        {
+          "id": "tip-2026-05-23-1",
+          "headline": "Use /usage command to track Claude Code resource consumption by category",
+          "summary": "The /usage command now provides detailed breakdowns of what's consuming your usage limits, including skills, subagents, plugins, and MCP server costs. This helps identify which features are driving your resource consumption for better optimization.",
+          "actionable_steps": [
+            "Type /usage in Claude Code",
+            "Review the per-category breakdown showing skills, subagents, plugins, and MCP-server costs",
+            "Identify high-usage categories to optimize your workflow"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.149",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21149",
+              "published_at": "2026-05-23T07:45:40.907Z"
+            }
+          ],
+          "created_at": "2026-05-23T07:45:56.432Z"
+        }
+      ]
+    }
+  }
+}
