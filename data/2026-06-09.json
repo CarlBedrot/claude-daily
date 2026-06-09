@@ -1,0 +1,178 @@
+{
+  "date": "2026-06-09",
+  "generated_at": "2026-06-09T08:09:46.127Z",
+  "digest": {
+    "lead": "Claude Code received a substantial update today with v2.1.169, introducing several developer-focused features including a safe mode for troubleshooting and session management improvements.",
+    "themes": [
+      "Developer tooling",
+      "Troubleshooting features"
+    ],
+    "summary": "The release focuses on making Claude Code more reliable and easier to debug for daily development workflows."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.169 Adds Safe Mode and Session Management Features",
+          "summary": "The latest Claude Code release introduces a `--safe-mode` flag that disables all customizations for troubleshooting, along with a `/cd` command for changing directories mid-session without breaking prompt cache [1]. The update also includes a new setting to disable bundled skills and fixes navigation issues with arrow keys [1].",
+          "key_points": [
+            "Safe mode can be enabled via `--safe-mode` flag or `CLAUDE_CODE_SAFE_MODE` environment variable",
+            "New `/cd` command preserves prompt cache when switching working directories",
+            "Bundled skills can now be disabled with `disableBundledSkills` setting"
+          ],
+          "impact": "These updates primarily benefit developers using Claude Code daily who need better debugging capabilities and session flexibility, especially those working across multiple project directories.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.169",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21169",
+              "published_at": "2026-06-09T08:09:34.115Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-06-09-1",
+          "headline": "Use safe-mode flag to troubleshoot Claude Code issues",
+          "summary": "When Claude Code behaves unexpectedly, safe mode disables all customizations including CLAUDE.md files, plugins, skills, hooks, and MCP servers. This helps isolate whether issues stem from your configurations or the base application.",
+          "actionable_steps": [
+            "Run `claude-code --safe-mode` from your terminal",
+            "Alternatively, set the environment variable `CLAUDE_CODE_SAFE_MODE=true`",
+            "Test if your issue persists in safe mode",
+            "If the issue disappears, gradually re-enable customizations to identify the culprit"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.169",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21169",
+              "published_at": "2026-06-09T08:09:34.115Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-08-1",
+          "headline": "Enable Amazon Bedrock support with Mantle integration",
+          "summary": "Claude Code v2.1.94 added support for Amazon Bedrock through Mantle integration. This allows you to use Claude Code with Amazon's Bedrock service instead of the default API endpoints, potentially offering better performance or compliance for enterprise users.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_USE_MANTLE=1 in your system or terminal",
+            "Restart Claude Code to apply the new configuration",
+            "Verify the connection is working by running a test query"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.94",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2194",
+              "published_at": "2026-04-08T07:28:46.896Z"
+            }
+          ],
+          "created_at": "2026-04-08T07:29:00.150Z"
+        },
+        {
+          "id": "tip-2026-05-27-5",
+          "headline": "Create a CLAUDE.md file to provide project context",
+          "summary": "CLAUDE.md files give Claude persistent knowledge about your project's structure, conventions, and requirements. This helps Claude make better decisions and follow your specific guidelines consistently.",
+          "actionable_steps": [
+            "Create a CLAUDE.md file in your project root",
+            "Add project overview, coding standards, and key architectural decisions",
+            "Include file structure explanations and important context",
+            "Test that Claude references this information in its responses"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Settings",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/settings",
+              "published_at": "2026-05-27T08:15:51.508Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-05-22-1",
+          "headline": "Pin Claude Code sessions to keep them alive during idle periods",
+          "summary": "Pinned sessions in Claude Code now persist even when not actively used and are only terminated under memory pressure after non-pinned sessions are closed first. This prevents losing your work context during breaks or when switching between tasks.",
+          "actionable_steps": [
+            "Open Claude Code and start an agents session",
+            "Press Ctrl+T to pin the current session",
+            "The session will now remain active even during idle periods"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.147",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21147",
+              "published_at": "2026-05-22T08:05:02.020Z"
+            }
+          ],
+          "created_at": "2026-05-22T08:05:13.276Z"
+        },
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "created_at": "2026-04-10T07:29:24.319Z"
+        }
+      ]
+    }
+  }
+}
