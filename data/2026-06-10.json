@@ -1,0 +1,224 @@
+{
+  "date": "2026-06-10",
+  "generated_at": "2026-06-10T08:19:44.008Z",
+  "digest": {
+    "lead": "Anthropic released Claude Fable 5, their most capable model yet, but it's sparking controversy over alleged anti-competitive behavior.",
+    "themes": [
+      "Model release",
+      "Safety concerns",
+      "Competition policy"
+    ],
+    "summary": "The launch comes with Claude Code v2.1.170 providing immediate access, while Project Glasswing continues generating security discussions."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude Fable 5 Launches as Anthropic's Most Capable Model",
+          "summary": "Anthropic has released Claude Fable 5, described as a 'Mythos-class model' that exceeds the capabilities of any previously available model [1][3]. However, the launch is generating significant controversy, with allegations that the model may refuse to help users who are competitors to Anthropic [2].",
+          "key_points": [
+            "Fable 5 represents Anthropic's most advanced publicly available model to date",
+            "The model has been 'made safe for general use' according to the official announcement",
+            "Community concerns focus on potential anti-competitive behavior built into the model"
+          ],
+          "perspectives": "While Anthropic positions this as their most capable model release, critics are raising serious questions about whether the model contains built-in restrictions against helping competitors, which could represent a significant departure from AI neutrality principles.",
+          "impact": "This affects all Claude users, but particularly developers and companies who may compete with Anthropic in any capacity, as they could face unexpected limitations in model assistance.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.170",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21170",
+              "published_at": "2026-06-10T08:19:18.875Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "If Claude Fable stops helping you, you'll never know",
+              "url": "https://jonready.com/blog/posts/claude-fable5-is-allowed-to-sabotage-your-app-if-youre-a-competitor.html",
+              "published_at": "2026-06-09T21:19:11.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Fable 5 Mythos 5",
+              "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+              "published_at": "2026-06-09T20:27:50.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Project Glasswing Update Draws Security Community Attention",
+          "summary": "Anthropic's Project Glasswing has received an update that's generating discussion in security circles [1]. The project continues to be a focus for those interested in AI safety and security implications.",
+          "impact": "This primarily affects AI safety researchers and security professionals monitoring Anthropic's safety initiatives and their broader implications for the industry.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's Project Glasswing Update",
+              "url": "https://www.schneier.com/blog/archives/2026/06/anthropics-project-glasswing-update.html",
+              "published_at": "2026-06-08T12:33:14.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.170 Fixes Session Management and Adds Fable 5 Access",
+          "summary": "The latest Claude Code update provides immediate access to Claude Fable 5 and resolves a critical bug where sessions weren't saving transcripts when launched from VS Code or shells with inherited environment variables [1]. This fix addresses the --resume functionality that many developers rely on for continuous workflows.",
+          "key_points": [
+            "Immediate access to Claude Fable 5 through the CLI interface",
+            "Fixed session transcript saving issues in VS Code integrated terminal",
+            "Resolved --resume functionality for inherited shell environments"
+          ],
+          "impact": "This directly benefits developers using Claude Code daily, particularly those working in VS Code who experienced session persistence issues and now gain access to the most advanced Claude model.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.170",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21170",
+              "published_at": "2026-06-10T08:19:18.875Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-06-02-1",
+          "headline": "Enable acceptEdits mode for safer file modifications in Claude Code",
+          "summary": "Claude Code v2.1.160 introduced enhanced safety prompts in acceptEdits mode that warn before writing to potentially dangerous files like shell startup files and build configs. This prevents unintended command execution while still allowing necessary edits.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.160 or later",
+            "Enable acceptEdits mode in your Claude Code configuration",
+            "Review and approve prompts when Claude attempts to edit shell startup files or build configs",
+            "Test that the safety prompts appear when editing files like .zshenv, .npmrc, or .pre-commit-config.yaml"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.160",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21160",
+              "published_at": "2026-06-02T08:29:37.508Z"
+            }
+          ],
+          "created_at": "2026-06-02T08:29:51.663Z"
+        },
+        {
+          "id": "tip-2026-04-15-1",
+          "headline": "Use ENABLE_PROMPT_CACHING_1H to extend prompt cache duration",
+          "summary": "Setting this environment variable enables 1-hour prompt cache TTL instead of the default, which can reduce API costs and improve response times for longer coding sessions. This works across API key, Bedrock, Vertex, and Foundry deployments.",
+          "actionable_steps": [
+            "Set the environment variable ENABLE_PROMPT_CACHING_1H=true in your system or deployment configuration",
+            "Restart Claude Code to apply the new caching setting",
+            "Monitor your usage to verify extended caching is working"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.108",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+              "published_at": "2026-04-15T07:29:39.027Z"
+            }
+          ],
+          "created_at": "2026-04-15T07:29:51.069Z"
+        },
+        {
+          "id": "tip-2026-04-29-1",
+          "headline": "Set ANTHROPIC_BEDROCK_SERVICE_TIER to control AWS Bedrock performance",
+          "summary": "You can now configure which AWS Bedrock service tier Claude Code uses by setting an environment variable. This lets you choose between default performance, flexible pricing, or priority processing depending on your needs.",
+          "actionable_steps": [
+            "Set the environment variable ANTHROPIC_BEDROCK_SERVICE_TIER to one of: 'default', 'flex', or 'priority'",
+            "Restart Claude Code to apply the new service tier setting",
+            "Verify the tier is active by checking that requests include the X-Amzn-Bedrock-Service-Tier header"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.122",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21122",
+              "published_at": "2026-04-29T07:40:05.702Z"
+            }
+          ],
+          "created_at": "2026-04-29T07:40:17.675Z"
+        },
+        {
+          "id": "tip-2026-04-14-1",
+          "headline": "Use the path parameter with EnterWorktree to switch between git worktrees",
+          "summary": "The EnterWorktree tool now accepts a path parameter that lets you switch into existing worktrees of your current repository. This makes it easier to work with multiple branches or feature development in parallel without switching repositories.",
+          "actionable_steps": [
+            "Identify the worktree path you want to switch to in your current repository",
+            "Use the EnterWorktree tool with the path parameter: `EnterWorktree(path=\"/path/to/your/worktree\")`",
+            "Verify you're in the correct worktree by checking the current branch or directory"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.105",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21105",
+              "published_at": "2026-04-14T07:29:33.318Z"
+            }
+          ],
+          "created_at": "2026-04-14T07:29:49.280Z"
+        },
+        {
+          "id": "tip-002",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Write a CLAUDE.md file to set project conventions once",
+          "summary": "Adding a CLAUDE.md to your project root lets you define coding standards, test commands, and architectural decisions that persist across every Claude Code session. Think of it as onboarding documentation that Claude reads automatically — you teach it once instead of repeating yourself.",
+          "author": {
+            "name": "Anthropic",
+            "role": "Claude Code Documentation"
+          },
+          "actionable_steps": [
+            "Create a CLAUDE.md in your project root with build/test/lint commands",
+            "Add coding conventions like naming patterns, preferred libraries, and file structure",
+            "Include architectural decisions and constraints Claude should respect",
+            "Use /init in Claude Code to auto-generate a starter CLAUDE.md"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Best Practices — CLAUDE.md",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2025-05-01T00:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
