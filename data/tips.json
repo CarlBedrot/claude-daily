@@ -1306,6 +1306,32 @@
         }
       ],
       "created_at": "2026-06-09T08:09:48.571Z"
+    },
+    {
+      "id": "tip-2026-06-11-1",
+      "headline": "Configure AWS region in ~/.aws config files for Bedrock integration",
+      "summary": "Claude Code now reads AWS region from your local AWS config files when AWS_REGION environment variable isn't set. This follows AWS SDK precedence rules and simplifies setup for Bedrock users.",
+      "actionable_steps": [
+        "Create or edit ~/.aws/config file",
+        "Add [default] section with region = your-aws-region (e.g., us-east-1)",
+        "Remove or unset AWS_REGION environment variable to test the fallback",
+        "Use /status command in Claude Code to verify the region source"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 3,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.172",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21172",
+          "published_at": "2026-06-11T08:30:28.667Z"
+        }
+      ],
+      "created_at": "2026-06-11T08:30:42.369Z"
     }
   ]
 }
