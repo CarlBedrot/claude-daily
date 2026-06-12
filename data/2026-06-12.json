@@ -1,0 +1,227 @@
+{
+  "date": "2026-06-12",
+  "generated_at": "2026-06-12T08:28:37.003Z",
+  "digest": {
+    "lead": "Anthropic is facing backlash over Claude Fable 5's overly aggressive content filtering, with the company issuing an apology for 'invisible guardrails' that blocked even innocent prompts.",
+    "themes": [
+      "Content filtering",
+      "Claude Code updates",
+      "Enterprise partnerships"
+    ],
+    "summary": "Meanwhile, Claude Code received two updates focusing on model management settings and scroll acceleration fixes, while Anthropic announced new enterprise partnerships with DXC and Claude Corps."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Apologizes for Claude Fable 5's Overly Aggressive Content Filtering",
+          "summary": "Anthropic issued an apology after Claude Fable 5 began blocking innocuous prompts with 'invisible guardrails' [1], including reportedly refusing to respond to simple greetings like 'hello' [2]. The aggressive filtering sparked significant discussion in the AI community.",
+          "key_points": [
+            "Users reported Fable 5 blocking basic, non-harmful prompts",
+            "Anthropic acknowledged the issue and apologized for the 'invisible distillation guardrail'"
+          ],
+          "perspectives": "While some view this as a necessary caution for AI safety, others see it as hampering the model's utility for everyday tasks.",
+          "impact": "This affects current Fable 5 users who may experience unexpected prompt rejections and raises questions about the balance between AI safety and usability for enterprise customers evaluating Claude.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic apologizes for invisible Claude Fable guardrails",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail",
+              "published_at": "2026-06-11T12:05:02.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "It blocked us at 'hello ' Anthropic Fable 5 refusing innocuous prompts",
+              "url": "https://www.theregister.com/ai-and-ml/2026/06/10/anthropic-claude-fable-5-refuses-innocuous-prompts/5253754",
+              "published_at": "2026-06-11T04:54:52.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Announces New Enterprise Partnerships with DXC and Claude Corps",
+          "summary": "Anthropic revealed two new strategic alliances [1][2], though specific details about the partnerships remain limited in the initial announcements.",
+          "impact": "These partnerships could expand Claude's reach in enterprise markets, particularly for organizations looking for AI implementation support and services.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Dxc Anthropic Alliance",
+              "url": "https://www.anthropic.com/news/dxc-anthropic-alliance",
+              "published_at": "2026-06-11T18:00:23.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Corps",
+              "url": "https://www.anthropic.com/news/claude-corps",
+              "published_at": "2026-06-11T13:36:07.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Releases Two Updates Focusing on Model Management and UI Fixes",
+          "summary": "Version 2.1.175 introduced the `enforceAvailableModels` managed setting for stricter model access controls [1], while v2.1.174 added mouse-wheel scroll acceleration settings and fixed several model picker display issues [2].",
+          "key_points": [
+            "New `enforceAvailableModels` setting prevents users from widening managed allowlists and constrains default model selection",
+            "Mouse-wheel scroll acceleration can now be disabled in fullscreen mode",
+            "Model picker now correctly shows Opus/Sonnet availability based on user's plan tier"
+          ],
+          "impact": "The enforceAvailableModels feature gives enterprise administrators tighter control over which Claude models their teams can access, while the UI fixes improve the developer experience for daily Claude Code users.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.175",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21175",
+              "published_at": "2026-06-12T08:28:12.457Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.174",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21174",
+              "published_at": "2026-06-12T08:28:12.457Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-27-2",
+          "headline": "Use `/reload-skills` to refresh skills without restarting",
+          "summary": "When you add or modify Claude Code skills, you can reload them instantly without losing your current session context. This saves time during skill development and testing workflows.",
+          "actionable_steps": [
+            "Make changes to your skill files",
+            "Run `/reload-skills` command in Claude Code",
+            "Verify new or updated skills are available in the current session"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Best Practices",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2026-05-27T08:15:51.074Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-05-07-1",
+          "headline": "Use CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN to keep conversation in terminal scrollback",
+          "summary": "Claude Code normally uses a fullscreen alternate-screen renderer that clears when you exit. Setting this environment variable keeps your conversation in your terminal's native scrollback buffer, making it easier to review past interactions after closing Claude Code.",
+          "actionable_steps": [
+            "Set the environment variable: export CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1",
+            "Launch Claude Code as normal",
+            "Your conversation will now remain in terminal scrollback when you exit"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.132",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21132",
+              "published_at": "2026-05-07T07:52:29.358Z"
+            }
+          ],
+          "created_at": "2026-05-07T07:52:41.155Z"
+        },
+        {
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-04-1",
+          "headline": "Use forceRemoteSettingsRefresh policy to ensure fresh configuration on startup",
+          "summary": "This setting forces Claude Code CLI to fetch the latest remote managed settings before starting and exits if the fetch fails. This ensures your CLI always runs with the most current configuration and prevents running with stale settings that might cause issues.",
+          "actionable_steps": [
+            "Open your Claude Code CLI configuration",
+            "Add the policy setting `forceRemoteSettingsRefresh: true`",
+            "Restart the CLI to verify it blocks startup until fresh settings are fetched"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.92",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+              "published_at": "2026-04-04T07:20:10.106Z"
+            }
+          ],
+          "created_at": "2026-04-04T07:20:24.316Z"
+        },
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        }
+      ]
+    }
+  }
+}
