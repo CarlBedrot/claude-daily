@@ -1332,6 +1332,31 @@
         }
       ],
       "created_at": "2026-06-11T08:30:42.369Z"
+    },
+    {
+      "id": "tip-2026-06-13-1",
+      "headline": "Set language setting to control session title generation",
+      "summary": "Claude Code now generates session titles in the language of your conversation. You can pin a specific language to ensure consistent title generation regardless of conversation content.",
+      "actionable_steps": [
+        "Open Claude Code settings",
+        "Locate the 'language' setting",
+        "Set it to your preferred language code (e.g., 'en', 'es', 'fr')"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.176",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21176",
+          "published_at": "2026-06-13T08:05:26.728Z"
+        }
+      ],
+      "created_at": "2026-06-13T08:05:40.073Z"
     }
   ]
 }

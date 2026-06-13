@@ -1,0 +1,229 @@
+{
+  "date": "2026-06-13",
+  "generated_at": "2026-06-13T08:05:48.920Z",
+  "digest": {
+    "lead": "The Trump administration has restricted foreign access to Anthropic's most powerful AI models, including the new Fable Mythos system, marking a significant shift in AI export controls.",
+    "themes": [
+      "Export restrictions",
+      "Model releases",
+      "Developer tools"
+    ],
+    "summary": "Meanwhile, Claude Code received multilingual session titles and improved AWS credential caching, while Anthropic announced a partnership with TCS and published its public record."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Trump Administration Blocks Foreign Access to Anthropic's Most Powerful AI Models",
+          "summary": "The Trump administration has implemented new restrictions preventing foreign entities from accessing Anthropic's most advanced AI models [3]. This policy change specifically affects the newly announced Fable Mythos system [2], representing a significant escalation in AI export controls.",
+          "key_points": [
+            "Foreign access to Anthropic's most powerful models now blocked",
+            "New Fable Mythos system affected by the restrictions"
+          ],
+          "impact": "This directly affects international developers and organizations using Claude's most advanced capabilities, potentially forcing them to alternative providers or lower-tier models.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Fable Mythos Access",
+              "url": "https://www.anthropic.com/news/fable-mythos-access",
+              "published_at": "2026-06-13T01:13:41.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Trump admin blocks foreign access to Anthropic's most powerful AI models",
+              "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security",
+              "published_at": "2026-06-12T23:52:27.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Partners with TCS to Expand Enterprise Reach",
+          "summary": "Anthropic has announced a new partnership with Tata Consultancy Services (TCS) [1], likely aimed at expanding Claude's presence in enterprise markets and consulting services.",
+          "impact": "This partnership could significantly increase Claude adoption among TCS's extensive enterprise client base, particularly in global markets where TCS has strong presence.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Tcs Anthropic Partnership",
+              "url": "https://www.anthropic.com/news/tcs-anthropic-partnership",
+              "published_at": "2026-06-12T17:59:27.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic Publishes Public Record Documentation",
+          "summary": "Anthropic has released new public record documentation [1], providing greater transparency into the company's operations, policies, or regulatory compliance efforts.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Anthropic Public Record",
+              "url": "https://www.anthropic.com/news/anthropic-public-record",
+              "published_at": "2026-06-12T16:24:44.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.176 Adds Multilingual Session Titles and Improved AWS Caching",
+          "summary": "The latest Claude Code release introduces automatic session title generation in the conversation's language, with an optional language setting for consistency [1]. The update also improves AWS Bedrock credential caching by respecting actual expiration times instead of using a fixed one-hour limit [1].",
+          "key_points": [
+            "Session titles now generated in conversation language with configurable language pinning",
+            "New `footerLinksRegexes` setting for customizable footer link badges",
+            "Enhanced Bedrock credential caching respects actual expiration times"
+          ],
+          "impact": "These improvements enhance the experience for international developers and teams using AWS Bedrock, reducing authentication friction and providing better localization support.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.176",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21176",
+              "published_at": "2026-06-13T08:05:26.728Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-06-13-1",
+          "headline": "Set language setting to control session title generation",
+          "summary": "Claude Code now generates session titles in the language of your conversation. You can pin a specific language to ensure consistent title generation regardless of conversation content.",
+          "actionable_steps": [
+            "Open Claude Code settings",
+            "Locate the 'language' setting",
+            "Set it to your preferred language code (e.g., 'en', 'es', 'fr')"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.176",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21176",
+              "published_at": "2026-06-13T08:05:26.728Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        },
+        {
+          "id": "tip-2026-05-05-1",
+          "headline": "Use bare /color command to randomize your Claude Code session color",
+          "summary": "The /color command without arguments now automatically selects a random color for your session. This provides a quick way to visually distinguish different sessions without manually choosing colors.",
+          "actionable_steps": [
+            "Open Claude Code terminal",
+            "Type `/color` (without any arguments)",
+            "Press Enter to apply a random session color"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.128",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21128",
+              "published_at": "2026-05-05T07:35:25.104Z"
+            }
+          ],
+          "created_at": "2026-05-05T07:35:34.870Z"
+        },
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        },
+        {
+          "id": "tip-2026-05-14-1",
+          "headline": "Use terminalSequence field to enable desktop notifications from Claude Code hooks",
+          "summary": "The terminalSequence field allows Claude Code hooks to emit desktop notifications, window titles, and terminal bells even when running without a controlling terminal. This is particularly useful for background processes or automated workflows that need to communicate status updates to users.",
+          "actionable_steps": [
+            "Update your hook JSON output to include the terminalSequence field",
+            "Configure the field to emit the desired notification type (desktop notification, window title, or bell)",
+            "Test the hook in an environment without a controlling terminal to verify notifications work"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.141",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21141",
+              "published_at": "2026-05-14T07:54:03.971Z"
+            }
+          ],
+          "created_at": "2026-05-14T07:54:20.369Z"
+        }
+      ]
+    }
+  }
+}
