@@ -1,0 +1,191 @@
+{
+  "date": "2026-06-14",
+  "generated_at": "2026-06-14T08:21:43.699Z",
+  "digest": {
+    "lead": "The big story today is Amazon CEO discussions triggering a U.S. crackdown on Anthropic models, drawing intense community scrutiny with hundreds of comments on Hacker News.",
+    "themes": [
+      "Regulatory pressure",
+      "Model releases",
+      "Government relations"
+    ],
+    "summary": "Meanwhile, Anthropic quietly released Claude Fable 5 Mythos 5, though details remain sparse."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Amazon CEO Discussions Lead to U.S. Government Crackdown on Anthropic Models",
+          "summary": "Conversations between Amazon's CEO and U.S. officials have reportedly triggered government action against Anthropic's AI models [1]. The news has generated significant discussion in the tech community, with nearly 500 comments on Hacker News reflecting widespread concern about regulatory overreach and its implications for AI development [1].",
+          "key_points": [
+            "Amazon CEO's communications with officials directly led to regulatory action",
+            "Story has attracted intense community attention with 664 upvotes and 490 comments"
+          ],
+          "impact": "This regulatory development could significantly impact Anthropic's operations and set precedent for government intervention in AI companies, particularly affecting enterprise customers and developers relying on Claude models.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Amazon CEO's talks with U.S. officials triggered crackdown on Anthropic models",
+              "url": "https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578?st=Yct6gx&reflink=desktopwebshare_permalink",
+              "published_at": "2026-06-13T16:57:49.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Releases Claude Fable 5 Mythos 5",
+          "summary": "Anthropic has announced the release of Claude Fable 5 Mythos 5, though the company has provided minimal details about the new model's capabilities or improvements [2].",
+          "impact": "The sparse announcement leaves developers and users uncertain about what improvements or new features this model iteration brings to the Claude ecosystem.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Fable 5 Mythos 5",
+              "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+              "published_at": "2026-06-13T02:30:15.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-27-1",
+          "headline": "Use `/code-review --fix` to automatically apply review findings",
+          "summary": "Instead of manually implementing code review suggestions, this command automatically applies reuse, simplification, and efficiency improvements to your working tree. This streamlines the code review process by eliminating the manual step of implementing suggested changes.",
+          "actionable_steps": [
+            "Run `/code-review --fix` command in Claude Code",
+            "Review the automatically applied changes in your working tree",
+            "Verify the improvements match your expectations"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.152",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21152",
+              "published_at": "2026-05-27T08:15:50.297Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-04-23-1",
+          "headline": "Use visual mode in Claude Code for text selection and editing",
+          "summary": "Claude Code now supports vim-style visual mode (v) and visual-line mode (V) for selecting and manipulating text. This enables more efficient text editing workflows similar to vim editors.",
+          "actionable_steps": [
+            "Press 'v' to enter visual mode for character-by-character selection",
+            "Press 'V' to enter visual-line mode for line-by-line selection",
+            "Use standard vim operators on your selected text"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.118",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21118",
+              "published_at": "2026-04-23T07:30:08.080Z"
+            }
+          ],
+          "created_at": "2026-04-23T07:30:24.917Z"
+        },
+        {
+          "id": "tip-2026-05-01-1",
+          "headline": "Use claude project purge to clean up Claude Code project state",
+          "summary": "The new purge command removes all Claude Code artifacts for a project including transcripts, tasks, file history, and config entries. This is useful for cleaning up projects or starting fresh without manual file deletion.",
+          "actionable_steps": [
+            "Run 'claude project purge [path]' to delete all Claude Code state for a project",
+            "Use '--dry-run' flag first to preview what will be deleted",
+            "Add '-y' or '--yes' to skip confirmation prompts, or '-i' for interactive mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.126",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21126",
+              "published_at": "2026-05-01T07:42:32.347Z"
+            }
+          ],
+          "created_at": "2026-05-01T07:42:46.183Z"
+        },
+        {
+          "id": "tip-2026-06-06-1",
+          "headline": "Configure fallback models for better reliability when primary model fails",
+          "summary": "Claude Code v2.1.166 introduced a fallbackModel setting that lets you specify up to three backup models that will be tried in order when your primary model is overloaded or unavailable. This prevents workflow interruptions during high-traffic periods.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.166 or later",
+            "Add 'fallbackModel' setting to your configuration with up to 3 model names in priority order",
+            "Use '--fallback-model' flag when starting interactive sessions to apply fallbacks",
+            "Test the configuration by temporarily blocking access to your primary model"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.166",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21166",
+              "published_at": "2026-06-06T07:54:43.477Z"
+            }
+          ],
+          "created_at": "2026-06-06T07:54:56.589Z"
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        }
+      ]
+    }
+  }
+}
