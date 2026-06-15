@@ -1,0 +1,199 @@
+{
+  "date": "2026-06-15",
+  "generated_at": "2026-06-15T09:01:09.401Z",
+  "digest": {
+    "lead": "The big story today is regulatory scrutiny heating up around Anthropic, with the EU Commission examining the practical consequences of a recent Anthropic decision while broader questions emerge about the company's trajectory.",
+    "themes": [
+      "Regulatory scrutiny",
+      "Valuation discussions",
+      "Corporate governance"
+    ],
+    "summary": "Meanwhile, discussions continue about FTX's former stake in Anthropic being worth approximately $75B at current valuations, highlighting the company's dramatic growth."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "EU Commission Examines Anthropic Decision Amid Regulatory Concerns",
+          "summary": "The European Union Commission is looking into the practical consequences of a recent Anthropic decision [1], drawing significant discussion in the tech community. The regulatory attention comes as questions emerge about whether Anthropic specifically requested certain actions or outcomes [2].",
+          "key_points": [
+            "EU regulatory body actively examining Anthropic's recent corporate decisions",
+            "Community debate suggests uncertainty about Anthropic's role in requesting specific outcomes"
+          ],
+          "impact": "This regulatory scrutiny could influence how Anthropic operates in European markets and may set precedents for AI company oversight globally.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "EU Commission looking at practical consequences of Anthropic decision",
+              "url": "https://www.reuters.com/legal/litigation/eu-commission-looking-practical-consequences-anthropic-decision-spokesperson-2026-06-14/",
+              "published_at": "2026-06-14T14:33:11.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Did Anthropic ask for this?",
+              "url": "https://www.verysane.ai/p/did-anthropic-ask-for-this",
+              "published_at": "2026-06-14T22:23:05.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "FTX's Former Anthropic Stake Valued at $75B Under Current Valuation",
+          "summary": "FTX's former stake in Anthropic would be worth approximately $75 billion at today's valuation [1], highlighting the dramatic growth in Anthropic's market value since the cryptocurrency exchange's collapse.",
+          "impact": "This valuation milestone underscores Anthropic's rapid ascent in the AI market and could influence future investment and partnership decisions for the company.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "FTX's former Anthropic stake would be worth about $75B at today's valuation",
+              "url": "https://news.ycombinator.com/item?id=48529190",
+              "published_at": "2026-06-14T16:31:27.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-27-3",
+          "headline": "Configure `disallowed-tools` in skill frontmatter to restrict model access",
+          "summary": "You can prevent Claude from using specific tools while a skill is active by declaring them in the skill's frontmatter. This gives you fine-grained control over tool availability during skill execution.",
+          "actionable_steps": [
+            "Open your skill file",
+            "Add `disallowed-tools: [\"tool1\", \"tool2\"]` to the frontmatter section",
+            "Save the file and reload skills with `/reload-skills`",
+            "Test that the specified tools are unavailable when the skill is active"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Overview",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+              "published_at": "2026-05-27T08:15:51.205Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-05-28-3",
+          "headline": "Organize project rules using .claude/rules/ directory structure",
+          "summary": "The .claude/rules/ directory lets you break down complex project instructions into organized, manageable files. This makes it easier to maintain large codebases and share specific rules across multiple projects.",
+          "actionable_steps": [
+            "Create a .claude/rules/ directory in your project root",
+            "Split your CLAUDE.md instructions into focused rule files (e.g., coding-style.md, testing.md)",
+            "Use symlinks to share common rules across multiple projects",
+            "Reference rule files from your main CLAUDE.md using import statements"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Ide Integrations",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
+              "published_at": "2026-05-28T08:16:10.322Z"
+            }
+          ],
+          "created_at": "2026-05-28T08:16:26.129Z"
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-05-16-1",
+          "headline": "Use --add-dir flag to configure Claude agents with additional directories",
+          "summary": "The new --add-dir flag allows you to specify additional directories for Claude agents to access during background sessions. This expands the scope of files and resources your agent can work with beyond the default project directory.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.142 or later",
+            "Run 'claude agents --add-dir /path/to/additional/directory' when starting an agent session",
+            "Verify the agent can access files in the specified directory"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.142",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21142",
+              "published_at": "2026-05-16T07:33:58.480Z"
+            }
+          ],
+          "created_at": "2026-05-16T07:34:13.249Z"
+        },
+        {
+          "id": "tip-2026-05-20-1",
+          "headline": "Use `claude agents --json` to integrate Claude sessions with external tools",
+          "summary": "The new JSON output format allows you to programmatically access live Claude session information. This enables integration with terminal multiplexers like tmux, status bars, and custom session management tools.",
+          "actionable_steps": [
+            "Run `claude agents --json` in your terminal to see the JSON output format",
+            "Parse the JSON output in your scripts to extract session information",
+            "Integrate the JSON data with tools like tmux-resurrect or custom status bars",
+            "Set up automated session monitoring or management based on the structured data"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.145",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21145",
+              "published_at": "2026-05-20T08:07:02.323Z"
+            }
+          ],
+          "created_at": "2026-05-20T08:07:19.268Z"
+        }
+      ]
+    }
+  }
+}
