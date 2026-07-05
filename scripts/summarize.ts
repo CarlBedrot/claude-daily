@@ -63,7 +63,11 @@ Content: ${item.content.slice(0, 500)}`,
 
   const response = await client.messages.create({
     model: "claude-sonnet-5",
-    max_tokens: 4096,
+    max_tokens: 8192,
+    // Sonnet 5 runs adaptive thinking by default when `thinking` is omitted;
+    // disabled here so output starts with the text block and max_tokens goes
+    // entirely to the briefing JSON.
+    thinking: { type: "disabled" },
     messages: [
       {
         role: "user",
@@ -73,8 +77,8 @@ Content: ${item.content.slice(0, 500)}`,
     system: SYSTEM_PROMPT,
   });
 
-  const raw =
-    response.content[0].type === "text" ? response.content[0].text : "";
+  const textBlock = response.content.find((b) => b.type === "text");
+  const raw = textBlock?.type === "text" ? textBlock.text : "";
   const text = raw.replace(/^```(?:json)?\s*\n?/, "").replace(/\n?```\s*$/, "");
   const parsed = JSON.parse(text);
 

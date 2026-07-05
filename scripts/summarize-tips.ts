@@ -51,7 +51,8 @@ Content: ${input.item.content.slice(0, 800)}`,
 
   const response = await client.messages.create({
     model: "claude-sonnet-5",
-    max_tokens: 4096,
+    max_tokens: 8192,
+    thinking: { type: "disabled" },
     messages: [
       {
         role: "user",
@@ -61,8 +62,8 @@ Content: ${input.item.content.slice(0, 800)}`,
     system: SYSTEM_PROMPT,
   });
 
-  const raw =
-    response.content[0].type === "text" ? response.content[0].text : "[]";
+  const textBlock = response.content.find((b) => b.type === "text");
+  const raw = textBlock?.type === "text" ? textBlock.text : "[]";
   const text = raw.replace(/^```(?:json)?\s*\n?/, "").replace(/\n?```\s*$/, "");
   const parsed: ({
     headline: string;

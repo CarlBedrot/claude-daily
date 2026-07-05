@@ -66,6 +66,7 @@ Guidelines:
   const response = await anthropic.messages.create({
     model: "claude-sonnet-5",
     max_tokens: 1024,
+    thinking: { type: "disabled" },
     messages: [{ role: "user", content: prompt }],
   });
 
