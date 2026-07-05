@@ -1,0 +1,333 @@
+{
+  "date": "2026-07-05",
+  "generated_at": "2026-07-05T11:04:55.654Z",
+  "digest": {
+    "lead": "Anthropic shipped Claude Sonnet 5 this week [8], alongside a new Visible Extended Thinking feature that lets users see the model's reasoning process in real time [5]. Claude Code continues its rapid-fire patch cadence, with three releases in short succession tightening permission defaults and fixing session stability issues [1][2][3].",
+    "themes": [
+      "Model updates",
+      "Developer tooling",
+      "Safety & governance"
+    ],
+    "summary": "Anthropic also published updates to its Responsible Scaling Policy [6] and detailed a new jailbreak-resistance framework developed with Fable [7], while the community debated a prompt-injection complaint on Reddit [4] and a sharp critique from Palantir's Alex Karp about model providers and customer IP [11]. On the tooling side, an open-source Claude Cowork alternative [10] and a new MCP cloud hosting startup [9] both drew attention on Hacker News."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic releases Claude Sonnet 5",
+          "summary": "Anthropic announced Claude Sonnet 5, the latest release in its Sonnet model line [8]. The announcement lands alongside a new visible extended thinking feature, suggesting the two ship as part of a coordinated update to Claude's reasoning capabilities [5][8].",
+          "key_points": [
+            "Claude Sonnet 5 is now live [8]",
+            "Claude Code has already been updated to reflect Sonnet 5-specific session handling changes [1]"
+          ],
+          "impact": "Developers and teams building on Claude will want to test Sonnet 5 against existing workloads, as it's likely to become the default recommendation for many production use cases.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Sonnet 5",
+              "url": "https://www.anthropic.com/news/claude-sonnet-5",
+              "published_at": "2026-07-03T01:20:09.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic makes Claude's extended thinking visible to users",
+          "summary": "Anthropic launched Visible Extended Thinking, a feature that surfaces Claude's step-by-step reasoning process directly in the interface rather than keeping it hidden [5]. This gives users more transparency into how Claude arrives at answers, particularly for complex or multi-step tasks.",
+          "key_points": [
+            "Extended thinking traces are now shown to users rather than fully hidden [5]"
+          ],
+          "impact": "Increased transparency helps users calibrate trust in Claude's answers and debug faulty reasoning, especially for high-stakes or technical queries.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Visible Extended Thinking",
+              "url": "https://www.anthropic.com/news/visible-extended-thinking",
+              "published_at": "2026-07-03T10:15:42.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic updates its Responsible Scaling Policy",
+          "summary": "Anthropic published a refreshed version of its Responsible Scaling Policy, the framework it uses to govern how it develops and deploys increasingly capable models [6]. The update comes the same week as Claude Sonnet 5's release and a new jailbreak-resistance framework, suggesting a broader push on safety commitments alongside capability improvements [6][7][8].",
+          "key_points": [
+            "The policy update accompanies related safety work, including a new anti-jailbreak framework built with Fable [7]"
+          ],
+          "impact": "Enterprises and regulators tracking AI governance will scrutinize how Anthropic's scaling commitments evolve as its models grow more capable.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Anthropics Responsible Scaling Policy",
+              "url": "https://www.anthropic.com/news/anthropics-responsible-scaling-policy",
+              "published_at": "2026-07-03T10:15:38.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-004",
+          "headline": "Anthropic details jailbreak-resistance framework with Fable",
+          "summary": "Anthropic published details on a new jailbreak safeguards framework developed in partnership with Fable, aimed at making Claude more resistant to adversarial prompting techniques [7].",
+          "key_points": [
+            "Framework targets systematic jailbreak attempts rather than one-off prompt fixes [7]"
+          ],
+          "impact": "Security teams and enterprises deploying Claude in customer-facing products benefit from stronger built-in defenses against misuse.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Fable Safeguards Jailbreak Framework",
+              "url": "https://www.anthropic.com/news/fable-safeguards-jailbreak-framework",
+              "published_at": "2026-07-03T10:14:45.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-005",
+          "headline": "User complaint alleges Claude injects unsolicited messages mid-conversation",
+          "summary": "A Reddit thread, surfaced on Hacker News, accuses Anthropic of performing prompt injection on users by inserting system-level reminders into conversations without clear disclosure [4]. The thread reportedly generated discussion but relatively little engagement on HN itself.",
+          "key_points": [
+            "Complaint centers on unexpected system-role messages appearing mid-conversation [4]",
+            "Notably, a same-day Claude Code changelog entry removes mid-conversation system-role harness reminders for Sonnet 5 sessions, which may be a direct response [1]"
+          ],
+          "impact": "Raises transparency concerns for users who want a clear boundary between model output and hidden system instructions; Anthropic's quick changelog fix suggests it's being addressed.",
+          "perspectives": "The Reddit/HN poster frames this as deceptive prompt injection [4], while the same-day Claude Code changelog suggests it was an internal harness mechanism now being removed rather than a deliberate manipulation tactic [1].",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic performing prompt injection on its users",
+              "url": "https://old.reddit.com/r/LLMDevs/comments/1udpw9h/just_got_this_response_from_claude_what_is_going/",
+              "published_at": "2026-07-05T01:30:44.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code tightens permission defaults and fixes session bugs across three rapid releases",
+          "summary": "Claude Code shipped versions 2.1.199 through 2.1.201 in quick succession, changing the default permission mode from 'default' to 'Manual' across the CLI, VS Code, and JetBrains integrations [2], while also fixing crashes, dropped streaming responses, and background sessions silently dying after sleep/wake [2][3]. A companion change removes mid-conversation system-role harness reminders specifically for Claude Sonnet 5 sessions [1].",
+          "key_points": [
+            "Default permission mode is now 'Manual' everywhere, with backward-compatible aliases for 'default' [2]",
+            "Stacked slash-skill invocations now load up to 5 skills instead of just the first [3]",
+            "SSL/TLS proxy errors now fail fast with actionable guidance instead of silently burning retries [3]",
+            "Partial streaming output is preserved and flagged as incomplete when the API errors mid-stream [3]"
+          ],
+          "impact": "Developers running Claude Code daily get safer defaults (manual approval before actions) plus fixes for annoying session drops and skill-chaining bugs — directly improving reliability of automated coding workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.201",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21201",
+              "published_at": "2026-07-05T11:04:10.622Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.200",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21200",
+              "published_at": "2026-07-05T11:04:10.622Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.199",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21199",
+              "published_at": "2026-07-05T11:04:10.622Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Developer builds open-source alternative to Claude Cowork",
+          "summary": "A Show HN post introduced Valmis, an open-source project positioned as an alternative to Claude Cowork [10]. The project drew moderate engagement on Hacker News, reflecting continued community interest in open alternatives to Anthropic's collaborative work features.",
+          "key_points": [
+            "Project is open-source and hosted on GitHub [10]"
+          ],
+          "impact": "Gives teams wary of vendor lock-in a self-hostable option inspired by Claude Cowork's workflow model.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: I built an open-source alternative to Claude Cowork",
+              "url": "https://github.com/valmishq/valmis",
+              "published_at": "2026-07-02T13:17:49.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "YC-backed Manufact launches MCP hosting service",
+          "summary": "Manufact, a Y Combinator S25 startup, launched an 'MCP Cloud' offering on Hacker News, aiming to simplify hosting and managing Model Context Protocol servers used by Claude and other AI agents [9]. The launch generated significant discussion with 70 comments.",
+          "key_points": [
+            "Positioned as managed infrastructure for MCP servers [9]",
+            "Drew active discussion (70 comments) suggesting strong developer interest in MCP tooling maturity [9]"
+          ],
+          "impact": "Signals growing commercial infrastructure forming around MCP, relevant to developers building Claude integrations who don't want to self-host MCP servers.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Launch HN: Manufact (YC S25) – MCP Cloud",
+              "url": "https://manufact.com",
+              "published_at": "2026-07-02T15:11:20.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-003",
+          "headline": "Palantir's Karp criticizes Anthropic and OpenAI over customer IP and token economics",
+          "summary": "Palantir CEO Alex Karp made public comments alleging that Anthropic and OpenAI are 'stealing' customer IP and argued that their tokens have low underlying value, sparking a 22-comment debate on Hacker News [11].",
+          "key_points": [
+            "Criticism centers on IP handling and the economic value of model provider tokens [11]"
+          ],
+          "impact": "Feeds into broader enterprise concerns about data/IP handling when adopting foundation model APIs, relevant to companies evaluating vendor trust in procurement decisions.",
+          "perspectives": "Karp's comments represent a competitor's viewpoint (Palantir competes for enterprise AI contracts) and were met with mixed reactions in the HN discussion [11].",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Karp: Anthropic/OpenAI are stealing customer IP and their tokens have low value",
+              "url": "https://twitter.com/Ric_RTP/status/2072403984304984202",
+              "published_at": "2026-07-02T12:17:58.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-07-05-1",
+          "headline": "Set an idle timeout for AskUserQuestion dialogs via /config",
+          "summary": "In Claude Code v2.1.200, AskUserQuestion dialogs no longer auto-continue by default. If you want dialogs to proceed automatically after inactivity, you now need to explicitly opt into an idle timeout.",
+          "actionable_steps": [
+            "Run `/config` inside Claude Code",
+            "Locate the idle timeout setting for AskUserQuestion dialogs",
+            "Enable and set your desired timeout value"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.200",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21200",
+              "published_at": "2026-07-05T11:04:10.622Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-07-05-2",
+          "headline": "Update permission mode references to 'manual' after upgrading Claude Code",
+          "summary": "The default permission mode across CLI, VS Code, and JetBrains is now called 'Manual' instead of 'default'. Existing configs using 'default' still work, but scripts or docs referencing the old name should be updated for clarity.",
+          "actionable_steps": [
+            "Search your configs and scripts for `--permission-mode default` or `\"defaultMode\": \"default\"`",
+            "Replace with `--permission-mode manual` or `\"defaultMode\": \"manual\"`",
+            "Verify behavior matches expectations in CLI, VS Code, and JetBrains integrations"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Best Practices",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2026-07-05T11:04:18.157Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-07-05-3",
+          "headline": "Ensure disabledMcpServers/enabledMcpServers are arrays in .claude.json",
+          "summary": "A startup crash occurred when these fields were set to non-array values in .claude.json. Setting them correctly as arrays avoids this crash after upgrading Claude Code.",
+          "actionable_steps": [
+            "Open your .claude.json file",
+            "Check the `disabledMcpServers` and `enabledMcpServers` fields",
+            "Ensure both are formatted as arrays (e.g., `[]` or `[\"server1\"]`), not strings or objects"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Mcp",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+              "published_at": "2026-07-05T11:04:18.452Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-06-11-1",
+          "headline": "Configure AWS region in ~/.aws config files for Bedrock integration",
+          "summary": "Claude Code now reads AWS region from your local AWS config files when AWS_REGION environment variable isn't set. This follows AWS SDK precedence rules and simplifies setup for Bedrock users.",
+          "actionable_steps": [
+            "Create or edit ~/.aws/config file",
+            "Add [default] section with region = your-aws-region (e.g., us-east-1)",
+            "Remove or unset AWS_REGION environment variable to test the fallback",
+            "Use /status command in Claude Code to verify the region source"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.172",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21172",
+              "published_at": "2026-06-11T08:30:28.667Z"
+            }
+          ],
+          "created_at": "2026-06-11T08:30:42.369Z"
+        },
+        {
+          "id": "tip-2026-06-06-1",
+          "headline": "Configure fallback models for better reliability when primary model fails",
+          "summary": "Claude Code v2.1.166 introduced a fallbackModel setting that lets you specify up to three backup models that will be tried in order when your primary model is overloaded or unavailable. This prevents workflow interruptions during high-traffic periods.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.166 or later",
+            "Add 'fallbackModel' setting to your configuration with up to 3 model names in priority order",
+            "Use '--fallback-model' flag when starting interactive sessions to apply fallbacks",
+            "Test the configuration by temporarily blocking access to your primary model"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.166",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21166",
+              "published_at": "2026-06-06T07:54:43.477Z"
+            }
+          ],
+          "created_at": "2026-06-06T07:54:56.589Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-07-05.mp3"
+}

@@ -1357,6 +1357,81 @@
         }
       ],
       "created_at": "2026-06-13T08:05:40.073Z"
+    },
+    {
+      "id": "tip-2026-07-05-1",
+      "headline": "Set an idle timeout for AskUserQuestion dialogs via /config",
+      "summary": "In Claude Code v2.1.200, AskUserQuestion dialogs no longer auto-continue by default. If you want dialogs to proceed automatically after inactivity, you now need to explicitly opt into an idle timeout.",
+      "actionable_steps": [
+        "Run `/config` inside Claude Code",
+        "Locate the idle timeout setting for AskUserQuestion dialogs",
+        "Enable and set your desired timeout value"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 2,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.200",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21200",
+          "published_at": "2026-07-05T11:04:10.622Z"
+        }
+      ],
+      "created_at": "2026-07-05T11:04:26.651Z"
+    },
+    {
+      "id": "tip-2026-07-05-2",
+      "headline": "Update permission mode references to 'manual' after upgrading Claude Code",
+      "summary": "The default permission mode across CLI, VS Code, and JetBrains is now called 'Manual' instead of 'default'. Existing configs using 'default' still work, but scripts or docs referencing the old name should be updated for clarity.",
+      "actionable_steps": [
+        "Search your configs and scripts for `--permission-mode default` or `\"defaultMode\": \"default\"`",
+        "Replace with `--permission-mode manual` or `\"defaultMode\": \"manual\"`",
+        "Verify behavior matches expectations in CLI, VS Code, and JetBrains integrations"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Best Practices",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+          "published_at": "2026-07-05T11:04:18.157Z"
+        }
+      ],
+      "created_at": "2026-07-05T11:04:26.651Z"
+    },
+    {
+      "id": "tip-2026-07-05-3",
+      "headline": "Ensure disabledMcpServers/enabledMcpServers are arrays in .claude.json",
+      "summary": "A startup crash occurred when these fields were set to non-array values in .claude.json. Setting them correctly as arrays avoids this crash after upgrading Claude Code.",
+      "actionable_steps": [
+        "Open your .claude.json file",
+        "Check the `disabledMcpServers` and `enabledMcpServers` fields",
+        "Ensure both are formatted as arrays (e.g., `[]` or `[\"server1\"]`), not strings or objects"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 3,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Mcp",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+          "published_at": "2026-07-05T11:04:18.452Z"
+        }
+      ],
+      "created_at": "2026-07-05T11:04:26.651Z"
     }
   ]
 }
