@@ -50,7 +50,7 @@ Content: ${input.item.content.slice(0, 800)}`,
     .join("\n\n---\n\n");
 
   const response = await client.messages.create({
-    model: "claude-sonnet-4-20250514",
+    model: "claude-sonnet-5",
     max_tokens: 4096,
     messages: [
       {

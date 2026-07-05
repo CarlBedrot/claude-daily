@@ -15,7 +15,7 @@ npm run fetch-raw    # Fetch sources only, write to data/raw-latest.json
 
 - **Next.js 16** (App Router) with React 19 and TypeScript (strict mode)
 - **Tailwind CSS v4** via `@tailwindcss/postcss` -- import with `@import "tailwindcss"` in CSS, not `@tailwind` directives
-- **Anthropic SDK** (`@anthropic-ai/sdk`) for summarization -- uses `claude-sonnet-4-20250514`
+- **Anthropic SDK** (`@anthropic-ai/sdk`) for summarization -- uses `claude-sonnet-5`
 - **Vercel Blob** (`@vercel/blob`) for audio file storage
 - **ElevenLabs** for text-to-speech audio generation
 - **tsx** for running TypeScript scripts directly
