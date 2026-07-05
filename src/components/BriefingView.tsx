@@ -16,6 +16,8 @@ import {
   markStoryRead,
   getUnreadCount,
   getMissedDates,
+  dismissCatchUp,
+  isCatchUpDismissed,
 } from "@/lib/reading-state";
 
 const ALL_TABS: TabKey[] = ["claude_ai", "claude_code", "community", "tips"];
@@ -60,7 +62,8 @@ export function BriefingView({ briefing, availableDates }: BriefingViewProps) {
   }, [briefing]);
 
   useEffect(() => {
-    setMissedDates(getMissedDates(briefing.date, dates));
+    const missed = getMissedDates(briefing.date, dates);
+    setMissedDates(isCatchUpDismissed(missed) ? [] : missed);
     setLastVisitDate(briefing.date);
     recalcUnread();
   }, [briefing.date]);
@@ -139,6 +142,10 @@ export function BriefingView({ briefing, availableDates }: BriefingViewProps) {
       <CatchUpBanner
         missedDates={missedDates}
         onNavigateToDate={navigateToDate}
+        onDismiss={() => {
+          dismissCatchUp(missedDates);
+          setMissedDates([]);
+        }}
       />
       {briefing.audio_url && <AudioPlayer audioUrl={briefing.audio_url} />}
       {briefing.digest && <DigestBanner digest={briefing.digest} />}

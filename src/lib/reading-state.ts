@@ -68,3 +68,23 @@ export function getMissedDates(
 
   return availableDates.filter((d) => d > lastVisit && d < currentDate);
 }
+
+const CATCHUP_DISMISSED_KEY = `${STORAGE_PREFIX}:catchUpDismissedThrough`;
+
+function latestOf(dates: string[]): string {
+  return dates.reduce((a, b) => (a > b ? a : b));
+}
+
+export function dismissCatchUp(missedDates: string[]): void {
+  if (!isClient() || missedDates.length === 0) return;
+  localStorage.setItem(CATCHUP_DISMISSED_KEY, latestOf(missedDates));
+}
+
+// Dismissed as long as no missed date is newer than the one dismissed through —
+// new missed days bring the banner back.
+export function isCatchUpDismissed(missedDates: string[]): boolean {
+  if (!isClient() || missedDates.length === 0) return false;
+  const dismissedThrough = localStorage.getItem(CATCHUP_DISMISSED_KEY);
+  if (!dismissedThrough) return false;
+  return latestOf(missedDates) <= dismissedThrough;
+}
