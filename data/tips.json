@@ -1432,6 +1432,29 @@
         }
       ],
       "created_at": "2026-07-05T11:04:26.651Z"
+    },
+    {
+      "id": "tip-curated-podcast-ai-daily-brief",
+      "created_at": "2026-07-05T11:50:00Z",
+      "headline": "Podcast: The AI Daily Brief keeps you current in 20 minutes a day",
+      "summary": "The AI Daily Brief by Nathaniel Whittemore delivers daily news analysis on everything AI — from new model releases and agent tooling to the practical questions of how AI changes work. A good audio companion to this site: listen on the commute, then dig into the Claude-specific details here.",
+      "author": {
+        "name": "Nathaniel Whittemore",
+        "role": "Host, The AI Daily Brief"
+      },
+      "actionable_steps": [
+        "Search for 'The AI Daily Brief' in your podcast app (Apple Podcasts, Spotify) or visit aidailybrief.ai",
+        "Episodes are ~20 minutes — fits a commute or coffee break",
+        "The headline segment covers the day's biggest story; stay for the analysis"
+      ],
+      "sources": [
+        {
+          "type": "blog",
+          "title": "The AI Daily Brief — official site",
+          "url": "https://aidailybrief.ai/",
+          "published_at": "2026-07-05T00:00:00Z"
+        }
+      ]
     }
   ]
 }

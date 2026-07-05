@@ -203,6 +203,28 @@
       "label": "Tips",
       "stories": [
         {
+          "id": "tip-curated-podcast-ai-daily-brief",
+          "headline": "Podcast: The AI Daily Brief keeps you current in 20 minutes a day",
+          "summary": "The AI Daily Brief by Nathaniel Whittemore delivers daily news analysis on everything AI — from new model releases and agent tooling to the practical questions of how AI changes work. A good audio companion to this site: listen on the commute, then dig into the Claude-specific details here.",
+          "author": {
+            "name": "Nathaniel Whittemore",
+            "role": "Host, The AI Daily Brief"
+          },
+          "actionable_steps": [
+            "Search for 'The AI Daily Brief' in your podcast app (Apple Podcasts, Spotify) or visit aidailybrief.ai",
+            "Episodes are ~20 minutes — fits a commute or coffee break",
+            "The headline segment covers the day's biggest story; stay for the analysis"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "The AI Daily Brief — official site",
+              "url": "https://aidailybrief.ai/",
+              "published_at": "2026-07-05T00:00:00Z"
+            }
+          ]
+        },
+        {
           "id": "tip-2026-07-05-1",
           "headline": "Set an idle timeout for AskUserQuestion dialogs via /config",
           "summary": "In Claude Code v2.1.200, AskUserQuestion dialogs no longer auto-continue by default. If you want dialogs to proceed automatically after inactivity, you now need to explicitly opt into an idle timeout.",
