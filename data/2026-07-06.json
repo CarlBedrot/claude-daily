@@ -1,0 +1,159 @@
+{
+  "date": "2026-07-06",
+  "generated_at": "2026-07-06T11:18:26.982Z",
+  "digest": {
+    "lead": "A quiet news day for the Claude ecosystem — no major model releases or product announcements crossed the wire today.",
+    "themes": [
+      "Quiet news day"
+    ],
+    "summary": "The only submitted item, a Hacker News post about a father-son Roblox-alternative game project, doesn't clearly relate to Claude or Anthropic and has been excluded from today's briefing."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-06-03-1",
+          "headline": "Set up OTEL_RESOURCE_ATTRIBUTES to track Claude Code usage by team",
+          "summary": "Claude Code v2.1.161 now includes OTEL_RESOURCE_ATTRIBUTES values as labels on metric datapoints. This allows you to slice and analyze usage metrics by custom dimensions like team, repository, or project. Essential for organizations wanting to track and optimize Claude usage across different groups.",
+          "actionable_steps": [
+            "Set the OTEL_RESOURCE_ATTRIBUTES environment variable with your desired labels (e.g., 'team=backend,repo=api-service')",
+            "Restart Claude Code to apply the new resource attributes",
+            "Check your metrics dashboard to verify the new labels appear on datapoints",
+            "Create queries or dashboards filtering by your custom dimensions"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.161",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21161",
+              "published_at": "2026-06-03T08:36:29.449Z"
+            }
+          ],
+          "created_at": "2026-06-03T08:36:43.310Z"
+        },
+        {
+          "id": "tip-2026-05-27-3",
+          "headline": "Configure `disallowed-tools` in skill frontmatter to restrict model access",
+          "summary": "You can prevent Claude from using specific tools while a skill is active by declaring them in the skill's frontmatter. This gives you fine-grained control over tool availability during skill execution.",
+          "actionable_steps": [
+            "Open your skill file",
+            "Add `disallowed-tools: [\"tool1\", \"tool2\"]` to the frontmatter section",
+            "Save the file and reload skills with `/reload-skills`",
+            "Test that the specified tools are unavailable when the skill is active"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Overview",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+              "published_at": "2026-05-27T08:15:51.205Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-05-23-1",
+          "headline": "Use /usage command to track Claude Code resource consumption by category",
+          "summary": "The /usage command now provides detailed breakdowns of what's consuming your usage limits, including skills, subagents, plugins, and MCP server costs. This helps identify which features are driving your resource consumption for better optimization.",
+          "actionable_steps": [
+            "Type /usage in Claude Code",
+            "Review the per-category breakdown showing skills, subagents, plugins, and MCP-server costs",
+            "Identify high-usage categories to optimize your workflow"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.149",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21149",
+              "published_at": "2026-05-23T07:45:40.907Z"
+            }
+          ],
+          "created_at": "2026-05-23T07:45:56.432Z"
+        },
+        {
+          "id": "tip-2026-06-09-1",
+          "headline": "Use safe-mode flag to troubleshoot Claude Code issues",
+          "summary": "When Claude Code behaves unexpectedly, safe mode disables all customizations including CLAUDE.md files, plugins, skills, hooks, and MCP servers. This helps isolate whether issues stem from your configurations or the base application.",
+          "actionable_steps": [
+            "Run `claude-code --safe-mode` from your terminal",
+            "Alternatively, set the environment variable `CLAUDE_CODE_SAFE_MODE=true`",
+            "Test if your issue persists in safe mode",
+            "If the issue disappears, gradually re-enable customizations to identify the culprit"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.169",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21169",
+              "published_at": "2026-06-09T08:09:34.115Z"
+            }
+          ],
+          "created_at": "2026-06-09T08:09:48.571Z"
+        },
+        {
+          "id": "tip-2026-04-24-1",
+          "headline": "Configure persistent Claude Code settings using ~/.claude/settings.json",
+          "summary": "Claude Code now saves your /config preferences (theme, editor mode, verbose output) to a persistent file instead of resetting each session. This eliminates the need to reconfigure your preferences every time you start Claude Code.",
+          "actionable_steps": [
+            "Run Claude Code and use /config to set your preferred theme, editor mode, and other settings",
+            "Verify settings are saved to ~/.claude/settings.json file",
+            "Test persistence by restarting Claude Code and confirming settings remain"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.119",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21119",
+              "published_at": "2026-04-24T07:32:40.639Z"
+            }
+          ],
+          "created_at": "2026-04-24T07:32:59.167Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-07-06.mp3"
+}
