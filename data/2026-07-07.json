@@ -1,0 +1,257 @@
+{
+  "date": "2026-07-07",
+  "generated_at": "2026-07-07T10:16:05.576Z",
+  "digest": {
+    "lead": "Anthropic published a new blog post on 'Building Safeguards for Claude,' detailing its approach to trust and safety systems, while a critical Hacker News post accusing Anthropic of eroding developer goodwill drew significant discussion (244 points, 188 comments).",
+    "themes": [
+      "Trust & Safety",
+      "Claude Code updates",
+      "Community sentiment"
+    ],
+    "summary": "Claude Code shipped a minor version update with workflow tooling improvements, Anthropic announced a cybersecurity partnership with the Alberta government, and the community continues to experiment with Claude-built creative artifacts and third-party projects."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Details Its Safeguards Approach for Claude",
+          "summary": "Anthropic published a blog post outlining the systems and processes it uses to build safeguards into Claude, covering how the company approaches trust, safety, and misuse prevention [1].",
+          "key_points": [],
+          "impact": "Relevant to enterprises and policymakers evaluating Anthropic's safety practices before deploying Claude in sensitive contexts.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Building Safeguards For Claude",
+              "url": "https://www.anthropic.com/news/building-safeguards-for-claude",
+              "published_at": "2026-07-06T23:32:01.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Alberta Government Adopts Claude for Cybersecurity",
+          "summary": "Anthropic announced a partnership with the Alberta government to use Claude for cybersecurity applications, marking another public-sector deployment of Claude [1].",
+          "key_points": [],
+          "impact": "Signals continued government adoption of Claude for security-critical use cases, a trend enterprises and public agencies evaluating AI vendors will watch closely.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Alberta Government Claude Cybersecurity",
+              "url": "https://www.anthropic.com/news/alberta-government-claude-cybersecurity",
+              "published_at": "2026-07-06T19:00:35.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Critical Essay Accuses Anthropic of Squandering Developer Goodwill",
+          "summary": "A widely discussed Hacker News post argues that Anthropic has made a series of decisions that have alienated developers and eroded community trust, sparking a large debate thread (244 points, 188 comments) [1].",
+          "key_points": [
+            "The post catalogs grievances related to Anthropic's product and policy decisions [1].",
+            "Discussion drew substantial engagement, suggesting the sentiment resonates with a portion of the developer community [1]."
+          ],
+          "impact": "Matters for developers and businesses deciding how much to invest in building on Claude, as community trust affects long-term platform adoption.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's Method to Losing Goodwill in a Few Easy Steps",
+              "url": "https://raheeljunaid.com/blog/anthropics-method-to-losing-goodwill-in-a-few-easy-steps/",
+              "published_at": "2026-07-06T12:37:06.000Z"
+            }
+          ],
+          "perspectives": "The essay presents a critical, frustrated developer viewpoint; Anthropic has not publicly responded, and the extent to which this reflects broader sentiment versus a vocal minority is unclear."
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.202 Adds Dynamic Workflow Sizing and OpenTelemetry Improvements",
+          "summary": "The latest Claude Code release introduces a 'Dynamic workflow size' setting in `/config` that lets users guide (but not strictly cap) how large agent workflows get, plus new OpenTelemetry attributes (`workflow.run_id`, `workflow.name`) to help reconstruct workflow activity from telemetry data [1]. The update also fixes a crash in the Ctrl+R inline history search [1].",
+          "key_points": [
+            "New `/config` setting offers advisory control over dynamic workflow agent counts (small/medium/large) [1].",
+            "Workflow-spawned agents now emit richer OTel telemetry for observability [1]."
+          ],
+          "impact": "Useful for developers running complex multi-agent Claude Code workflows who need better observability and control over resource usage.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.202",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21202",
+              "published_at": "2026-07-07T10:15:40.359Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Interactive Fiction Artifact 'Vessel' Explores Whether Machines Can Grieve",
+          "summary": "A Claude-built interactive artifact called 'Vessel,' described as an EGA-style adventure game exploring machine grief, drew attention on Hacker News [1].",
+          "key_points": [],
+          "impact": "Showcases creative, narrative-driven uses of Claude's artifact feature beyond typical coding and productivity tasks.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Vessel: An EGA adventure about whether machines can grieve",
+              "url": "https://claude.ai/public/artifacts/2c647671-3f94-4d22-b3c1-f2b5a0e17b6e",
+              "published_at": "2026-07-06T22:48:02.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "Parent Builds Custom FPS Game as Roblox Alternative",
+          "summary": "A developer shared a project on Hacker News describing how they built a custom first-person shooter game for their child as an alternative to Roblox, garnering modest community interest [1].",
+          "key_points": [],
+          "impact": "An example of independent developers using AI-assisted tools to build personal, family-oriented software projects outside major platforms.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: I hated how much my 12-year-old played Roblox, so we built our own FPS",
+              "url": "https://cooked.house",
+              "published_at": "2026-07-05T17:14:45.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-07-07-1",
+          "headline": "Use the Dynamic Workflow Size setting to control agent counts",
+          "summary": "Claude Code v2.1.202 adds a 'Dynamic workflow size' option in /config that lets you guide how many agents Claude spawns for dynamic workflows (small/medium/large). This is an advisory setting, not a hard cap, so it helps balance speed vs. thoroughness for multi-agent tasks.",
+          "actionable_steps": [
+            "Run /config in Claude Code",
+            "Locate the 'Dynamic workflow size' setting",
+            "Set it to small, medium, or large based on task complexity and desired agent count"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.202",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21202",
+              "published_at": "2026-07-07T10:15:40.359Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-07-07-2",
+          "headline": "Use workflow.run_id and workflow.name OTel attributes to trace workflow runs",
+          "summary": "Claude Code now emits workflow.run_id and workflow.name as OpenTelemetry attributes on telemetry from workflow-spawned agents. This lets teams reconstruct the full activity of a workflow run from their observability backend.",
+          "actionable_steps": [
+            "Ensure OpenTelemetry export is configured for your Claude Code instance",
+            "Query your OTel backend for workflow.run_id and workflow.name attributes",
+            "Filter/group traces by these attributes to reconstruct a workflow run's activity"
+          ],
+          "difficulty": "advanced",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Settings",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/settings",
+              "published_at": "2026-07-07T10:15:46.132Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-16-1",
+          "headline": "Use --add-dir flag to configure Claude agents with additional directories",
+          "summary": "The new --add-dir flag allows you to specify additional directories for Claude agents to access during background sessions. This expands the scope of files and resources your agent can work with beyond the default project directory.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.142 or later",
+            "Run 'claude agents --add-dir /path/to/additional/directory' when starting an agent session",
+            "Verify the agent can access files in the specified directory"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.142",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21142",
+              "published_at": "2026-05-16T07:33:58.480Z"
+            }
+          ],
+          "created_at": "2026-05-16T07:34:13.249Z"
+        },
+        {
+          "id": "tip-2026-04-16-1",
+          "headline": "Use `/tui fullscreen` for flicker-free Claude Code rendering",
+          "summary": "The `/tui fullscreen` command switches Claude Code to a flicker-free rendering mode within the same conversation. This improves visual stability and reduces screen flicker during interactions.",
+          "actionable_steps": [
+            "Open Claude Code",
+            "Type `/tui fullscreen` in the conversation",
+            "Press Enter to activate flicker-free rendering mode"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.110",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21110",
+              "published_at": "2026-04-16T07:29:41.642Z"
+            }
+          ],
+          "created_at": "2026-04-16T07:29:58.901Z"
+        },
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "created_at": "2026-04-10T07:29:24.319Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-07-07.mp3"
+}
