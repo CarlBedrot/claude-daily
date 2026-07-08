@@ -1,0 +1,245 @@
+{
+  "date": "2026-07-08",
+  "generated_at": "2026-07-08T09:17:45.752Z",
+  "digest": {
+    "lead": "Anthropic is rolling out Claude Cowork to mobile and web [1], expanding its collaborative workspace beyond desktop just as backlash over the Fable 5 creative-writing feature continues to simmer — Anthropic responded by extending free access to Fable 5 on all paid plans through July 12 [2][3].",
+    "themes": [
+      "Claude Cowork expansion",
+      "Fable 5 controversy",
+      "Claude Code polish updates"
+    ],
+    "summary": "Claude Code shipped two small but meaningful patch releases fixing hook streaming, login-expiry warnings, and a macOS stall bug [4][5]. Meanwhile, the community continues to build alternatives to official Anthropic apps, with an open-source local-first Claude Desktop alternative gaining traction on Hacker News [6]."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude Cowork expands to mobile and web",
+          "summary": "Anthropic is bringing Claude Cowork, its collaborative workspace feature, to mobile and web platforms, extending it beyond its original desktop footprint [1].",
+          "key_points": [
+            "The move broadens Cowork's reach to users who don't work primarily from desktop apps [1]"
+          ],
+          "impact": "Teams and enterprises already using Cowork for collaborative workflows gain more flexible access, potentially accelerating adoption in distributed and mobile-first work settings.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic is launching Claude Cowork on mobile and web",
+              "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web",
+              "published_at": "2026-07-07T17:50:22.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic extends Fable 5 access amid user backlash",
+          "summary": "Anthropic announced it is extending access to Fable 5 on all paid plans through July 12 [1], a move that comes as criticism of the feature has been building [2]. Reports describe growing user frustration, though specific grievances vary across discussions.",
+          "key_points": [
+            "Anthropic's extension was framed as broadening availability, not addressing complaints directly [1]",
+            "Separate coverage describes mounting backlash over Fable 5 with the community split on details [2]"
+          ],
+          "impact": "This affects paid-plan subscribers currently experimenting with Fable 5 and signals Anthropic is monitoring community sentiment closely as it iterates on newer creative features.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "We're extending access to Fable 5 on all paid plans through July 12",
+              "url": "https://twitter.com/claudeai/status/2074548242386178258",
+              "published_at": "2026-07-07T17:44:50.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Claude Fable 5 Backlash Grows",
+              "url": "https://tech.yahoo.com/ai/claude/articles/claude-fable-5-backlash-grows-213000534.html",
+              "published_at": "2026-07-07T00:56:07.000Z"
+            }
+          ],
+          "perspectives": "Anthropic's official messaging [1] focuses on extending access as a goodwill gesture, while outside reporting [2] frames the same period as one of growing user dissatisfaction, suggesting some tension between the company's framing and community reception."
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code patches fix hook streaming and login-expiry issues",
+          "summary": "Two consecutive Claude Code releases (v2.1.203 and v2.1.204) addressed several stability issues: a fix for hook events not streaming during SessionStart hooks in headless sessions that could cause remote workers to be idle-reaped mid-hook [1], plus a new warning for expiring logins, a visible manual permission mode indicator, updated MCP roots-list behavior, and a fix for a 15-20 second stall when opening background agent sessions on macOS [2].",
+          "key_points": [
+            "Fixed idle-reaping of remote workers caused by hook events failing to stream in headless SessionStart hooks [1]",
+            "Added proactive login-expiry warnings so background sessions aren't unexpectedly interrupted [2]",
+            "Fixed a macOS bug causing 15-20 second stalls when switching background agent sessions due to false low-memory detection [2]"
+          ],
+          "impact": "These fixes primarily benefit developers running Claude Code in headless or background-agent workflows, reducing unexpected session interruptions and macOS-specific slowdowns.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.204",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21204",
+              "published_at": "2026-07-08T09:17:24.418Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.203",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21203",
+              "published_at": "2026-07-08T09:17:24.418Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Open-source 'Rowboat' offers local-first alternative to Claude Desktop",
+          "summary": "A new open-source project called Rowboat has launched as a local-first alternative to Claude Desktop, gaining significant traction on Hacker News [1]. The project appeals to users wanting more control over data locality and customization outside Anthropic's official client.",
+          "key_points": [
+            "Positioned as local-first, giving users control over where data lives compared to Claude Desktop [1]",
+            "Generated active discussion with 157 points and 45 comments on Hacker News [1]"
+          ],
+          "impact": "Developers and privacy-conscious users looking for alternatives to official Anthropic clients now have another open-source option, reflecting continued community appetite for building around Claude's APIs rather than solely relying on first-party apps.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Rowboat – Open-source, local-first alternative to Claude Desktop",
+              "url": "https://github.com/rowboatlabs/rowboat",
+              "published_at": "2026-07-07T16:10:44.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-07-08-1",
+          "headline": "Update to Claude Code v2.1.204 to fix headless SessionStart hook streaming",
+          "summary": "This release fixes a bug where hook events weren't streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook. Updating avoids lost work from prematurely terminated remote sessions.",
+          "actionable_steps": [
+            "Run your Claude Code updater or reinstall to get v2.1.204",
+            "Verify headless/remote sessions using SessionStart hooks no longer get idle-reaped",
+            "Re-test any CI or automation pipelines relying on SessionStart hooks in headless mode"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.204",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21204",
+              "published_at": "2026-07-08T09:17:24.418Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-07-08-2",
+          "headline": "Update to Claude Code v2.1.203 to fix background session stalls and stale tokens",
+          "summary": "This version resolves a macOS regression causing 15-20 second stalls when opening background sessions, fixes permanently unresponsive background sessions due to stale daemon tokens, and adds visibility improvements like login expiry warnings and a manual permission mode badge.",
+          "actionable_steps": [
+            "Update Claude Code to v2.1.203 or later",
+            "If using background/macOS sessions, confirm the 15-20s stall on switching sessions is resolved",
+            "Watch for the new login-expiry warning to re-authenticate before background sessions are interrupted",
+            "Check the footer for the grey pause badge to confirm manual permission mode status"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.203",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21203",
+              "published_at": "2026-07-08T09:17:24.418Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-07-08-4",
+          "headline": "Set up a project CLAUDE.md file to guide Claude's behavior",
+          "summary": "CLAUDE.md files let you give Claude persistent, project-specific instructions so it follows your conventions automatically instead of repeating context in every prompt. Organizing rules properly (including path-specific rules and shared rules via symlinks) helps scale this across large teams.",
+          "actionable_steps": [
+            "Create a CLAUDE.md file at your project root with key conventions and instructions",
+            "Use .claude/rules/ to organize path-specific rules for different parts of the codebase",
+            "Use symlinks to share common rules across multiple projects",
+            "Run /memory to view and edit what Claude has auto-saved, and audit for accuracy"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Memory",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+              "published_at": "2026-07-08T09:17:25.510Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-07-08-5",
+          "headline": "Use Claude Code's VS Code extension features to streamline your workflow",
+          "summary": "The VS Code integration offers checkpoints for rewinding changes, background process monitoring, terminal output inclusion in prompts, and git integration for commits and PRs, all of which speed up iterative development inside the IDE.",
+          "actionable_steps": [
+            "Install the Claude Code VS Code extension and sign in",
+            "Use checkpoints to rewind to earlier states when changes go wrong",
+            "Enable including terminal output in prompts so Claude sees command results directly",
+            "Use the git integration to create commits and pull requests, and try git worktrees for parallel tasks"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Ide Integrations",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
+              "published_at": "2026-07-08T09:17:26.998Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-04-21-1",
+          "headline": "Use `/terminal-setup` to configure smoother fullscreen scrolling in VS Code, Cursor, and Windsurf",
+          "summary": "Claude Code v2.1.116 improved terminal scrolling performance by automatically configuring your editor's scroll sensitivity. This eliminates choppy scrolling when working in fullscreen terminal mode.",
+          "actionable_steps": [
+            "Open Claude Code in your VS Code, Cursor, or Windsurf editor",
+            "Run the `/terminal-setup` command",
+            "Allow Claude Code to configure your editor's scroll sensitivity settings"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.116",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+              "published_at": "2026-04-21T07:30:03.998Z"
+            }
+          ],
+          "created_at": "2026-04-21T07:30:17.044Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-07-08.mp3"
+}

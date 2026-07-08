@@ -1505,6 +1505,109 @@
         }
       ],
       "created_at": "2026-07-07T10:15:52.756Z"
+    },
+    {
+      "id": "tip-2026-07-08-1",
+      "headline": "Update to Claude Code v2.1.204 to fix headless SessionStart hook streaming",
+      "summary": "This release fixes a bug where hook events weren't streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook. Updating avoids lost work from prematurely terminated remote sessions.",
+      "actionable_steps": [
+        "Run your Claude Code updater or reinstall to get v2.1.204",
+        "Verify headless/remote sessions using SessionStart hooks no longer get idle-reaped",
+        "Re-test any CI or automation pipelines relying on SessionStart hooks in headless mode"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.204",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21204",
+          "published_at": "2026-07-08T09:17:24.418Z"
+        }
+      ],
+      "created_at": "2026-07-08T09:17:38.162Z"
+    },
+    {
+      "id": "tip-2026-07-08-2",
+      "headline": "Update to Claude Code v2.1.203 to fix background session stalls and stale tokens",
+      "summary": "This version resolves a macOS regression causing 15-20 second stalls when opening background sessions, fixes permanently unresponsive background sessions due to stale daemon tokens, and adds visibility improvements like login expiry warnings and a manual permission mode badge.",
+      "actionable_steps": [
+        "Update Claude Code to v2.1.203 or later",
+        "If using background/macOS sessions, confirm the 15-20s stall on switching sessions is resolved",
+        "Watch for the new login-expiry warning to re-authenticate before background sessions are interrupted",
+        "Check the footer for the grey pause badge to confirm manual permission mode status"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.203",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21203",
+          "published_at": "2026-07-08T09:17:24.418Z"
+        }
+      ],
+      "created_at": "2026-07-08T09:17:38.162Z"
+    },
+    {
+      "id": "tip-2026-07-08-4",
+      "headline": "Set up a project CLAUDE.md file to guide Claude's behavior",
+      "summary": "CLAUDE.md files let you give Claude persistent, project-specific instructions so it follows your conventions automatically instead of repeating context in every prompt. Organizing rules properly (including path-specific rules and shared rules via symlinks) helps scale this across large teams.",
+      "actionable_steps": [
+        "Create a CLAUDE.md file at your project root with key conventions and instructions",
+        "Use .claude/rules/ to organize path-specific rules for different parts of the codebase",
+        "Use symlinks to share common rules across multiple projects",
+        "Run /memory to view and edit what Claude has auto-saved, and audit for accuracy"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 15,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Memory",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+          "published_at": "2026-07-08T09:17:25.510Z"
+        }
+      ],
+      "created_at": "2026-07-08T09:17:38.162Z"
+    },
+    {
+      "id": "tip-2026-07-08-5",
+      "headline": "Use Claude Code's VS Code extension features to streamline your workflow",
+      "summary": "The VS Code integration offers checkpoints for rewinding changes, background process monitoring, terminal output inclusion in prompts, and git integration for commits and PRs, all of which speed up iterative development inside the IDE.",
+      "actionable_steps": [
+        "Install the Claude Code VS Code extension and sign in",
+        "Use checkpoints to rewind to earlier states when changes go wrong",
+        "Enable including terminal output in prompts so Claude sees command results directly",
+        "Use the git integration to create commits and pull requests, and try git worktrees for parallel tasks"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 10,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Ide Integrations",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
+          "published_at": "2026-07-08T09:17:26.998Z"
+        }
+      ],
+      "created_at": "2026-07-08T09:17:38.162Z"
     }
   ]
 }
