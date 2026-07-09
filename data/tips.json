@@ -1608,6 +1608,32 @@
         }
       ],
       "created_at": "2026-07-08T09:17:38.162Z"
+    },
+    {
+      "id": "tip-2026-07-09-1",
+      "headline": "Use Claude Code hooks to control tool execution and session behavior",
+      "summary": "Hooks let you intercept lifecycle events like SessionStart, UserPromptSubmit, and tool calls to inject context, validate actions, or block unwanted behavior. This gives fine-grained control over how Claude Code operates in your environment, including custom setup scripts and decision logic.",
+      "actionable_steps": [
+        "Open the /hooks menu in Claude Code to view and manage configured hooks",
+        "Define a hook configuration with a matcher pattern to target specific events or MCP tools",
+        "Write a command, HTTP, or MCP tool hook handler that returns JSON or an exit code to control the decision",
+        "Use SessionStart hooks to persist environment variables or load custom instructions automatically"
+      ],
+      "difficulty": "advanced",
+      "estimated_minutes": 30,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Hooks",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/hooks",
+          "published_at": "2026-07-09T10:20:01.023Z"
+        }
+      ],
+      "created_at": "2026-07-09T10:20:06.992Z"
     }
   ]
 }
