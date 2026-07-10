@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { RawItem } from "./sources/types";
 import { DailyBriefing } from "../src/types/daily";
+import { parseJsonResponse } from "./parse-json-response";
 
 const SYSTEM_PROMPT = `You are a news editor for "Claude Daily", a daily briefing about the Claude AI ecosystem.
 
@@ -79,8 +80,7 @@ Content: ${item.content.slice(0, 500)}`,
 
   const textBlock = response.content.find((b) => b.type === "text");
   const raw = textBlock?.type === "text" ? textBlock.text : "";
-  const text = raw.replace(/^```(?:json)?\s*\n?/, "").replace(/\n?```\s*$/, "");
-  const parsed = JSON.parse(text);
+  const parsed = parseJsonResponse<Pick<DailyBriefing, "digest" | "tabs">>(raw);
 
   const now = new Date();
   const dateStr = now.toISOString().split("T")[0];

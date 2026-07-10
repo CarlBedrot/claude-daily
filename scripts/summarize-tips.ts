@@ -1,6 +1,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { RawItem } from "./sources/types";
 import { Story } from "../src/types/daily";
+import { parseJsonResponse } from "./parse-json-response";
 
 const SYSTEM_PROMPT = `You extract actionable tips from raw content about Claude AI and Claude Code.
 
@@ -64,14 +65,15 @@ Content: ${input.item.content.slice(0, 800)}`,
 
   const textBlock = response.content.find((b) => b.type === "text");
   const raw = textBlock?.type === "text" ? textBlock.text : "[]";
-  const text = raw.replace(/^```(?:json)?\s*\n?/, "").replace(/\n?```\s*$/, "");
-  const parsed: ({
-    headline: string;
-    summary: string;
-    actionable_steps: string[];
-    difficulty?: "beginner" | "intermediate" | "advanced";
-    estimated_minutes?: number;
-  } | null)[] = JSON.parse(text);
+  const parsed = parseJsonResponse<
+    ({
+      headline: string;
+      summary: string;
+      actionable_steps: string[];
+      difficulty?: "beginner" | "intermediate" | "advanced";
+      estimated_minutes?: number;
+    } | null)[]
+  >(raw);
 
   const tips: Story[] = [];
   const now = new Date().toISOString();
