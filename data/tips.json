@@ -1634,6 +1634,31 @@
         }
       ],
       "created_at": "2026-07-09T10:20:06.992Z"
+    },
+    {
+      "id": "tip-2026-07-12-1",
+      "headline": "Use /doctor to trim bloated CLAUDE.md files",
+      "summary": "Claude Code's /doctor command now checks checked-in CLAUDE.md files and proposes cutting content that Claude could already derive from the codebase itself. This keeps context files lean and avoids redundant instructions that waste context window space.",
+      "actionable_steps": [
+        "Run `/doctor` in Claude Code within your project",
+        "Review the suggested trims to your checked-in CLAUDE.md file",
+        "Accept or reject each proposed cut based on whether the content is truly derivable from the codebase"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.206",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21206",
+          "published_at": "2026-07-12T08:56:25.816Z"
+        }
+      ],
+      "created_at": "2026-07-12T08:56:37.604Z"
     }
   ]
 }
