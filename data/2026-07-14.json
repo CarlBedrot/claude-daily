@@ -1,0 +1,313 @@
+{
+  "date": "2026-07-14",
+  "generated_at": "2026-07-14T08:57:02.945Z",
+  "digest": {
+    "lead": "Anthropic launched \"Claude for Creative Work,\" a new push into writing, design, and creative production tools, while a viral Hacker News post accusing Anthropic of overstating claims (743 comments) is stirring debate about the company's credibility amid its IPO buzz.",
+    "themes": [
+      "Creative tools expansion",
+      "Anthropic scrutiny & controversy",
+      "Claude Code performance debates"
+    ],
+    "summary": "Claude Code shipped two more incremental releases (screen reader mode, background session fixes), a token-overhead comparison against OpenCode went viral, and researchers reported finding a hidden conceptual workspace inside Claude's reasoning."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic launches Claude for Creative Work",
+          "summary": "Anthropic unveiled a new offering called Claude for Creative Work, aimed at writers, designers, and other creative professionals [1]. The announcement coincides with a related post on Claude's design philosophy from Anthropic Labs [2].",
+          "key_points": [
+            "New product positioning targets creative professionals rather than just developers or enterprise users [1]",
+            "Companion post details Anthropic Labs' approach to Claude's design [2]"
+          ],
+          "impact": "This signals Anthropic's ambition to expand beyond coding and enterprise use cases into creative and content-generation markets, potentially competing more directly with tools like Midjourney or ChatGPT's creative features.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude For Creative Work",
+              "url": "https://www.anthropic.com/news/claude-for-creative-work",
+              "published_at": "2026-07-13T15:46:07.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Design Anthropic Labs",
+              "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+              "published_at": "2026-07-13T15:41:00.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic names Theo Hourmouzis as GM for Australia and New Zealand",
+          "summary": "Anthropic announced Theo Hourmouzis as General Manager for Australia and New Zealand, marking a formal regional leadership hire as the company expands internationally [1].",
+          "impact": "Indicates Anthropic's continued push to build out regional go-to-market operations, relevant to enterprise customers and partners in APAC considering Claude adoption.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Theo Hourmouzis General Manager Australia New Zealand",
+              "url": "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand",
+              "published_at": "2026-07-13T15:41:50.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Researchers find a hidden conceptual workspace inside Claude",
+          "summary": "A MIT Technology Review report describes Anthropic interpretability research uncovering a hidden internal space where Claude appears to work through abstract concepts before producing output [1].",
+          "impact": "Adds to Anthropic's ongoing interpretability research agenda, relevant to AI safety researchers and those studying how large language models reason internally.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic found a hidden space where Claude puzzles over concepts",
+              "url": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
+              "published_at": "2026-07-12T12:13:29.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-004",
+          "headline": "$65K salary at Anthropic sparks debate on SF affordability amid IPO wave",
+          "summary": "A Mission Local article examining whether a $65K salary at Anthropic is livable in San Francisco has sparked Hacker News debate, set against the backdrop of Anthropic's rumored IPO and its effect on local housing costs and evictions [1].",
+          "perspectives": "Commenters were split between sympathy for lower-paid Anthropic staff facing SF's high cost of living and skepticism that a company valued so highly pays entry-level roles so little [1].",
+          "impact": "Reflects growing public scrutiny of AI companies' economic footprint in San Francisco, relevant to those tracking Anthropic's IPO trajectory and its local social impact.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "$65K to work at Anthropic? Debate ensues amid IPO wave",
+              "url": "https://missionlocal.org/2026/07/anthropic-sf-affordability-ipo-housing-evictions-rent/",
+              "published_at": "2026-07-13T21:56:52.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-005",
+          "headline": "Viral post accuses Anthropic of overstating claims, drawing huge HN debate",
+          "summary": "A widely shared post titled \"Zig Creator Calls Spade a Spade, Anthropic Blows Smoke\" criticizes Anthropic for alleged exaggeration or misleading claims, generating over 1,400 points and 743 comments on Hacker News [1].",
+          "perspectives": "The scale of engagement suggests a sharply divided community reaction — some defending Anthropic's communications, others agreeing the company has overstated results or capabilities [1].",
+          "impact": "A high-visibility credibility challenge for Anthropic that could shape public and developer perception during a sensitive period of IPO speculation.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Zig Creator Calls Spade a Spade, Anthropic Blows Smoke",
+              "url": "https://raymyers.org/post/zed-creator-calls-spade-a-spade/",
+              "published_at": "2026-07-13T08:39:39.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-006",
+          "headline": "Anthropic extends 'Fable' feature/event until July 19",
+          "summary": "Anthropic announced via its official Claude AI Twitter account that 'Fable' has been extended until July 19, though details on what Fable entails remain sparse from available sources [1].",
+          "impact": "Minor update, but relevant to users tracking limited-time Claude features or promotions.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Fable extended until 19 July",
+              "url": "https://twitter.com/claudeai/status/2076351399999557669",
+              "published_at": "2026-07-12T17:14:34.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code ships accessibility and background-session fixes in v2.1.208/209",
+          "summary": "Claude Code's latest releases add a screen reader mode for accessibility, a vim insert-mode remap setting, and corporate launcher wrapper support [2], while a follow-up patch fixes a regression that blocked dialogs like /model during background agent sessions [1].",
+          "key_points": [
+            "New opt-in screen reader mode via `claude --ax-screen-reader` or config flag [2]",
+            "`vimInsertModeRemaps` lets users map sequences like `jj` to Escape in vim mode [2]",
+            "v2.1.209 reverts an overly broad guard that blocked dialogs in background `claude agents` sessions [1]"
+          ],
+          "impact": "Accessibility improvements matter to screen-reader-dependent developers, while the background session fix restores functionality for teams running Claude Code agents unattended.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.209",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21209",
+              "published_at": "2026-07-14T08:56:24.343Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.208",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21208",
+              "published_at": "2026-07-14T08:56:24.343Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Benchmark claims Claude Code sends 33k tokens of overhead before even reading your prompt",
+          "summary": "A widely discussed benchmark post argues Claude Code sends roughly 33,000 tokens of system/context overhead before processing a user's actual prompt, compared to about 7,000 tokens for the competing tool OpenCode [1]. The post generated significant Hacker News debate about efficiency and cost implications of Claude Code's architecture.",
+          "key_points": [
+            "Claims Claude Code's per-request token overhead is roughly 4-5x that of OpenCode [1]",
+            "Sparked 378 comments debating causes — system prompts, tool definitions, and context management [1]"
+          ],
+          "perspectives": "Some commenters argue the overhead reflects legitimate functionality (richer tool definitions, safety guardrails) while others see it as wasteful cost inflation, especially for high-volume API users [1].",
+          "impact": "Directly affects developers and teams paying per-token for Claude Code usage, and raises competitive pressure for Anthropic to optimize overhead as rivals like OpenCode market themselves as leaner alternatives.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Code sends 33k tokens before reading the prompt; OpenCode sends 7k",
+              "url": "https://systima.ai/blog/claude-code-vs-opencode-token-overhead",
+              "published_at": "2026-07-12T18:25:51.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Developer implements a neural network entirely in SQL using Claude",
+          "summary": "A Show HN project demonstrates a neural network implemented in SQL, built with Claude's assistance in a branch of the xarray-sql repository, running an MNIST digit-classification benchmark [1]. The project drew notable engagement on Hacker News as a creative demonstration of both SQL's flexibility and Claude's coding capabilities.",
+          "impact": "Showcases an example of Claude being used for unconventional, exploratory coding projects, relevant to developers interested in creative applications of AI-assisted coding.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: I implemented a neural network in SQL",
+              "url": "https://github.com/xqlsystems/xarray-sql/blob/claude/xarray-sql-mnist-demo/benchmarks/nn.py",
+              "published_at": "2026-07-13T20:00:10.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ],
+          "created_at": "2026-03-31T07:28:07.414Z"
+        },
+        {
+          "id": "tip-2026-05-28-2",
+          "headline": "Set up hooks to automate Claude Code workflows at key events",
+          "summary": "Hooks allow you to run custom scripts or commands automatically when specific events occur in Claude Code, such as session start, prompt submission, or instruction loading. This enables automated setup, validation, or custom integrations.",
+          "actionable_steps": [
+            "Create hook configuration files in your project's .claude directory",
+            "Define hook events (SessionStart, UserPromptSubmit, etc.) and their corresponding actions",
+            "Configure hook handlers with command, HTTP, or MCP tool fields as needed",
+            "Test hooks using the /hooks menu to verify they trigger correctly"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 20,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Memory",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+              "published_at": "2026-05-28T08:16:09.064Z"
+            }
+          ],
+          "created_at": "2026-05-28T08:16:26.129Z"
+        },
+        {
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-07-1",
+          "headline": "Use CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN to keep conversation in terminal scrollback",
+          "summary": "Claude Code normally uses a fullscreen alternate-screen renderer that clears when you exit. Setting this environment variable keeps your conversation in your terminal's native scrollback buffer, making it easier to review past interactions after closing Claude Code.",
+          "actionable_steps": [
+            "Set the environment variable: export CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN=1",
+            "Launch Claude Code as normal",
+            "Your conversation will now remain in terminal scrollback when you exit"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.132",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21132",
+              "published_at": "2026-05-07T07:52:29.358Z"
+            }
+          ],
+          "created_at": "2026-05-07T07:52:41.155Z"
+        },
+        {
+          "id": "tip-2026-04-23-1",
+          "headline": "Use visual mode in Claude Code for text selection and editing",
+          "summary": "Claude Code now supports vim-style visual mode (v) and visual-line mode (V) for selecting and manipulating text. This enables more efficient text editing workflows similar to vim editors.",
+          "actionable_steps": [
+            "Press 'v' to enter visual mode for character-by-character selection",
+            "Press 'V' to enter visual-line mode for line-by-line selection",
+            "Use standard vim operators on your selected text"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.118",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21118",
+              "published_at": "2026-04-23T07:30:08.080Z"
+            }
+          ],
+          "created_at": "2026-04-23T07:30:24.917Z"
+        }
+      ]
+    }
+  }
+}
