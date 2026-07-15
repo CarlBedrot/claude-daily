@@ -1,0 +1,255 @@
+{
+  "date": "2026-07-15",
+  "generated_at": "2026-07-15T09:02:54.036Z",
+  "digest": {
+    "lead": "Anthropic pushed another incremental Claude Code update (v2.1.210) focused on reliability fixes — worktree isolation bugs and permission-rule clarity — while on the product side it announced Claude For Teachers, extending its education push alongside a new Canadian AI research initiative.",
+    "themes": [
+      "Claude Code reliability",
+      "Education & research expansion",
+      "Ecosystem tooling"
+    ],
+    "summary": "The developer community continues to build on top of Claude: a new open-source GUI coding agent (Juggler) and a Dropbox-based skill-sharing tool (Sx 2.0) both drew strong Hacker News engagement, alongside a YC-backed startup extracting feedback from agent conversations."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Launches Claude For Teachers",
+          "summary": "Anthropic introduced Claude For Teachers, a new offering aimed at bringing Claude's capabilities into classrooms and educator workflows [1].",
+          "key_points": [],
+          "impact": "Signals Anthropic's continued push into education-specific products, targeting teachers and schools as a distinct user segment.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude For Teachers",
+              "url": "https://www.anthropic.com/news/claude-for-teachers",
+              "published_at": "2026-07-14T17:50:04.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic Announces Canadian AI Research Initiative",
+          "summary": "Anthropic published details of a new research effort focused on AI in Canada, marking an expansion of its research and policy engagement in the region [1].",
+          "key_points": [],
+          "impact": "Reflects Anthropic's broader strategy of deepening international research partnerships and regional presence outside the US.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Canadian Ai Research",
+              "url": "https://www.anthropic.com/news/canadian-ai-research",
+              "published_at": "2026-07-14T16:33:29.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.210 Fixes Worktree Isolation Bug, Adds Elapsed-Time Indicator",
+          "summary": "The latest Claude Code release adds a live elapsed-time counter to long-running tool calls so they no longer appear stuck, and warns users at startup if they've set overly broad permission rules like `Write(path)` instead of the safer `Edit(path)` [1]. It also fixes a bug where subagents running in isolated worktrees could still mutate the main repo's git checkout, and patches an issue where the `ultracode` keyword could be triggered by non-human input [1].",
+          "key_points": [
+            "Live elapsed-time counter added to collapsed tool summary lines for long-running calls [1]",
+            "Startup warnings now flag risky permission rules such as `Write(path)`, `NotebookEdit(path)`, and `Glob(path)` [1]",
+            "Fixed worktree-isolated subagents incorrectly running git-mutating commands against the main repo [1]"
+          ],
+          "impact": "The worktree isolation fix matters most for developers running parallel subagents, preventing accidental corruption of the main repository checkout during isolated tasks.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.210",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21210",
+              "published_at": "2026-07-15T09:02:29.271Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Open-Source GUI Coding Agent 'Juggler' Draws Strong HN Engagement",
+          "summary": "Juggler, an open-source GUI coding agent built by the creator of JUCE, launched on Hacker News and drew 230 points and over 100 comments [1]. The tool positions itself as a graphical alternative to terminal-based coding agents like Claude Code.",
+          "key_points": [],
+          "impact": "Highlights growing developer interest in GUI-based alternatives to CLI coding agents, potentially broadening the audience for agentic coding tools beyond terminal-comfortable developers.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Juggler – an open-source GUI coding agent, by the creator of JUCE",
+              "url": "https://github.com/juggler-ai/juggler",
+              "published_at": "2026-07-12T18:28:15.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "Sx 2.0 Lets Teams Share AI Skills Through a Dropbox Folder",
+          "summary": "Sx 2.0 launched on Hacker News, offering a lightweight way for teams to share AI agent skills using a simple Dropbox folder as a 'skill server' [1]. The launch generated 43 points and 33 comments from developers interested in low-friction skill distribution.",
+          "key_points": [],
+          "impact": "Offers a simple, infrastructure-free way for teams using Claude and similar agents to distribute reusable skills, appealing to small teams wary of heavier tooling.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Sx 2.0 – Share AI skills with your team through a Dropbox folder",
+              "url": "https://sleuth-io.github.io/sx/2026/07/10/your-dropbox-is-now-a-skill-server.html",
+              "published_at": "2026-07-13T23:26:52.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-003",
+          "headline": "YC-Backed Agnost AI Extracts User Feedback From Agent Conversations",
+          "summary": "Agnost AI, part of YC's S26 batch, launched on Hacker News with a tool that extracts structured user feedback from conversations with AI agents [1]. The launch received 77 points and 40 comments.",
+          "key_points": [],
+          "impact": "Relevant to teams building products on top of Claude and other agent frameworks who need systematic ways to turn chat logs into actionable product feedback.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Launch HN: Agnost AI (YC S26) – Extract user feedback from agent conversations",
+              "url": "https://agnost.ai",
+              "published_at": "2026-07-14T16:06:18.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-08-1",
+          "headline": "Configure worktree base reference to preserve unpushed commits",
+          "summary": "The latest Claude Code update changed the default behavior for worktrees to branch from origin instead of local HEAD, potentially losing unpushed commits. Setting the baseRef to 'head' preserves your local work when creating new worktrees.",
+          "actionable_steps": [
+            "Open your Claude Code settings",
+            "Add or modify the setting: \"worktree.baseRef\": \"head\"",
+            "Save the configuration file"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.133",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21133",
+              "published_at": "2026-05-08T07:29:29.198Z"
+            }
+          ],
+          "created_at": "2026-05-08T07:29:43.717Z"
+        },
+        {
+          "id": "tip-2026-07-07-1",
+          "headline": "Use the Dynamic Workflow Size setting to control agent counts",
+          "summary": "Claude Code v2.1.202 adds a 'Dynamic workflow size' option in /config that lets you guide how many agents Claude spawns for dynamic workflows (small/medium/large). This is an advisory setting, not a hard cap, so it helps balance speed vs. thoroughness for multi-agent tasks.",
+          "actionable_steps": [
+            "Run /config in Claude Code",
+            "Locate the 'Dynamic workflow size' setting",
+            "Set it to small, medium, or large based on task complexity and desired agent count"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.202",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21202",
+              "published_at": "2026-07-07T10:15:40.359Z"
+            }
+          ],
+          "created_at": "2026-07-07T10:15:52.756Z"
+        },
+        {
+          "id": "tip-2026-04-08-1",
+          "headline": "Enable Amazon Bedrock support with Mantle integration",
+          "summary": "Claude Code v2.1.94 added support for Amazon Bedrock through Mantle integration. This allows you to use Claude Code with Amazon's Bedrock service instead of the default API endpoints, potentially offering better performance or compliance for enterprise users.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_USE_MANTLE=1 in your system or terminal",
+            "Restart Claude Code to apply the new configuration",
+            "Verify the connection is working by running a test query"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.94",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2194",
+              "published_at": "2026-04-08T07:28:46.896Z"
+            }
+          ],
+          "created_at": "2026-04-08T07:29:00.150Z"
+        },
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-05-28-3",
+          "headline": "Organize project rules using .claude/rules/ directory structure",
+          "summary": "The .claude/rules/ directory lets you break down complex project instructions into organized, manageable files. This makes it easier to maintain large codebases and share specific rules across multiple projects.",
+          "actionable_steps": [
+            "Create a .claude/rules/ directory in your project root",
+            "Split your CLAUDE.md instructions into focused rule files (e.g., coding-style.md, testing.md)",
+            "Use symlinks to share common rules across multiple projects",
+            "Reference rule files from your main CLAUDE.md using import statements"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Ide Integrations",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
+              "published_at": "2026-05-28T08:16:10.322Z"
+            }
+          ],
+          "created_at": "2026-05-28T08:16:26.129Z"
+        }
+      ]
+    }
+  }
+}
