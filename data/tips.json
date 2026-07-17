@@ -1659,6 +1659,56 @@
         }
       ],
       "created_at": "2026-07-12T08:56:37.604Z"
+    },
+    {
+      "id": "tip-2026-07-17-1",
+      "headline": "Use /fork to spin off background sessions without blocking your work",
+      "summary": "The /fork command now copies your current conversation into a separate background session visible in `claude agents`, letting you explore an alternate path while continuing your main session. The old in-session subagent behavior is now handled by the separate `/subtask` command.",
+      "actionable_steps": [
+        "Run `/fork` in an active Claude Code session to create a background copy of the conversation",
+        "Check `claude agents` to view and manage the forked session as its own row",
+        "Use `/subtask` instead if you want the old in-session subagent launch behavior"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.212",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21212",
+          "published_at": "2026-07-17T09:01:27.993Z"
+        }
+      ],
+      "created_at": "2026-07-17T09:01:49.469Z"
+    },
+    {
+      "id": "tip-2026-07-17-2",
+      "headline": "Configure WebSearch and subagent spawn limits to prevent runaway loops",
+      "summary": "Claude Code now enforces a default session-wide cap of 200 WebSearch calls and 200 subagent spawns to stop infinite search or delegation loops from burning resources. Both limits are tunable via environment variables, so you can raise or lower them based on your workflow's needs.",
+      "actionable_steps": [
+        "Set `CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION` to adjust the WebSearch call limit from the default of 200",
+        "Set `CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION` to adjust the subagent spawn limit from the default of 200",
+        "Run `/clear` to reset the subagent spawn budget within a session"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.211",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21211",
+          "published_at": "2026-07-17T09:01:27.993Z"
+        }
+      ],
+      "created_at": "2026-07-17T09:01:49.469Z"
     }
   ]
 }
