@@ -1,0 +1,231 @@
+{
+  "date": "2026-07-18",
+  "generated_at": "2026-07-18T08:28:55.683Z",
+  "digest": {
+    "lead": "Anthropic is reportedly in talks with Meta for a $10B deal to lease computing power, a sign of just how tight GPU/TPU capacity has become as Claude demand keeps climbing. Meanwhile, the newly announced Claude Fable 5 rolls out to all Max plans starting July 20.",
+    "themes": [
+      "Compute infrastructure",
+      "Model rollout",
+      "AI adoption patterns"
+    ],
+    "summary": "Claude Code shipped another point release focused on tightening permission-check security, and a widely-shared artifact from Anthropic's Boris Cherny outlines stages of AI adoption in engineering teams."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic in Talks with Meta for $10B Compute Leasing Deal",
+          "summary": "Meta is reportedly negotiating to lease computing power to Anthropic in a deal valued at up to $10 billion [1]. The arrangement would give Anthropic access to additional infrastructure capacity as it scales Claude, while providing Meta a new revenue stream from its data center investments.",
+          "key_points": [
+            "Deal reportedly valued at roughly $10 billion [1]",
+            "Reflects continued scramble among AI labs to secure compute capacity"
+          ],
+          "impact": "A deal of this size would signal how compute-constrained Anthropic remains despite its growth, and affects enterprise customers relying on Claude's availability and future model release timelines.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Meta in Talks to Lease Computing Power to Anthropic in Potential $10B Deal",
+              "url": "https://www.nytimes.com/2026/07/17/technology/meta-anthropic-ai-computing-power.html",
+              "published_at": "2026-07-17T16:33:48.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Claude Fable 5 Coming to All Max Plans on July 20",
+          "summary": "Anthropic announced that Claude Fable 5 will be included in all Max subscription plans starting July 20 [1], expanding access to a feature previously limited to a smaller tier or trial group.",
+          "key_points": [
+            "Rollout begins July 20 for all Max plan subscribers [1]"
+          ],
+          "impact": "Max plan subscribers gain broader access to a new capability without an added cost, making the tier more attractive relative to lower-priced plans.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Beginning July 20, Claude Fable 5 will be included in all Max plans",
+              "url": "https://twitter.com/claudeai/status/2078302415804379218",
+              "published_at": "2026-07-18T02:15:36.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.214 Patches Permission-Check Security Bugs",
+          "summary": "The latest Claude Code release fixes several permission-check flaws, including an issue where single-segment allow rules like `Edit(src/**)` incorrectly auto-approved writes to nested directories anywhere in the tree rather than just under the current working directory [1]. The update also closes a permission bypass affecting Windows PowerShell 5.1 sessions and hardens Bash permission checks against unusual redirect syntax and extremely long commands [1].",
+          "key_points": [
+            "Fixed overly broad `dir/**` allow-rule matching that could auto-approve unintended file writes [1]",
+            "Closed a permission-check bypass specific to Windows PowerShell 5.1 [1]",
+            "Bash commands over 10,000 characters and unusual file-descriptor redirects now fail closed, always prompting for approval [1]"
+          ],
+          "impact": "These are meaningful security fixes for anyone using Claude Code's permission system to sandbox file edits and shell commands — teams relying on allow-lists in CI or automated workflows should update promptly.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.214",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21214",
+              "published_at": "2026-07-18T08:28:32.644Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Anthropic's Boris Cherny Outlines the Stages of AI Adoption",
+          "summary": "Boris Cherny, an Anthropic engineer known for his work on Claude Code, shared an artifact laying out the typical stages teams go through when adopting AI coding tools [1]. The piece resonated with the Hacker News community as a framework for understanding how organizations mature from skepticism to deep integration of AI into engineering workflows.",
+          "key_points": [
+            "Published as a Claude.ai artifact, illustrating the format itself as a communication tool [1]"
+          ],
+          "impact": "Useful reading for engineering leaders trying to benchmark their organization's AI adoption maturity and plan rollout strategy for tools like Claude Code.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Boris Cherny: Steps of AI Adoption",
+              "url": "https://claude.ai/code/artifact/bfdfaef9-bc62-4dfe-ba9e-c58a26c9accf",
+              "published_at": "2026-07-17T01:53:48.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-curated-podcast-ai-daily-brief",
+          "created_at": "2026-07-05T11:50:00Z",
+          "headline": "Podcast: The AI Daily Brief keeps you current in 20 minutes a day",
+          "summary": "The AI Daily Brief by Nathaniel Whittemore delivers daily news analysis on everything AI — from new model releases and agent tooling to the practical questions of how AI changes work. A good audio companion to this site: listen on the commute, then dig into the Claude-specific details here.",
+          "author": {
+            "name": "Nathaniel Whittemore",
+            "role": "Host, The AI Daily Brief"
+          },
+          "actionable_steps": [
+            "Search for 'The AI Daily Brief' in your podcast app (Apple Podcasts, Spotify) or visit aidailybrief.ai",
+            "Episodes are ~20 minutes — fits a commute or coffee break",
+            "The headline segment covers the day's biggest story; stay for the analysis"
+          ],
+          "sources": [
+            {
+              "type": "blog",
+              "title": "The AI Daily Brief — official site",
+              "url": "https://aidailybrief.ai/",
+              "published_at": "2026-07-05T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-07-07-2",
+          "headline": "Use workflow.run_id and workflow.name OTel attributes to trace workflow runs",
+          "summary": "Claude Code now emits workflow.run_id and workflow.name as OpenTelemetry attributes on telemetry from workflow-spawned agents. This lets teams reconstruct the full activity of a workflow run from their observability backend.",
+          "actionable_steps": [
+            "Ensure OpenTelemetry export is configured for your Claude Code instance",
+            "Query your OTel backend for workflow.run_id and workflow.name attributes",
+            "Filter/group traces by these attributes to reconstruct a workflow run's activity"
+          ],
+          "difficulty": "advanced",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Settings",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/settings",
+              "published_at": "2026-07-07T10:15:46.132Z"
+            }
+          ],
+          "created_at": "2026-07-07T10:15:52.756Z"
+        },
+        {
+          "id": "tip-2026-05-27-3",
+          "headline": "Configure `disallowed-tools` in skill frontmatter to restrict model access",
+          "summary": "You can prevent Claude from using specific tools while a skill is active by declaring them in the skill's frontmatter. This gives you fine-grained control over tool availability during skill execution.",
+          "actionable_steps": [
+            "Open your skill file",
+            "Add `disallowed-tools: [\"tool1\", \"tool2\"]` to the frontmatter section",
+            "Save the file and reload skills with `/reload-skills`",
+            "Test that the specified tools are unavailable when the skill is active"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Overview",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/overview",
+              "published_at": "2026-05-27T08:15:51.205Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        },
+        {
+          "id": "tip-2026-06-09-1",
+          "headline": "Use safe-mode flag to troubleshoot Claude Code issues",
+          "summary": "When Claude Code behaves unexpectedly, safe mode disables all customizations including CLAUDE.md files, plugins, skills, hooks, and MCP servers. This helps isolate whether issues stem from your configurations or the base application.",
+          "actionable_steps": [
+            "Run `claude-code --safe-mode` from your terminal",
+            "Alternatively, set the environment variable `CLAUDE_CODE_SAFE_MODE=true`",
+            "Test if your issue persists in safe mode",
+            "If the issue disappears, gradually re-enable customizations to identify the culprit"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.169",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21169",
+              "published_at": "2026-06-09T08:09:34.115Z"
+            }
+          ],
+          "created_at": "2026-06-09T08:09:48.571Z"
+        }
+      ]
+    }
+  }
+}
