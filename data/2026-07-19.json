@@ -1,0 +1,194 @@
+{
+  "date": "2026-07-19",
+  "generated_at": "2026-07-19T08:59:51.112Z",
+  "digest": {
+    "lead": "A quiet news day: Claude Code shipped a small but notable workflow change in v2.1.215, no longer auto-running the /verify and /code-review skills without an explicit invocation, giving developers more control over when these checks fire.",
+    "themes": [
+      "Developer tooling",
+      "Anthropic marketing"
+    ],
+    "summary": "Also making waves is community reaction to a new Anthropic ad campaign, which some Hacker News commenters found unsettling."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic's new ad campaign draws unease from viewers",
+          "summary": "A new Anthropic advertisement is generating discussion after commenters described it as unsettling [1]. The Hacker News thread reflects broader public sensitivity around how AI companies market their products.",
+          "key_points": [
+            "The ad has been characterized by some viewers as 'creepy' [1]",
+            "Discussion remains relatively small-scale (37 points, 5 comments) [1]"
+          ],
+          "impact": "This reflects ongoing public wariness about AI marketing and messaging, relevant to Anthropic's brand perception among both enterprise buyers and everyday users.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic's newest ad is creeping people out",
+              "url": "https://techcrunch.com/2026/07/14/anthropics-newest-ad-is-creeping-people-out/",
+              "published_at": "2026-07-18T23:50:18.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.215 stops auto-running verify and code-review skills",
+          "summary": "The latest Claude Code release changes default behavior so that the /verify and /code-review skills no longer run automatically during sessions [1]. Developers must now explicitly invoke these commands when they want checks performed.",
+          "key_points": [
+            "Previously these skills ran automatically as part of Claude's workflow [1]",
+            "Now they require manual invocation via /verify or /code-review [1]"
+          ],
+          "impact": "Developers using Claude Code daily get more predictable, opt-in control over review and verification steps, reducing unexpected slowdowns in fast-moving coding sessions.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.215",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21215",
+              "published_at": "2026-07-19T08:59:36.965Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-05-1",
+          "headline": "Use bare /color command to randomize your Claude Code session color",
+          "summary": "The /color command without arguments now automatically selects a random color for your session. This provides a quick way to visually distinguish different sessions without manually choosing colors.",
+          "actionable_steps": [
+            "Open Claude Code terminal",
+            "Type `/color` (without any arguments)",
+            "Press Enter to apply a random session color"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.128",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21128",
+              "published_at": "2026-05-05T07:35:25.104Z"
+            }
+          ],
+          "created_at": "2026-05-05T07:35:34.870Z"
+        },
+        {
+          "id": "tip-2026-07-05-2",
+          "headline": "Update permission mode references to 'manual' after upgrading Claude Code",
+          "summary": "The default permission mode across CLI, VS Code, and JetBrains is now called 'Manual' instead of 'default'. Existing configs using 'default' still work, but scripts or docs referencing the old name should be updated for clarity.",
+          "actionable_steps": [
+            "Search your configs and scripts for `--permission-mode default` or `\"defaultMode\": \"default\"`",
+            "Replace with `--permission-mode manual` or `\"defaultMode\": \"manual\"`",
+            "Verify behavior matches expectations in CLI, VS Code, and JetBrains integrations"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Best Practices",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2026-07-05T11:04:18.157Z"
+            }
+          ],
+          "created_at": "2026-07-05T11:04:26.651Z"
+        },
+        {
+          "id": "tip-003",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use Claude's extended thinking for complex architectural decisions",
+          "summary": "When asking Claude to make non-trivial design choices — like choosing between patterns, structuring a new module, or planning a migration — enabling extended thinking produces significantly better results. Claude will reason through trade-offs before committing to an approach, catching issues that quick responses miss.",
+          "author": {
+            "name": "Community",
+            "role": "r/ClaudeAI contributors"
+          },
+          "actionable_steps": [
+            "For architecture questions, ask Claude to 'think through the trade-offs' explicitly",
+            "Use Claude Code's plan mode (shift+tab) for multi-step tasks that need careful reasoning",
+            "Review Claude's reasoning in extended thinking to catch flawed assumptions early"
+          ],
+          "sources": [
+            {
+              "type": "reddit",
+              "title": "Tips for getting better architectural advice from Claude",
+              "url": "https://www.reddit.com/r/ClaudeAI/comments/example",
+              "published_at": "2025-07-15T00:00:00Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-07-08-1",
+          "headline": "Update to Claude Code v2.1.204 to fix headless SessionStart hook streaming",
+          "summary": "This release fixes a bug where hook events weren't streaming during SessionStart hooks in headless sessions, which could cause remote workers to be idle-reaped mid-hook. Updating avoids lost work from prematurely terminated remote sessions.",
+          "actionable_steps": [
+            "Run your Claude Code updater or reinstall to get v2.1.204",
+            "Verify headless/remote sessions using SessionStart hooks no longer get idle-reaped",
+            "Re-test any CI or automation pipelines relying on SessionStart hooks in headless mode"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.204",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21204",
+              "published_at": "2026-07-08T09:17:24.418Z"
+            }
+          ],
+          "created_at": "2026-07-08T09:17:38.162Z"
+        },
+        {
+          "id": "tip-2026-06-02-1",
+          "headline": "Enable acceptEdits mode for safer file modifications in Claude Code",
+          "summary": "Claude Code v2.1.160 introduced enhanced safety prompts in acceptEdits mode that warn before writing to potentially dangerous files like shell startup files and build configs. This prevents unintended command execution while still allowing necessary edits.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.160 or later",
+            "Enable acceptEdits mode in your Claude Code configuration",
+            "Review and approve prompts when Claude attempts to edit shell startup files or build configs",
+            "Test that the safety prompts appear when editing files like .zshenv, .npmrc, or .pre-commit-config.yaml"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.160",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21160",
+              "published_at": "2026-06-02T08:29:37.508Z"
+            }
+          ],
+          "created_at": "2026-06-02T08:29:51.663Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-07-19.mp3"
+}
