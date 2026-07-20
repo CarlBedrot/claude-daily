@@ -1,0 +1,211 @@
+{
+  "date": "2026-07-20",
+  "generated_at": "2026-07-20T09:47:58.070Z",
+  "digest": {
+    "lead": "Anthropic detailed how it uses Claude Code internally to run large-scale code migrations across its own codebase, offering a rare look at production-grade agentic coding at scale — while reports surfaced that Anthropic is in early talks with Meta to acquire additional compute capacity.",
+    "themes": [
+      "Agentic coding at scale",
+      "Compute and infrastructure",
+      "Developer tooling"
+    ],
+    "summary": "Also today: a small but handy community-built Claude Code skill lets developers search royalty-free stock photos directly via the Pexels API."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic reportedly in early talks with Meta over compute power",
+          "summary": "Anthropic is said to be in early-stage discussions with Meta about acquiring additional compute capacity, according to a CNBC report [1]. Details remain sparse, with the talks described as preliminary and no formal deal confirmed.",
+          "key_points": [
+            "Report indicates early-stage talks, not a finalized agreement [1]",
+            "Compute access remains a strategic bottleneck for frontier AI labs, including Anthropic [1]"
+          ],
+          "impact": "If a deal materializes, it could significantly affect Anthropic's ability to train and serve future Claude models, with implications for pricing, availability, and pace of releases for all Claude users.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic in early talks with Meta to acquire compute power",
+              "url": "https://www.cnbc.com/2026/07/17/anthropic-meta-ai-compute.html",
+              "published_at": "2026-07-18T01:24:48.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Anthropic details large-scale code migrations run with Claude Code",
+          "summary": "Anthropic published a blog post describing how it runs large-scale code migrations internally using Claude Code, sparking a substantial discussion among developers [2]. The post outlines practical approaches to using agentic coding tools for repository-wide refactoring and modernization tasks.",
+          "key_points": [
+            "Anthropic shares its own internal playbook for using Claude Code on large-scale migrations [2]",
+            "The post generated notable engagement, with 30 comments on Hacker News debating real-world applicability [2]"
+          ],
+          "impact": "Engineering teams considering agentic coding tools for legacy modernization or large refactors get a concrete case study from Anthropic itself, which could shape best practices industry-wide.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic runs large-scale code migrations with Claude Code",
+              "url": "https://claude.com/blog/ai-code-migration",
+              "published_at": "2026-07-19T08:31:15.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "New Claude Code skill adds royalty-free stock photo search via Pexels",
+          "summary": "A developer released an open-source Claude Code skill that lets users search royalty-free stock photos directly through the Pexels API [1]. The tool is aimed at streamlining content and design workflows within Claude Code sessions.",
+          "impact": "A small but useful addition for developers and designers building content-heavy projects who want to source imagery without leaving their Claude Code workflow.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Code skill for searching royalty-free stock photos via the Pexels API",
+              "url": "https://github.com/amalshehu/pexels-skill",
+              "published_at": "2026-07-19T12:55:11.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-04-1",
+          "headline": "Use forceRemoteSettingsRefresh policy to ensure fresh configuration on startup",
+          "summary": "This setting forces Claude Code CLI to fetch the latest remote managed settings before starting and exits if the fetch fails. This ensures your CLI always runs with the most current configuration and prevents running with stale settings that might cause issues.",
+          "actionable_steps": [
+            "Open your Claude Code CLI configuration",
+            "Add the policy setting `forceRemoteSettingsRefresh: true`",
+            "Restart the CLI to verify it blocks startup until fresh settings are fetched"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.92",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+              "published_at": "2026-04-04T07:20:10.106Z"
+            }
+          ],
+          "created_at": "2026-04-04T07:20:24.316Z"
+        },
+        {
+          "id": "tip-2026-07-05-3",
+          "headline": "Ensure disabledMcpServers/enabledMcpServers are arrays in .claude.json",
+          "summary": "A startup crash occurred when these fields were set to non-array values in .claude.json. Setting them correctly as arrays avoids this crash after upgrading Claude Code.",
+          "actionable_steps": [
+            "Open your .claude.json file",
+            "Check the `disabledMcpServers` and `enabledMcpServers` fields",
+            "Ensure both are formatted as arrays (e.g., `[]` or `[\"server1\"]`), not strings or objects"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Mcp",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+              "published_at": "2026-07-05T11:04:18.452Z"
+            }
+          ],
+          "created_at": "2026-07-05T11:04:26.651Z"
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        },
+        {
+          "id": "tip-2026-04-01-1",
+          "headline": "Use defer permission in PreToolUse hooks to pause headless sessions",
+          "summary": "You can now pause headless Claude Code sessions at tool calls and resume them later with permission evaluation. This allows for better control over automated workflows that need human approval.",
+          "actionable_steps": [
+            "Set up a PreToolUse hook in your Claude Code configuration",
+            "Return 'defer' as the permission decision in the hook",
+            "Resume the session using `claude-code -p --resume` command",
+            "The hook will re-evaluate the tool call upon resumption"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.89",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2189",
+              "published_at": "2026-04-01T07:28:38.482Z"
+            }
+          ],
+          "created_at": "2026-04-01T07:28:52.087Z"
+        },
+        {
+          "id": "tip-2026-05-21-1",
+          "headline": "Use `/code-review` with effort levels for better code analysis",
+          "summary": "The `/simplify` command has been renamed to `/code-review` and now accepts optional effort levels like 'high' for more thorough analysis. This gives you better control over how deeply Claude examines your code for potential improvements.",
+          "actionable_steps": [
+            "Replace any existing `/simplify` commands with `/code-review`",
+            "Add effort levels like `/code-review high` for more thorough analysis",
+            "Use `/code-review low` for quick reviews or `/code-review medium` for standard analysis"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.146",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21146",
+              "published_at": "2026-05-21T08:10:25.551Z"
+            }
+          ],
+          "created_at": "2026-05-21T08:10:38.448Z"
+        }
+      ]
+    }
+  }
+}
