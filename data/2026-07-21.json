@@ -1,0 +1,248 @@
+{
+  "date": "2026-07-21",
+  "generated_at": "2026-07-21T09:20:12.012Z",
+  "digest": {
+    "lead": "A federal judge has signed off on Anthropic's $1.5 billion settlement of the authors' copyright lawsuit, closing out one of the biggest legal overhangs on the company [2]. Meanwhile, a widely discussed HN essay questions whether Anthropic's economics can keep pace with fast-improving open-weight competitors like Kimi K3 and Qwen 3.8 [4].",
+    "themes": [
+      "Legal & business",
+      "Competitive landscape",
+      "Developer tooling"
+    ],
+    "summary": "Claude Code shipped another incremental update fixing session slowdowns and sandbox controls [1], Anthropic announced new rare disease research grants [3], and a community project showed off an AI movie-making pipeline built on Claude Code [5]."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Judge approves Anthropic's $1.5 billion copyright settlement",
+          "summary": "A US federal judge has approved Anthropic's $1.5 billion settlement resolving the authors' copyright lawsuit over training data [2]. The settlement, one of the largest of its kind in the AI industry, closes out significant legal exposure for the company.",
+          "key_points": [
+            "The settlement was approved by a US judge on July 20, 2026 [2]",
+            "It resolves a copyright lawsuit brought by authors over Anthropic's training practices [2]"
+          ],
+          "impact": "This removes a major legal risk for Anthropic and sets a financial benchmark for how AI companies may resolve copyright disputes with content creators, affecting publishers, authors, and other AI labs facing similar suits.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "US judge approves Anthropic's $1.5B settlement of copyright lawsuit",
+              "url": "https://www.reuters.com/world/us-judge-approves-anthropics-15-billion-settlement-copyright-lawsuit-2026-07-20/",
+              "published_at": "2026-07-20T21:25:24.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic funds rare disease research grants",
+          "summary": "Anthropic announced a new grants program supporting rare disease research [3], part of the company's broader philanthropic and applied science initiatives.",
+          "impact": "Signals Anthropic's continued investment in AI-for-science applications, relevant to researchers and institutions working on rare disease treatments.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Rare Disease Research Grants",
+              "url": "https://www.anthropic.com/news/rare-disease-research-grants",
+              "published_at": "2026-07-20T17:36:28.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "HN debate: can Anthropic's economics survive cheaper open-weight rivals?",
+          "summary": "A widely discussed essay and HN thread (335 points, 311 comments) argues that fast-improving open-weight models like Kimi K3 and Qwen 3.8 threaten the economics underpinning frontier labs like Anthropic [4]. The piece and ensuing discussion weigh whether Anthropic's cost structure and pricing can remain competitive as open alternatives close the capability gap.",
+          "key_points": [
+            "The essay frames Kimi K3 and Qwen 3.8 as narrowing the quality gap with proprietary frontier models [4]",
+            "Commenters were split between skepticism of Anthropic's long-term margins and confidence in its enterprise and coding moat [4]"
+          ],
+          "impact": "Matters to enterprises and developers choosing between proprietary and open-weight models, and to investors watching whether frontier labs can sustain pricing power.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Kimi K3, Qwen 3.8, and Anthropic's (Potential) Unravelling",
+              "url": "https://www.emergingtrajectories.com/lh/frontier-lab-economics/",
+              "published_at": "2026-07-20T15:13:42.000Z"
+            }
+          ],
+          "perspectives": "The essay is skeptical of Anthropic's competitive durability, while HN commenters offered pushback, citing Claude's strength in coding and enterprise adoption as a counterweight to cheaper open-weight models [4]."
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.216 fixes session slowdowns and sandbox controls",
+          "summary": "The latest Claude Code release adds a `sandbox.filesystem.disabled` setting to skip filesystem isolation while retaining network egress control, and fixes a quadratic slowdown bug that caused multi-second stalls and slow resumes in long sessions [1]. It also fixes auto mode incorrectly denying commands after OAuth token expiry, and corrects AskUserQuestion behavior that ignored user requests to pause or clarify [1].",
+          "key_points": [
+            "New `sandbox.filesystem.disabled` setting offers more granular sandbox control [1]",
+            "Fixed quadratic message-normalization slowdown affecting long sessions and resumes [1]",
+            "Fixed auto mode falsely denying commands after OAuth token rotation [1]"
+          ],
+          "impact": "Directly benefits developers running long Claude Code sessions who were hitting performance stalls and authentication-related command denials, improving reliability of day-to-day coding workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.216",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21216",
+              "published_at": "2026-07-21T09:19:39.780Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Developer builds pipeline for 10-minute AI movies using Claude Code and Seedance",
+          "summary": "A Show HN project demonstrates a pipeline that combines Claude Code with the Seedance video model to generate 10-minute AI-produced movies [5]. The project drew modest community engagement, highlighting continued experimentation with Claude Code as an orchestration layer for creative, multi-tool media generation workflows.",
+          "impact": "Illustrates how developers are using Claude Code beyond traditional software engineering, as an orchestration tool for creative production pipelines.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: A Pipeline for Making 10-minute AI Movies with Claude Code and Seedance",
+              "url": "https://github.com/dawndrain/movie-gen",
+              "published_at": "2026-07-20T13:57:44.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-27-5",
+          "headline": "Create a CLAUDE.md file to provide project context",
+          "summary": "CLAUDE.md files give Claude persistent knowledge about your project's structure, conventions, and requirements. This helps Claude make better decisions and follow your specific guidelines consistently.",
+          "actionable_steps": [
+            "Create a CLAUDE.md file in your project root",
+            "Add project overview, coding standards, and key architectural decisions",
+            "Include file structure explanations and important context",
+            "Test that Claude references this information in its responses"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Settings",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/settings",
+              "published_at": "2026-05-27T08:15:51.508Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-05-20-1",
+          "headline": "Use `claude agents --json` to integrate Claude sessions with external tools",
+          "summary": "The new JSON output format allows you to programmatically access live Claude session information. This enables integration with terminal multiplexers like tmux, status bars, and custom session management tools.",
+          "actionable_steps": [
+            "Run `claude agents --json` in your terminal to see the JSON output format",
+            "Parse the JSON output in your scripts to extract session information",
+            "Integrate the JSON data with tools like tmux-resurrect or custom status bars",
+            "Set up automated session monitoring or management based on the structured data"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.145",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21145",
+              "published_at": "2026-05-20T08:07:02.323Z"
+            }
+          ],
+          "created_at": "2026-05-20T08:07:19.268Z"
+        },
+        {
+          "id": "tip-2026-05-23-1",
+          "headline": "Use /usage command to track Claude Code resource consumption by category",
+          "summary": "The /usage command now provides detailed breakdowns of what's consuming your usage limits, including skills, subagents, plugins, and MCP server costs. This helps identify which features are driving your resource consumption for better optimization.",
+          "actionable_steps": [
+            "Type /usage in Claude Code",
+            "Review the per-category breakdown showing skills, subagents, plugins, and MCP-server costs",
+            "Identify high-usage categories to optimize your workflow"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.149",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21149",
+              "published_at": "2026-05-23T07:45:40.907Z"
+            }
+          ],
+          "created_at": "2026-05-23T07:45:56.432Z"
+        },
+        {
+          "id": "tip-2026-06-11-1",
+          "headline": "Configure AWS region in ~/.aws config files for Bedrock integration",
+          "summary": "Claude Code now reads AWS region from your local AWS config files when AWS_REGION environment variable isn't set. This follows AWS SDK precedence rules and simplifies setup for Bedrock users.",
+          "actionable_steps": [
+            "Create or edit ~/.aws/config file",
+            "Add [default] section with region = your-aws-region (e.g., us-east-1)",
+            "Remove or unset AWS_REGION environment variable to test the fallback",
+            "Use /status command in Claude Code to verify the region source"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.172",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21172",
+              "published_at": "2026-06-11T08:30:28.667Z"
+            }
+          ],
+          "created_at": "2026-06-11T08:30:42.369Z"
+        },
+        {
+          "id": "tip-2026-04-10-1",
+          "headline": "Set up Google Vertex AI integration using the interactive wizard",
+          "summary": "Claude Code v2.1.98 introduced a guided setup wizard that simplifies connecting to Google Vertex AI. This eliminates manual configuration steps and reduces authentication errors by walking you through GCP setup, project selection, and credential verification.",
+          "actionable_steps": [
+            "Open Claude Code and go to the login screen",
+            "Select '3rd-party platform' option",
+            "Follow the interactive Google Vertex AI setup wizard",
+            "Complete GCP authentication, project and region configuration, and credential verification as prompted"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.98",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2198",
+              "published_at": "2026-04-10T07:29:05.613Z"
+            }
+          ],
+          "created_at": "2026-04-10T07:29:24.319Z"
+        }
+      ]
+    }
+  }
+}
