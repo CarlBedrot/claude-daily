@@ -1,0 +1,353 @@
+{
+  "date": "2026-07-26",
+  "generated_at": "2026-07-26T09:06:18.876Z",
+  "digest": {
+    "lead": "Anthropic released Claude Opus 5 [6], now the default Opus model with a 1M token context window and a fast mode priced at $10/$50 per Mtok [2]. It's been rolled out into Claude Code v2.1.219 alongside a major system prompt cleanup — Anthropic says it removed over 80% of Claude Code's system prompt for Opus 5 and the new Fable 5 model [5].",
+    "themes": [
+      "Opus 5 launch",
+      "Claude Code updates",
+      "Ecosystem & policy debates"
+    ],
+    "summary": "Claude Code shipped three consecutive point releases with new sandbox controls, hook events, and reliability fixes [1][2][3]. Elsewhere, discussion continues around the cost of AI coding subsidies [12] and a report on Anthropic and OpenAI aligning against open-weight model risk [13]."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic launches Claude Opus 5 as new default Opus model",
+          "summary": "Anthropic officially released Claude Opus 5 [6], which became the default Opus model in Claude Code with a 1M token context window and a fast mode priced at $10/$50 per Mtok [2]. Engineers also revealed that Opus 5 and its sibling model Fable 5 allowed removal of over 80% of Claude Code's system prompt, suggesting substantially improved instruction-following and reduced need for scaffolding [5].",
+          "key_points": [
+            "1M token context window and fast mode pricing at $10/$50 per Mtok [2]",
+            "Now the default Opus model across Claude Code [2]",
+            "System prompt for Claude Code shrunk by over 80% thanks to Opus 5 and Fable 5's improved default behavior [5]"
+          ],
+          "impact": "This is a major model upgrade affecting anyone using Claude for complex coding or reasoning tasks — the shrunk system prompt suggests real gains in reliability that reduce engineering overhead for developers building on Claude.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Opus 5",
+              "url": "https://www.anthropic.com/news/claude-opus-5",
+              "published_at": "2026-07-25T02:03:36.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.219",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21219",
+              "published_at": "2026-07-26T09:05:39.916Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "\"We removed over 80% of Claude Code's system prompt for Opus 5 and Fable 5\"",
+              "url": "https://twitter.com/trq212/status/2080710971228918066",
+              "published_at": "2026-07-25T02:18:09.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic outlines Economic Futures Research Fund agenda",
+          "summary": "Anthropic published an agenda for its Economic Futures Research Fund, outlining research priorities on the economic effects of AI [7].",
+          "key_points": [],
+          "impact": "Signals Anthropic's continued investment in studying AI's labor and economic impact, relevant to policymakers and enterprises planning for AI-driven workforce changes.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Economic Futures Research Fund Agenda",
+              "url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda",
+              "published_at": "2026-07-24T18:46:48.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic previews Claude for creative work",
+          "summary": "Anthropic shared a development preview of Claude tooling aimed at creative work, signaling continued expansion beyond coding and productivity use cases [8].",
+          "key_points": [],
+          "impact": "Relevant to designers, writers, and creative professionals evaluating Claude as a tool for creative workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude For Creative Work Dev",
+              "url": "https://www.anthropic.com/news/claude-for-creative-work-dev",
+              "published_at": "2026-07-23T20:11:00.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-004",
+          "headline": "Report: Anthropic and OpenAI align against open-weight model risks",
+          "summary": "A widely discussed Axios report claims Anthropic and OpenAI are finding common cause in lobbying against open-weight AI models, framing this as a defense of commercial interests amid geopolitical competition with China [13]. The story generated substantial community debate, with 331 comments on Hacker News.",
+          "key_points": [
+            "Report frames the alignment as protecting proprietary model business models [13]",
+            "Discussion ties the issue to broader US-China AI competition narratives [13]"
+          ],
+          "impact": "Matters to open-source AI developers and policymakers, as regulatory positioning by leading labs could shape the future availability of open-weight alternatives to Claude.",
+          "perspectives": "The framing suggests self-interested motives behind safety arguments, a view reflected in the large, contentious comment thread rather than official Anthropic statements [13].",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "OpenAI and Anthropic unite against open-weight AI risks to their bottom line",
+              "url": "https://www.axios.com/2026/07/22/openai-anthropic-open-models-trump-china",
+              "published_at": "2026-07-23T13:00:03.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code ships rapid succession of updates around Opus 5 launch",
+          "summary": "Claude Code saw three point releases in quick succession. Version 2.1.219 introduced Claude Opus 5 as the default model with 1M context and fast-mode pricing, plus a new `sandbox.network.strictAllowlist` setting and a `DirectoryAdded` hook for mid-session directory registration [2]. Version 2.1.218 moved `/code-review` to run as a background subagent to avoid cluttering conversations, added screen-reader support for text deletion, and fixed a Windows path corruption bug [3]. Version 2.1.220 followed with general bug fixes and reliability improvements [1].",
+          "key_points": [
+            "Opus 5 becomes default Opus model in Claude Code with 1M context and $10/$50 per Mtok fast mode [2]",
+            "New sandbox network allowlist setting and `DirectoryAdded` hook for finer-grained agent control [2]",
+            "`/code-review` now runs as a background subagent, plus accessibility and Windows path fixes [3]"
+          ],
+          "impact": "Directly affects daily Claude Code users: better sandboxing controls improve security for agentic workflows, and background code review reduces context clutter for developers running long sessions.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.220",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21220",
+              "published_at": "2026-07-26T09:05:39.916Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.219",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21219",
+              "published_at": "2026-07-26T09:05:39.916Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.218",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21218",
+              "published_at": "2026-07-26T09:05:39.916Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Debate over sustainability of discounted AI coding costs",
+          "summary": "A blog post analyzed how much Anthropic may be subsidizing AI coding usage, estimating a 13x effective discount versus underlying compute costs, and questioning how long such pricing can persist [12].",
+          "key_points": [
+            "Estimate suggests heavy subsidization of coding-focused Claude usage [12]",
+            "Raises questions about long-term pricing sustainability for heavy Claude Code users [12]"
+          ],
+          "impact": "Important for teams building products or businesses dependent on current Claude Code pricing, as any correction could significantly affect operating costs.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic is subsidizing our AI coding at 13x. How long will it last?",
+              "url": "https://modelplane.ai/blog/ai-coding-subsidy-multiple",
+              "published_at": "2026-07-23T13:13:37.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Raycast-style Minesweeper built as Claude artifact draws HN attention",
+          "summary": "A developer showcased a raycasted Minesweeper game built as a Claude artifact, gaining traction on Hacker News as a creative demonstration of Claude's code-generation capabilities [4].",
+          "key_points": [],
+          "impact": "A fun example of Claude's artifacts feature being used for creative coding demos, showing off rapid prototyping capabilities to developers.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Minesweeper Raycasted",
+              "url": "https://claude.ai/public/artifacts/725f961b-09dc-4a66-8dac-8fefeeb69a1f",
+              "published_at": "2026-07-25T19:39:12.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "Screenpipe launches to turn recorded work into AI agents",
+          "summary": "YC-backed startup Screenpipe launched publicly on Hacker News, offering a tool that records how users work and converts that behavior into automated agents, drawing significant community engagement [9].",
+          "key_points": [
+            "Positions itself as a way to bootstrap agent workflows from observed human behavior [9]"
+          ],
+          "impact": "Relevant to teams exploring agentic automation built on top of Claude and similar models, as a potential onramp for creating custom workflow agents.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Launch HN: Screenpipe (YC S26) – Record how you work and turn that into agents",
+              "url": "https://news.ycombinator.com/item?id=49024620",
+              "published_at": "2026-07-23T16:48:38.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-003",
+          "headline": "OneCLI open-sources credential gateway to protect secrets from AI agents",
+          "summary": "A new open-source project, OneCLI, launched on Hacker News as a credential gateway designed to keep sensitive secrets out of reach of AI coding agents like Claude Code [10].",
+          "key_points": [
+            "Addresses growing concern about agents accidentally exposing or misusing credentials [10]"
+          ],
+          "impact": "Useful for security-conscious teams deploying Claude Code or similar agents in environments with sensitive credentials, offering a guardrail against accidental leaks.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: OneCLI – OSS credential gateway that keeps secrets out of AI agents",
+              "url": "https://github.com/onecli/onecli",
+              "published_at": "2026-07-23T15:42:40.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-004",
+          "headline": "Palmier Pro debuts as open-source, AI-native macOS video editor",
+          "summary": "Palmier Pro launched as an open-source macOS video editor built specifically for AI-assisted workflows, gaining strong Hacker News engagement with 189 points [11].",
+          "key_points": [
+            "Built from the ground up for AI-integrated video editing workflows [11]"
+          ],
+          "impact": "Shows expanding use of AI models like Claude in creative software beyond text and code, relevant to developers building AI-native creative tools.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Palmier Pro – Open-source macOS video editor built for AI",
+              "url": "https://github.com/palmier-io/palmier-pro",
+              "published_at": "2026-07-23T15:11:37.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-07-26-1",
+          "headline": "Enable strict network allowlisting for sandboxed commands",
+          "summary": "The new sandbox.network.strictAllowlist setting silently denies requests to non-allowlisted hosts instead of prompting, which tightens security for automated or unattended Claude Code runs. This is useful for CI/CD or agentic workflows where you don't want interactive approval prompts.",
+          "actionable_steps": [
+            "Open your Claude Code settings file (project or global)",
+            "Add the sandbox.network.strictAllowlist key set to true",
+            "Define your allowed hosts list to ensure required domains aren't blocked",
+            "Test a sandboxed command to confirm non-allowlisted hosts are denied silently"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.219",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21219",
+              "published_at": "2026-07-26T09:05:39.916Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-06-13-1",
+          "headline": "Set language setting to control session title generation",
+          "summary": "Claude Code now generates session titles in the language of your conversation. You can pin a specific language to ensure consistent title generation regardless of conversation content.",
+          "actionable_steps": [
+            "Open Claude Code settings",
+            "Locate the 'language' setting",
+            "Set it to your preferred language code (e.g., 'en', 'es', 'fr')"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.176",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21176",
+              "published_at": "2026-06-13T08:05:26.728Z"
+            }
+          ],
+          "created_at": "2026-06-13T08:05:40.073Z"
+        },
+        {
+          "id": "tip-2026-03-31-1",
+          "headline": "Set CLAUDE_CODE_NO_FLICKER=1 to eliminate screen flickering",
+          "summary": "This environment variable enables flicker-free alt-screen rendering with virtualized scrollback in Claude Code v2.1.88+. It provides a smoother visual experience when Claude Code switches between screen modes during long coding sessions.",
+          "actionable_steps": [
+            "Add 'export CLAUDE_CODE_NO_FLICKER=1' to your shell profile (.bashrc, .zshrc, etc.)",
+            "Restart your terminal or run 'source ~/.bashrc' to apply the change",
+            "Launch Claude Code to verify flicker-free rendering is active"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.88",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2188",
+              "published_at": "2026-03-31T07:27:57.201Z"
+            }
+          ],
+          "created_at": "2026-03-31T07:28:07.414Z"
+        },
+        {
+          "id": "tip-2026-03-27-1",
+          "headline": "Use environment variables to configure MCP server settings in Claude Code",
+          "summary": "Claude Code v2.1.85 introduced CLAUDE_CODE_MCP_SERVER_NAME and CLAUDE_CODE_MCP_SERVER_URL environment variables for MCP headersHelper scripts. This allows a single helper script to serve multiple MCP servers, simplifying configuration management.",
+          "actionable_steps": [
+            "Set the CLAUDE_CODE_MCP_SERVER_NAME environment variable to your desired server name",
+            "Set the CLAUDE_CODE_MCP_SERVER_URL environment variable to your MCP server URL",
+            "Update your MCP headersHelper scripts to use these variables instead of hardcoded values"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.85",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2185",
+              "published_at": "2026-03-27T07:23:38.539Z"
+            }
+          ],
+          "created_at": "2026-03-27T07:23:51.062Z"
+        },
+        {
+          "id": "tip-001",
+          "created_at": "2026-03-08T00:00:00Z",
+          "headline": "Use @-mentions to give Claude Code precise file context",
+          "summary": "Boris Cherny, creator of Claude Code, recommends using @-mentions to point Claude at specific files instead of letting it search. This dramatically reduces token usage and improves accuracy since Claude works with the exact files you intend rather than guessing from project structure.",
+          "author": {
+            "name": "Boris Cherny",
+            "role": "Creator of Claude Code"
+          },
+          "actionable_steps": [
+            "Type @ in Claude Code to see a file picker with fuzzy search",
+            "Select the specific files relevant to your task before writing your prompt",
+            "Combine multiple @-mentions for cross-file tasks like refactoring"
+          ],
+          "sources": [
+            {
+              "type": "twitter",
+              "title": "Boris Cherny on using @-mentions effectively",
+              "url": "https://x.com/AriPerkkio/status/1929872553765572828",
+              "published_at": "2025-06-03T12:00:00Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
