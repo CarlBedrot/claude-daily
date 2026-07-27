@@ -1,0 +1,196 @@
+{
+  "date": "2026-07-27",
+  "generated_at": "2026-07-27T10:30:27.746Z",
+  "digest": {
+    "lead": "Opus 5 hit turbulence today: an elevated-error incident on Anthropic's status page coincided with a Reddit discovery that Claude Code hardcodes instructions telling Opus 5 to avoid subagents — sparking speculation about the model's reliability or cost/behavior tradeoffs under load.",
+    "themes": [
+      "Opus 5 reliability",
+      "Claude Code internals"
+    ],
+    "summary": "Both stories concern Opus 5 stability and configuration, with developers digging into why Anthropic may be steering the model away from subagent usage in Claude Code."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Reports Elevated Errors for Opus 5",
+          "summary": "Anthropic's status page reported elevated errors affecting Opus 5, drawing significant attention on Hacker News [1]. The incident generated substantial discussion, with 93 points and 81 comments, though details on root cause and resolution remain limited [1].",
+          "key_points": [
+            "Incident logged on Anthropic's official status page [1]",
+            "Sparked a large Hacker News discussion thread with 81 comments [1]"
+          ],
+          "impact": "Teams running production workloads on Opus 5 may have experienced degraded reliability or failed requests, making this relevant to developers and businesses depending on the model for time-sensitive tasks.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Elevated Errors for Opus 5",
+              "url": "https://status.claude.com/incidents/zftg3gqkmv18",
+              "published_at": "2026-07-26T09:18:34.000Z"
+            }
+          ],
+          "perspectives": ""
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Hidden Prompt Blocks Opus 5 From Using Subagents in Claude Code",
+          "summary": "A Reddit user discovered that Claude Code contains a hardcoded instruction directing Opus 5 not to use subagents, prompting discussion about why Anthropic would restrict this capability for its newest model [2]. The finding raises questions about whether this is a temporary safeguard tied to the model's rollout or a more permanent architectural choice [2].",
+          "key_points": [
+            "Discovery made by inspecting Claude Code's system prompts/config [2]",
+            "Community speculates the restriction may relate to cost, stability, or coordination issues with subagents [2]"
+          ],
+          "impact": "Developers relying on Claude Code's subagent orchestration for complex, multi-step coding tasks may see different behavior when using Opus 5 versus other models, affecting workflow design.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Claude Code has a hardcoded instruction telling Opus 5 not to use subagents",
+              "url": "https://old.reddit.com/r/ClaudeCode/comments/1v6y5q2/claude_code_has_a_hardcoded_instruction_telling/",
+              "published_at": "2026-07-26T08:45:06.000Z"
+            }
+          ],
+          "perspectives": "Some commenters view the restriction as a prudent, temporary measure given Opus 5's newness, while others see it as evidence of unresolved issues with subagent coordination for the model [2]."
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-03-26-2",
+          "headline": "Configure streaming timeout for better connection handling",
+          "summary": "The new CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable lets you customize how long Claude Code waits before timing out idle streaming connections. This helps prevent unnecessary disconnections during long-running operations.",
+          "actionable_steps": [
+            "Set the CLAUDE_STREAM_IDLE_TIMEOUT_MS environment variable",
+            "Choose a timeout value in milliseconds (default is 90000 for 90 seconds)",
+            "Restart Claude Code for the setting to take effect"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.83",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2183",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-03-26-1",
+          "headline": "Enable PowerShell tool for Windows development workflows",
+          "summary": "Claude Code now includes an opt-in PowerShell tool that allows Windows users to execute PowerShell commands directly through Claude. This provides native Windows command-line access for system administration and development tasks.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.84 or later",
+            "Enable the PowerShell tool in your settings as a preview feature",
+            "Visit https://code.claude.com/docs/en/tools-reference#powershell-tool for configuration details"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.84",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2184",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        },
+        {
+          "id": "tip-2026-07-07-2",
+          "headline": "Use workflow.run_id and workflow.name OTel attributes to trace workflow runs",
+          "summary": "Claude Code now emits workflow.run_id and workflow.name as OpenTelemetry attributes on telemetry from workflow-spawned agents. This lets teams reconstruct the full activity of a workflow run from their observability backend.",
+          "actionable_steps": [
+            "Ensure OpenTelemetry export is configured for your Claude Code instance",
+            "Query your OTel backend for workflow.run_id and workflow.name attributes",
+            "Filter/group traces by these attributes to reconstruct a workflow run's activity"
+          ],
+          "difficulty": "advanced",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Settings",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/settings",
+              "published_at": "2026-07-07T10:15:46.132Z"
+            }
+          ],
+          "created_at": "2026-07-07T10:15:52.756Z"
+        },
+        {
+          "id": "tip-2026-05-27-2",
+          "headline": "Use `/reload-skills` to refresh skills without restarting",
+          "summary": "When you add or modify Claude Code skills, you can reload them instantly without losing your current session context. This saves time during skill development and testing workflows.",
+          "actionable_steps": [
+            "Make changes to your skill files",
+            "Run `/reload-skills` command in Claude Code",
+            "Verify new or updated skills are available in the current session"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Best Practices",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2026-05-27T08:15:51.074Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-04-03-1",
+          "headline": "Use _meta annotation to prevent large MCP tool results from being truncated",
+          "summary": "Claude Code now supports preserving large tool results (like database schemas) up to 500K characters by adding a special metadata annotation. This prevents important data from being cut off during processing.",
+          "actionable_steps": [
+            "Add `_meta[\"anthropic/maxResultSizeChars\"]` annotation to your MCP tool result",
+            "Set the value to your desired character limit (up to 500,000)",
+            "Test with large results like database schemas to verify they pass through completely"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.91",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2191",
+              "published_at": "2026-04-03T07:25:14.262Z"
+            }
+          ],
+          "created_at": "2026-04-03T07:25:28.584Z"
+        }
+      ]
+    }
+  }
+}
