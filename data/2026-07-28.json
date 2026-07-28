@@ -1,0 +1,229 @@
+{
+  "date": "2026-07-28",
+  "generated_at": "2026-07-28T09:29:06.245Z",
+  "digest": {
+    "lead": "Anthropic staked out a public position on open weights models today [2], while separately announcing an enterprise partnership with Cognizant [3] — but the more immediate story for daily users was a rough patch for Claude Opus 5, which suffered two separate elevated-error incidents in the space of a few hours [4][5].",
+    "themes": [
+      "Reliability concerns",
+      "Enterprise partnerships",
+      "Open weights debate"
+    ],
+    "summary": "Elsewhere in the ecosystem, Kimi K3 became available via Telnyx's inference API, drawing attention as a competing model option [1]."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic publishes stance on open weights models",
+          "summary": "Anthropic released a blog post articulating its position on open weights models, addressing when and how it thinks open-sourcing model weights makes sense given safety and competitive considerations [1].",
+          "key_points": [
+            "The post frames open weights as a policy and safety tradeoff rather than a simple binary choice [1]",
+            "Comes amid ongoing industry debate about open vs. closed model releases [1]"
+          ],
+          "impact": "This signals Anthropic's likely posture on future model release decisions, relevant to policymakers, researchers, and competitors weighing their own open-source strategies.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Position Open Weights Models",
+              "url": "https://www.anthropic.com/news/position-open-weights-models",
+              "published_at": "2026-07-27T21:55:20.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic announces partnership with Cognizant",
+          "summary": "Anthropic and Cognizant announced a partnership aimed at bringing Claude's capabilities into enterprise consulting and IT services workflows [1].",
+          "impact": "Matters most to large enterprises considering Claude adoption through established consulting channels, as it extends Anthropic's go-to-market reach into traditional IT services.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Cognizant Anthropic",
+              "url": "https://www.anthropic.com/news/cognizant-anthropic",
+              "published_at": "2026-07-27T15:34:00.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Claude Opus 5 hit by two separate outage incidents in one day",
+          "summary": "Claude Opus 5 experienced elevated error rates twice within a short window on July 27, prompting significant Hacker News discussion about reliability, with the first incident drawing 50 points and 24 comments [2] and a second, larger incident drawing 99 points and 73 comments [1].",
+          "key_points": [
+            "Two distinct status page incidents were filed hours apart, both specifically citing Opus 5 [1][2]",
+            "Community discussion focused on frustration with recurring reliability issues on the flagship model [1][2]"
+          ],
+          "impact": "Affects anyone running production workloads on Opus 5, particularly teams with latency- or uptime-sensitive applications who may need fallback strategies during outages.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Elevated errors on Claude Opus 5",
+              "url": "https://status.claude.com/incidents/mfdtrknpxghq",
+              "published_at": "2026-07-27T11:32:32.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Elevated errors on Claude Opus 5",
+              "url": "https://status.claude.com/incidents/lhqp09kxq7pb",
+              "published_at": "2026-07-27T08:20:06.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Kimi K3 launches on Telnyx Inference API, entering competitive landscape",
+          "summary": "Kimi K3 is now available through Telnyx's Inference API, giving developers another hosted model option and prompting Hacker News comparisons to Claude and other frontier models [1].",
+          "impact": "Relevant to developers evaluating model choice and pricing across providers, as increased competition can influence Claude's positioning and pricing.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Kimi K3 Now Available via Telnyx Inference API",
+              "url": "https://telnyx.com/release-notes/kimi-k3-telnyx-inference",
+              "published_at": "2026-07-27T22:46:28.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-15-1",
+          "headline": "Use ENABLE_PROMPT_CACHING_1H to extend prompt cache duration",
+          "summary": "Setting this environment variable enables 1-hour prompt cache TTL instead of the default, which can reduce API costs and improve response times for longer coding sessions. This works across API key, Bedrock, Vertex, and Foundry deployments.",
+          "actionable_steps": [
+            "Set the environment variable ENABLE_PROMPT_CACHING_1H=true in your system or deployment configuration",
+            "Restart Claude Code to apply the new caching setting",
+            "Monitor your usage to verify extended caching is working"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.108",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21108",
+              "published_at": "2026-04-15T07:29:39.027Z"
+            }
+          ],
+          "created_at": "2026-04-15T07:29:51.069Z"
+        },
+        {
+          "id": "tip-2026-04-28-1",
+          "headline": "Use `alwaysLoad: true` in MCP server config to skip tool-search deferral",
+          "summary": "By default, Claude Code defers loading some MCP tools until they're needed. Setting `alwaysLoad: true` in your MCP server configuration ensures all tools from that server are immediately available without waiting for tool search to activate them.",
+          "actionable_steps": [
+            "Open your MCP server configuration file",
+            "Add `\"alwaysLoad\": true` to the server config object",
+            "Restart Claude Code to apply the changes"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.121",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21121",
+              "published_at": "2026-04-28T07:44:25.570Z"
+            }
+          ],
+          "created_at": "2026-04-28T07:44:45.297Z"
+        },
+        {
+          "id": "tip-2026-05-09-1",
+          "headline": "Enable feedback surveys for enterprise OpenTelemetry users",
+          "summary": "If your enterprise captures telemetry data through OpenTelemetry, you can now re-enable Claude Code's session quality surveys to gather user feedback. This helps organizations collect structured feedback data alongside their existing telemetry infrastructure.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL=true",
+            "Restart your Claude Code application",
+            "Verify that session quality surveys now appear in your Claude Code interface"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.136",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21136",
+              "published_at": "2026-05-09T07:31:06.758Z"
+            }
+          ],
+          "created_at": "2026-05-09T07:31:18.385Z"
+        },
+        {
+          "id": "tip-2026-04-08-1",
+          "headline": "Enable Amazon Bedrock support with Mantle integration",
+          "summary": "Claude Code v2.1.94 added support for Amazon Bedrock through Mantle integration. This allows you to use Claude Code with Amazon's Bedrock service instead of the default API endpoints, potentially offering better performance or compliance for enterprise users.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_USE_MANTLE=1 in your system or terminal",
+            "Restart Claude Code to apply the new configuration",
+            "Verify the connection is working by running a test query"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.94",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2194",
+              "published_at": "2026-04-08T07:28:46.896Z"
+            }
+          ],
+          "created_at": "2026-04-08T07:29:00.150Z"
+        },
+        {
+          "id": "tip-2026-05-29-1",
+          "headline": "Use /effort xhigh command for complex tasks requiring maximum processing power",
+          "summary": "Claude Code v2.1.154 introduced the /effort xhigh command which enables high-effort processing mode for challenging tasks. This mode is now the default in Opus 4.8 and provides enhanced problem-solving capabilities for complex coding challenges.",
+          "actionable_steps": [
+            "Type /effort xhigh at the beginning of your prompt or conversation",
+            "Present your most challenging coding task or problem",
+            "Allow Claude to process with maximum effort for better results"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.154",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21154",
+              "published_at": "2026-05-29T08:14:31.545Z"
+            }
+          ],
+          "created_at": "2026-05-29T08:14:47.087Z"
+        }
+      ]
+    }
+  }
+}
