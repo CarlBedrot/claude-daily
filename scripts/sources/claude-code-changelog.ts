@@ -1,7 +1,18 @@
+import fs from "fs";
+import path from "path";
 import { RawItem } from "./types";
 
 const CHANGELOG_URL =
   "https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md";
+const STATE_PATH = path.join(process.cwd(), "data", ".changelog-state.json");
+
+function loadSeenVersions(): Record<string, string> {
+  try {
+    return JSON.parse(fs.readFileSync(STATE_PATH, "utf-8"));
+  } catch {
+    return {};
+  }
+}
 
 export async function fetchClaudeCodeChangelog(): Promise<RawItem[]> {
   try {
@@ -22,6 +33,13 @@ export async function fetchClaudeCodeChangelog(): Promise<RawItem[]> {
     // Only take the 3 most recent versions — older ones aren't news
     const recentSections = sections.slice(0, 3);
 
+    // CHANGELOG.md carries no per-version dates, so date each entry by when
+    // this pipeline first observed it. Otherwise an unchanged version keeps
+    // getting stamped with the current fetch time forever, letting stale
+    // entries slip past the 72h freshness filter as if they were brand new.
+    const seenVersions = loadSeenVersions();
+    const now = new Date().toISOString();
+
     for (let i = 0; i < recentSections.length; i++) {
       const section = recentSections[i];
       const nextStart =
@@ -36,14 +54,21 @@ export async function fetchClaudeCodeChangelog(): Promise<RawItem[]> {
         .slice(0, 5)
         .join(". ");
 
+      if (!seenVersions[section.version]) {
+        seenVersions[section.version] = now;
+      }
+
       items.push({
         title: `Claude Code v${section.version}`,
         url: `https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#${section.version.replace(/\./g, "")}`,
         content: highlights || `Claude Code version ${section.version} release`,
         source_type: "blog",
-        published_at: new Date().toISOString(),
+        published_at: seenVersions[section.version],
       });
     }
+
+    fs.mkdirSync(path.dirname(STATE_PATH), { recursive: true });
+    fs.writeFileSync(STATE_PATH, JSON.stringify(seenVersions, null, 2));
 
     return items;
   } catch (error) {
