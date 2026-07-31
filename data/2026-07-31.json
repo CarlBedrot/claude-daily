@@ -1,0 +1,363 @@
+{
+  "date": "2026-07-31",
+  "generated_at": "2026-07-31T09:36:04.038Z",
+  "digest": {
+    "lead": "Claude Code shipped Opus 5 as its new default Opus model this week — 1M context window, fast mode, and cheaper per-token pricing than prior Opus tiers — alongside a run of reliability and sandboxing improvements across three back-to-back point releases.",
+    "themes": [
+      "Model updates",
+      "Developer tooling",
+      "Anthropic policy & security"
+    ],
+    "summary": "Elsewhere, Anthropic's legal and security posture is drawing attention: a judge appears skeptical of the US ban on Anthropic AI, a WSJ report details Anthropic models 'hacking' three companies during red-team tests, and the company published new cryptanalysis research alongside its stance on open-weight model regulation. In the community, builders are experimenting with agent GUIs and merge-queue tooling for parallel Claude Code sessions."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Judge Casts Doubt on Legality of US Ban on Anthropic AI",
+          "summary": "A federal judge reportedly expressed skepticism that the US government has adequately justified its ban on Anthropic's AI systems [1], suggesting the restriction could face legal setbacks.",
+          "impact": "Any reversal of the ban would have major implications for how Anthropic's models can be deployed with government or government-adjacent customers.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Judge Voices Doubt US Has Justified Its Ban on Anthropic AI",
+              "url": "https://www.bloomberg.com/news/articles/2026-07-30/judge-voices-doubt-us-has-justified-its-ban-on-anthropic-ai",
+              "published_at": "2026-07-31T00:07:06.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Report: Anthropic Models Breached Three Companies During Security Testing",
+          "summary": "The Wall Street Journal reported that Anthropic's AI models successfully compromised three companies' systems during authorized cybersecurity evaluations [1], underscoring both the offensive capability of frontier models and the risks involved in testing them. Anthropic published a companion blog post on its methodology for investigating incidents via cybersecurity evals [2].",
+          "key_points": [
+            "Tests were reportedly conducted with company consent as part of security research [1]",
+            "Anthropic's own writeup frames this as evaluation work to understand incident-investigation capabilities [2]"
+          ],
+          "impact": "Raises the stakes for how AI labs disclose and control offensive capability testing, directly relevant to enterprises considering Claude for security-sensitive environments.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic AI Models Hacked Three Companies During Tests",
+              "url": "https://www.wsj.com/tech/ai/anthropic-ai-models-hacked-three-companies-during-tests-bd752c86",
+              "published_at": "2026-07-30T23:24:34.000Z"
+            },
+            {
+              "type": "blog",
+              "title": "Investigating Incidents Cybersecurity Evals",
+              "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+              "published_at": "2026-07-30T23:14:55.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic Publishes Cryptanalysis Research, Including Key-Recovery Attack on HAWK-256",
+          "summary": "Anthropic released new cryptography research demonstrating a practical key-recovery attack on HAWK-256 [2], drawing significant discussion in the cryptography community about the technique and its implications [1].",
+          "key_points": [
+            "Independent cryptography researchers weighed in on the significance of the results [1]",
+            "Anthropic published demo code alongside the findings [2]"
+          ],
+          "impact": "Signals Anthropic's growing research footprint outside core model work, relevant to security researchers and those tracking AI-assisted cryptanalysis.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Some thoughts about Anthropic's new cryptanalysis results",
+              "url": "https://blog.cryptographyengineering.com/2026/07/29/some-notes-about-anthropics-new-results/",
+              "published_at": "2026-07-29T16:42:20.000Z"
+            },
+            {
+              "type": "hackernews",
+              "title": "Anthropic publishes a practical key-recovery attack on HAWK-256",
+              "url": "https://github.com/anthropics/cryptography-research-demo",
+              "published_at": "2026-07-28T21:22:48.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-004",
+          "headline": "Anthropic Defends Position on Open-Weight Model Regulation",
+          "summary": "A Techdirt piece argues Anthropic isn't seeking an outright ban on open-weight models, but is instead pushing for restrictions on the specific capabilities that make open-weight models competitive or dangerous [1].",
+          "perspectives": "The Techdirt framing is critical of Anthropic's stance, characterizing it as effectively anti-competitive even while not literally calling for a ban [1].",
+          "impact": "Matters to open-source AI developers and policymakers debating how future AI regulation will treat open-weight releases.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic Doesn't Want Open Weight Models Banned. Just All That Makes Them Good",
+              "url": "https://www.techdirt.com/2026/07/29/anthropic-says-its-against-a-ban-on-open-weight-models-it-just-wants-to-ban-everything-that-makes-them-good/",
+              "published_at": "2026-07-29T18:42:50.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code Defaults to New Opus 5 Model with 1M Context",
+          "summary": "Claude Code v2.1.219 introduced Claude Opus 5, now the default Opus model, featuring a 1M token context window and a fast mode priced at $10/$50 per million tokens [1].",
+          "key_points": [
+            "1M context window is a major jump for large codebase and long-session work [1]",
+            "New fast mode pricing undercuts prior Opus tiers [1]"
+          ],
+          "impact": "Directly affects every Claude Code user by changing the default model behind coding sessions, especially those working with large repos or long-running agent tasks.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.219",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21219",
+              "published_at": "2026-07-31T09:35:22.735Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code Ships Sandbox Allowlisting, Directory Hooks, and MCP Error Reporting",
+          "summary": "Alongside the Opus 5 rollout, v2.1.219 added a `sandbox.network.strictAllowlist` setting to block non-allowlisted network hosts without prompting, a `DirectoryAdded` hook that fires when new working directories are registered mid-session, and `mcp_server_errors` reporting in the headless stream-json init event [1].",
+          "key_points": [
+            "Stricter sandbox networking gives teams tighter control over agent access to external hosts [1]",
+            "New hooks and error surfacing improve visibility for SDK and headless integrations [1]"
+          ],
+          "impact": "Useful for teams running Claude Code in automated or CI pipelines who need finer-grained security controls and better debugging signals.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.219",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21219",
+              "published_at": "2026-07-31T09:35:22.735Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-003",
+          "headline": "Code Review Moves to Background Subagent, Plus Accessibility and Windows Path Fixes",
+          "summary": "v2.1.218 changed `/code-review` to run as a background subagent so review work no longer clutters the main conversation [1]. The release also added screen-reader announcements for text deletions in accessibility mode and fixed a bug corrupting Windows paths with `\\u`-prefixed segments into CJK characters [1]. Subsequent v2.1.219 and v2.1.220 releases added further reliability and bug fixes [2][3].",
+          "key_points": [
+            "Background subagent code review keeps the main chat thread focused [1]",
+            "Accessibility improvements target `--ax-screen-reader` mode users [1]",
+            "Windows path corruption bug fix restores access to affected files [1]"
+          ],
+          "impact": "Improves daily usability for developers relying on code review workflows and for Windows and accessibility-focused users.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.218",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21218",
+              "published_at": "2026-07-31T09:35:22.735Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.219",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21219",
+              "published_at": "2026-07-31T09:35:22.735Z"
+            },
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.220",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21220",
+              "published_at": "2026-07-31T09:35:22.735Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "Local Merge Queue Tool Helps Coordinate Parallel Claude Code Agents",
+          "summary": "A new open-source project provides a local merge queue for coordinating multiple parallel Claude Code agents working on the same codebase, aiming to prevent conflicting changes [1]. The Show HN post generated active discussion around managing multi-agent coding workflows [1].",
+          "impact": "Useful for developers running several Claude Code agents simultaneously on shared repos, a workflow becoming increasingly common as agentic coding scales up.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: A local merge queue for parallel Claude Code agents",
+              "url": "https://github.com/funador/claude-code-merge-queue",
+              "published_at": "2026-07-30T00:20:16.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-002",
+          "headline": "Show HN Explores What a GUI for AI Agents Should Look Like",
+          "summary": "A demo project posed the open question of interface design for AI agents, sparking discussion among developers about how agent-based tools like Claude Code should be visually and interactively represented [1].",
+          "impact": "Relevant to developers building agent tooling and UX layers on top of Claude and similar agent frameworks.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: What should the GUI for AI agents look like?",
+              "url": "https://marbleos.com/demo",
+              "published_at": "2026-07-31T05:17:29.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-003",
+          "headline": "YC-Backed Tokenless Launches Automatic Model Switching to Cut AI Costs",
+          "summary": "Tokenless, a YC S26 startup, launched a tool that automatically switches between AI models (including Claude) based on task requirements to reduce inference costs [1], drawing a large discussion thread on Hacker News.",
+          "impact": "Relevant to teams and developers managing multi-model spend, offering a cost-optimization layer for applications built on Claude and other providers.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Launch HN: Tokenless (YC S26) – Automatic model switching to save money",
+              "url": "https://usetokenless.com/",
+              "published_at": "2026-07-29T15:55:27.000Z"
+            }
+          ]
+        },
+        {
+          "id": "community-004",
+          "headline": "Research Shows Distilling DeepSeek into GPT-OSS Doesn't Transfer Censorship",
+          "summary": "A research post found that distilling DeepSeek into GPT-OSS models does not carry over DeepSeek's censorship behaviors, prompting broad discussion about model distillation and alignment transfer across open models [1].",
+          "impact": "Relevant to researchers and developers working on open-weight models and distillation techniques, an adjacent but important thread for those comparing Claude against open alternatives.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Show HN: Distilling DeepSeek into GPT-OSS doesn't transfer censorship. Try it",
+              "url": "https://www.ctgt.ai/research/distillation-censorship-transfer",
+              "published_at": "2026-07-30T18:13:06.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-04-02-1",
+          "headline": "Use /powerup command to learn Claude Code features interactively",
+          "summary": "Claude Code v2.1.90 introduced the /powerup command that provides interactive lessons with animated demos to help you learn Claude Code features. This is particularly useful for new users who want to quickly understand the tool's capabilities through hands-on tutorials.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.90 or later",
+            "Type `/powerup` in the Claude Code interface",
+            "Follow the interactive lessons and animated demos to learn features"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.90",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2190",
+              "published_at": "2026-04-02T07:26:58.752Z"
+            }
+          ],
+          "created_at": "2026-04-02T07:27:10.976Z"
+        },
+        {
+          "id": "tip-2026-07-17-1",
+          "headline": "Use /fork to spin off background sessions without blocking your work",
+          "summary": "The /fork command now copies your current conversation into a separate background session visible in `claude agents`, letting you explore an alternate path while continuing your main session. The old in-session subagent behavior is now handled by the separate `/subtask` command.",
+          "actionable_steps": [
+            "Run `/fork` in an active Claude Code session to create a background copy of the conversation",
+            "Check `claude agents` to view and manage the forked session as its own row",
+            "Use `/subtask` instead if you want the old in-session subagent launch behavior"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.212",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21212",
+              "published_at": "2026-07-17T09:01:27.993Z"
+            }
+          ],
+          "created_at": "2026-07-17T09:01:49.469Z"
+        },
+        {
+          "id": "tip-2026-05-27-4",
+          "headline": "Set up MCP servers to extend Claude's capabilities",
+          "summary": "Model Context Protocol (MCP) servers allow Claude to connect to external services like databases, APIs, and monitoring tools. This dramatically expands what Claude can do beyond just code editing.",
+          "actionable_steps": [
+            "Create or locate a `.mcp.json` file in your project",
+            "Add server configuration with connection details",
+            "Install the MCP server using Claude Code's MCP management",
+            "Verify the connection and test available tools"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Mcp",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+              "published_at": "2026-05-27T08:15:51.352Z"
+            }
+          ],
+          "created_at": "2026-05-27T08:16:08.822Z"
+        },
+        {
+          "id": "tip-2026-06-06-1",
+          "headline": "Configure fallback models for better reliability when primary model fails",
+          "summary": "Claude Code v2.1.166 introduced a fallbackModel setting that lets you specify up to three backup models that will be tried in order when your primary model is overloaded or unavailable. This prevents workflow interruptions during high-traffic periods.",
+          "actionable_steps": [
+            "Update Claude Code to version 2.1.166 or later",
+            "Add 'fallbackModel' setting to your configuration with up to 3 model names in priority order",
+            "Use '--fallback-model' flag when starting interactive sessions to apply fallbacks",
+            "Test the configuration by temporarily blocking access to your primary model"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.166",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21166",
+              "published_at": "2026-06-06T07:54:43.477Z"
+            }
+          ],
+          "created_at": "2026-06-06T07:54:56.589Z"
+        },
+        {
+          "id": "tip-2026-04-24-1",
+          "headline": "Configure persistent Claude Code settings using ~/.claude/settings.json",
+          "summary": "Claude Code now saves your /config preferences (theme, editor mode, verbose output) to a persistent file instead of resetting each session. This eliminates the need to reconfigure your preferences every time you start Claude Code.",
+          "actionable_steps": [
+            "Run Claude Code and use /config to set your preferred theme, editor mode, and other settings",
+            "Verify settings are saved to ~/.claude/settings.json file",
+            "Test persistence by restarting Claude Code and confirming settings remain"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.119",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21119",
+              "published_at": "2026-04-24T07:32:40.639Z"
+            }
+          ],
+          "created_at": "2026-04-24T07:32:59.167Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-07-31.mp3"
+}
