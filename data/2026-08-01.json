@@ -1,0 +1,157 @@
+{
+  "date": "2026-08-01",
+  "generated_at": "2026-08-01T08:58:21.809Z",
+  "digest": {
+    "lead": "A quiet news day for the Claude ecosystem — no major model releases or product announcements, just a small community project surfacing on Hacker News.",
+    "themes": [
+      "Community projects"
+    ],
+    "summary": "Nothing substantial to report across Claude.ai, Claude Code, or broader community channels today."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": []
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": []
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-05-20-1",
+          "headline": "Use `claude agents --json` to integrate Claude sessions with external tools",
+          "summary": "The new JSON output format allows you to programmatically access live Claude session information. This enables integration with terminal multiplexers like tmux, status bars, and custom session management tools.",
+          "actionable_steps": [
+            "Run `claude agents --json` in your terminal to see the JSON output format",
+            "Parse the JSON output in your scripts to extract session information",
+            "Integrate the JSON data with tools like tmux-resurrect or custom status bars",
+            "Set up automated session monitoring or management based on the structured data"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.145",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21145",
+              "published_at": "2026-05-20T08:07:02.323Z"
+            }
+          ],
+          "created_at": "2026-05-20T08:07:19.268Z"
+        },
+        {
+          "id": "tip-2026-05-08-1",
+          "headline": "Configure worktree base reference to preserve unpushed commits",
+          "summary": "The latest Claude Code update changed the default behavior for worktrees to branch from origin instead of local HEAD, potentially losing unpushed commits. Setting the baseRef to 'head' preserves your local work when creating new worktrees.",
+          "actionable_steps": [
+            "Open your Claude Code settings",
+            "Add or modify the setting: \"worktree.baseRef\": \"head\"",
+            "Save the configuration file"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.133",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21133",
+              "published_at": "2026-05-08T07:29:29.198Z"
+            }
+          ],
+          "created_at": "2026-05-08T07:29:43.717Z"
+        },
+        {
+          "id": "tip-2026-04-21-1",
+          "headline": "Use `/terminal-setup` to configure smoother fullscreen scrolling in VS Code, Cursor, and Windsurf",
+          "summary": "Claude Code v2.1.116 improved terminal scrolling performance by automatically configuring your editor's scroll sensitivity. This eliminates choppy scrolling when working in fullscreen terminal mode.",
+          "actionable_steps": [
+            "Open Claude Code in your VS Code, Cursor, or Windsurf editor",
+            "Run the `/terminal-setup` command",
+            "Allow Claude Code to configure your editor's scroll sensitivity settings"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.116",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21116",
+              "published_at": "2026-04-21T07:30:03.998Z"
+            }
+          ],
+          "created_at": "2026-04-21T07:30:17.044Z"
+        },
+        {
+          "id": "tip-2026-05-22-1",
+          "headline": "Pin Claude Code sessions to keep them alive during idle periods",
+          "summary": "Pinned sessions in Claude Code now persist even when not actively used and are only terminated under memory pressure after non-pinned sessions are closed first. This prevents losing your work context during breaks or when switching between tasks.",
+          "actionable_steps": [
+            "Open Claude Code and start an agents session",
+            "Press Ctrl+T to pin the current session",
+            "The session will now remain active even during idle periods"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 1,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.147",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21147",
+              "published_at": "2026-05-22T08:05:02.020Z"
+            }
+          ],
+          "created_at": "2026-05-22T08:05:13.276Z"
+        },
+        {
+          "id": "tip-2026-03-26-3",
+          "headline": "Use managed settings drop-in directory for team policy deployment",
+          "summary": "The new managed-settings.d/ directory allows multiple teams to deploy independent configuration fragments that automatically merge. This enables better organization of team-specific policies without conflicts.",
+          "actionable_steps": [
+            "Create a managed-settings.d/ directory alongside your managed-settings.json",
+            "Place individual team policy files in the directory (they merge alphabetically)",
+            "Name files with prefixes to control merge order (e.g., 01-team-a.json, 02-team-b.json)"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.81",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2181",
+              "published_at": "2026-03-26T06:24:36.961Z"
+            }
+          ],
+          "created_at": "2026-03-26T06:24:56.786Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-08-01.mp3"
+}
