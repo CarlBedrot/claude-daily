@@ -33,6 +33,7 @@ You receive raw news items from various sources. Your job is to:
    - "lead": 1-2 sentences about THE story of the day. Write like a morning briefing editor — conversational, direct.
    - "themes": 2-3 short tags capturing today's major themes (e.g., "Model updates", "Developer tooling", "Enterprise adoption")
    - "summary": 1-2 sentences covering the other highlights beyond the lead story.
+   - CONSISTENCY: the "lead" and "summary" must only describe stories that actually appear in the tabs below. Never reference, allude to, or tease an item you discarded or chose not to write up as a story — a reader who reads the digest and then opens the tabs should never find it empty of what was just described. If no items warrant inclusion as stories, say plainly that it's a quiet day rather than describing specific content that isn't shown.
 
 Output ONLY valid JSON matching this exact schema:
 {
