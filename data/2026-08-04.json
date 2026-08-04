@@ -1,0 +1,271 @@
+{
+  "date": "2026-08-04",
+  "generated_at": "2026-08-04T09:31:51.866Z",
+  "digest": {
+    "lead": "Anthropic quietly shipped Claude Opus 5 inside a Claude Code point release — 1M context window, a fast mode, and pricing at $10/$50 per Mtok, now the default Opus model for Code users.",
+    "themes": [
+      "Model updates",
+      "Developer tooling",
+      "Enterprise & nonprofit expansion"
+    ],
+    "summary": "Claude Code also picked up a new VSCode Focus view and tighter sandbox credential controls, while Anthropic published new cybersecurity evaluation research and launched a nonprofit-focused offering."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Claude Opus 5 debuts as new default Opus model, with 1M context and fast mode",
+          "summary": "Anthropic released Claude Opus 5, now the default Opus model, featuring a 1M token context window and a fast mode priced at $10/$50 per million tokens [1]. The release notably appeared as a line item in a Claude Code changelog rather than a standalone announcement [1].",
+          "key_points": [
+            "1M context window and a new fast mode tier at $10/$50 per Mtok [1]",
+            "Claude Opus 5 is now the default Opus model across Claude Code [1]"
+          ],
+          "impact": "A major model upgrade like this affects nearly every Claude user and developer building on the API, especially teams with long-context or high-throughput workloads who benefit from the fast mode pricing.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.219",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21219",
+              "published_at": "2026-08-04T09:31:25.760Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic launches Claude for Nonprofits",
+          "summary": "Anthropic introduced a new offering tailored to nonprofit organizations, expanding its sector-specific product lineup [1].",
+          "impact": "Gives nonprofits — often budget-constrained and understaffed — a dedicated path to adopt Claude, potentially widening Anthropic's footprint outside traditional enterprise and developer markets.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude For Nonprofits",
+              "url": "https://www.anthropic.com/news/claude-for-nonprofits",
+              "published_at": "2026-08-03T16:00:43.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "Anthropic publishes cybersecurity incident-investigation evaluations",
+          "summary": "Anthropic released new research and evaluation methodology focused on how Claude models perform when investigating cybersecurity incidents [1].",
+          "impact": "Relevant to security teams and enterprises assessing whether Claude can be trusted for sensitive incident-response and threat-analysis workflows.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Investigating Incidents Cybersecurity Evals",
+              "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+              "published_at": "2026-08-03T14:36:32.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code ships VSCode Focus view and stricter sandbox controls in v2.1.221",
+          "summary": "The latest Claude Code release adds a Focus view for VSCode that hides routine tool activity behind an expandable per-turn summary with a live running-tool indicator, toggled via Ctrl+Alt+F [1]. It also introduces a `mask` mode for sandboxed credential files on Linux/WSL, letting sandboxed commands see sentinel values while a proxy substitutes real credentials on egress [1].",
+          "key_points": [
+            "Focus view reduces UI noise by collapsing tool-call chatter into per-turn summaries [1]",
+            "New credential masking mode improves sandbox security on Linux and WSL; macOS still falls back to deny mode [1]"
+          ],
+          "impact": "Improves day-to-day ergonomics and security posture for developers running Claude Code inside VSCode, particularly those working with sensitive credentials in sandboxed environments.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.221",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21221",
+              "published_at": "2026-08-04T09:31:25.760Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-002",
+          "headline": "Claude Code v2.1.219 adds network allowlist enforcement and new hooks",
+          "summary": "Alongside the Opus 5 rollout, Claude Code v2.1.219 added a `sandbox.network.strictAllowlist` setting that silently denies non-allowlisted hosts for sandboxed commands, plus a new `DirectoryAdded` hook that fires when working directories are registered mid-session [1]. The headless stream-json init event now also reports `mcp_server_errors` for skipped MCP config entries [1].",
+          "key_points": [
+            "Strict allowlist mode blocks unapproved network hosts without interactive prompting [1]",
+            "New `DirectoryAdded` hook supports `/add-dir` and SDK-driven repo root registration [1]"
+          ],
+          "impact": "Gives developers and platform teams finer-grained control over sandboxed agent network access and multi-directory workflows, reducing friction in CI and automated pipelines.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.219",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21219",
+              "published_at": "2026-08-04T09:31:25.760Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-code-003",
+          "headline": "Claude Code v2.1.220 focuses on bug fixes and reliability",
+          "summary": "A minor release delivered general bug fixes and reliability improvements with no new user-facing features [1].",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.220",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21220",
+              "published_at": "2026-08-04T09:31:25.760Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": [
+        {
+          "id": "community-001",
+          "headline": "YC-backed Hoplite launches tool for deploying cloud coding agents",
+          "summary": "Hoplite, a Y Combinator S26 startup, launched on Hacker News with a platform for effortlessly deploying cloud-based coding agents, drawing 70 points and 57 comments [1]. The tool sits in the growing ecosystem of infrastructure built around agentic coding tools like Claude Code.",
+          "impact": "Signals continued startup investment in infrastructure layers around AI coding agents, relevant to developers looking for ways to run agents like Claude Code at scale in the cloud.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Launch HN: Hoplite (YC S26) – Effortlessly deploy cloud coding agents",
+              "url": "https://hoplite.sh",
+              "published_at": "2026-08-03T16:32:06.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-07-08-5",
+          "headline": "Use Claude Code's VS Code extension features to streamline your workflow",
+          "summary": "The VS Code integration offers checkpoints for rewinding changes, background process monitoring, terminal output inclusion in prompts, and git integration for commits and PRs, all of which speed up iterative development inside the IDE.",
+          "actionable_steps": [
+            "Install the Claude Code VS Code extension and sign in",
+            "Use checkpoints to rewind to earlier states when changes go wrong",
+            "Enable including terminal output in prompts so Claude sees command results directly",
+            "Use the git integration to create commits and pull requests, and try git worktrees for parallel tasks"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Ide Integrations",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/ide-integrations",
+              "published_at": "2026-07-08T09:17:26.998Z"
+            }
+          ],
+          "created_at": "2026-07-08T09:17:38.162Z"
+        },
+        {
+          "id": "tip-2026-04-11-1",
+          "headline": "Use `/team-onboarding` command to generate teammate ramp-up guides",
+          "summary": "Claude Code can automatically create onboarding documentation for new team members based on your local usage patterns. This saves time creating training materials and ensures consistency in how team members learn your workflows.",
+          "actionable_steps": [
+            "Update to Claude Code v2.1.101 or later",
+            "Run the `/team-onboarding` command in your Claude Code interface",
+            "Review the generated ramp-up guide and customize as needed",
+            "Share the guide with new team members"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.101",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21101",
+              "published_at": "2026-04-11T07:20:03.789Z"
+            }
+          ],
+          "created_at": "2026-04-11T07:20:14.398Z"
+        },
+        {
+          "id": "tip-2026-07-05-3",
+          "headline": "Ensure disabledMcpServers/enabledMcpServers are arrays in .claude.json",
+          "summary": "A startup crash occurred when these fields were set to non-array values in .claude.json. Setting them correctly as arrays avoids this crash after upgrading Claude Code.",
+          "actionable_steps": [
+            "Open your .claude.json file",
+            "Check the `disabledMcpServers` and `enabledMcpServers` fields",
+            "Ensure both are formatted as arrays (e.g., `[]` or `[\"server1\"]`), not strings or objects"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Mcp",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+              "published_at": "2026-07-05T11:04:18.452Z"
+            }
+          ],
+          "created_at": "2026-07-05T11:04:26.651Z"
+        },
+        {
+          "id": "tip-2026-04-04-1",
+          "headline": "Use forceRemoteSettingsRefresh policy to ensure fresh configuration on startup",
+          "summary": "This setting forces Claude Code CLI to fetch the latest remote managed settings before starting and exits if the fetch fails. This ensures your CLI always runs with the most current configuration and prevents running with stale settings that might cause issues.",
+          "actionable_steps": [
+            "Open your Claude Code CLI configuration",
+            "Add the policy setting `forceRemoteSettingsRefresh: true`",
+            "Restart the CLI to verify it blocks startup until fresh settings are fetched"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.92",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#2192",
+              "published_at": "2026-04-04T07:20:10.106Z"
+            }
+          ],
+          "created_at": "2026-04-04T07:20:24.316Z"
+        },
+        {
+          "id": "tip-2026-06-05-1",
+          "headline": "Use /plugin list command to manage Claude Code plugins",
+          "summary": "The new /plugin list command helps you track which plugins are installed and their status. You can filter to see only enabled or disabled plugins, making plugin management much easier.",
+          "actionable_steps": [
+            "Type `/plugin list` in Claude Code to see all installed plugins",
+            "Use `/plugin list --enabled` to see only active plugins",
+            "Use `/plugin list --disabled` to see only inactive plugins"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.163",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21163",
+              "published_at": "2026-06-05T08:18:39.804Z"
+            }
+          ],
+          "created_at": "2026-06-05T08:18:52.541Z"
+        }
+      ]
+    }
+  }
+}
