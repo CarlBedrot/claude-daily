@@ -1,0 +1,196 @@
+{
+  "date": "2026-08-05",
+  "generated_at": "2026-08-05T09:28:26.767Z",
+  "digest": {
+    "lead": "A quiet news day: Claude Code shipped another incremental patch closing security gaps around worktree isolation and hook permissions, while Anthropic announced a new addition to its leadership or advisory ranks with Tino Cuellar.",
+    "themes": [
+      "Developer tooling",
+      "Security & governance",
+      "Anthropic leadership"
+    ],
+    "summary": "No major model releases or product launches today — coverage centers on a routine Claude Code changelog update and an Anthropic personnel announcement."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-001",
+          "headline": "Anthropic Announces Tino Cuellar",
+          "summary": "Anthropic published a brief announcement regarding Tino Cuellar [1]. Details of the specific role or capacity were not elaborated in the source content.",
+          "key_points": [],
+          "impact": "Leadership and advisory additions can signal Anthropic's priorities around governance, policy, or safety as it scales — relevant to enterprises and policymakers tracking Anthropic's institutional direction.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Tino Cuellar",
+              "url": "https://www.anthropic.com/news/tino-cuellar",
+              "published_at": "2026-08-04T17:40:15.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.222 Patches Git Isolation and Hook Permission Bypass",
+          "summary": "The latest Claude Code release fixes a bug that allowed worktree-isolated sessions and their subagents to run destructive git commands against the main checkout, extending isolation to file edits and Bash across all session types [1]. It also closes a gap where PreToolUse auto-allow hooks could bypass tool restrictions during background agent tasks like summaries, compaction, and renames, and fixes a Team/Enterprise `/usage-credits` bug that blocked members from resubmitting dismissed credit requests [1].",
+          "key_points": [
+            "Worktree isolation now covers file edits and Bash commands in every session type, preventing subagents from affecting the main checkout [1].",
+            "Background agent tasks (summaries, compaction, renames) can no longer bypass tool restrictions via auto-allow hooks [1].",
+            "Team/Enterprise usage-credit requests are no longer blocked after an earlier request was dismissed [1]."
+          ],
+          "impact": "Teams running Claude Code with git worktrees or custom hook-based permission restrictions get meaningfully tighter security guarantees, reducing risk of destructive operations leaking outside isolated sessions.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.222",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21222",
+              "published_at": "2026-08-05T09:28:08.259Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-08-05-3",
+          "headline": "Configure MCP servers with the right installation scope",
+          "summary": "Claude Code supports local, project, and user scopes for MCP server configuration, which determines whether a server connection is available just to you, shared with your team via the repo, or available across all your projects. Choosing the correct scope avoids leaking credentials into shared config or missing servers you need in other projects.",
+          "actionable_steps": [
+            "Use local scope for personal, one-off server connections you don't want to share",
+            "Use project scope (checked into .mcp.json) for servers your whole team should access",
+            "Use user scope for servers you want available across all your own projects",
+            "Use environment variable expansion in .mcp.json to avoid hardcoding secrets like API keys"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Mcp",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+              "published_at": "2026-08-05T09:28:09.137Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-28-2",
+          "headline": "Set up hooks to automate Claude Code workflows at key events",
+          "summary": "Hooks allow you to run custom scripts or commands automatically when specific events occur in Claude Code, such as session start, prompt submission, or instruction loading. This enables automated setup, validation, or custom integrations.",
+          "actionable_steps": [
+            "Create hook configuration files in your project's .claude directory",
+            "Define hook events (SessionStart, UserPromptSubmit, etc.) and their corresponding actions",
+            "Configure hook handlers with command, HTTP, or MCP tool fields as needed",
+            "Test hooks using the /hooks menu to verify they trigger correctly"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 20,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Memory",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/memory",
+              "published_at": "2026-05-28T08:16:09.064Z"
+            }
+          ],
+          "created_at": "2026-05-28T08:16:26.129Z"
+        },
+        {
+          "id": "tip-2026-05-09-1",
+          "headline": "Enable feedback surveys for enterprise OpenTelemetry users",
+          "summary": "If your enterprise captures telemetry data through OpenTelemetry, you can now re-enable Claude Code's session quality surveys to gather user feedback. This helps organizations collect structured feedback data alongside their existing telemetry infrastructure.",
+          "actionable_steps": [
+            "Set the environment variable CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL=true",
+            "Restart your Claude Code application",
+            "Verify that session quality surveys now appear in your Claude Code interface"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.136",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21136",
+              "published_at": "2026-05-09T07:31:06.758Z"
+            }
+          ],
+          "created_at": "2026-05-09T07:31:18.385Z"
+        },
+        {
+          "id": "tip-2026-06-09-1",
+          "headline": "Use safe-mode flag to troubleshoot Claude Code issues",
+          "summary": "When Claude Code behaves unexpectedly, safe mode disables all customizations including CLAUDE.md files, plugins, skills, hooks, and MCP servers. This helps isolate whether issues stem from your configurations or the base application.",
+          "actionable_steps": [
+            "Run `claude-code --safe-mode` from your terminal",
+            "Alternatively, set the environment variable `CLAUDE_CODE_SAFE_MODE=true`",
+            "Test if your issue persists in safe mode",
+            "If the issue disappears, gradually re-enable customizations to identify the culprit"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.169",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21169",
+              "published_at": "2026-06-09T08:09:34.115Z"
+            }
+          ],
+          "created_at": "2026-06-09T08:09:48.571Z"
+        },
+        {
+          "id": "tip-2026-06-13-1",
+          "headline": "Set language setting to control session title generation",
+          "summary": "Claude Code now generates session titles in the language of your conversation. You can pin a specific language to ensure consistent title generation regardless of conversation content.",
+          "actionable_steps": [
+            "Open Claude Code settings",
+            "Locate the 'language' setting",
+            "Set it to your preferred language code (e.g., 'en', 'es', 'fr')"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 2,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.176",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21176",
+              "published_at": "2026-06-13T08:05:26.728Z"
+            }
+          ],
+          "created_at": "2026-06-13T08:05:40.073Z"
+        }
+      ]
+    }
+  },
+  "audio_url": "https://ajo4h0yenzwapoa5.public.blob.vercel-storage.com/audio/2026-08-05.mp3"
+}

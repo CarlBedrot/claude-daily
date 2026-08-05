@@ -1735,6 +1735,32 @@
         }
       ],
       "created_at": "2026-07-26T09:05:51.398Z"
+    },
+    {
+      "id": "tip-2026-08-05-3",
+      "headline": "Configure MCP servers with the right installation scope",
+      "summary": "Claude Code supports local, project, and user scopes for MCP server configuration, which determines whether a server connection is available just to you, shared with your team via the repo, or available across all your projects. Choosing the correct scope avoids leaking credentials into shared config or missing servers you need in other projects.",
+      "actionable_steps": [
+        "Use local scope for personal, one-off server connections you don't want to share",
+        "Use project scope (checked into .mcp.json) for servers your whole team should access",
+        "Use user scope for servers you want available across all your own projects",
+        "Use environment variable expansion in .mcp.json to avoid hardcoding secrets like API keys"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 15,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Mcp",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/mcp",
+          "published_at": "2026-08-05T09:28:09.137Z"
+        }
+      ],
+      "created_at": "2026-08-05T09:28:15.927Z"
     }
   ]
 }
