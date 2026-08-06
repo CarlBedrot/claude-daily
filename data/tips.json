@@ -1761,6 +1761,82 @@
         }
       ],
       "created_at": "2026-08-05T09:28:15.927Z"
+    },
+    {
+      "id": "tip-2026-08-06-1",
+      "headline": "Use owner wildcard entries to manage marketplace access at the org level",
+      "summary": "Claude Code now supports `\"owner/*\"` wildcard entries in managed settings, letting admins allow or block all marketplace repos under a GitHub org in one rule instead of listing each repo individually.",
+      "actionable_steps": [
+        "Open your managed settings file for Claude Code",
+        "Add an entry like `\"owner/*\"` under `strictKnownMarketplaces` or `blockedMarketplaces`",
+        "Replace `owner` with the GitHub org name you want to allow or block",
+        "Save and redeploy the settings to apply org-wide marketplace rules"
+      ],
+      "difficulty": "intermediate",
+      "estimated_minutes": 10,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.223",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21223",
+          "published_at": "2026-08-06T09:32:34.294Z"
+        }
+      ],
+      "created_at": "2026-08-06T09:32:55.070Z"
+    },
+    {
+      "id": "tip-2026-08-06-2",
+      "headline": "Use /teleport to continue a cloud session locally",
+      "summary": "Claude Code now surfaces a `/teleport` hint in cloud sessions, letting you pick up a session on your local machine using its session ID instead of losing context when switching environments.",
+      "actionable_steps": [
+        "Note the session ID shown in the `/teleport` hint during a cloud session",
+        "Open a local terminal with Claude Code installed",
+        "Run `claude --teleport <session id>` to resume the session locally"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 3,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code v2.1.222",
+          "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21222",
+          "published_at": "2026-08-06T09:32:34.294Z"
+        }
+      ],
+      "created_at": "2026-08-06T09:32:55.070Z"
+    },
+    {
+      "id": "tip-2026-08-06-3",
+      "headline": "Update Claude Code to patch the Bash permission bypass",
+      "summary": "A crafted Bash command could previously hide parts of itself from permission checks, and tab-padded or invisible Unicode characters could hide command content from approval dialogs. Updating closes this security gap.",
+      "actionable_steps": [
+        "Update Claude Code to v2.1.223 or later",
+        "Re-review any custom permission rules that rely on command string matching",
+        "Verify approval dialogs now display full command text before approving"
+      ],
+      "difficulty": "beginner",
+      "estimated_minutes": 5,
+      "author": {
+        "name": "Anthropic",
+        "role": "Official documentation"
+      },
+      "sources": [
+        {
+          "type": "blog",
+          "title": "Claude Code Docs: Best Practices",
+          "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+          "published_at": "2026-08-06T09:32:34.672Z"
+        }
+      ],
+      "created_at": "2026-08-06T09:32:55.070Z"
     }
   ]
 }

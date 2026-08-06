@@ -1,0 +1,223 @@
+{
+  "date": "2026-08-06",
+  "generated_at": "2026-08-06T09:32:54.628Z",
+  "digest": {
+    "lead": "Anthropic is reportedly building its own custom chips [claude-ai-002] — a big strategic bet on reducing reliance on Nvidia and Google TPUs as Claude demand scales. Meanwhile, two critical stories are making waves: a BBC report on Anthropic's AI being used to impersonate people in an attempted hack [claude-ai-003], and a Guardian piece questioning Anthropic's book destruction practices related to training data [claude-ai-004].",
+    "themes": [
+      "Custom silicon",
+      "Trust & safety scrutiny",
+      "Claude Code incremental updates"
+    ],
+    "summary": "On the developer side, Claude Code shipped another incremental release with marketplace controls and cloud session improvements [claude-code-001]. Quieter day overall, with most conversation centered on Anthropic's infrastructure ambitions and public scrutiny of its practices."
+  },
+  "tabs": {
+    "claude_ai": {
+      "label": "Claude.ai",
+      "stories": [
+        {
+          "id": "claude-ai-002",
+          "headline": "Anthropic reportedly building in-house AI chip",
+          "summary": "According to a Business Insider report, Anthropic is assembling an internal silicon team to design its own AI chips for Claude [1]. The move would mirror similar efforts by OpenAI and Google to reduce dependence on Nvidia GPUs and control costs as inference demand grows.",
+          "key_points": [
+            "The effort reportedly involves a dedicated in-house chip team [1]",
+            "Custom silicon could reduce Anthropic's reliance on third-party hardware providers like Nvidia and Google [1]"
+          ],
+          "impact": "If confirmed, this signals Anthropic's long-term bet on controlling its own compute stack — relevant to enterprises and investors watching Anthropic's infrastructure costs and scaling plans.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic Is Building Its Own Chip",
+              "url": "https://www.businessinsider.com/anthropic-in-house-silicon-chip-team-claude-2026-8",
+              "published_at": "2026-08-05T17:32:51.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-003",
+          "headline": "BBC report: Anthropic AI used to create fake profiles in attempted hack",
+          "summary": "A BBC investigation reports that an Anthropic AI system was used to create fake profiles and impersonate real people as part of an attempted hacking operation [1]. The story has generated significant discussion around AI misuse and the security implications of increasingly capable agentic models.",
+          "impact": "Raises fresh concerns for security teams and policymakers about how advanced AI models can be weaponized for social engineering and identity fraud.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Anthropic AI created fake profiles and impersonated people in attempted hack",
+              "url": "https://www.bbc.co.uk/news/articles/c1w1lvn7d9go",
+              "published_at": "2026-08-05T12:16:47.000Z"
+            }
+          ]
+        },
+        {
+          "id": "claude-ai-004",
+          "headline": "Guardian op-ed criticizes Anthropic's book destruction practices",
+          "summary": "A Guardian commentary piece questions why Anthropic has been destroying physical books, presumably as part of digitization or training data processes [1]. The piece adds to ongoing scrutiny of how AI companies source and handle copyrighted training material.",
+          "impact": "Feeds into the broader debate over AI training data practices and copyright, relevant to publishers, authors, and policymakers tracking Anthropic's data sourcing methods.",
+          "sources": [
+            {
+              "type": "hackernews",
+              "title": "Why is Anthropic destroying books?",
+              "url": "https://www.theguardian.com/commentisfree/2026/aug/05/anthropic-ai-destroying-books",
+              "published_at": "2026-08-05T12:05:22.000Z"
+            }
+          ]
+        }
+      ]
+    },
+    "claude_code": {
+      "label": "Claude Code",
+      "stories": [
+        {
+          "id": "claude-code-001",
+          "headline": "Claude Code v2.1.223 adds marketplace wildcard controls and cloud session teleport hint",
+          "summary": "The latest Claude Code release adds owner wildcard entries for managing marketplace permissions across entire GitHub orgs, plus a new warning system for restricted subagent models [1]. It also introduces a `/teleport` hint that lets users continue cloud sessions locally via `claude --teleport`, alongside a Bash permission bypass fix [1].",
+          "key_points": [
+            "New `\"owner/*\"` wildcard entries let admins allow or block all marketplace repos under a GitHub org [1]",
+            "Warnings now appear when a requested subagent model is restricted and the parent model runs instead [1]",
+            "New `/teleport` command bridges cloud and local sessions [1]"
+          ],
+          "impact": "Useful for teams managing marketplace governance at scale and developers who move between cloud and local Claude Code sessions.",
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.223",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21223",
+              "published_at": "2026-08-06T09:32:34.294Z"
+            }
+          ]
+        }
+      ]
+    },
+    "community": {
+      "label": "Community",
+      "stories": []
+    },
+    "tips": {
+      "label": "Tips",
+      "stories": [
+        {
+          "id": "tip-2026-08-06-1",
+          "headline": "Use owner wildcard entries to manage marketplace access at the org level",
+          "summary": "Claude Code now supports `\"owner/*\"` wildcard entries in managed settings, letting admins allow or block all marketplace repos under a GitHub org in one rule instead of listing each repo individually.",
+          "actionable_steps": [
+            "Open your managed settings file for Claude Code",
+            "Add an entry like `\"owner/*\"` under `strictKnownMarketplaces` or `blockedMarketplaces`",
+            "Replace `owner` with the GitHub org name you want to allow or block",
+            "Save and redeploy the settings to apply org-wide marketplace rules"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 10,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.223",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21223",
+              "published_at": "2026-08-06T09:32:34.294Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-08-06-2",
+          "headline": "Use /teleport to continue a cloud session locally",
+          "summary": "Claude Code now surfaces a `/teleport` hint in cloud sessions, letting you pick up a session on your local machine using its session ID instead of losing context when switching environments.",
+          "actionable_steps": [
+            "Note the session ID shown in the `/teleport` hint during a cloud session",
+            "Open a local terminal with Claude Code installed",
+            "Run `claude --teleport <session id>` to resume the session locally"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 3,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.222",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21222",
+              "published_at": "2026-08-06T09:32:34.294Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-08-06-3",
+          "headline": "Update Claude Code to patch the Bash permission bypass",
+          "summary": "A crafted Bash command could previously hide parts of itself from permission checks, and tab-padded or invisible Unicode characters could hide command content from approval dialogs. Updating closes this security gap.",
+          "actionable_steps": [
+            "Update Claude Code to v2.1.223 or later",
+            "Re-review any custom permission rules that rely on command string matching",
+            "Verify approval dialogs now display full command text before approving"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code Docs: Best Practices",
+              "url": "https://docs.anthropic.com/en/docs/claude-code/best-practices",
+              "published_at": "2026-08-06T09:32:34.672Z"
+            }
+          ]
+        },
+        {
+          "id": "tip-2026-05-13-1",
+          "headline": "Use case-insensitive agent type names in Claude Code configurations",
+          "summary": "Claude Code now accepts agent type names with any casing and separators. This makes configuration more flexible and reduces errors from formatting inconsistencies.",
+          "actionable_steps": [
+            "In your Claude Code configuration, use any casing for agent types (e.g., 'Code Reviewer', 'code-reviewer', 'CODE_REVIEWER')",
+            "Test that your existing configurations still work with the new flexible matching",
+            "Update documentation to reflect the more flexible naming convention"
+          ],
+          "difficulty": "beginner",
+          "estimated_minutes": 5,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.140",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21140",
+              "published_at": "2026-05-13T07:57:26.247Z"
+            }
+          ],
+          "created_at": "2026-05-13T07:57:42.216Z"
+        },
+        {
+          "id": "tip-2026-07-26-1",
+          "headline": "Enable strict network allowlisting for sandboxed commands",
+          "summary": "The new sandbox.network.strictAllowlist setting silently denies requests to non-allowlisted hosts instead of prompting, which tightens security for automated or unattended Claude Code runs. This is useful for CI/CD or agentic workflows where you don't want interactive approval prompts.",
+          "actionable_steps": [
+            "Open your Claude Code settings file (project or global)",
+            "Add the sandbox.network.strictAllowlist key set to true",
+            "Define your allowed hosts list to ensure required domains aren't blocked",
+            "Test a sandboxed command to confirm non-allowlisted hosts are denied silently"
+          ],
+          "difficulty": "intermediate",
+          "estimated_minutes": 15,
+          "author": {
+            "name": "Anthropic",
+            "role": "Official documentation"
+          },
+          "sources": [
+            {
+              "type": "blog",
+              "title": "Claude Code v2.1.219",
+              "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md#21219",
+              "published_at": "2026-07-26T09:05:39.916Z"
+            }
+          ],
+          "created_at": "2026-07-26T09:05:51.398Z"
+        }
+      ]
+    }
+  }
+}
