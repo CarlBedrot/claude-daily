@@ -25,8 +25,35 @@ Rules:
 - difficulty: "beginner" = anyone can do it, "intermediate" = needs some CLI/config familiarity, "advanced" = requires deep tooling knowledge
 - estimated_minutes: rough time to implement the tip (e.g., 2, 5, 15, 30)
 
-Output a JSON array. Use null for items you discard.
-Example: [{"headline": "...", "summary": "...", "actionable_steps": [...], "difficulty": "beginner", "estimated_minutes": 5}, null, {"headline": "...", ...}]`;
+Use null for items you discard.`;
+
+const TIP_SCHEMA = {
+  type: "object",
+  properties: {
+    tips: {
+      type: "array",
+      items: {
+        anyOf: [
+          {
+            type: "object",
+            properties: {
+              headline: { type: "string" },
+              summary: { type: "string" },
+              actionable_steps: { type: "array", items: { type: "string" } },
+              difficulty: { type: "string", enum: ["beginner", "intermediate", "advanced"] },
+              estimated_minutes: { type: "number" },
+            },
+            required: ["headline", "summary", "actionable_steps", "difficulty", "estimated_minutes"],
+            additionalProperties: false,
+          },
+          { type: "null" },
+        ],
+      },
+    },
+  },
+  required: ["tips"],
+  additionalProperties: false,
+};
 
 type TipInput = {
   item: RawItem;
@@ -60,18 +87,23 @@ Content: ${input.item.content.slice(0, 800)}`,
       },
     ],
     system: SYSTEM_PROMPT,
+    output_config: { format: { type: "json_schema", schema: TIP_SCHEMA } },
   });
 
   const textBlock = response.content.find((b) => b.type === "text");
-  const raw = textBlock?.type === "text" ? textBlock.text : "[]";
-  const text = raw.replace(/^```(?:json)?\s*\n?/, "").replace(/\n?```\s*$/, "");
-  const parsed: ({
-    headline: string;
-    summary: string;
-    actionable_steps: string[];
-    difficulty?: "beginner" | "intermediate" | "advanced";
-    estimated_minutes?: number;
-  } | null)[] = JSON.parse(text);
+  if (!textBlock || textBlock.type !== "text") {
+    throw new Error(`Tips response had no text block: ${JSON.stringify(response.content)}`);
+  }
+  const parsedResponse: {
+    tips: ({
+      headline: string;
+      summary: string;
+      actionable_steps: string[];
+      difficulty?: "beginner" | "intermediate" | "advanced";
+      estimated_minutes?: number;
+    } | null)[];
+  } = JSON.parse(textBlock.text);
+  const parsed = parsedResponse.tips;
 
   const tips: Story[] = [];
   const now = new Date().toISOString();

@@ -34,18 +34,72 @@ You receive raw news items from various sources. Your job is to:
    - "themes": 2-3 short tags capturing today's major themes (e.g., "Model updates", "Developer tooling", "Enterprise adoption")
    - "summary": 1-2 sentences covering the other highlights beyond the lead story.
 
-Output ONLY valid JSON matching this exact schema:
-{
-  "digest": { "lead": "The big story today is...", "themes": ["Theme 1", "Theme 2"], "summary": "Also worth noting..." },
-  "tabs": {
-    "claude_ai": {
-      "label": "Claude.ai",
-      "stories": [{ "id": "claude-ai-001", "headline": "", "summary": "", "key_points": [], "impact": "", "sources": [{ "type": "blog|reddit|twitter|hackernews", "title": "", "url": "", "published_at": "" }], "perspectives": "" }]
+Set "perspectives" and "impact" to null when they don't apply to a story.`;
+
+const SOURCE_SCHEMA = {
+  type: "object",
+  properties: {
+    type: { type: "string", enum: ["blog", "reddit", "twitter", "hackernews"] },
+    title: { type: "string" },
+    url: { type: "string" },
+    published_at: { type: "string" },
+  },
+  required: ["type", "title", "url", "published_at"],
+  additionalProperties: false,
+};
+
+const STORY_SCHEMA = {
+  type: "object",
+  properties: {
+    id: { type: "string" },
+    headline: { type: "string" },
+    summary: { type: "string" },
+    key_points: { type: "array", items: { type: "string" } },
+    sources: { type: "array", items: SOURCE_SCHEMA },
+    perspectives: { anyOf: [{ type: "string" }, { type: "null" }] },
+    impact: { anyOf: [{ type: "string" }, { type: "null" }] },
+  },
+  required: ["id", "headline", "summary", "key_points", "sources", "perspectives", "impact"],
+  additionalProperties: false,
+};
+
+const TAB_SCHEMA = {
+  type: "object",
+  properties: {
+    label: { type: "string" },
+    stories: { type: "array", items: STORY_SCHEMA },
+  },
+  required: ["label", "stories"],
+  additionalProperties: false,
+};
+
+const BRIEFING_SCHEMA = {
+  type: "object",
+  properties: {
+    digest: {
+      type: "object",
+      properties: {
+        lead: { type: "string" },
+        themes: { type: "array", items: { type: "string" } },
+        summary: { type: "string" },
+      },
+      required: ["lead", "themes", "summary"],
+      additionalProperties: false,
     },
-    "claude_code": { "label": "Claude Code", "stories": [...] },
-    "community": { "label": "Community", "stories": [...] }
-  }
-}`;
+    tabs: {
+      type: "object",
+      properties: {
+        claude_ai: TAB_SCHEMA,
+        claude_code: TAB_SCHEMA,
+        community: TAB_SCHEMA,
+      },
+      required: ["claude_ai", "claude_code", "community"],
+      additionalProperties: false,
+    },
+  },
+  required: ["digest", "tabs"],
+  additionalProperties: false,
+};
 
 export async function summarize(items: RawItem[]): Promise<DailyBriefing> {
   const client = new Anthropic();
@@ -75,12 +129,14 @@ Content: ${item.content.slice(0, 500)}`,
       },
     ],
     system: SYSTEM_PROMPT,
+    output_config: { format: { type: "json_schema", schema: BRIEFING_SCHEMA } },
   });
 
   const textBlock = response.content.find((b) => b.type === "text");
-  const raw = textBlock?.type === "text" ? textBlock.text : "";
-  const text = raw.replace(/^```(?:json)?\s*\n?/, "").replace(/\n?```\s*$/, "");
-  const parsed = JSON.parse(text);
+  if (!textBlock || textBlock.type !== "text") {
+    throw new Error(`Summarize response had no text block: ${JSON.stringify(response.content)}`);
+  }
+  const parsed = JSON.parse(textBlock.text);
 
   const now = new Date();
   const dateStr = now.toISOString().split("T")[0];
